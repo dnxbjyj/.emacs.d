@@ -1,5 +1,5 @@
 ;; TODO 设置文本文件的默认编码
-
+ 
 ;; 开启自动补全
 ; 开启全局 Company 补全
 ;;(global-company-mode 1)
