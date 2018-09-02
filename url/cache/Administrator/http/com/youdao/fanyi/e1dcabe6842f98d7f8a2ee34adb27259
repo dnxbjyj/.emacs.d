@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 00:32:47 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["缺点"],"basic":{"us-phonetic":"kɔns","phonetic":"kɔns","uk-phonetic":"kɔns","explains":["abbr. 面向连接的网络服务（Connection Oriented Network Service）","n. (Cons)人名；(英)康斯；(法、西)孔斯"]},"query":"CONS","errorCode":0,"web":[{"value":["面向连接的服务","缺点","面向连接的网络服务"],"key":"CONS"},{"value":["耗油"],"key":"CONS consumption"},{"value":["正式用语"],"key":"cons cript"}]}

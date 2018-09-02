@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 00:32:17 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["可选"],"basic":{"us-phonetic":"'ɑpʃənl","phonetic":"'ɒpʃ(ə)n(ə)l","uk-phonetic":"'ɒpʃ(ə)n(ə)l","explains":["adj. 可选择的，随意的","n. 选修科目"]},"query":"optional","errorCode":0,"web":[{"value":["休闲","可选","选配"],"key":"Optional"},{"value":["选择性规定","任选规定","可选择的合同条款"],"key":"optional stipulation"},{"value":["可选包","厂商选择性实现包","厂商选择性实现套件"],"key":"optional package"}]}

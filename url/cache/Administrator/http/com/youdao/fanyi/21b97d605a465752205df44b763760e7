@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 00:32:40 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["通配符"],"basic":{"explains":["n. 通配符；万用字符"]},"query":"wildcards","errorCode":0,"web":[{"value":["通配符","万用字符","万用字元"],"key":"Wildcards"},{"value":["映射通配符"],"key":"Mapping Wildcards"},{"value":["关于网站二级域名问题"],"key":"wildcards dns"}]}

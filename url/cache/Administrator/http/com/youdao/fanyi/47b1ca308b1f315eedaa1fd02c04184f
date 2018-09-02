@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 00:32:28 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"basic":{"explains":["adv. 交互式地；互勤地"]},"query":"interactively","errorCode":0,"web":[{"value":["交互式地","交互地","交互"],"key":"interactively"},{"value":["交互式漫游"],"key":"roaming interactively"},{"value":["交互修改"],"key":"modified interactively"}]}

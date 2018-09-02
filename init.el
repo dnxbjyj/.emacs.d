@@ -1,3 +1,18 @@
+;; 快速加载init.el
+(global-set-key (kbd "C-<f5>") 'load-file)
+
+;; 快速跳到某一行
+(global-set-key (kbd "C-c j") 'goto-line)
+
+;; dired模式默认递归删除目录
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+
+;; org-mode自动换行
+(add-hook 'org-mode-hook
+	  (lambda()
+	    (setq truncate-lines nil))) 
+
 ;; TODO 设置文本文件的默认编码
  
 ;; 开启自动补全
@@ -8,7 +23,7 @@
 ;; 关闭哔哔告警音
 (setq ring-bell-function 'ignore)
 
-;; 开启括号配对
+ ;; 开启括号配对
 (electric-pair-mode t)
 
 ;; 有道词典，Enable Cache
@@ -58,7 +73,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company youdao-dictionary))))
+ '(markdown-command "pandoc -f markdown -t html")
+ '(package-selected-packages
+   (quote
+    (w3m pydoc markdown-mode jdee company youdao-dictionary))))
  
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
