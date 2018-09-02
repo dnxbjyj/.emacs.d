@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:03:30 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["谓词"],"basic":{"us-phonetic":"'predikeits","phonetic":"'predikeits","uk-phonetic":"'predikeits","explains":["n. [数] 谓词，判断（predicate的复数）"]},"query":"predicates","errorCode":0,"web":[{"value":["谓词","谓语","预测"],"key":"Predicates"},{"value":["基本谓词"],"key":"basic predicates"},{"value":["最小项谓词"],"key":"minterm predicates"}]}

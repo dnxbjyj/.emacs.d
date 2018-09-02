@@ -1,0 +1,193 @@
+links: http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html
+
+Emergency Elisp
+Are you an Emacs user but don't know Lisp? Welcome to my first Emacs Lisp primer! This should hopefully help get you over the hurdle so you can have more control over your Emacs sessions.
+
+There are lots of ways to do things in Lisp, and some are "Lispier" than others. I'm going to focus on how to do things you probably already know how to do from C++ or Java.
+
+I'm mostly focusing on the language itself, since that's arguably the hardest part. There are tons of Emacs-specific APIs that you can learn how to use from the documentation.
+
+Lisp is good at some things (like code that generates code) and not so good at others (like arithmetic expressions). I will generally avoid talking about good vs. bad, and just talk about how to do things. Emacs Lisp is like any other language ¨C you get used to it eventually.
+
+Most Lisp introductions try to give you the "Tao of Lisp", complete with incense-burning, chanting, yoga and all that stuff. What I really wanted in the beginning was a simple cookbook for doing my "normal" stuff in Lisp. So that's what this is. It's an introduction to how to write C, Java or JavaScript code in Emacs Lisp, more or less.
+
+Here goes. Let's see how short I can make it. I'll start with the boring (but hopefully familiar) lexical tokens and operators, then move on to how to implement various favorite statements, declarations and other programming constructs.
+
+Quick Start
+
+Lisp is written as nested parenthesized expressions like (+ 2 3). These expressions are sometimes called forms (in the sense of "shapes".)
+
+There are also "atoms" (leaf nodes, basically) that are not parenthesized: strings, numbers, symbols (which must be quoted with apostrophe for use as symbols, like 'foo), vectors, and other miscellany.
+
+There are only single-line comments: semicolon to end of line.
+
+To set a variable named foo to the value "bar":
+(setq foo "bar")  ; setq means "set quoted"
+
+To call a function named foo-bar with arguments "flim" and "flam":
+(foo-bar "flim" "flam")
+
+To compute the arithmetic expression (0x15 * (8.2 + (7 << 3))) % 2:
+(% (* #x15 (+ 8.2 (lsh 7 3))) 2)
+
+In other words, arithmetic uses prefix notation, just like lisp function calls.
+
+There's no static type system; you use runtime predicates to figure out the type of a data item. In elisp, predicate functions often end with "p". I'll let you figure out what it stands for.
+
+Important: You can (and should) experiment with Lisp in the *scratch* buffer. You can evaluate an expression and see its result in any of several ways, including:
+
+Put your cursor after the last close-paren and type C-j (control + j)
+
+Put your cursor inside the expression and type M-C-x (alt + control + x)
+
+Put your cursor after the last close-paren and type C-x C-e
+
+
+The first approach spits the result into the *scratch* buffer, and the next two echo it into the minibuffer. They all also work for atoms ¨C expressions not in parens such as numbers, strings, characters and symbols.
+
+-------------------------------------------
+
+Lexical Stuff
+
+Lisp has only a handful of lexical tokens (i.e. atomic program elements).
+
+Comments:
+
+Single-line only. They start with a semicolon:
+(blah blah blah)   ;  I am a comment
+
+Strings:
+
+Double-quoted only.
+"He's said: \"Emacs Rules\" one time too many."
+
+You can embed newlines in strings, like so:
+"Oh Argentina!
+Your little tin of pink meat
+Soars o'er the Pampas"
+
+Characters:
+
+?x is the syntax for an ASCII character: ? followed by the character.
+
+e.g.: ?a is ascii 97 ('a'), ? (that is, question-mark space) is ascii 32 (' ').
+
+Some need to be escaped, such as ?\(, ?\) and ?\\
+
+Emacs 22+ has unicode support. Out of scope for this primer.
+
+Characters are just int values internally, so you can use arithmetic operations on them (for instance, to iterate through ?a to ?z).
+
+Numbers:
+
+Integers are 29 bits of precision (not the usual 32). -32, 0, 157, etc.
+
+Binary: start with #b, e.g. #b10010110
+
+Octal: #o[0-7]+, e.g. #o377
+
+Hexadecimal: start with #x, e.g. #xabcd, #xDEADBEE
+
+Floating-point: the usual. -10.005, 0.0, 3.14159265 (64 bits of precision.)
+
+Scientific: the usual. 6.02e23, 5e-10
+
+
+The variables most-positive-fixnum and most-negative-fixnum are the largest and smallest integers representable in Emacs Lisp without bignum support. Emacs 22+ comes with a fancy bignum/math library called calc, if you need it. Arithmetic operations overflow and underflow the way you'd expect (in, say, C or Java.)
+
+Booleans
+
+The symbol t (just a letter 't' by itself) is true.
+
+The symbol nil is false (and also means null).
+
+In Emacs Lisp, nil is the only false value; everything else evalutes to true in a boolean context, including empty strings, zero, the symbol 'false, and empty vectors. An empty list, '(), is the same thing as nil.
+
+Arrays
+
+Elisp has fixed-sized arrays called "vectors". You can use square-brackets to create a pre-initialized literal vector, for instance:
+[-2 0 2 4 6 8 10]
+["No" "Sir" "I" "am" "a" "real" "horse"]
+["hi" 22 120 89.6 2748 [3 "a"]]
+
+Note that you do not (and cannot) use commas to separate the elements; use whitespace.
+
+Vectors can have mixed-type elements, and can be nested. You usually use the function make-vector to create them, since literal vectors are singletons, which can be surprising.
+
+Lists
+
+Lisp makes heavy use of linked lists, so there's lexical syntax for them. Anything in parentheses is a list, but unless you quote it, it will be evaluated as a function call. There are various ways to quote things in Lisp:
+(quote (1 2 3)) ; produces the list (1 2 3) with no list-element evaluation
+'(1 2 3)  ; apostrophe is shorthand for (quote (...))
+          ; note that it goes _outside_ the left-paren
+(list 1 (+ 1 1) 3) ; also produces (1 2 3), since it evaluates the elements first
+`(1 ,(+ 1 1) 3)  ; another (1 2 3) via a template system called "backquote"
+There's a lot more that could be said about lists, but other people have already said it.
+
+Pairs
+
+You can set the head and tail (also known as car and cdr) fields of a lisp link-list node struct (also known as a cons cell) directly, using it as a 2-element untyped struct. The syntax is (head-value . tail-value), and you have to quote it (see above).
+
+A common lookup-table data-structure for very small data sets is an associative list (known as an alist). It's just a list of dotted pairs, like so:
+'( (apple . "red")
+   (banana . "yellow")
+   (orange . "orange") )
+Emacs Lisp has built-in hashtables, bit-vectors, and miscellaneous other data structures, but there's no syntax for them; you create them with function calls.
+Operators
+
+Some operations that are typically operators in other languages are function calls in elisp.
+
+Equality
+
+Numeric equality: (= 2 (+ 1 1)) Single-equal. Yields t or nil. Works for floats too.
+
+Not-numerically-equal: (/= 2 3) I know, it looks like assign-divide-equal. But it's not.
+
+Value equality: (eq 'foo 2) Like Java ==. Works for ints, symbols, interned strings, and object references. Use eql for floating-point numbers (or just =).
+
+Deep (structural) equality: use equal, as in:
+(equal '(1 2 (3 4)) (list 1 2 (list 3 (* 2 2))))  ; true
+
+The equal function is like Java's Object.equals(). Works for lists, vectors, strings, and just about anything else.
+
+String
+
+Strings don't have any operators, but there are lots of string functions. Some common ones:
+(concat "foo" "bar" "baz")  ; yields "foobarbaz"
+
+(string= "foo" "baz")  ; yields nil (false).  Can also use equal.
+
+(substring "foobar" 0 3) ; yields "foo"
+
+(upcase "foobar")  ; yields "FOOBAR"
+
+Do M-x apropos RET \bstring\b RET to see a list of functions related to strings.
+
+Arithmetic
+
+Easiest to show as a table...
+C/Java/JS Operator	Emacs Lisp	Example	Result
++	+	(+ 1 2 3 4 5)	15
+-	-	(- 6 2 3)	1
+*	*	(* 2 -1 4.2)	-8.4
+/	/	(/ 10 3)	3 (use floats for float div)
+%	%	(% 10 2)	0
+<<	lsh	(lsh 1 5)	32
+>>	ash (negative amount)	(ash -32 -4)	-2
+>>>	lsh (negative amount)	(lsh 32 -4)	2
+++	incf (requires 'cl library)	(incf x 6)	x+6
+--	decf (ditto)	(decf x 5)	x-5
+? : (ternary)	(if test-expr then-expr else-expr)	(if t 3 4)	3
+&&	and	(and t t t nil)	nil
+||	or	(or nil nil nil t)	t
+! (logical-not)	not	(not 3)	nil
+~ (bit-not)	lognot	(lognot #b1001)	-10
+^ (bit-xor)	logxor	(logxor 5 3)	6
+& (bit-and)	logand	(logand 1 3)	1
+| (bit-or)	logior	(logior 1 3)	3
+<	<	(< 5 3)	nil
+>	>	(> 5 3)	t
+<=	<=	(<= 3 3)	t
+>=	>=	(>= 5 3)	t
+. (field access)	see setf below	n/a	n/a
+[] (array access)	aref/aset	(aref [2 4 6] 1)	4

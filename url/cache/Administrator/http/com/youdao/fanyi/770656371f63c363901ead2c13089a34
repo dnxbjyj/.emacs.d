@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:07:46 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["吐"],"basic":{"us-phonetic":"spɪt","phonetic":"spɪt","uk-phonetic":"spɪt","explains":["vi. 吐痰；吐口水；发出劈啪声","vt. 吐，吐出；发出；发射","n. 唾液"]},"query":"spit","errorCode":0,"web":[{"value":["智能交通系统战略平台","繁忙时间","裂缝"],"key":"SPITS"},{"value":["烤肉铁叉"],"key":"Roasting spits"},{"value":["吐出"],"key":"spits out"}]}

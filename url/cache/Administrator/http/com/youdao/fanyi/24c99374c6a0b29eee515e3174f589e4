@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:01:03 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["声明"],"basic":{"us-phonetic":",deklə'reiʃənz","phonetic":",deklə'reiʃənz","uk-phonetic":",deklə'reiʃənz","explains":["n. [法] 声明（declaration的复数）"]},"query":"declarations","errorCode":0,"web":[{"value":["声明","声明区","宣告类"],"key":"declarations"},{"value":["端口声明"],"key":"Port Declarations"},{"value":["名字空间声明","命名空间声明","声明命名空间"],"key":"Namespace Declarations"}]}

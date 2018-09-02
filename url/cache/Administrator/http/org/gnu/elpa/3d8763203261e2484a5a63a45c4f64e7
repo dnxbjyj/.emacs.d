@@ -1,3 +1,13 @@
+HTTP/1.1 200 OK
+Date: Sun, 02 Sep 2018 15:44:15 GMT
+Server: Apache/2.4.25 (Debian)
+Last-Modified: Sun, 02 Sep 2018 09:05:12 GMT
+ETag: "956a-574dfb8e457df"
+Accept-Ranges: bytes
+Content-Length: 38250
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
 (1
  (ace-window .
 	     [(0 9 0)

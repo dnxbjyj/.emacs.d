@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:35:03 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["关键"],"basic":{"us-phonetic":"ki:","phonetic":"kiː","uk-phonetic":"kiː","explains":["n. （打字机等的）键；关键；钥匙","adj. 关键的","vt. 键入；锁上；调节\u2026的音调；提供线索","vi. 使用钥匙","n. (Key)人名；(英)基；(德、荷、瑞典)凯"]},"query":"key","errorCode":0,"web":[{"value":["钥匙","键","调"],"key":"key"},{"value":["主键","主关键字","主键约束"],"key":"primary key"},{"value":["控制键","控制键","按钮"],"key":"Control key"}]}

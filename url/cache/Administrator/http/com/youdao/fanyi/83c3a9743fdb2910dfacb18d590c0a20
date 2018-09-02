@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:54:20 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["最终"],"basic":{"us-phonetic":"ɪ'vɛntʃuəli","phonetic":"ɪ'ventʃʊəlɪ","uk-phonetic":"ɪ'ventʃʊəlɪ","explains":["adv. 最后，终于"]},"query":"eventually","errorCode":0,"web":[{"value":["最后","终究","终于"],"key":"eventually"},{"value":["最终处理结果"],"key":"Eventually results"},{"value":["最终会到达"],"key":"Eventually reach"}]}

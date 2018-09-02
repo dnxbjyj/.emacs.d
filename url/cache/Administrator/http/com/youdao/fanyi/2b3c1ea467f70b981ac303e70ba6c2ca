@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 00:33:06 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["显式的"],"basic":{"us-phonetic":"ɪk'splɪsɪt","phonetic":"ɪk'splɪsɪt; ek-","uk-phonetic":"ɪk'splɪsɪt; ek-","explains":["adj. 明确的；清楚的；直率的；详述的"]},"query":"explicit","errorCode":0,"web":[{"value":["明确的","显式","明白的"],"key":"explicit"},{"value":["外显记忆","外显记忆","外显性记忆"],"key":"Explicit memory"},{"value":["明亏"],"key":"explicit loss"}]}

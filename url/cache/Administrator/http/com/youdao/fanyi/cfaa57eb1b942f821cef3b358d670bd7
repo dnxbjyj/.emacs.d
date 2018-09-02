@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:03:45 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["实验"],"basic":{"us-phonetic":"ekˈspɪrəment; ɪkˈspɪrəment; ekˈsperəmənt; ɪkˈsperəmənt","phonetic":"ɪk'sperɪm(ə)nt; ek-","uk-phonetic":"ɪk'sperɪm(ə)nt; ek-","explains":["n. 实验，试验；尝试","vi. 尝试；进行实验"]},"query":"experiment","errorCode":0,"web":[{"value":["实验","实验","试验"],"key":"Experiment"},{"value":["斐索实验","菲佐实验"],"key":"Fizeau experiment"},{"value":["罗森汉恩实验","罗森塔尔实验"],"key":"Rosenhan experiment"}]}

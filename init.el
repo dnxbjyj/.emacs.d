@@ -1,5 +1,3 @@
-;; 快速加载init.el
-(global-set-key (kbd "C-<f5>") 'load-file)
 
 ;; 快速跳到某一行
 (global-set-key (kbd "C-c j") 'goto-line)
@@ -52,7 +50,6 @@
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 ;;******************************************************************************
 
-
 ;; 启用 dired-x 可以让每一次进入 Dired 模式时，使用新的快捷键 C-x C-j 就可以进 入当前文件夹的所在的路径
 (require 'dired-x)
 
@@ -63,11 +60,11 @@
 ;; (require 'dired)
 ;; (defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
 
-;; 延迟加载
+;; 延迟加载dired mode
 (with-eval-after-load 'dired
     (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
-
+;; 自定义环境变量
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -76,8 +73,9 @@
  '(markdown-command "pandoc -f markdown -t html")
  '(package-selected-packages
    (quote
-    (w3m pydoc markdown-mode jdee company youdao-dictionary))))
- 
+    (org-pomodoro w3m pydoc markdown-mode jdee company youdao-dictionary))))
+
+;; 自定义字体设置
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -85,6 +83,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "微软雅黑" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
 
+;; 显示行号
 (global-linum-mode 1)
 
 ;; 定义一个函数：快速打开配置文件
@@ -94,3 +93,6 @@
     
 ;; 把函数open-init-file绑定到快捷键<F2>键上
 (global-set-key (kbd "<f2>") 'open-init-file)
+
+;; 快速加载init.el
+(global-set-key (kbd "C-<f5>") 'load-file)

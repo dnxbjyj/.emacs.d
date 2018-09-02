@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:52:32 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["底漆"],"basic":{"us-phonetic":"'praɪmɚ","phonetic":"'praɪmə","uk-phonetic":"'praɪmə","explains":["n. 初级读本；识字课本；原始物"]},"query":"primer","errorCode":0,"web":[{"value":["底漆","引物","引物"],"key":"primer"},{"value":["工厂底漆","工厂","工厂底漆，工厂防锈漆"],"key":"Factory primer"},{"value":["环氧底漆","环氧树脂底漆","环氧底漆"],"key":"Epoxy primer"}]}

@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:35:43 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["包"],"basic":{"us-phonetic":"'pækɪdʒ","phonetic":"'pækɪdʒ","uk-phonetic":"'pækɪdʒ","explains":["n. 包，包裹；套装软件，[计] 程序包","adj. 一揽子的","vt. 打包；将\u2026包装"]},"query":"package","errorCode":0,"web":[{"value":["包装","包裹","软件包"],"key":"Package"},{"value":["运输包装","运输包装件","运输包装件"],"key":"transport package"},{"value":["销售包装","发卖包装","询价分析处理及范例"],"key":"sales package"}]}

@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:53:30 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["可以说"],"basic":{"us-phonetic":"'ɑrɡjuəbli","phonetic":"'ɑːɡjʊəblɪ","uk-phonetic":"'ɑːɡjʊəblɪ","explains":["adv. 可论证地；可争辩地；正如可提出证据加以证明的那样地","[广义用法]可能，大概"]},"query":"arguably","errorCode":0,"web":[{"value":["可论证地","可争辩地","正如可提出证据加以证明的那样"],"key":"arguably"},{"value":["但可以争论地"],"key":"But Arguably"},{"value":["我们可以被低估"],"key":"We Re Arguably Undervalued"}]}

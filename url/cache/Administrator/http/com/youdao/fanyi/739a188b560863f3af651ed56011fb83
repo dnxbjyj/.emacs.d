@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:04:04 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["括弧"],"basic":{"us-phonetic":"'pæren","phonetic":"'pæren","uk-phonetic":"'pæren","explains":["n. (Paren)人名；(法)帕朗","abbr. 括弧（parenthesis）"]},"query":"paren","errorCode":0,"web":[{"value":["括弧","家庭与育儿","圆括号"],"key":"paren"},{"value":["第一少年"],"key":"Pervyy paren"},{"value":["母离子"],"key":"paren ion"}]}

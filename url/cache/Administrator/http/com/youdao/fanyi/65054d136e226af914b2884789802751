@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:55:10 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["或多或少。"],"basic":{"explains":["或多或少"]},"query":"more or less","errorCode":0,"web":[{"value":["15分钟左右。"],"key":"Fifteen minutes, more or less."},{"value":["3年左右。"],"key":"Three years, more or less."},{"value":["这有几分确定。"],"key":"It is more or less certain."}]}

@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:01:13 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["嵌套的"],"basic":{"us-phonetic":"'nestid","phonetic":"'nestɪd","uk-phonetic":"'nestɪd","explains":["adj. 嵌套的，内装的","v. 筑巢；嵌入（nest的过去分词）"]},"query":"nested","errorCode":0,"web":[{"value":["嵌套","巢状式","巢状"],"key":"nested"},{"value":["嵌套表","嵌套表段","内嵌表"],"key":"nested table"},{"value":["是否允许嵌套注释","是否答应嵌套注释"],"key":"Nested comments"}]}

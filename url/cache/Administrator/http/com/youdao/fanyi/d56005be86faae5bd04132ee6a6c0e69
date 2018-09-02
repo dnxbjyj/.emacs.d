@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:51:46 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["紧急"],"basic":{"us-phonetic":"ɪ'mɝdʒənsi","phonetic":"ɪ'mɜːdʒ(ə)nsɪ","uk-phonetic":"ɪ'mɜːdʒ(ə)nsɪ","explains":["n. 紧急情况；突发事件；非常时刻","adj. 紧急的；备用的"]},"query":"emergency","errorCode":0,"web":[{"value":["紧急情况","急诊","突发事件"],"key":"emergency"},{"value":["急症室","急诊室","急诊科"],"key":"Emergency department"},{"value":["紧急停止","异常停止","紧急停机"],"key":"EMERGENCY STOP"}]}

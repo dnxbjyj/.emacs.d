@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:54:44 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["的东西"],"basic":{"us-phonetic":"stʌf","phonetic":"stʌf","uk-phonetic":"stʌf","explains":["n. 东西；材料；填充物；素材资料","vt. 塞满；填塞；让吃饱","vi. 吃得过多"]},"query":"stuff","errorCode":0,"web":[{"value":["材料","原料","东西"],"key":"Stuff"},{"value":["Hot Stuff feat. KM-MARKIT","大人物","拜托小姐主题曲"],"key":"Hot Stuff"},{"value":["饲料"],"key":"feeding stuff"}]}

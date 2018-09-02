@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:03:16 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["算术"],"basic":{"us-phonetic":"ə'rɪθmətɪk","phonetic":"ə'rɪθmətɪk","uk-phonetic":"ə'rɪθmətɪk","explains":["n. 算术，算法"]},"query":"arithmetic","errorCode":0,"web":[{"value":["算术","算术","四则运算"],"key":"Arithmetic"},{"value":["等差数列","算术级数","等差级数"],"key":"arithmetic progression"},{"value":["算术算符","算术运算符","算术操作符"],"key":"arithmetic operator"}]}

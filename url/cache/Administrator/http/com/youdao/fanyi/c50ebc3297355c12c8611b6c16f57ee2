@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 17:02:07 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["分号"],"basic":{"us-phonetic":"'sɛmɪkolən","phonetic":",semɪ'kəʊlən; -'kəʊlɒn","uk-phonetic":",semɪ'kəʊlən; -'kəʊlɒn","explains":["n. 分号"]},"query":"semicolon","errorCode":0,"web":[{"value":["分号","分号","缺少操作符或分号"],"key":"Semicolon"},{"value":["左半结肠","左半结肠"],"key":"Left semicolon"},{"value":["最终分号"],"key":"final semicolon"}]}

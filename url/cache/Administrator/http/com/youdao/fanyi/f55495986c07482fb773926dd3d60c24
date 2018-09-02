@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:35:53 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["全球"],"basic":{"us-phonetic":"'ɡlobl","phonetic":"'gləʊb(ə)l","uk-phonetic":"'gləʊb(ə)l","explains":["adj. 全球的；总体的；球形的"]},"query":"global","errorCode":0,"web":[{"value":["全球","全局","全球性"],"key":"Global"},{"value":["全局变量","全局变量","全域变数"],"key":"Global variable"},{"value":["全球金融","全球财务","环球金融"],"key":"Global finance"}]}

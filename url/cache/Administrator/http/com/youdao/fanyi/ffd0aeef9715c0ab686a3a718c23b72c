@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 02 Sep 2018 16:36:02 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["添加"],"basic":{"us-phonetic":"'ædɪd","phonetic":"'ædɪd","uk-phonetic":"'ædɪd","explains":["adj. 更多的；额外的","v. 增加（add的过去分词）"]},"query":"added","errorCode":0,"web":[{"value":["加","上架","新增"],"key":"Added"},{"value":["附加价值","增加值","增值"],"key":"value added"},{"value":["加映的短片"],"key":"added short"}]}
