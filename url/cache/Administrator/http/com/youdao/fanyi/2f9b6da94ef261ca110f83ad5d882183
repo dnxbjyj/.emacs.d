@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:00:31 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["为数不多的"],"basic":{"explains":["一把；少量的；一小部分"]},"query":"a handful of","errorCode":0,"web":[{"value":["少量的","一小撮","一把"],"key":"a handful of"},{"value":["一捧枣儿"],"key":"a double handful of dates"},{"value":["仅少数几个人"],"key":"a mere handful of people"}]}

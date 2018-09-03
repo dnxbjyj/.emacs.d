@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 17:01:59 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["混杂"],"basic":{"us-phonetic":"'mɪsəleni","phonetic":"mɪ'selənɪ","uk-phonetic":"mɪ'selənɪ","explains":["n. 杂录，杂集；混杂；混合物"]},"query":"miscellany","errorCode":0,"web":[{"value":["混合物","杂项讨论","杂物"],"key":"miscellany"},{"value":["中石器集刊"],"key":"Mesolithic Miscellany"},{"value":["杂费"],"key":"Miscellany goodeous"}]}

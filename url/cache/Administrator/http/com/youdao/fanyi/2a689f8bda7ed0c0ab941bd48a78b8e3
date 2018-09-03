@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 17:07:43 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["方法"],"basic":{"us-phonetic":"ə'protʃ","phonetic":"ə'prəʊtʃ","uk-phonetic":"ə'prəʊtʃ","explains":["n. 方法；途径；接近","vt. 接近；着手处理","vi. 靠近"]},"query":"approach","errorCode":0,"web":[{"value":["接近","方法","爱谱诗"],"key":"approach"},{"value":["爱情泡泡糖","无路可退","爱情泡泡糖主题曲"],"key":"Final Approach"},{"value":["接近角","拉模变形锥","离出角"],"key":"Approach angle"}]}

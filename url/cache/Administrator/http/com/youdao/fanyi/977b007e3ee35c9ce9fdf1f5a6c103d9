@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:06:00 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["八进制"],"basic":{"us-phonetic":"'ɑktl","phonetic":"'ɒkt(ə)l","uk-phonetic":"'ɒkt(ə)l","explains":["adj. [数] 八进制的"]},"query":"octal","errorCode":0,"web":[{"value":["八进制","八路","八进制数"],"key":"octal"},{"value":["八进制数","八进数补码","八进位数"],"key":"octal number"},{"value":["该命令的名称由来"],"key":"Octal Dump"}]}

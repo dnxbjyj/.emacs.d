@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:26:40 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["单例"],"basic":{"explains":["n. 使用单件；单件物品（singleton的复数）"]},"query":"singletons","errorCode":0,"web":[{"value":["使用单件","序列","采用单件"],"key":"Singletons"},{"value":["模糊单点"],"key":"fuzzy singletons"}]}

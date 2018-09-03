@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:27:25 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["括号"],"basic":{"us-phonetic":"pə'rɛnθəsɪz","phonetic":"pə'renθəsɪz","uk-phonetic":"pə'renθəsɪz","explains":["n. parenthesis的复数形式"]},"query":"parentheses","errorCode":0,"web":[{"value":["括号","圆括号","圆括弧"],"key":"parentheses"},{"value":["的复数","插入语"],"key":"parentheses parenthesis"},{"value":["平衡圆括号"],"key":"balanced parentheses"}]}

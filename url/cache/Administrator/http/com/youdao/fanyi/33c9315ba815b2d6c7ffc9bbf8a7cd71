@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 16:54:28 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["道"],"basic":{"us-phonetic":"tau, dau, 'tɑ:əu","phonetic":"tau, dau, 'tɑ:əu","uk-phonetic":"tau, dau, 'tɑ:əu","explains":["n. （中国道家的）道","n. (Tao)人名；(柬)道"]},"query":"tao","errorCode":0,"web":[{"value":["道","TAO (太鼓乐团)","陶姓"],"key":"Tao"},{"value":["陈涛","陈陶","陈"],"key":"Chen Tao"},{"value":["洮河","陶河","桃河"],"key":"Tao River"}]}

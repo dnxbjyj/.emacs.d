@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:00:22 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["一些"],"basic":{"us-phonetic":"'hænd,fʊl","phonetic":"'hæn(d)fʊl; -f(ə)l","uk-phonetic":"'hæn(d)fʊl; -f(ə)l","explains":["n. 少数；一把；棘手事"]},"query":"handful","errorCode":0,"web":[{"value":["一把","少数","把"],"key":"handful"},{"value":["五人团","强力集团"],"key":"mighty handful"},{"value":["一把"],"key":"handful cn"}]}

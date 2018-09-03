@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 16:52:47 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["障碍"],"basic":{"us-phonetic":"'hɝdl","phonetic":"'hɜːd(ə)l","uk-phonetic":"'hɜːd(ə)l","explains":["n. 障碍；栏；跳栏","vt. 克服","vi. 克服；跳过","n. (Hurdle)人名；(英)赫德尔"]},"query":"hurdle","errorCode":0,"web":[{"value":["跨栏","障碍","栏架"],"key":"Hurdle"},{"value":["栅栏技术","栅技术","栅栏技术"],"key":"Hurdle Technology"},{"value":["水上浮桥跨栏跳"],"key":"Hurdle Hop"}]}

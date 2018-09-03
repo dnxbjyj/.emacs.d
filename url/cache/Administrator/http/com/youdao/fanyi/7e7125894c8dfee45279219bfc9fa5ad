@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 17:02:55 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["计算"],"basic":{"us-phonetic":"kəm'pjʊt","phonetic":"kəm'pjuːt","uk-phonetic":"kəm'pjuːt","explains":["n. 计算；估计；推断","vt. 计算；估算；用计算机计算","vi. 计算；估算；推断"]},"query":"compute","errorCode":0,"web":[{"value":["计算","估计","子句中的聚合"],"key":"compute"},{"value":["互联计算","运算动能","互联运算"],"key":"Compute Continuum"},{"value":["计算变量","计算产生变量"],"key":"Compute Variable"}]}

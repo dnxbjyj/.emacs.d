@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:05:47 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["精度"],"basic":{"us-phonetic":"prɪ'sɪʒn","phonetic":"prɪ'sɪʒ(ə)n","uk-phonetic":"prɪ'sɪʒ(ə)n","explains":["n. 精度，[数] 精密度；精确","adj. 精密的，精确的"]},"query":"precision","errorCode":0,"web":[{"value":["精度","精密度","精密"],"key":"precision"},{"value":["精细农业","精细农业","精准农业"],"key":"Precision agriculture"},{"value":["假精确"],"key":"False precision"}]}

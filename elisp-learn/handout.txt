@@ -45,7 +45,7 @@ Put your cursor after the last close-paren and type C-x C-e
 
 The first approach spits the result into the *scratch* buffer, and the next two echo it into the minibuffer. They all also work for atoms 每 expressions not in parens such as numbers, strings, characters and symbols.
 
--------------------------------------------
+
 
 Lexical Stuff
 
@@ -191,3 +191,330 @@ C/Java/JS Operator	Emacs Lisp	Example	Result
 >=	>=	(>= 5 3)	t
 . (field access)	see setf below	n/a	n/a
 [] (array access)	aref/aset	(aref [2 4 6] 1)	4
+-------------------------------------------
+Statements
+
+This section has some recipes for simple Java-like statements. It's not comprehensive 每 just some recipes to get you going.
+
+if/else
+
+Case 1: no else clause: (if test-expr expr)
+
+Example:
+(if (>= 3 2)
+  (message "hello there"))
+
+Case 2: else clause: (if test-expr then-expr else-expr)
+(if (today-is-friday)         ; test-expr
+    (message "yay, friday")   ; then-expr
+  (message "boo, other day")) ; else-expr
+
+If you need multiple expressions (statements) in the then-expr, you wrap them with a call to progn, which is like curly-braces in C or Java:
+(if (zerop 0)
+    (progn
+      (do-something)
+      (do-something-else)
+      (etc-etc-etc)))
+
+You don't need the progn around the else-expr 每 everything after the then-expr is considered to be part of the else-expr. Hence:
+(if (today-is-friday)
+    (message "yay, friday")
+  (message "not friday!")
+  (non-friday-stuff)
+  (more-non-friday-stuff))
+
+Case 3: else-if clause: Just nest 'em. Or use cond (see below).
+(if 'sunday
+    (message "sunday!")      ; then-expr
+  (if 'saturday              ; else-if
+      (message "saturday!")  ; next then-expr
+    (message ("weekday!")))) ; final else
+
+Case 4: no else-if, multiple body expressions 每 use when:
+
+If you don't have an else-clause, then you can use the when macro, which provides an implicit progn:
+(when (> 5 1)
+  (blah)
+  (blah-blah)
+  (blah blah blah))
+
+You can also use unless, which is like when but inverts the sense of the test:
+(unless (weekend-p)
+  (message "another day at work")
+  (get-back-to-work))
+
+switch
+
+Elisp has two versions of the classic switch statement: cond and case.
+
+Elisp does not have a table-lookup optimization for switch, so cond and case are just syntax for nested if-then-else clauses. However, if you have more than one level of nesting, it looks a lot nicer than if expressions. The syntax is:
+(cond
+  (test-1
+    do-stuff-1)
+  (test-2
+    do-stuff-2)
+  ...
+  (t
+    do-default-stuff))
+
+The do-stuff parts can be any number of statements, and don't need to be wrapped with a progn block.
+
+Unlike classic switch, cond can handle any test expression (it just checks them in order), not just numbers. The downside is that it doesn't have any special-casing for numbers, so you have to compare them to something. Here's one that does string compares:
+(cond
+ ((equal value "foo")  ; case #1 每 notice it's a function call to `equal' so it's in parens
+  (message "got foo")  ; action 1
+  (+ 2 2))             ; return value for case 1
+ ((equal value "bar")  ; case #2 每 also a function call (to `+')
+  nil)                 ; return value for case 2
+ (t                    ; default case 每 not a function call, just literal true
+  'hello))             ; return symbol 'hello
+
+The final t default clause is optional. The first matching clause is executed, and the result of the entire cond expression is the result of the last expression in the matching clause.
+
+The 'cl (Common Lisp) package bundled with Emacs provides case, which works if you're comparing numbers or symbols, so in a sense it works more like standard switch. Example:
+(case 12
+  (5 "five")
+  (1 "one")
+  (12 "twelve")
+  (otherwise
+   "I only know five, one and twelve."))  ; result:  "twelve"
+
+With case you can use either t or otherwise for the default case, but it must come last.
+
+It's cleaner to use case when you can get away with it, but cond is more general.
+
+while
+
+Elisp has a relatively normal while function: (while test body-forms)
+
+Example, which you can evaluate in your *scratch* buffer:
+(setq x 10
+      total 0)
+(while (plusp x)  ; while x is positive
+  (incf total x)  ; add x to total
+  (decf x))       ; subtract 1 from x
+
+First we set two global variables, x=10 and total=0, then run the loop. Then we can evaluate the expression total to see that its value is 55 (the sum of the numbers 1 to 10).
+
+break/continue
+
+Lisp has a facility for upward control-flow transfers called catch/throw. It's very similar to Java or C++ exception handling, albeit possibly somewhat lighter-weight.
+
+To do a break from inside a loop in elisp, you put a (catch 'break ...) outside the loop, and a (throw 'break value) wherever you want to break inside the loop, like so:
+
+Emacs Lisp	Java
+
+(setq x 0 total 0)
+(catch 'break
+  (while t
+    (incf total x)
+    (if (> (incf x) 10)
+        (throw 'break total))))
+var x = total = 0;
+while (true) {
+  total += x;
+  if (x++ > 10) {
+    break;
+  }
+}
+
+The symbol 'break is arbitrary, but is probably a nice choice for your readers. If you have nested loops, you might consider 'break-outer and 'break-inner in your catch expressions.
+
+You can (throw 'break nil) if you don't care about the "return value" for the while-loop.
+
+To continue a loop, put a catch expression just inside the loop, at the top. For instance, to sum the numbers from 1 to 99 that are not evenly divisible by 5 (artificially lame example demonstrating use of continue):
+
+Emacs Lisp	Java
+(setq x 0 total 0)
+(while (< x 100)
+  (catch 'continue
+    (incf x)
+    (if (zerop (% x 5))
+        (throw 'continue nil))
+    (incf total x)))
+var x = total = 0;
+while (x < 100) {
+  x++;
+  if (x % 5 == 0) {
+    continue;
+  }
+  total += x;
+}
+
+We can combine these examples to show using a break and continue in the same loop:
+
+Emacs Lisp	JavaScript
+(setq x 0 total 0)
+(catch 'break
+  (while t
+    (catch 'continue
+      (incf x)
+      (if (>= x 100)
+          (throw 'break nil))
+      (if (zerop (% x 5))
+          (throw 'continue nil))
+      (incf total x))))
+var x = total = 0;
+while (true) {
+  x++;
+  if (x >= 100) {
+    break;
+  }
+  if (x % 5 == 0) {
+    continue;
+  }
+  total += x;
+}
+
+All the loops above compute the value 4000 in the variable total. There are better ways to compute this result, but I needed something simple to illustrate break and continue.
+
+The catch/throw mechanism can be used across function boundaries, just like exceptions. It's not intended for true exceptions or error conditions 每 Emacs has another mechanism for that, discussed in the try/catch section below. You should get comfortable using catch/throw for normal jumps and control transfer in your Elisp code.
+
+do/while
+
+Pretty much all iteration in Emacs Lisp is easiest using the loop macro from the Common Lisp package. Just do this to enable loop:
+(require 'cl)  ; get lots of Common Lisp goodies
+
+The loop macro is a powerful minilanguage with lots of features, and it's worth reading up on. I'll use it in this primer to show you how to do basic looping constructs from other languages.
+
+You can do a do/while like so:
+(loop do
+      (setq x (1+ x))
+      while
+      (< x 10))
+
+You can have any number of lisp expressions between the do and while keywords.
+
+for
+
+The C-style for-loop has four components: variable initialization, the loop body, the test, and the increment. You can do all that and more with the loop macro. For instance, this arbitrary JavaScript:
+// JavaScript
+var result = [];
+for (var i = 10, j = 0; j <= 10; i--, j += 2) {
+  result.push(i+j);
+}
+
+Could be done with loop like so:
+(loop with result = '()         ; one-time initialization
+      for i downfrom 10         ; count i down from 10
+      for j from 0 by 2         ; count j up from 0 by 2
+      while (< j 10)            ; stop when j >= 10
+      do
+      (push (+ i j) result)     ; fast-accumulate i+j
+      finally
+      return (nreverse result)) ; reverse and return result
+
+It's a bit more verbose, but loop has a lot of options, so you want it to be reasonably transparent.
+
+Notice that this loop declares the result array and then "returns" it. It could also operate on a variable declared outside the loop, in which case we wouldn't need the finally return clause.
+
+The loop macro is astoundingly flexible. Its full specification is way out of scope for this primer, but if you want to make Emacs Lisp your, uh, friend, then you should spend some time reading up on loop.
+
+for..in
+
+If you're iterating over a collection, Java provides the "smart" for-loop, and JavaScript has for..in and for each..in. There are various ways to do it in Lisp, but you really might as well just learn how to do it with the loop macro. It's a one-stop shop for iteration.
+
+The basic approach is to use loop for var in sequence, and then do something with the individual results. You can, for instance, collect them (or a function on them) into a result list like so:
+(loop for i in '(1 2 3 4 5 6)
+      collect (* i i))           ; yields (1 4 9 16 25 36)
+
+The loop macro lets you iterate over list elements, list cells, vectors, hash-keys, hash-values, buffers, windows, frames, symbols, and just about anything else you could want to traverse. See the Info pages or your Emacs manual for details.
+
+functions
+
+You define a function with defun.
+
+Syntax: (defun function-name arg-list [optional docstring] body)
+(defun square (x)
+  "Return X squared."
+  (* x x))
+
+For a no-arg function, you use an empty list:
+(defun hello ()
+  "Print the string `hello' to the minibuffer."
+  (message "hello!"))
+
+The body can be any number of expressions. The return value of the function is the result of the last expression executed. You do not declare the return type, so it's useful to mention it in the documentation string. The doc string is available from M-x describe-function after you evaluate your function.
+
+Emacs Lisp does not have function/method overloading, but it supports optional and "rest" parameters similar to what Python and Ruby offer. You can use the full Common Lisp specification for argument lists, including support for keyword arguments (see the defstruct section below), if you use the defun* macro instead of defun. The defun* version also lets you (return "foo") without having to set up your own catch/throw.
+
+If you want your function to be available as a M-x command, put (interactive) as the first expression in the body after the doc string.
+
+local variables
+
+You declare function local variables with the let form. The basic syntax is (let var-decl var-decl)
+
+(let ((name1 value1)
+      (name2 value2)
+      name3
+      name4
+      (name5 value5)
+      name6
+      ...))
+
+Each var-decl is either a single name, or (name initial-value). You can mix initialized and uninitialized values in any order. Uninitialized variables get the initial value nil.
+
+You can have multiple let clauses in a function. Code written for performance often collects all declarations into a single let at the top, since it's a bit faster that way. Typically you should write your code for clarity first.
+
+reference parameters
+
+C++ has reference parameters, which allow you to modify variables from the caller's stack. Java does not, so you have to work around it occasionally by passing in a 1-element array, or using an instance variable, or whatever.
+
+Emacs Lisp does not have true reference parameters, but it has dynamic scope, which means you can modify values on your caller's stack anyway. Consider the following pair of functions:
+(defun foo ()
+  (let ((x 6))  ; define a local (i.e., stack) variable x initialized to 6
+    (bar)       ; call bar
+    x))         ; return x
+
+(defun bar ()
+  (setq x 7))   ; finds and modifies x in the caller's stack frame
+
+If you invoke (foo) the return value is 7.
+
+Dynamic scoping is generally considered a bad design bordering on evil, but it can occasionally come in handy. If nothing else, it's good to know it's what Emacs does.
+
+return
+
+A lisp function by default returns the value of the last expression executed in the function. Sometimes it's possible to structure your function so that every possible return value is in a "tail position" (meaning the last expression out before the door closes, so to speak.) For instance:
+
+Emacs Lisp	JavaScript
+(require 'calendar)
+
+(defun day-name ()
+  (let ((date (calendar-day-of-week
+               (calendar-current-date))))
+    (if (= date 0)
+        "Sunday"
+      (if (= date 6)
+          "Saturday"
+        "weekday"))))
+function dayName() {
+  var date = new Date().getDay();
+  switch (date) {
+    case 0:
+      return "Sunday";
+    case 6:
+      return "Saturday";
+    default:
+      return "weekday";
+  }
+}
+
+The return value is just the result of the last expression, so whatever our nested if produces is automatically returned, and there's no need here for an explicit return form.
+
+However, sometimes restructuring the function this way is inconvenient, and you'd prefer to do an "early return".
+
+You can do early returns in Emacs Lisp the same way you do break and continue, using the catch/throw facility. Usually simple functions can be structured so you don't need this 每 it's most often useful for larger, deeply-nested functions. So for a contrived example, we'll just rewrite the function above to be closer to the JavaScript version:
+(defun day-name ()
+  (let ((date (calendar-day-of-week
+               (calendar-current-date))))  ; 0-6
+    (catch 'return
+      (case date
+        (0
+         (throw 'return "Sunday"))
+        (6
+         (throw 'return "Saturday"))
+        (t
+         (throw 'return "weekday"))))))
+
+Obviously using catch/throw here is slow and clunky compared to the alternatives, but sometimes it's exactly what you need to get out of a deeply nested construct.

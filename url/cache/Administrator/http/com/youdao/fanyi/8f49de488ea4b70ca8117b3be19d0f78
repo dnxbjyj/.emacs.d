@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:27:09 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["重"],"basic":{"us-phonetic":"'hɛvi","phonetic":"'hevɪ","uk-phonetic":"'hevɪ","explains":["n. 重物；严肃角色","adj. 沉重的；繁重的，巨大的；拥挤的；阴沉的","adv. 大量地；笨重地"]},"query":"heavy","errorCode":0,"web":[{"value":["重的","沉重","重重"],"key":"heavy"},{"value":["重金属","重金属","重金属含量"],"key":"heavy metals"},{"value":["重水","重水","地板上的深积水"],"key":"Heavy water"}]}

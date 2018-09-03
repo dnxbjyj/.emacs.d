@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:28:25 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["模板"],"basic":{"us-phonetic":"'tɛmplet","phonetic":"'templeɪt; -plɪt","uk-phonetic":"'templeɪt; -plɪt","explains":["n. 模板，样板"]},"query":"template","errorCode":0,"web":[{"value":["模板","网店模版","模版"],"key":"Template"},{"value":["函数模板","函式模板","函式范本"],"key":"function template"},{"value":["可调节的样板","可调理的榜样","可调模板"],"key":"Adjustable template"}]}

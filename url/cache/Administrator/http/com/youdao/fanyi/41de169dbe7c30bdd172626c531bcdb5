@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:28:05 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["速记"],"basic":{"us-phonetic":"'ʃɔrthænd","phonetic":"'ʃɔːthænd","uk-phonetic":"'ʃɔːthænd","explains":["n. 速记；速记法","adj. 速记法的"]},"query":"shorthand","errorCode":0,"web":[{"value":["速记","速记法","速写"],"key":"shorthand"},{"value":["英语速记"],"key":"English Shorthand"},{"value":["人手不足"],"key":"sh  shorthand"}]}

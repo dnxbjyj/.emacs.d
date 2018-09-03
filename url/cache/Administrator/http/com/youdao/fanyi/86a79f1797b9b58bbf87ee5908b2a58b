@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 17:01:25 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["形式"],"basic":{"explains":["n. 表格（form的复数形式）；表单；窗体","v. 形成（form的第三人称单数）；培养；制作"]},"query":"forms","errorCode":0,"web":[{"value":["表单","窗体","表格"],"key":"Forms"},{"value":["Windows Forms","Windows Forms","使用"],"key":"Windows Forms"},{"value":["生命形态","生命形式","生活型"],"key":"life forms"}]}

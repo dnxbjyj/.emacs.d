@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 17:01:17 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["括起来"],"basic":{"explains":["将\u2026\u2026加上括弧（parenthesize的过去式和过去分词）"]},"query":"parenthesized","errorCode":0,"web":[{"value":["括号表示法"],"key":"parenthesized notation"},{"value":["括号"],"key":"the parenthesized"},{"value":["扩入括号的表达式"],"key":"Parenthesized Expressions"}]}

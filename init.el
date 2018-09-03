@@ -1,4 +1,16 @@
 ;;***************************系统类配置
+;; 在dired模式中打开.emacs.d目录
+(defun open-emacs-d()
+  (interactive)
+  (dired "~/.emacs.d/"))
+(global-set-key (kbd "C-<f5>") 'open-emacs-d)
+
+;; 在文件夹中打开.emacs.d目录
+(defun open-emacs-d-dir()
+  (interactive)
+  (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d"))
+(global-set-key (kbd "C-S-<f5>") 'open-emacs-d-dir)
+
 ;; 定义一个函数：快速打开配置文件
 (defun open-init-file()
     (interactive)
@@ -6,7 +18,7 @@
 ;; 把函数open-init-file绑定到快捷键<F2>键上
 (global-set-key (kbd "<f2>") 'open-init-file)
 ;; 快速加载init.el
-(global-set-key (kbd "C-<f5>") 'load-file)
+(global-set-key (kbd "C-<f2>") 'load-file)
 
 ;; 自定义环境变量
 (custom-set-variables

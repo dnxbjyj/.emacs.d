@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 02 Sep 2018 17:01:30 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["原子"],"basic":{"us-phonetic":"'ætəm","phonetic":"'ætəm","uk-phonetic":"'ætəm","explains":["n. [物] 原子（atom的复数）"]},"query":"atoms","errorCode":0,"web":[{"value":["原子","元子","元素"],"key":"Atoms"},{"value":["代表原子","代表性原子"],"key":"Representative Atoms"},{"value":["稳定性比铯原子钟","铯原子"],"key":"cesium atoms"}]}

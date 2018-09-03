@@ -1,9 +1,11 @@
 HTTP/1.1 200 OK
 Server: nginx
-Date: Mon, 03 Sep 2018 16:27:15 GMT
+Date: Mon, 03 Sep 2018 16:00:13 GMT
 Content-Type: application/json;charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
 
 {"translation":["词汇"],"basic":{"us-phonetic":"'lɛksɪkl","phonetic":"'leksɪk(ə)l","uk-phonetic":"'leksɪk(ə)l","explains":["adj. 词汇的；[语] 词典的；词典编纂的"]},"query":"lexical","errorCode":0,"web":[{"value":["词汇","词典的","词法"],"key":"lexical"},{"value":["词法分析","词法分析","词汇分析"],"key":"Lexical analysis"},{"value":["词汇资源","词汇量限制在两三千范围内","词汇使用不灵活"],"key":"lexical resource"}]}

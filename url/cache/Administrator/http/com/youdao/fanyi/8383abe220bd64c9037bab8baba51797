@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:34:13 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["收益率"],"basic":{"explains":["n. 生产量，投资效益（yield的复数形式）","v. [经] 生产；投降，[力] 屈服（yield的三单形式）"]},"query":"yields","errorCode":0,"web":[{"value":["债息","产量","让渡"],"key":"Yields"},{"value":["红利回报率"],"key":"dividend yields"},{"value":["初始收益率","初始产率","初始产额"],"key":"initial yields"}]}

@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 16:27:33 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["评估"],"basic":{"explains":["vi. 评估；估\u2026的价（evaluate的过去分词形式）"]},"query":"evaluated","errorCode":0,"web":[{"value":["评价","估","已评估"],"key":"evaluated"},{"value":["评价过的数据","评定数据","评价数据"],"key":"evaluated data"},{"value":["估计误差","评定误差","计算误差"],"key":"evaluated error"}]}
