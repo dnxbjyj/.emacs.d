@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:28:30 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["反"],"basic":{"explains":["备份引用","反引号"]},"query":"backquote","errorCode":0,"web":[{"value":["反引号","正引号","重音符"],"key":"backquote"},{"value":["单引号"],"key":"quote or backquote"}]}

@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:27:55 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["评价"],"basic":{"us-phonetic":"ɪ,væljʊ'eʃən","phonetic":"ɪˌvæljuˈeɪʃn","uk-phonetic":"ɪˌvæljuˈeɪʃn","explains":["n. 评价；[审计] 评估；估价；求值"]},"query":"evaluation","errorCode":0,"web":[{"value":["评价","估价","评估"],"key":"evaluation"},{"value":["工作评价","职位评价","工作评估"],"key":"Job evaluation"},{"value":["业绩评估","绩效评估","业绩评价"],"key":"performance evaluation"}]}

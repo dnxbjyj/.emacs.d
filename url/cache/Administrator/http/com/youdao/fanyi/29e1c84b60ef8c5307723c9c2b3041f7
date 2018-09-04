@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:33:37 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["联想"],"basic":{"us-phonetic":"ə'soʃɪətɪv","phonetic":"ə'səʊʃɪətɪv; -sɪ-","uk-phonetic":"ə'səʊʃɪətɪv; -sɪ-","explains":["adj. 联想的；联合的；组合的"]},"query":"associative","errorCode":0,"web":[{"value":["关联的","联合的","相关的"],"key":"Associative"},{"value":["关联标注","关联式标注","关联标注关联式标注"],"key":"associative dimension"},{"value":["相联处理机","辅助处理机","关联处理机"],"key":"associative processor"}]}

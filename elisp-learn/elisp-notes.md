@@ -1,7 +1,18 @@
-# 运行elisp代码的3种方式：
+# 运行elisp代码的几种方式：
+### 运行单行代码
 * 在代码的最后一个括号后面执行：`C-j`
 * 在代码的中间执行：`C-M-x`
 * 在代码的最后执行：`C-x C-e`
+
+### 运行当前buffer中的所有代码
+`init.el`:
+```lisp
+;; 运行当前buffer中的所有代码
+(defun eval-this-buffer()
+	(interactive)
+	(eval-buffer nil (get-buffer-create "output"))
+	(switch-to-buffer-other-window "output"))
+```
 
 # 注释
 代码中以分号`;`开头的行都是注释行（但行注释）。
@@ -54,3 +65,5 @@
 
 # 算数表达式
 elisp所使用的算数表达式是前缀表达式，并且有一些特殊的函数来进行运算。
+
+

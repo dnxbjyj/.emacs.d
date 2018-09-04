@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:06:03 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["十六进制"],"basic":{"us-phonetic":",hɛksə'dɛsɪml","phonetic":",heksə'desɪm(ə)l","uk-phonetic":",heksə'desɪm(ə)l","explains":["n. 十六进制","adj. 十六进制的"]},"query":"hexadecimal","errorCode":0,"web":[{"value":["十六进制","十六进位","十六进制数"],"key":"hexadecimal"},{"value":["十六进制数","十六进数","十六进制"],"key":"hexadecimal number"},{"value":["十六进制数字","十六进制数位"],"key":"hexadecimal digit"}]}

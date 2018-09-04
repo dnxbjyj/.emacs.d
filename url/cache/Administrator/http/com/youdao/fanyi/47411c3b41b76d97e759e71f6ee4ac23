@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:16:27 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["初始化"],"basic":{"explains":["adj. 初始化；初始化的；起始步骤","v. 初始化（initialize的过去分词）；预置"]},"query":"initialized","errorCode":0,"web":[{"value":["初始化","已初始化的","预置"],"key":"initialized"},{"value":["初始化段"],"key":"Initialized Sections"},{"value":["初始化数据库"],"key":"initialized database"}]}

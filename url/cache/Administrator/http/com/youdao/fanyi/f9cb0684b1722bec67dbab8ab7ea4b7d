@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:09:53 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["积极的"],"basic":{"us-phonetic":"'pɑzətɪv","phonetic":"ˈpɒzətɪv","uk-phonetic":"ˈpɒzətɪv","explains":["n. 正数；[摄] 正片","adj. 积极的；[数] 正的，[医][化学] 阳性的；确定的，肯定的；实际的，真实的；绝对的"]},"query":"positive","errorCode":0,"web":[{"value":["积极的","阳","正面"],"key":"positive"},{"value":["积极心理学","积极心理学","正向心理学"],"key":"Positive psychology"},{"value":["正反馈","正回馈","正回输"],"key":"positive feedback"}]}

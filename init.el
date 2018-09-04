@@ -20,6 +20,14 @@
 ;; 快速加载init.el
 (global-set-key (kbd "C-<f2>") 'load-file)
 
+;; 运行当前buffer中的所有代码
+(defun eval-this-buffer()
+	(interactive)
+	(eval-buffer nil (get-buffer-create "output"))
+	(switch-to-buffer-other-window "output"))
+;; 绑定快捷键C-<f9>
+(global-set-key (kbd "C-<f9>") 'eval-this-buffer)
+
 ;; 自定义环境变量
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

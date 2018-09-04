@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:04:02 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["在内部"],"basic":{"us-phonetic":"in'tə:nəli","phonetic":"in'tə:nəli","uk-phonetic":"in'tə:nəli","explains":["adv. 内部地；国内地；内在地"]},"query":"internally","errorCode":0,"web":[{"value":["在内部","内部的","内存"],"key":"Internally"},{"value":["内切的","内切","内切线"],"key":"internally tangent"},{"value":["内磨"],"key":"grind internally"}]}

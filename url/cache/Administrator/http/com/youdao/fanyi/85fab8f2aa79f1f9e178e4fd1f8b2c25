@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:16:21 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["广场"],"basic":{"us-phonetic":"skwɛr","phonetic":"skweə","uk-phonetic":"skweə","explains":["n. 平方；广场；正方形","adj. 平方的；正方形的；直角的；正直的","vt. 使成方形；与\u2026一致","vi. 一致；成方形","adv. 成直角地"]},"query":"square","errorCode":0,"web":[{"value":["正方形","广场","平方"],"key":"Square"},{"value":["三角尺","三角尺","三角板"],"key":"Set square"},{"value":["莱斯特广场","莱斯特广场","莱斯特广场"],"key":"leicester square"}]}

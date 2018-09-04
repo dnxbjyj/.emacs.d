@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:04:08 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["操作"],"basic":{"us-phonetic":",ɑpə'reʃən","explains":["n. 运营；运作；业务操作（operation的复数）"]},"query":"operations","errorCode":0,"web":[{"value":["操作","运营","经营中"],"key":"Operations"},{"value":["操作经理","营运经理","运营经理"],"key":"Operations Manager"},{"value":["操作分析","操作阐发","操作分析员"],"key":"Operations Analyst"}]}

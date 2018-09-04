@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:01:28 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["嵌入"],"basic":{"us-phonetic":"ɪm'bɛd","phonetic":"ɪm'bed; em-","uk-phonetic":"ɪm'bed; em-","explains":["vt. 栽种；使嵌入，使插入；使深留脑中"]},"query":"embed","errorCode":0,"web":[{"value":["嵌入","使插入","内嵌"],"key":"embed"},{"value":["嵌入码","嵌入代码","自动播放加挂语法"],"key":"Embed Code"},{"value":["嵌入字体"],"key":"Embed Fonts"}]}

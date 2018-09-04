@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:50:02 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["适当地"],"basic":{"us-phonetic":",æprə'po","phonetic":",æprə'pəʊ; 'æprəpəʊ","uk-phonetic":",æprə'pəʊ; 'æprəpəʊ","explains":["adj. 恰好的；适当的","adv. 恰好地；适当地；恰当地","prep. 关于"]},"query":"apropos","errorCode":0,"web":[{"value":["通过关键字查询手册","适当地","适宜的"],"key":"apropos"},{"value":["营业发达的公司"],"key":"traveling apropos"},{"value":["关于"],"key":"apropos prep"}]}

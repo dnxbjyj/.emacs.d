@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:27:12 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["有关"],"basic":{"us-phonetic":"'lɪŋkt","phonetic":"lɪŋkt","uk-phonetic":"lɪŋkt","explains":["v. 连接；串联（link的过去分词）","adj. 连接的；联合的；显示连环遗传的"]},"query":"linked","errorCode":0,"web":[{"value":["连接饰物","连接的","连动"],"key":"Linked"},{"value":["键连资料","关联数据","键连资料"],"key":"Linked data"},{"value":["分布链接的","分布链接图层","散布链接的"],"key":"Distribute Linked"}]}

@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:06:13 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["科学"],"basic":{"us-phonetic":",saɪən'tɪfɪk","phonetic":"saɪən'tɪfɪk","uk-phonetic":"saɪən'tɪfɪk","explains":["adj. 科学的，系统的"]},"query":"scientific","errorCode":0,"web":[{"value":["科学的","系统的","科学化"],"key":"scientific"},{"value":["科学美国人","科学人","美国科学"],"key":"Scientific American"},{"value":["科学界","科学界","科学共同体"],"key":"Scientific community"}]}

@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 23:09:33 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["全面的"],"basic":{"us-phonetic":"ˌkɑːmprɪˈhensɪv","phonetic":"kɒmprɪ'hensɪv","uk-phonetic":"kɒmprɪ'hensɪv","explains":["n. 综合学校；专业综合测验","adj. 综合的；广泛的；有理解力的"]},"query":"comprehensive","errorCode":0,"web":[{"value":["全面","广泛的","综合性"],"key":"Comprehensive"},{"value":["综合利用","资源化","综合利用"],"key":"Comprehensive utilization"},{"value":["综合收入","综合收益","全面收益"],"key":"comprehensive income"}]}

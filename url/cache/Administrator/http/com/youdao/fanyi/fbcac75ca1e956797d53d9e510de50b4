@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:04:14 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["迭代"],"basic":{"us-phonetic":"ˈɪtəˌret","phonetic":"'ɪtəreɪt","uk-phonetic":"'ɪtəreɪt","explains":["vt. 迭代；重复；反复说；重做"]},"query":"iterate","errorCode":0,"web":[{"value":["迭代","反复说","重申"],"key":"iterate"},{"value":["迭代改进"],"key":"iterate improvement"},{"value":["迭代函数","迭代函数","迭代函数系"],"key":"Iterate Function"}]}

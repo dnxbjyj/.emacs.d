@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 23:51:50 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["刮伤"],"basic":{"us-phonetic":"skrætʃ","phonetic":"skrætʃ","uk-phonetic":"skrætʃ","explains":["n. 擦伤；抓痕；刮擦声；乱写","vt. 抓；刮；挖出；乱涂","adj. 打草稿用的；凑合的；碰巧的","vi. 抓；搔；发刮擦声；勉强糊口；退出比赛"]},"query":"scratch","errorCode":0,"web":[{"value":["忧伤涂鸦","划伤","刮伤"],"key":"Scratch"},{"value":["即开式奖券","草稿栏","便笺本"],"key":"scratch pad"},{"value":["不易刮花","耐擦伤性","刮不花"],"key":"Scratch Resistance"}]}

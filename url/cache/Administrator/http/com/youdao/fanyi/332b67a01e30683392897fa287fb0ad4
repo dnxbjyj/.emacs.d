@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 23:13:26 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["颠倒"],"basic":{"us-phonetic":"'ɪnvɝt","phonetic":"ɪn'vɜːt","uk-phonetic":"ɪn'vɜːt","explains":["vt. 使\u2026转化；使\u2026颠倒；使\u2026反转；使\u2026前后倒置","n. 颠倒的事物；倒置物；倒悬者","adj. 转化的"]},"query":"invert","errorCode":0,"web":[{"value":["倒装"],"key":"inverts"},{"value":["倒置开关"],"key":"Inverts switch"},{"value":["同性恋者","异性恋者"],"key":"The Inverts"}]}

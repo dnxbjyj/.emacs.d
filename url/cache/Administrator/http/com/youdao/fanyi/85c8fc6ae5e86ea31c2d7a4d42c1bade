@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:10:07 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["能被描绘的"],"basic":{"us-phonetic":",repri'zentəbl","phonetic":",repri'zentəbl","uk-phonetic":",repri'zentəbl","explains":["adj. 能被代表的；能上演的；能被描绘的"]},"query":"representable","errorCode":0,"web":[{"value":["可表示的","能被描绘","可表示性"],"key":"representable"},{"value":["表示的统一模"],"key":"representable uninorms"},{"value":["可表的函子","可表示的函子","可表示函子"],"key":"representable functor"}]}

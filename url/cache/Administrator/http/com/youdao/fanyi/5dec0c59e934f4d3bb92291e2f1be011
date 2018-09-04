@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:26:56 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["文字"],"basic":{"us-phonetic":"'lɪtərəl","phonetic":"'lɪt(ə)r(ə)l","uk-phonetic":"'lɪt(ə)r(ə)l","explains":["adj. 文字的；逐字的；无夸张的"]},"query":"literal","errorCode":0,"web":[{"value":["文字","字面","照字面的"],"key":"literal"},{"value":["字母系数","文字系数","文字系"],"key":"literal coefficient"},{"value":["字符串","字符串字面量","字符串字面值"],"key":"string literal"}]}

@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:30:32 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["报价"],"basic":{"us-phonetic":"kwot","phonetic":"kwəʊt","uk-phonetic":"kwəʊt","explains":["n. 引用","vi. 报价；引用；引证","vt. 报价；引述；举证"]},"query":"quote","errorCode":0,"web":[{"value":["报价","引用","开价"],"key":"Quote"},{"value":["引号的下一半","右引号"],"key":"close quote"},{"value":["智慧引用","智者说"],"key":"Brainy Quote"}]}

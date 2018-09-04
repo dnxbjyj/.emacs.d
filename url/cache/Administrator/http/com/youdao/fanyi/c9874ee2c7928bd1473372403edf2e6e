@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:16:17 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["向量"],"basic":{"explains":["n. [数] 向量（vector的复数）；航向；航线；弹道，轨道；带菌者","v. 推动\u2026前进；指引（vector的第三人称单数）"]},"query":"vectors","errorCode":0,"web":[{"value":["向量","矢量","载体"],"key":"Vectors"},{"value":["机械性传媒"],"key":"mechanical vectors"},{"value":["遗传载体","遗传载体","遗传体"],"key":"genetic vectors"}]}

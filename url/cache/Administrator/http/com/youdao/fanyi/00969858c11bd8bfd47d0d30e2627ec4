@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 03 Sep 2018 23:09:27 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["食谱"],"basic":{"explains":["食谱","方法"]},"query":"recipes","errorCode":0,"web":[{"value":["食谱","每周食谱","配方"],"key":"Recipes"},{"value":["食谱天才","天才食谱"],"key":"Recipes Genius"},{"value":["冬之食谱"],"key":"Winter recipes"}]}

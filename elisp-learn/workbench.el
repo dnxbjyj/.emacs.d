@@ -1,3 +1,9 @@
-(setq foo ?a)
-(setq n1 5e-10)
-(setq n2 [1 2 "haha" 1.22 [3 "bbb"]])
+(require 'cl)
+(setq x 10
+      total 0)
+(while (> x 0)
+  (incf total x)
+  (decf x))
+(message total)
+
+

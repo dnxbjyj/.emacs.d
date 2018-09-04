@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:33:55 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["杂项"],"basic":{"us-phonetic":"'mɪsə'lenɪəs","phonetic":",mɪsə'leɪnɪəs","uk-phonetic":",mɪsə'leɪnɪəs","explains":["adj. 混杂的，各种各样的；多方面的，多才多艺的"]},"query":"miscellaneous","errorCode":0,"web":[{"value":["杂项","其他","其他参数"],"key":"Miscellaneous"},{"value":["杂项资产","什项资产","其它"],"key":"miscellaneous assets"},{"value":["杂项负债","什项负债","其它"],"key":"miscellaneous liabilities"}]}

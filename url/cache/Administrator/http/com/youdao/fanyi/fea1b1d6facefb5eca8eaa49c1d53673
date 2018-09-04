@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 16:28:00 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["撇号"],"basic":{"us-phonetic":"ə'pɑstrəfi","phonetic":"ə'pɒstrəfɪ","uk-phonetic":"ə'pɒstrəfɪ","explains":["n. 省略符号，撇号；呼语，顿呼"]},"query":"apostrophe","errorCode":0,"web":[{"value":["撇号","所有格符号","省略号"],"key":"apostrophe"},{"value":["单引号字符"],"key":"apostrophe character"},{"value":["撇号编辑","单引号编辑"],"key":"apostrophe editing"}]}
