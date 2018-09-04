@@ -1,15 +1,12 @@
 ;;***************************系统类配置
-;; 在dired模式中打开.emacs.d目录
-(defun open-emacs-d()
-  (interactive)
-  (dired "~/.emacs.d/"))
-(global-set-key (kbd "C-<f5>") 'open-emacs-d)
-
 ;; 在文件夹中打开.emacs.d目录
 (defun open-emacs-d-dir()
   (interactive)
   (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d"))
 (global-set-key (kbd "C-S-<f5>") 'open-emacs-d-dir)
+
+;; 在dired模式中打开.emacs.d目录，使用lambda表达式匿名函数定义
+(global-set-key (kbd "C-<f5>") '(lambda() (interactive) (dired "~/.emacs.d/")))
 
 ;; 定义一个函数：快速打开配置文件
 (defun open-init-file()
@@ -23,8 +20,7 @@
 ;; 运行当前buffer中的所有代码
 (defun eval-this-buffer()
 	(interactive)
-	(eval-buffer nil (get-buffer-create "output"))
-	(switch-to-buffer-other-window "output"))
+	(eval-buffer nil))
 ;; 绑定快捷键C-<f9>
 (global-set-key (kbd "C-<f9>") 'eval-this-buffer)
 

@@ -1,9 +1,7 @@
-(require 'cl)
-(setq x 10
-      total 0)
-(while (> x 0)
-  (incf total x)
-  (decf x))
-(message total)
+(defun greeting(name)
+  (let ((my-name (read-from-minibuffer "Enter your name:")))
+  (insert (format "Hello %s! I am %s." name my-name))))
+(greeting "you")
+
 
 
