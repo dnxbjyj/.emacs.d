@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 23:13:46 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["优化"],"basic":{"us-phonetic":",ɑptəmɪ'zeʃən","phonetic":",ɒptɪmaɪ'zeɪʃən","uk-phonetic":",ɒptɪmaɪ'zeɪʃən","explains":["n. 最佳化，最优化"]},"query":"optimization","errorCode":0,"web":[{"value":["优化","最优化","最佳化"],"key":"optimization"},{"value":["全局优化","全域最佳化","全域非线性最佳化"],"key":"global optimization"},{"value":["优化工具箱","最佳化工具箱","最优化工具箱"],"key":"Optimization Toolbox"}]}

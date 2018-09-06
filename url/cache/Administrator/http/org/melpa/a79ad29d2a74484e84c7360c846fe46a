@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 06 Sep 2018 16:39:06 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 470
+Last-Modified: Thu, 06 Sep 2018 16:28:54 GMT
+Connection: keep-alive
+Vary: Accept-Encoding
+ETag: "5b9155c6-1d6"
+Strict-Transport-Security: max-age=15768000
+Accept-Ranges: bytes
+
+Magit is an interface to the version control system Git,
+implemented as an Emacs package.  Magit aspires to be a complete
+Git porcelain.  While we cannot (yet) claim, that Magit wraps and
+improves upon each and every Git command, it is complete enough to
+allow even experienced Git users to perform almost all of their
+daily version control tasks directly from within Emacs.  While many
+fine Git clients exist, only Magit and Git itself deserve to be
+called porcelains.

@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 23:12:42 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["气孔导度"],"basic":{"us-phonetic":"kɔnd","phonetic":"kɔnd","uk-phonetic":"kɔnd","explains":["n. 气孔导度；电导率；条件数","n. (Cond)人名；(英)康德"]},"query":"cond","errorCode":0,"web":[{"value":["条件数","电导率","气孔导度"],"key":"cond"},{"value":["康泰纳仕","康泰纳士"],"key":"Cond Nast"},{"value":["纳斯特"],"key":"cond enest"}]}

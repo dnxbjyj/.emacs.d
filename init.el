@@ -1,28 +1,20 @@
-;;***************************系统类配置
-;; 在文件夹中打开.emacs.d目录
-(defun open-emacs-d-dir()
-  (interactive)
-  (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d"))
-(global-set-key (kbd "C-S-<f5>") 'open-emacs-d-dir)
+;;***************************系统类配置***************************
+;; 定义一个函数：快速打开配置文件init.el，并绑定到快捷键<F2>键上
+(global-set-key (kbd "<f2>") '(lambda() (interactive) (find-file "~/.emacs.d/init.el")))
 
+;; 快速加载init.el
+(global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/init.el")))
+
+;; 在文件夹中打开当前文件所在目录C-c C-o
+(global-set-key (kbd "C-c C-o") '(lambda() (interactive) (shell-command "start .\\")))
+
+;; 在文件夹中打开.emacs.d目录，并绑定快捷键为：C-S-<f5>
+(global-set-key (kbd "C-S-<f5>") '(lambda() (interactive) (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d")))
 ;; 在dired模式中打开.emacs.d目录，使用lambda表达式匿名函数定义
 (global-set-key (kbd "C-<f5>") '(lambda() (interactive) (dired "~/.emacs.d/")))
 
-;; 定义一个函数：快速打开配置文件
-(defun open-init-file()
-    (interactive)
-    (find-file "~/.emacs.d/init.el"))
-;; 把函数open-init-file绑定到快捷键<F2>键上
-(global-set-key (kbd "<f2>") 'open-init-file)
-;; 快速加载init.el
-(global-set-key (kbd "C-<f2>") 'load-file)
-
-;; 运行当前buffer中的所有代码
-(defun eval-this-buffer()
-	(interactive)
-	(eval-buffer nil))
-;; 绑定快捷键C-<f9>
-(global-set-key (kbd "C-<f9>") 'eval-this-buffer)
+;; 运行当前buffer中的所有代码，并绑定快捷键C-<f9>
+(global-set-key (kbd "C-<f9>") '(lambda() (interactive) (eval-buffer nil)))
 
 ;; 自定义环境变量
 (custom-set-variables
@@ -33,7 +25,7 @@
  '(markdown-command "pandoc -f markdown -t html")
  '(package-selected-packages
    (quote
-    (org-pomodoro w3m pydoc markdown-mode jdee company youdao-dictionary))))
+    (magit org-pomodoro w3m pydoc markdown-mode jdee company youdao-dictionary))))
 
 ;; 关闭哔哔告警音
 (setq ring-bell-function 'ignore)
@@ -46,18 +38,26 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "微软雅黑" :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
 
-;;***************************文档编辑操作类配置
+;;***************************编程开发类配置***************************
+;; 自动提交当前文件所在git仓库的所有修改代码到远程master分支，绑定快捷键：C-c C-p
+(global-set-key
+ (kbd "C-c C-p")
+ '(lambda()
+    (interactive)
+    (shell-command "git add -A && git commit -m \"modify something in emacs\" && git push origin master")))
 
+;;***************************文档编辑操作类配置***************************
 ;; 显示行号
 (global-linum-mode 1)
 
 ;; 快速跳到某一行
 (global-set-key (kbd "C-c j") 'goto-line)
+
 ;; 开启括号配对
 (electric-pair-mode t)
 
-;;***************************插件配置
-;;##### melpha
+;;***************************插件配置***************************
+;;##### melpha #####
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -76,12 +76,12 @@
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 
-;;##### 有道词典，开启缓存和设置快捷键
+;;##### 有道词典，开启缓存和设置快捷键#####
 (setq url-automatic-caching t)
 (global-set-key (kbd "C-q") 'youdao-dictionary-search-at-point+)
 
-;;***************************特定模式配置
-;;#####dired模式
+;;***************************特定模式配置***************************
+;;#####dired模式#####
 ;; dired模式默认递归删除目录
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)
@@ -100,7 +100,7 @@
 ;; 让dired模式多个目录同时打开时共用一个缓冲区
 (put 'dired-find-alternate-file 'disabled nil)
 
-;;#####org-mode
+;;#####org-mode#####
 ;; org-mode自动换行
 (add-hook 'org-mode-hook
 	  (lambda()

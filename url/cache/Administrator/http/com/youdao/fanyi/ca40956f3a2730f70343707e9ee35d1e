@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 23:10:39 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["卷曲的"],"basic":{"us-phonetic":"'kɝli","phonetic":"'kɜːlɪ","uk-phonetic":"'kɜːlɪ","explains":["adj. 卷曲的；卷毛的；（木材）有皱状纹理的；蜷缩的"]},"query":"curly","errorCode":0,"web":[{"value":["屈尔莱","卷曲的","卷毛的"],"key":"Curly"},{"value":["卷发","卷发型","自然卷发"],"key":"curly hair"},{"value":["卷曲的","有卷毛的"],"key":"curly a"}]}

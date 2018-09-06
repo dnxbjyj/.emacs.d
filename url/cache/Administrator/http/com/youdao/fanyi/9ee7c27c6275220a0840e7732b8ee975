@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 23:10:25 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["包装"],"basic":{"us-phonetic":"ræp","phonetic":"ræp","uk-phonetic":"ræp","explains":["n. 外套；围巾","vt. 包；缠绕；隐藏；掩护","vi. 包起来；缠绕；穿外衣"]},"query":"wrap","errorCode":0,"web":[{"value":["包裹","外","外套"],"key":"wrap"},{"value":["自动换行","词语换行","主动换行"],"key":"word wrap"},{"value":["裹身裙","围裹裙","包裹裙"],"key":"wrap dress"}]}

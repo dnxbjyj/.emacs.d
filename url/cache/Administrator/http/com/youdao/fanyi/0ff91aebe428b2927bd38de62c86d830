@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 03 Sep 2018 23:10:47 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["牙套"],"basic":{"us-phonetic":"'bresiz","phonetic":"'breisiz","uk-phonetic":"'breisiz","explains":["n. 背带；吊带（brace的复数）"]},"query":"braces","errorCode":0,"web":[{"value":["吊带","花括号","支架"],"key":"braces"},{"value":["裤子背带"],"key":"braces suspenders"},{"value":["舌侧矫治器"],"key":"Lingual Braces"}]}
