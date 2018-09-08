@@ -1,9 +1,25 @@
 ;;***************************系统类配置***************************
 ;; 定义一个函数：快速打开配置文件init.el，并绑定到快捷键<F2>键上
 (global-set-key (kbd "<f2>") '(lambda() (interactive) (find-file "~/.emacs.d/init.el")))
-
 ;; 快速加载init.el
 (global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/init.el")))
+
+;; 关闭菜单栏
+(menu-bar-mode 0)
+;; 关闭工具栏
+(tool-bar-mode 0)
+;; 关闭右边滚动条
+(scroll-bar-mode 0)
+;; 关闭启动欢迎画面
+(setq inhibit-startup-message t)
+;; 关闭哔哔告警音
+(setq ring-bell-function 'ignore)
+
+;; 全屏展示
+(toggle-frame-fullscreen)
+
+;; 高亮当前行
+;(global-hl-line-mode 1)
 
 ;; 在文件夹中打开当前文件所在目录C-c C-o
 (global-set-key (kbd "C-c C-o") '(lambda() (interactive) (shell-command "start .\\")))
@@ -16,19 +32,24 @@
 ;; 运行当前buffer中的所有代码，并绑定快捷键C-<f9>
 (global-set-key (kbd "C-<f9>") '(lambda() (interactive) (eval-buffer nil)))
 
-;; 自定义环境变量
+;; 自定义环境变量（自动添加的）
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(markdown-command "pandoc -f markdown -t html")
  '(package-selected-packages
    (quote
     (magit org-pomodoro w3m pydoc markdown-mode jdee company youdao-dictionary))))
 
-;; 关闭哔哔告警音
-(setq ring-bell-function 'ignore)
+;;***************************外观、主题配置***************************
+;; 将主题文件目录：~/.emacs.d/themes添加到加载路径里
+(add-to-list 'load-path "~/.emacs.d/themes")
+
+;; 引入color-theme模块（需要提前将主题文件夹themes和color-theme.el文件放入~/.emacs.d/themes目录下）
+(require 'color-theme)
+;; 初始化模块
+(color-theme-initialize)  
+
+;; 设置calm-forest主题
+(color-theme-calm-forest)
 
 ;; 自定义字体设置
 (custom-set-faces
@@ -47,6 +68,10 @@
     (shell-command "git add -A && git commit -m \"modify something in emacs\" && git push origin master")))
 
 ;;***************************文档编辑操作类配置***************************
+;; 字体缩放
+(global-set-key (kbd "C-+") '(lambda () (interactive) (text-scale-increase)))
+(global-set-key (kbd "C--") '(lambda () (interactive) (text-scale-decrease)))
+
 ;; 显示行号
 (global-linum-mode 1)
 
@@ -58,10 +83,6 @@
 
 ;;***************************插件配置***************************
 ;;##### melpha #####
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
 ;; melpa插件库配置
 (package-initialize)
 (require 'package)
@@ -82,6 +103,7 @@
 
 ;;***************************特定模式配置***************************
 ;;#####dired模式#####
+
 ;; dired模式默认递归删除目录
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)
@@ -101,6 +123,10 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;;#####org-mode#####
+;; 上下移动同一级主题的整行的内容
+(global-set-key (kbd "M-n") '(lambda () (interactive) (org-metadown)))
+(global-set-key (kbd "M-p") '(lambda () (interactive) (org-metaup)))
+
 ;; org-mode自动换行
 (add-hook 'org-mode-hook
 	  (lambda()
