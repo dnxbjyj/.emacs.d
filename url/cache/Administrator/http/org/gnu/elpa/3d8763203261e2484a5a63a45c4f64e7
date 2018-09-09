@@ -1,8 +1,8 @@
 HTTP/1.1 200 OK
-Date: Thu, 06 Sep 2018 16:35:13 GMT
+Date: Sun, 09 Sep 2018 12:45:59 GMT
 Server: Apache/2.4.25 (Debian)
-Last-Modified: Wed, 05 Sep 2018 09:05:27 GMT
-ETag: "956a-5751c1354f654"
+Last-Modified: Sun, 09 Sep 2018 09:05:51 GMT
+ETag: "956a-5756c8c245c13"
 Accept-Ranges: bytes
 Content-Length: 38250
 Keep-Alive: timeout=5, max=100
@@ -131,7 +131,7 @@ Connection: Keep-Alive
 	  ((:url . "https://github.com/Malabarba/beacon")
 	   (:keywords "convenience"))])
  (brief .
-	[(5 84)
+	[(5 85)
 	 nil "Brief Editor Emulator" single
 	 ((:url . "http://elpa.gnu.org/packages/brief.html")
 	  (:keywords "brief" "emulations" "crisp"))])
@@ -399,7 +399,7 @@ Connection: Keep-Alive
 	 ((:keywords "convenience" "languages")
 	  (:url . "https://github.com/joaotavora/eglot"))])
  (el-search .
-	    [(1 7 7)
+	    [(1 7 8)
 	     ((emacs
 	       (25))
 	      (stream

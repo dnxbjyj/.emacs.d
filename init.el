@@ -1,8 +1,17 @@
 ;;***************************系统类配置***************************
-;; 定义一个函数：快速打开配置文件init.el，并绑定到快捷键<F2>键上
-(global-set-key (kbd "<f2>") '(lambda() (interactive) (find-file "~/.emacs.d/init.el")))
-;; 快速加载init.el
-(global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/init.el")))
+;; 默认使用utf-8编码新建文件
+(setq default-buffer-file-coding-system 'utf-8-unix) 
+
+;; 绑定切换到另一个窗口的快捷键为更好用的C-;
+(global-set-key (kbd "C-;") 'other-window)
+
+;; 使用bs-cycle-next和bs-cycle-previous在当前窗口中切换buffer
+(global-set-key (kbd "C-<tab>") 'bs-cycle-next)
+(global-set-key (kbd "S-<tab>") 'bs-cycle-previous)
+
+;; 使用ido-mode让切换buffer时体验更好
+(ido-mode 1)
+(setq ido-seperator "\n")
 
 ;; 关闭菜单栏
 (menu-bar-mode 0)
@@ -15,19 +24,14 @@
 ;; 关闭哔哔告警音
 (setq ring-bell-function 'ignore)
 
+;; 启动时最大化窗口
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; 全屏展示
 (toggle-frame-fullscreen)
 
 ;; 高亮当前行
 ;(global-hl-line-mode 1)
-
-;; 在文件夹中打开当前文件所在目录C-c C-o
-(global-set-key (kbd "C-c C-o") '(lambda() (interactive) (shell-command "start .\\")))
-
-;; 在文件夹中打开.emacs.d目录，并绑定快捷键为：C-S-<f5>
-(global-set-key (kbd "C-S-<f5>") '(lambda() (interactive) (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d")))
-;; 在dired模式中打开.emacs.d目录，使用lambda表达式匿名函数定义
-(global-set-key (kbd "C-<f5>") '(lambda() (interactive) (dired "~/.emacs.d/")))
 
 ;; 运行当前buffer中的所有代码，并绑定快捷键C-<f9>
 (global-set-key (kbd "C-<f9>") '(lambda() (interactive) (eval-buffer nil)))
@@ -38,6 +42,25 @@
  '(package-selected-packages
    (quote
     (magit org-pomodoro w3m pydoc markdown-mode jdee company youdao-dictionary))))
+
+;;***************************快速打开配置***************************
+;; 快速打开配置文件init.el，并绑定到快捷键<F2>键上
+(global-set-key (kbd "<f2>") '(lambda() (interactive) (find-file "~/.emacs.d/init.el")))
+;; 快速加载init.el
+(global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/init.el")))
+
+;; 在文件夹中打开当前文件所在目录C-c C-o
+(global-set-key (kbd "C-c C-o") '(lambda() (interactive) (shell-command "start .\\")))
+
+;; 快速在dired模式打开e:/code目录，绑定快捷键C-<f6>
+(global-set-key (kbd "C-<f6>") (lambda() (interactive) (dired "e:/code")))
+;; 快速在文件夹中打开e:/code目录，绑定快捷键C-S-<f6>
+(global-set-key (kbd "C-S-<f6>") (lambda() (interactive) (shell-command "start e:/code")))
+
+;; 在文件夹中打开.emacs.d目录，并绑定快捷键为：C-S-<f5>
+(global-set-key (kbd "C-S-<f5>") '(lambda() (interactive) (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d")))
+;; 在dired模式中打开.emacs.d目录，并绑定快捷键C-<f5>
+(global-set-key (kbd "C-<f5>") '(lambda() (interactive) (dired "~/.emacs.d/")))
 
 ;;***************************外观、主题配置***************************
 ;; 将主题文件目录：~/.emacs.d/themes添加到加载路径里
@@ -68,6 +91,9 @@
     (shell-command "git add -A && git commit -m \"modify something in emacs\" && git push origin master")))
 
 ;;***************************文档编辑操作类配置***************************
+;; 格式化JSON字符串
+(global-set-key (kbd "C-c C-j") '(lambda () (interactive) (json-pretty-print-buffer)))
+
 ;; 字体缩放
 (global-set-key (kbd "C-+") '(lambda () (interactive) (text-scale-increase)))
 (global-set-key (kbd "C--") '(lambda () (interactive) (text-scale-decrease)))
@@ -102,6 +128,15 @@
 (global-set-key (kbd "C-q") 'youdao-dictionary-search-at-point+)
 
 ;;***************************特定模式配置***************************
+;;#####company-mode模式#####
+;; 延迟时间 
+(setq company-idle-delay 0.2)           
+;; 触发补全的字符数量 
+(setq company-minimum-prefix-length 2) 
+
+;; 为所有的缓冲区开启company-mode模式
+(add-hook 'after-init-hook 'global-company-mode)
+
 ;;#####dired模式#####
 
 ;; dired模式默认递归删除目录
@@ -124,8 +159,12 @@
 
 ;;#####org-mode#####
 ;; 上下移动同一级主题的整行的内容
-(global-set-key (kbd "M-n") '(lambda () (interactive) (org-metadown)))
-(global-set-key (kbd "M-p") '(lambda () (interactive) (org-metaup)))
+(add-hook 'org-mode-hook
+	  (lambda()
+	    (global-set-key (kbd "M-n") '(lambda () (interactive) (org-metadown)))))
+(add-hook 'org-mode-hook
+	  (lambda()
+	    (global-set-key (kbd "M-p") '(lambda () (interactive) (org-metaup)))))
 
 ;; org-mode自动换行
 (add-hook 'org-mode-hook

@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 09 Sep 2018 13:36:42 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["文字"],"basic":{"explains":["n. 字面值；文字（literal的复数）"]},"query":"literals","errorCode":0,"web":[{"value":["字面值","字面量","常量"],"key":"Literals"},{"value":["类名称字面常量","类字面常量"],"key":"class literals"},{"value":["复合字面量","复合常量"],"key":"compound literals"}]}
