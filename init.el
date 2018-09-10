@@ -1,4 +1,13 @@
 ;;***************************系统类配置***************************
+;; 设置光标的形状为长条形（而非默认的矩形块）
+(setq-default cursor-type 'bar)
+
+;; 关闭备份文件（即以"~"结尾的文件）
+(setq make-backup-files nil)
+
+;; 关闭自动保存文件
+(setq auto-save-default nil)
+
 ;; 默认使用utf-8编码新建文件
 (setq default-buffer-file-coding-system 'utf-8-unix) 
 

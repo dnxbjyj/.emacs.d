@@ -9,12 +9,13 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "e:/code/py-project/Selenium/"
  "e:/code/py-project/DoubanHouse/"
+ "e:/code/py-project/Selenium/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "tmp3.txt"
  "tmp2.txt"
  "tmp.txt"
  "topics_tpl.html"
