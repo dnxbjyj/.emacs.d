@@ -1,2 +1,0 @@
-# myemacs
-My Emacs Configurations.

@@ -40,7 +40,7 @@
 (toggle-frame-fullscreen)
 
 ;; 高亮当前行
-;(global-hl-line-mode 1)
+(global-hl-line-mode 1)
 
 ;; 运行当前buffer中的所有代码，并绑定快捷键C-<f9>
 (global-set-key (kbd "C-<f9>") '(lambda() (interactive) (eval-buffer nil)))
@@ -58,8 +58,8 @@
 ;; 快速加载init.el
 (global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/init.el")))
 
-;; 在文件夹中打开当前文件所在目录C-c C-o
-(global-set-key (kbd "C-c C-o") '(lambda() (interactive) (shell-command "start .\\")))
+;; 在文件夹中打开当前文件所在目录C-c o
+(global-set-key (kbd "C-c o") '(lambda() (interactive) (shell-command "start .\\")))
 
 ;; 快速在dired模式打开e:/code目录，绑定快捷键C-<f6>
 (global-set-key (kbd "C-<f6>") (lambda() (interactive) (dired "e:/code")))
@@ -136,6 +136,12 @@
 (setq url-automatic-caching t)
 (global-set-key (kbd "C-q") 'youdao-dictionary-search-at-point+)
 
+;;##### org-pomodoro #####
+;; org-pomodoro插件快捷键：在org-mode打开/关闭番茄钟
+(global-set-key (kbd "C-c p")
+		'(lambda () (interactive)
+		   (org-pomodoro)))
+
 ;;***************************特定模式配置***************************
 ;;#####company-mode模式#####
 ;; 延迟时间 
@@ -167,6 +173,15 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;;#####org-mode#####
+;; 缩进
+(add-hook 'org-mode-hook
+	  (lambda()
+	    (global-set-key (kbd "C-c i") '(lambda () (interactive) (org-indent-mode 1)))))
+(add-hook 'org-mode-hook
+	  (lambda()
+	    (global-set-key (kbd "C-c l") '(lambda () (interactive) (org-indent-mode 0)))))
+
+
 ;; 上下移动同一级主题的整行的内容
 (add-hook 'org-mode-hook
 	  (lambda()

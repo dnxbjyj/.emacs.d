@@ -9,12 +9,17 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
+ "e:/code/py-project/GeneralJinja2TableTpl/"
  "e:/code/py-project/DoubanHouse/"
  "e:/code/py-project/Selenium/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "LICENSE"
+ "read.md"
+ "readme.md"
  "tmp3.txt"
  "tmp2.txt"
  "tmp.txt"
@@ -26,13 +31,17 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/code/py-project/DoubanHouse/" (23445 18399 0 0) "topics_tpl.html~" "topics_tpl.html" "topics.txt" "topics.html" "SpiderCore.py~" "SpiderCore.py" "readme.md~" "readme.md" "html.txt" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23447 55186 0 0) "url/" "themes/" "README.md" "LICENSE" "init.el" "ido.last" "elpa/" "elisp-learn/" "auto-save-list/" "abbrev_defs" ".gitignore" ".git/" "../" "./")
 
- ("e:/code/py-project/Selenium/" (23444 50478 0 0) "tmp.txt~" "tmp.txt" "login.py~" "login.py" "html.txt" "../" "./")
+ ("e:/code/py-project/GeneralJinja2TableTpl/" (23446 65229 0 0) "table_tpl.html" "render.py" "readme.md" "../" "./")
+
+ ("e:/code/py-project/" (23446 63831 0 0) "ZiruSpider/" "ZhilianSpider/" "Selenium/" "SantiWordCloud/" "SantiCut/" "README.md" "MyBlog/" "LICENSE" "LianjiaHousePriceSpider/" "GovWorkReportAnalysis/" "GeneralJinja2TableTpl/" "DoXPath/" "DoubanHouse/" "CutPDF/" "CrepricecnHousePriceSpider/" "AddWinContextMenu/" "AddPDFBookmarks/" ".idea/" ".gitignore" ".git/" "../" "./")
+
+ ("e:/code/py-project/Selenium/" (23445 19051 0 0) "tmp2.txt" "tmp.txt~" "tmp.txt" "login.py~" "login.py" "html.txt" "../" "./")
+
+ ("e:/code/py-project/DoubanHouse/" (23446 40080 0 0) "topics_tpl.html" "topics.html" "topics/" "SpiderCore.py" "readme.md" "html.txt" "../" "./")
 
  ("e:/code/" (23298 21424 0 0) "wxapp/" "tmp/" "python-basic/" "py-project/" "PDFCUT/" "matlab-basic/" "learngit/" "js-basic/" "java-projects/" "env/" "data.bak/" "data-analysis-basic/" "csvs/" "blog/" "android/" "algorithm/" "../" "./")
-
- ("e:/code/py-project/" (23444 49090 0 0) "ZiruSpider/" "ZhilianSpider/" "Selenium/" "SantiWordCloud/" "SantiCut/" "README.md" "MyBlog/" "LICENSE" "LianjiaHousePriceSpider/" "GovWorkReportAnalysis/" "DoXPath/" "DoubanHouse/" "CutPDF/" "CrepricecnHousePriceSpider/" "AddWinContextMenu/" "AddPDFBookmarks/" ".idea/" ".gitignore" ".git/" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

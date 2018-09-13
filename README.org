@@ -1,0 +1,17 @@
+* .emacs.d
+My Emacs Configurations.
+
+
+* Emacs痛点集锦
+  CLOCK: [2018-09-13 周四 08:03]
+** 有道翻译插件
+** company-mode：http://company-mode.github.io/
+** emacs正则介绍：https://www.emacswiki.org/emacs/RegularExpression
+** org-mode：https://blog.csdn.net/u014801157/article/details/24372485
+** emacs插件包管理系统安装：http://ergoemacs.org/emacs/emacs_package_system.html
+** markdown-mode在线文档：https://jblevins.org/projects/markdown-mode/
+** markdown预览：http://noclyt.com/2015/02/01/markdown-emacs-pandoc/
+** 在上方插入一行
+
+* 大神的emacs配置
+** http://www.voidcn.com/article/p-vnzvblwb-pm.html
