@@ -1,3 +1,10 @@
+;;***************************使用自定义函数***************************
+;; 在当前位置插入当前日期，格式举例：2018-09-14 周五
+(defun today ()
+  "insert today date string at current position."
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d %a")))
+
 ;;***************************系统类配置***************************
 ;; 设置光标的形状为长条形（而非默认的矩形块）
 (setq-default cursor-type 'bar)

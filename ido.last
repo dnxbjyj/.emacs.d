@@ -9,6 +9,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
  "e:/code/py-project/GeneralJinja2TableTpl/"
  "e:/code/py-project/DoubanHouse/"
@@ -17,6 +18,8 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "dired-x.info"
+ "org.info"
  "LICENSE"
  "read.md"
  "readme.md"
@@ -25,12 +28,12 @@
  "tmp.txt"
  "topics_tpl.html"
  "login.py"
- "html.txt"
- "SpiderCore.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/" (22571 7646 0 0) "woman.info" "wisent.info" "widget.info" "viper.info" "vip.info" "vhdl-mode.info" "url.info" "tramp.info" "todo-mode.info" "srecode.info" "speedbar.info" "smtpmail.info" "sieve.info" "ses.info" "semantic.info" "sc.info" "sasl.info" "remember.info" "reftex.info" "rcirc.info" "pgg.info" "pcl-cvs.info" "org.info" "octave-mode.info" "nxml-mode.info" "newsticker.info" "mh-e.info" "message.info" "mairix-el.info" "info.info" "ido.info" "idlwave.info" "htmlfontify.info" "gnus.info" "forms.info" "flymake.info" "eww.info" "eudc.info" "eshell.info" "ert.info" "erc.info" "epa.info" "emacs.info" "emacs-mime.info" "emacs-gnutls.info" "elisp.info" "eintr.info" "eieio.info" "efaq.info" "efaq-w32.info" "edt.info" "ediff.info" "ede.info" "ebrowse.info" "dired-x.info" "dir" "dbus.info" "cl.info" "ccmode.info" "calc.info" "bovine.info" "autotype.info" "auth.info" "ada-mode.info" "../" "./")
+
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23447 55186 0 0) "url/" "themes/" "README.md" "LICENSE" "init.el" "ido.last" "elpa/" "elisp-learn/" "auto-save-list/" "abbrev_defs" ".gitignore" ".git/" "../" "./")
 
  ("e:/code/py-project/GeneralJinja2TableTpl/" (23446 65229 0 0) "table_tpl.html" "render.py" "readme.md" "../" "./")
