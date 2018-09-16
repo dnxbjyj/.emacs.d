@@ -9,16 +9,17 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
  "e:/gitee/vector8/"
  "e:/code/py-project/DoubanHouse/"
  "d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/"
- "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
  "e:/code/py-project/GeneralJinja2TableTpl/"
  "e:/code/py-project/Selenium/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "tmp.json"
  "auto-commit.bat"
  "config.conf"
  "dired-x.info"
@@ -28,18 +29,17 @@
  "readme.md"
  "tmp3.txt"
  "tmp2.txt"
- "tmp.txt"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/gitee/vector8/" (23453 45296 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23454 36118 0 0) "url/" "tmp.txt" "themes/" "README.org" "LICENSE" "init.el" "ido.last" "elpa/" "elisp-learn/" "elisp/" "auto-save-list/" "auto-commit.bat" "abbrev_defs" ".gitignore" ".git/" "../" "./")
+
+ ("e:/code/py-project/DoubanHouse/" (23453 42915 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto_commit.bat" "../" "./")
+
+ ("e:/gitee/vector8/" (23453 50215 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("e:/code/py-project/GeneralJinja2TableTpl/" (23447 1094 0 0) "table_tpl.html" "result.html" "render.py" "readme.md" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23451 56048 0 0) "url/" "themes/" "README.org" "LICENSE" "init.el" "ido.last" "elpa/" "elisp-learn/" "auto-save-list/" "abbrev_defs" ".gitignore" ".git/" "../" "./")
-
- ("e:/code/py-project/DoubanHouse/" (23450 61229 0 0) "topics_tpl.html" "topics.html" "topics/" "SpiderCore.py" "readme.md" "html.txt" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "../" "./")
 
  ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/" (22571 7646 0 0) "woman.info" "wisent.info" "widget.info" "viper.info" "vip.info" "vhdl-mode.info" "url.info" "tramp.info" "todo-mode.info" "srecode.info" "speedbar.info" "smtpmail.info" "sieve.info" "ses.info" "semantic.info" "sc.info" "sasl.info" "remember.info" "reftex.info" "rcirc.info" "pgg.info" "pcl-cvs.info" "org.info" "octave-mode.info" "nxml-mode.info" "newsticker.info" "mh-e.info" "message.info" "mairix-el.info" "info.info" "ido.info" "idlwave.info" "htmlfontify.info" "gnus.info" "forms.info" "flymake.info" "eww.info" "eudc.info" "eshell.info" "ert.info" "erc.info" "epa.info" "emacs.info" "emacs-mime.info" "emacs-gnutls.info" "elisp.info" "eintr.info" "eieio.info" "efaq.info" "efaq-w32.info" "edt.info" "ediff.info" "ede.info" "ebrowse.info" "dired-x.info" "dir" "dbus.info" "cl.info" "ccmode.info" "calc.info" "bovine.info" "autotype.info" "auth.info" "ada-mode.info" "../" "./")
 

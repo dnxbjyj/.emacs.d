@@ -112,12 +112,12 @@
 (global-set-key (kbd "C-S-<f6>") (lambda() (interactive) (shell-command "start e:/code")))
 
 ;; 快速打开vector8日程文件
-(global-set-key (kbd "<f7>") (lambda() (interactive) (find-file "e:/gitee/vector8/vector8.org.txt")))
+(global-set-key (kbd "<f8>") (lambda() (interactive) (find-file "e:/gitee/vector8/vector8.org.txt")))
 
 ;; 快速在dired模式打开e:/gitee目录，绑定快捷键C-<f7>
-(global-set-key (kbd "C-<f7>") (lambda() (interactive) (dired "e:/gitee")))
+(global-set-key (kbd "C-<f8>") (lambda() (interactive) (dired "e:/gitee")))
 ;; 快速在文件夹中打开e:/gitee目录，绑定快捷键C-S-<f7>
-(global-set-key (kbd "C-S-<f7>") (lambda() (interactive) (shell-command "start e:/gitee")))
+(global-set-key (kbd "C-S-<f8>") (lambda() (interactive) (shell-command "start e:/gitee")))
 
 ;; 在文件夹中打开.emacs.d目录，并绑定快捷键为：C-S-<f5>
 (global-set-key (kbd "C-S-<f5>") '(lambda() (interactive) (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d")))
