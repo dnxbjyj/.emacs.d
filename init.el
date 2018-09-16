@@ -1,4 +1,11 @@
 ;;***************************使用自定义函数***************************
+;; 快速执行当前目录下的auto-commit.bat批处理脚本
+(defun auto-commit()
+  "auto commit code to remote git repository."
+  (interactive)
+  (shell-command "start auto-commit.bat"))
+(global-set-key (kbd "<f12>") 'auto-commit)
+
 ;; 在当前位置插入当前日期，格式举例：2018-09-14 周五
 (defun today ()
   "insert today date string at current position."
@@ -6,6 +13,37 @@
   (insert (format-time-string "%Y-%m-%d %a")))
 
 ;;***************************系统类配置***************************
+;; 窗口缩放，用于多窗口场景
+(global-set-key (kbd "C-S-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-S-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-S-<down>") 'shrink-window)
+(global-set-key (kbd "C-S-<up>") 'enlarge-window)
+
+
+;; 在状态条显示当前buffer大小
+(size-indication-mode 1)
+
+;; 在状态栏显示当前光标位于哪个函数内部
+(which-function-mode t)
+
+;; 将elisp目录添加到加载路径列表
+(add-to-list 'load-path "~/.emacs.d/elisp")
+
+;; 正则替换：C-c f
+(global-set-key (kbd "C-c f")
+		(lambda (from to)
+		  (interactive "squery, then replace, from:\nsto:")
+		  (goto-char (point-min))
+		  (query-replace-regexp from to)))
+
+;; 设置文本编码全部为utf-8-unix
+(setq default-buffer-file-coding-system 'utf-8-unix)  ;; 缓存文件
+(setq default-file-name-coding-system 'utf-8-unix)  ;; 文件名
+(setq default-keyboard-coding-system 'utf-8-unix)  ;; 键盘输入
+(setq default-process-coding-system 'utf-8-unix)  ;; 进程输入输出
+(setq default-sendmail-coding-system 'utf-8-unix)  ;; 发送邮件
+(setq default-terminal-coding-system 'utf-8-unix)  ;; 终端
+
 ;; 设置光标的形状为长条形（而非默认的矩形块）
 (setq-default cursor-type 'bar)
 
@@ -73,6 +111,14 @@
 ;; 快速在文件夹中打开e:/code目录，绑定快捷键C-S-<f6>
 (global-set-key (kbd "C-S-<f6>") (lambda() (interactive) (shell-command "start e:/code")))
 
+;; 快速打开vector8日程文件
+(global-set-key (kbd "<f7>") (lambda() (interactive) (find-file "e:/gitee/vector8/vector8.org.txt")))
+
+;; 快速在dired模式打开e:/gitee目录，绑定快捷键C-<f7>
+(global-set-key (kbd "C-<f7>") (lambda() (interactive) (dired "e:/gitee")))
+;; 快速在文件夹中打开e:/gitee目录，绑定快捷键C-S-<f7>
+(global-set-key (kbd "C-S-<f7>") (lambda() (interactive) (shell-command "start e:/gitee")))
+
 ;; 在文件夹中打开.emacs.d目录，并绑定快捷键为：C-S-<f5>
 (global-set-key (kbd "C-S-<f5>") '(lambda() (interactive) (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d")))
 ;; 在dired模式中打开.emacs.d目录，并绑定快捷键C-<f5>
@@ -108,11 +154,11 @@
 
 ;;***************************文档编辑操作类配置***************************
 ;; 格式化JSON字符串
-(global-set-key (kbd "C-c C-j") '(lambda () (interactive) (json-pretty-print-buffer)))
+(global-set-key (kbd "C-c C-j") 'json-pretty-print-buffer)
 
 ;; 字体缩放
-(global-set-key (kbd "C-+") '(lambda () (interactive) (text-scale-increase)))
-(global-set-key (kbd "C--") '(lambda () (interactive) (text-scale-decrease)))
+(global-set-key (kbd "C-+") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
 
 ;; 显示行号
 (global-linum-mode 1)
@@ -124,6 +170,13 @@
 (electric-pair-mode t)
 
 ;;***************************插件配置***************************
+;; ##### watch-other-window插件#####
+(require 'watch-other-window)
+(global-set-key (kbd "C->") 'watch-other-window-up-line)
+(global-set-key (kbd "C-<") 'watch-other-window-down-line)
+(global-set-key (kbd "C-M->") 'watch-other-window-up)
+(global-set-key (kbd "C-M-<") 'watch-other-window-down)
+
 ;;##### melpha #####
 ;; melpa插件库配置
 (package-initialize)
@@ -145,9 +198,7 @@
 
 ;;##### org-pomodoro #####
 ;; org-pomodoro插件快捷键：在org-mode打开/关闭番茄钟
-(global-set-key (kbd "C-c p")
-		'(lambda () (interactive)
-		   (org-pomodoro)))
+(global-set-key (kbd "C-c p") 'org-pomodoro)
 
 ;;***************************特定模式配置***************************
 ;;#####company-mode模式#####
@@ -192,10 +243,10 @@
 ;; 上下移动同一级主题的整行的内容
 (add-hook 'org-mode-hook
 	  (lambda()
-	    (global-set-key (kbd "M-n") '(lambda () (interactive) (org-metadown)))))
+	    (global-set-key (kbd "M-n") 'org-metadown)))
 (add-hook 'org-mode-hook
 	  (lambda()
-	    (global-set-key (kbd "M-p") '(lambda () (interactive) (org-metaup)))))
+	    (global-set-key (kbd "M-p") 'org-metaup)))
 
 ;; org-mode自动换行
 (add-hook 'org-mode-hook

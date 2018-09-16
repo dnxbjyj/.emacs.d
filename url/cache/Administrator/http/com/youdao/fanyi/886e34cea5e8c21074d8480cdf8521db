@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 16 Sep 2018 01:15:29 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["重要性"],"basic":{"us-phonetic":"ɪm'pɔrtns","phonetic":"ɪm'pɔːt(ə)ns","uk-phonetic":"ɪm'pɔːt(ə)ns","explains":["n. 价值；重要；重大；傲慢"]},"query":"importance","errorCode":0,"web":[{"value":["重要性","重要","重视"],"key":"Importance"},{"value":["重要值","重要性","重要性值"],"key":"importance value"},{"value":["同等重要","有同等重要性","同样重要"],"key":"equal importance"}]}

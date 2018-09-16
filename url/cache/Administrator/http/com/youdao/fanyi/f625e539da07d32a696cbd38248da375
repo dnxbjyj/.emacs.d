@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 16 Sep 2018 01:15:15 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["紧迫感"],"basic":{"us-phonetic":"'ɝdʒənsi","phonetic":"'ɜːdʒ(ə)nsɪ","uk-phonetic":"'ɜːdʒ(ə)nsɪ","explains":["n. 紧急；催促；紧急的事"]},"query":"urgency","errorCode":0,"web":[{"value":["紧迫性","紧急","迫切"],"key":"Urgency"},{"value":["紧急呼叫"],"key":"urgency call"},{"value":["紧急通信"],"key":"urgency communication"}]}
