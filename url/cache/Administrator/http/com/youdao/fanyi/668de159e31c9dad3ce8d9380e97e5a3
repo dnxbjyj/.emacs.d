@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 16 Sep 2018 01:15:58 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["依赖"],"basic":{"us-phonetic":"dɪ'pɛndəns","phonetic":"dɪ'pend(ə)ns","uk-phonetic":"dɪ'pend(ə)ns","explains":["n. 依赖；依靠；信任；信赖"]},"query":"dependence","errorCode":0,"web":[{"value":["依赖性","依赖","依靠"],"key":"Dependence"},{"value":["酒精依赖","酒精依赖","酒依赖"],"key":"Alcohol dependence"},{"value":["心理依赖","精神依赖性","心理依赖性"],"key":"psychological dependence"}]}

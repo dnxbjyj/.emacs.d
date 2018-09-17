@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 17 Sep 2018 16:49:38 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["自述"],"basic":{"us-phonetic":"'ri:dmi","phonetic":"'ri:dmi","uk-phonetic":"'ri:dmi","explains":["n. 自述文件（提供使用者讯息的辅助文件）"]},"query":"readme","errorCode":0,"web":[{"value":["读我档案","自述文件","自述"],"key":"README"},{"value":["读取游戏说明","查看自述文件","查看自述"],"key":"View Readme"},{"value":["自述文件"],"key":"readme files"}]}

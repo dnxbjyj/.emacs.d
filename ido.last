@@ -9,8 +9,10 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/"
  "e:/gitee/vector8/"
  "e:/code/py-project/DoubanHouse/"
  "d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/"
@@ -20,27 +22,31 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init-myfunction.el"
- "tmp.txt"
- "tmp.json"
- "auto-commit.bat"
- "config.conf"
- "dired-x.info"
- "org.info"
- "LICENSE"
- "read.md"
- "readme.md"
+ "init-dired.el"
+ "init-company-mode.el"
+ "init-org-pomodoro.el"
+ "init-youdao-dictionary.el"
+ "init-watch-other-window.el"
+ "init-theme.el"
+ "init-org.el"
+ "init-package.el"
+ "init-my-function.el"
+ "init-better-default.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("e:/gitee/vector8/" (23454 36716 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23455 53841 0 0) "url/" "tmp.txt" "site-lisp/" "README.org" "LICENSE" "init.el.bak" "init.el.backup" "init.el" "ido.last" "elpa/" "elisp-learn/" "elisp/" "auto-save-list/" "auto-commit.bat" "abbrev_defs" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/" (23454 61791 0 0) "watch-other-window.el" "custom.el" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23455 53974 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-ui.el" "init-theme.el" "init-package.el" "init-org.el" "init-org-pomodoro.el" "init-my-function.el" "init-key-binding.el" "init-company-mode.el" "init-better-default.el" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23454 61626 0 0) "url/" "tmp.txt" "themes/" "README.org" "LICENSE" "init.el" "ido.last" "elpa/" "elisp-learn/" "elisp/" "auto-save-list/" "auto-commit.bat" "abbrev_defs" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23455 53496 0 0) "template.el" "init-config.el" "init/" "../" "./")
 
- ("e:/code/py-project/DoubanHouse/" (23453 42915 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto_commit.bat" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/" (23455 52862 0 0) "watch-other-window.el" "init-myfunction.el" "custom.el" ".#init-myfunction.el" "../" "./")
+
+ ("e:/code/py-project/DoubanHouse/" (23454 62248 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-17.html" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto-commit.bat" "../" "./")
+
+ ("e:/gitee/vector8/" (23455 50204 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("e:/code/py-project/GeneralJinja2TableTpl/" (23447 1094 0 0) "table_tpl.html" "result.html" "render.py" "readme.md" "../" "./")
 

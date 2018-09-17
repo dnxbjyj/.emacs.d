@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 16 Sep 2018 01:28:08 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["存储库"],"basic":{"us-phonetic":"rɪ'pɑzə'tɔri","phonetic":"rɪ'pɒzɪt(ə)rɪ","uk-phonetic":"rɪ'pɒzɪt(ə)rɪ","explains":["n. 贮藏室，仓库；知识库；智囊团"]},"query":"repository","errorCode":0,"web":[{"value":["知识库","资源库","版本库"],"key":"repository"},{"value":["对象库","对象仓库","打开对象库"],"key":"Object Repository"},{"value":["储存机制浏览器","库浏览器","保存机制浏览器"],"key":"repository Browser"}]}

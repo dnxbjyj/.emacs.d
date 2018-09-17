@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 17 Sep 2018 16:49:19 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["初始化"],"basic":{"us-phonetic":"ɪ'nɪt","phonetic":"ɪ'nɪt","uk-phonetic":"ɪ'nɪt","explains":["abbr. 初始化（initialization）"]},"query":"init","errorCode":0,"web":[{"value":["初始化","爱尼特","请重新安装"],"key":"Init"},{"value":["性能起始","性能初始化页面","性能起始页"],"key":"PERF INIT"},{"value":["初始段"],"key":"INIT ENDINIT"}]}

@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 17 Sep 2018 16:49:32 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["elisp"],"query":"ELISP","errorCode":0,"web":[{"value":["酶联免疫点法","Enzme-linked Immunospot Assay","编程"],"key":"ELISP"},{"value":["软件名称"],"key":"elisp manual"},{"value":["动态交互式提示"],"key":"Emacs Elisp"}]}
