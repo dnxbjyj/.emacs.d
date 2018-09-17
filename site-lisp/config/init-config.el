@@ -15,6 +15,8 @@
 (require 'init-org-pomodoro)
 ;; 加载包
 (require 'init-package)
+;; 快速访问按键配置
+(require 'init-quick-access)
 ;; 主题设置
 (require 'init-theme)
 ;; 界面外观设置

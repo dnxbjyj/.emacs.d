@@ -22,6 +22,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init-quick-access.el"
  "init-dired.el"
  "init-company-mode.el"
  "init-org-pomodoro.el"
@@ -31,16 +32,17 @@
  "init-org.el"
  "init-package.el"
  "init-my-function.el"
- "init-better-default.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23455 53841 0 0) "url/" "tmp.txt" "site-lisp/" "README.org" "LICENSE" "init.el.bak" "init.el.backup" "init.el" "ido.last" "elpa/" "elisp-learn/" "elisp/" "auto-save-list/" "auto-commit.bat" "abbrev_defs" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23455 55370 0 0) "template.el" "init-config.el" "init/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23455 53974 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-ui.el" "init-theme.el" "init-package.el" "init-org.el" "init-org-pomodoro.el" "init-my-function.el" "init-key-binding.el" "init-company-mode.el" "init-better-default.el" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23455 56944 0 0) "url/" "site-lisp/" "README.org" "LICENSE" "init.el" "ido.last" "elisp-learn/" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23455 53496 0 0) "template.el" "init-config.el" "init/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23455 56917 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-ui.el" "init-theme.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
+
+ ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/bin/" (22571 8984 0 0) "runemacs.exe" "libXpm-noX4.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.1.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/" (23455 52862 0 0) "watch-other-window.el" "init-myfunction.el" "custom.el" ".#init-myfunction.el" "../" "./")
 
