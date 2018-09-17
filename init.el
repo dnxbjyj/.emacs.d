@@ -1,4 +1,10 @@
 ;;***************************使用自定义函数***************************
+;; 将elisp目录添加到加载路径列表
+(add-to-list 'load-path "~/.emacs.d/elisp")
+
+;; 自定义函数模块
+(require 'init-myfunction)
+
 ;; 快速执行当前目录下的auto-commit.bat批处理脚本
 (defun auto-commit()
   "auto commit code to remote git repository."
@@ -6,11 +12,6 @@
   (shell-command "start auto-commit.bat"))
 (global-set-key (kbd "<f12>") 'auto-commit)
 
-;; 在当前位置插入当前日期，格式举例：2018-09-14 周五
-(defun today ()
-  "insert today date string at current position."
-  (interactive)
-  (insert (format-time-string "%Y-%m-%d %a")))
 
 ;;***************************系统类配置***************************
 ;; 窗口缩放，用于多窗口场景
@@ -26,8 +27,6 @@
 ;; 在状态栏显示当前光标位于哪个函数内部
 (which-function-mode t)
 
-;; 将elisp目录添加到加载路径列表
-(add-to-list 'load-path "~/.emacs.d/elisp")
 
 ;; 正则替换：C-c f
 (global-set-key (kbd "C-c f")

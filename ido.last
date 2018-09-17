@@ -9,6 +9,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
  "e:/gitee/vector8/"
  "e:/code/py-project/DoubanHouse/"
@@ -19,6 +20,8 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init-myfunction.el"
+ "tmp.txt"
  "tmp.json"
  "auto-commit.bat"
  "config.conf"
@@ -27,17 +30,17 @@
  "LICENSE"
  "read.md"
  "readme.md"
- "tmp3.txt"
- "tmp2.txt"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23454 36118 0 0) "url/" "tmp.txt" "themes/" "README.org" "LICENSE" "init.el" "ido.last" "elpa/" "elisp-learn/" "elisp/" "auto-save-list/" "auto-commit.bat" "abbrev_defs" ".gitignore" ".git/" "../" "./")
+ ("e:/gitee/vector8/" (23454 36716 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/" (23454 61791 0 0) "watch-other-window.el" "custom.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23454 61626 0 0) "url/" "tmp.txt" "themes/" "README.org" "LICENSE" "init.el" "ido.last" "elpa/" "elisp-learn/" "elisp/" "auto-save-list/" "auto-commit.bat" "abbrev_defs" ".gitignore" ".git/" "../" "./")
 
  ("e:/code/py-project/DoubanHouse/" (23453 42915 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto_commit.bat" "../" "./")
-
- ("e:/gitee/vector8/" (23453 50215 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("e:/code/py-project/GeneralJinja2TableTpl/" (23447 1094 0 0) "table_tpl.html" "result.html" "render.py" "readme.md" "../" "./")
 
