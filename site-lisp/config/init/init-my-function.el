@@ -1,5 +1,5 @@
 ;;;;;;;;;; init-my-function模块 ;;;;;;;;;;
-;;;; Desc: 自定义函数
+;;;; Desc: 自定义函数配置
 
 ;;;; init-my-function start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

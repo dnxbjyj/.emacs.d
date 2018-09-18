@@ -1,5 +1,5 @@
 ;;;;;;;;;; init-youdao-dictionary模块 ;;;;;;;;;;
-;;;; Desc:
+;;;; Desc: 有道词典配置
 
 ;;;; init-youdao-dictionary start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

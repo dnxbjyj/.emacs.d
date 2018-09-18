@@ -1,5 +1,5 @@
 ;;;;;;;;;; init-org-pomodoro模块 ;;;;;;;;;;
-;;;; Desc:
+;;;; Desc: org-mode番茄时钟配置
 
 ;;;; init-org-pomodoro start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

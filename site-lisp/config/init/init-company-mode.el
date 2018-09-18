@@ -1,5 +1,5 @@
 ;;;;;;;;;; init-company-mode模块 ;;;;;;;;;;
-;;;; Desc:
+;;;; Desc: company-mode自定义配置
 
 ;;;; init-company-mode start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
