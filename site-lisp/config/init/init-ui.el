@@ -9,6 +9,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 
+;; 设置行号格式为数字后面跟一个空格
+(setq linum-format "%d ")
+
+;; 关闭启动帮助画面
+(setq inhibit-splash-screen 1)
+
+;; 语法高亮
+(global-font-lock-mode t)
+
 ;; 关闭菜单栏
 (menu-bar-mode 0)
 

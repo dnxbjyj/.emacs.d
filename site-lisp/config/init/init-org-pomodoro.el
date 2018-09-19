@@ -4,7 +4,7 @@
 ;;;; init-org-pomodoro start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
-
+(require 'org-pomodoro)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:

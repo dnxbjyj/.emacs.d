@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 19 Sep 2018 00:24:50 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["这"],"basic":{"us-phonetic":"ðɪs","phonetic":"ðɪs","uk-phonetic":"ðɪs","explains":["n. (This)人名；(法)蒂斯","adj. 这；本；这个；今","pron. 这；这个；这里","adv. 这样地；这么"]},"query":"this","errorCode":0,"web":[{"value":["这个","这","关键字"],"key":"This"},{"value":["今天下午","何时可以得到信息","什么时间答复她"],"key":"this afternoon"},{"value":["由此可见","这说明","这表明"],"key":"This shows"}]}

@@ -10,8 +10,8 @@
 ;; ----- ido-work-directory-list -----
 (
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/"
- "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/"
  "e:/gitee/vector8/"
  "e:/code/py-project/DoubanHouse/"
@@ -22,6 +22,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init-network.el"
  "init-quick-access.el"
  "init-dired.el"
  "init-company-mode.el"
@@ -31,24 +32,23 @@
  "init-theme.el"
  "init-org.el"
  "init-package.el"
- "init-my-function.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23455 55370 0 0) "template.el" "init-config.el" "init/" "../" "./")
+ ("e:/code/py-project/DoubanHouse/" (23457 37433 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-19.html" "douban-house-topics-2018-09-18.html" "douban-house-topics-2018-09-17.html" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto-commit.bat" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23455 56944 0 0) "url/" "site-lisp/" "README.org" "LICENSE" "init.el" "ido.last" "elisp-learn/" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("e:/gitee/vector8/" (23457 9371 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23455 56917 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-ui.el" "init-theme.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23457 37768 0 0) "url/" "site-lisp/" "README.org" "LICENSE" "init.el" "ido.last" "elisp-learn/" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23457 38150 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23455 57465 0 0) "template.el" "init-config.el" "init/" "../" "./")
 
  ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/bin/" (22571 8984 0 0) "runemacs.exe" "libXpm-noX4.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.1.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/" (23455 52862 0 0) "watch-other-window.el" "init-myfunction.el" "custom.el" ".#init-myfunction.el" "../" "./")
-
- ("e:/code/py-project/DoubanHouse/" (23454 62248 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-17.html" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto-commit.bat" "../" "./")
-
- ("e:/gitee/vector8/" (23455 50204 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("e:/code/py-project/GeneralJinja2TableTpl/" (23447 1094 0 0) "table_tpl.html" "result.html" "render.py" "readme.md" "../" "./")
 

@@ -4,10 +4,29 @@
 ;;;; init-better-default start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
-
+(require 'recentf)
+(require 'saveplace)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 防止页面滚动时跳动
+(setq scroll-margin 3 scroll-conservatively 10000)
+
+;; 保存上次光标所在位置
+(setq-default save-place t)
+
+;; 可以对选中的文本进行替换、删除
+(delete-selection-mode 1)
+
+;; 替换"yes/no"为"y/n"
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; 历史文件记录模式
+(recentf-mode 1)
+(setq recentf-max-menu-item 10)
+
+;; 打开最近的文件列表
+(global-set-key (kbd "C-c C-r") 'recentf-open-files)
 
 ;; 在状态条显示当前buffer大小
 (size-indication-mode 1)

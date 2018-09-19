@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 17 Sep 2018 16:52:36 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["标题"],"basic":{"us-phonetic":"'taɪtl","phonetic":"'taɪt(ə)l","uk-phonetic":"'taɪt(ə)l","explains":["n. 冠军；标题；头衔；权利；字幕","adj. 冠军的；标题的；头衔的","vt. 加标题于；赋予头衔；把\u2026称为"]},"query":"title","errorCode":0,"web":[{"value":["标题","题目","头衔"],"key":"Title"},{"value":["标题标签","页面标题","页面题目"],"key":"title tag"},{"value":["页面标题","网页标题","英文叫"],"key":"Page title"}]}

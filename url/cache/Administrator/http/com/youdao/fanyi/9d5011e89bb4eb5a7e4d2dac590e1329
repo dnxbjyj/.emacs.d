@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 19 Sep 2018 00:12:40 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["抑制"],"basic":{"us-phonetic":"ɪn'hɪbɪt","phonetic":"ɪn'hɪbɪt","uk-phonetic":"ɪn'hɪbɪt","explains":["vt. 抑制；禁止"]},"query":"inhibit","errorCode":0,"web":[{"value":["抑制","禁止","约束"],"key":"inhibit"},{"value":["禁止电路","禁阻电路","禁止电路，抑制电路"],"key":"inhibit circuit"},{"value":["禁止脉冲","禁止脉波"],"key":"inhibit pulse"}]}

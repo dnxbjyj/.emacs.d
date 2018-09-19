@@ -9,6 +9,8 @@
 (require 'init-key-binding)
 ;; 自定义函数
 (require 'init-my-function)
+;; 网络配置
+(require 'init-network)
 ;; org-mode配置
 (require 'init-org-mode)
 ;; org-pomodoro插件配置
@@ -17,6 +19,8 @@
 (require 'init-package)
 ;; 快速访问按键配置
 (require 'init-quick-access)
+;; 本地化快速访问配置
+(require 'init-quick-access-local)
 ;; 主题设置
 (require 'init-theme)
 ;; 界面外观设置
