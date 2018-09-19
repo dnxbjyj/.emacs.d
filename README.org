@@ -1,17 +1,15 @@
 * .emacs.d
 My Emacs Configurations.
 
+* ºËĞÄÅäÖÃÎÄ¼ş½á¹¹
+- init.el :: Ö÷Èë¿ÚÎÄ¼ş
+- site-lisp/ :: Ä£¿é»¯ÅäÖÃÄ¿Â¼
+- site-lisp/config/ :: Ä£¿é»¯ÅäÖÃÎÄ¼ş´æ·ÅÄ¿Â¼
+- site-lisp/extension/ :: À©Õ¹ÎÄ¼ş´æ·ÅÄ¿Â¼
 
-* Emacsç—›ç‚¹é›†é”¦
-  CLOCK: [2018-09-13 å‘¨å›› 08:03]
-** æœ‰é“ç¿»è¯‘æ’ä»¶
-** company-modeï¼šhttp://company-mode.github.io/
-** emacsæ­£åˆ™ä»‹ç»ï¼šhttps://www.emacswiki.org/emacs/RegularExpression
-** org-modeï¼šhttps://blog.csdn.net/u014801157/article/details/24372485
-** emacsæ’ä»¶åŒ…ç®¡ç†ç³»ç»Ÿå®‰è£…ï¼šhttp://ergoemacs.org/emacs/emacs_package_system.html
-** markdown-modeåœ¨çº¿æ–‡æ¡£ï¼šhttps://jblevins.org/projects/markdown-mode/
-** markdowné¢„è§ˆï¼šhttp://noclyt.com/2015/02/01/markdown-emacs-pandoc/
-** åœ¨ä¸Šæ–¹æ’å…¥ä¸€è¡Œ
+- site-lisp/config/init-config.el :: Ä£¿é»¯ÅäÖÃÈë¿ÚÅäÖÃÎÄ¼ş
+- site-lisp/config/template.el :: Ä£¿é»¯ÅäÖÃÄ£°åÎÄ¼ş
+- site-lisp/config/init/ :: ¸÷¸öÄ£¿é³õÊ¼»¯ÅäÖÃÎÄ¼ş´æ·ÅÄ¿Â¼
 
-* å¤§ç¥çš„emacsé…ç½®
-** http://www.voidcn.com/article/p-vnzvblwb-pm.html
+- site-lisp/extension/themes/ :: Ö÷ÌâÀ©Õ¹Ä¿Â¼
+
