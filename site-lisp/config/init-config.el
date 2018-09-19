@@ -25,6 +25,8 @@
 (require 'init-theme)
 ;; 界面外观设置
 (require 'init-ui)
+;; virtualenvwrapper虚拟化环境配置
+;(require 'init-virtualenvwrapper)
 ;; 滚动另一个窗口插件配置
 (require 'init-watch-other-window)
 ;; 有道词典配置

@@ -23,3 +23,5 @@ file+sys:d:/
 * emacs加载配置文件时报错
 - 报错信息 :: wrong type argument: commandp, xxx
 - 原因 :: 没有在配置文件中提前引用（require）所用到的模块。
+* emacs痛点集锦
+** 在eshell中使用virtualenv

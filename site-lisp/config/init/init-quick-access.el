@@ -17,6 +17,9 @@
 ;; 快速加载init-config.el: C-<f2>
 (global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/site-lisp/config/init-config.el")))
 
+;; 快速打开emacs日常积累文件：emacs-daily.org
+(global-set-key (kbd "<f7>") (lambda() (interactive) (find-file "~/.emacs.d/emacs-daily.org")))
+
 ;; 快速提交git代码: <f12>
 (global-set-key (kbd "<f12>") (lambda() (interactive) (shell-command "start auto-commit.bat")))
 
