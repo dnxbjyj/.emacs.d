@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Wed, 19 Sep 2018 00:08:19 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["来"],"basic":{"us-phonetic":"tə;tu;tuː","phonetic":"tə;tu;tuː","uk-phonetic":"tə;tu;tuː","explains":["adv. 向前；（门等）关上","prep. 到；向；（表示时间、方向）朝\u2026方向","n. (To)人名；(柬)多；(中)脱(普通话·威妥玛)"]},"query":"to","errorCode":0,"web":[{"value":["TO","TO","汤加"],"key":"TO"},{"value":["按照","根据","依据"],"key":"According to"},{"value":["呼吁","要求","诉诸"],"key":"appeal to"}]}

@@ -1,0 +1,25 @@
+#+TITLE: emacs学习日积月累
+#+DATE: 2018-09-19 周三
+
+* org-mode操作积累
+** 插入本地文件路径链接
+file:d:/ 
+file+sys:d:/ 
+用快捷键`C-c C-o`就可以通过上面两个链接打开文件/目录，不同之处在于，第一种方式是在emacs中打开，而第二种方式是使用系统默认的打开方式打开。
+
+* 全局代理神器：proxifier
+设置需要走代理的软件为白名单，其他一律直连，稳了。
+
+* 通过手工添加扩展的方式配置主题
+- 1. 添加主题文件 :: 在"~/.emacs.d/themes"目录下放主题文件xxx-theme.el，主题文件末尾要有：`(provide-theme 'xxx)`
+- 2. 在init.el中添加如下代码 :: 
+#+BEGIN_SRC emacs-lisp
+;; 加载主题路径
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+;; 加载主题
+(load-theme 'xxx t)
+#+END_SRC
+
+* emacs加载配置文件时报错
+- 报错信息 :: wrong type argument: commandp, xxx
+- 原因 :: 没有在配置文件中提前引用（require）所用到的模块。

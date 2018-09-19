@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 19 Sep 2018 15:00:44 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["年代"],"basic":{"us-phonetic":"es","phonetic":"es","uk-phonetic":"es","explains":["n. 字母s，英语字母中第十九个字母","abbr. 南，南方（south）"]},"query":"s","errorCode":0,"web":[{"value":["纽约地铁S线","S语言","纽约地铁S线"],"key":"S"},{"value":["剑鱼座S","剑鱼座S"],"key":"S Doradus"},{"value":["S chip","S-chips","S-Shares"],"key":"S股"}]}
