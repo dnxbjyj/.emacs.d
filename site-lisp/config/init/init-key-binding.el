@@ -9,6 +9,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 
+;; 加载当前文件
+(global-set-key (kbd "C-<f3>") 'load-file)
+
 ;; 窗口缩放，用于多窗口场景
 (global-set-key (kbd "C-S-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "C-S-<right>") 'enlarge-window-horizontally)
