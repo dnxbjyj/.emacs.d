@@ -17,6 +17,9 @@
 ;; 快速加载init-config.el: C-<f2>
 (global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/site-lisp/config/init-config.el")))
 
+;; 加载当前文件: C-<f3>
+(global-set-key (kbd "C-<f3>") 'load-file)
+
 ;; 快速打开emacs日常积累文件：emacs-daily.org
 (global-set-key (kbd "<f7>") (lambda() (interactive) (find-file "~/.emacs.d/emacs-daily.org")))
 

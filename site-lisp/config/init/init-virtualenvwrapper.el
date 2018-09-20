@@ -15,10 +15,6 @@
 ;; the environment variable `WORKON_HOME` points to the right place
 (setq venv-location "e:/code/env/.py2env/")
 
-(venv-initialize-eshell)
-
-(venv-mkvirtualenv "py2env")
-
 ;; Use M-x venv-workon to activate virtualenvs and M-x venv-deactivate deactivate them
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

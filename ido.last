@@ -9,6 +9,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "e:/gitee/vector8/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/virtualenvwrapper/"
  "e:/code/py-project/inspider/"
@@ -17,7 +18,6 @@
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/"
- "e:/gitee/vector8/"
  "d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/"
  "e:/code/py-project/GeneralJinja2TableTpl/"
  "e:/code/py-project/Selenium/"
@@ -25,6 +25,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "py_template.py"
  "init-virtualenvwrapper.el"
  "virtualenvwrapper.el"
  "user.py"
@@ -34,26 +35,25 @@
  "emacs-daily.org"
  "init-quick-access-local.el"
  "init-network.el"
- "init-quick-access.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23458 35948 0 0) "url/" "site-lisp/" "recentf" "README.org" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23458 34871 0 0) "template.el" "init-config.el" "init/" "../" "./")
+
+ ("e:/code/py-project/inspider/" (23458 58443 0 0) "__init__.py" "readme.md" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23458 35479 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-quick-access-local.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-network.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
+
+ ("e:/gitee/vector8/" (23458 58522 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" ".#vector8.org.txt" "../" "./")
+
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/virtualenvwrapper/" (23458 34518 0 0) "virtualenvwrapper.el" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23458 34369 0 0) "url/" "site-lisp/" "recentf" "README.org" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23458 34317 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-quick-access-local.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-network.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/" (23458 34119 0 0) "readme.org" "elisp/" "../" "./")
 
- ("e:/code/py-project/inspider/" (23458 33950 0 0) "__init__.py" "user.py" "readme.md" "../" "./")
-
  ("e:/code/py-project/DoubanHouse/" (23458 33367 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-19.html" "douban-house-topics-2018-09-18.html" "douban-house-topics-2018-09-17.html" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto-commit.bat" "../" "./")
-
- ("e:/gitee/vector8/" (23458 33004 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23457 38920 0 0) "template.el" "init-config.el" "init/" "../" "./")
 
  ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/bin/" (22571 8984 0 0) "runemacs.exe" "libXpm-noX4.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.1.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" "../" "./")
 

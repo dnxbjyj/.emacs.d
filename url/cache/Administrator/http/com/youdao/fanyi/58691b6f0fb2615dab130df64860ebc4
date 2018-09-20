@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 20 Sep 2018 14:55:42 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["网站"],"basic":{"us-phonetic":"saɪt","phonetic":"saɪt","uk-phonetic":"saɪt","explains":["n. 地点；位置；场所","vt. 设置；为\u2026选址"]},"query":"site","errorCode":0,"web":[{"value":["站点","场地","场所"],"key":"Site"},{"value":["建筑工地","施工现场","工地"],"key":"Construction Site"},{"value":["行动通信基地台","蜂窝站","基地台"],"key":"Cell site"}]}
