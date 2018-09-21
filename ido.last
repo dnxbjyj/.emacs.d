@@ -2,15 +2,20 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("e:/$RECYCLE.BIN/" . "S-1-5-21-1130190671-4074319291-2719029717-500/")
+ ("e:/baidu-cloud/" . "dear/")
+ ("e:/baidu-cloud/dear/resume/" . "archive/")
+ ("e:/baidu-cloud/dear/" . "resume/")
  ("e:/code/" . "py-project/")
- ("e:/" . "code/")
+ ("e:/" . "baidu-cloud/")
  ("e:/code/py-project/" . "Selenium/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "e:/gitee/vector8/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/"
+ "e:/baidu-cloud/dear/resume/"
+ "e:/gitee/vector8/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/virtualenvwrapper/"
  "e:/code/py-project/inspider/"
  "e:/code/py-project/DoubanHouse/"
@@ -25,6 +30,9 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init-helm.el"
+ "补充-raw.txt"
+ "补充-v1.0.txt"
  "py_template.py"
  "init-virtualenvwrapper.el"
  "virtualenvwrapper.el"
@@ -32,22 +40,51 @@
  "__init__.py"
  "r.md"
  "readme.md"
- "emacs-daily.org"
- "init-quick-access-local.el"
- "init-network.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23458 35948 0 0) "url/" "site-lisp/" "recentf" "README.org" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23461 7399 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23458 34871 0 0) "template.el" "init-config.el" "init/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23461 3754 0 0) "template.el" "init-config.el" "init/" "../" "./")
+
+ ("e:/gitee/vector8/" (23461 1467 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("e:/baidu-cloud/dear/resume/" (23460 33746 0 0) "补充.docx" "补充-v1.2.txt" "补充-v1.2.docx" "补充-v1.1.docx" "补充-raw.txt" "实习简历/" "archive/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23461 6997 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-network.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
+
+ ("c:/Users/" (22909 11438 0 0) "Public/" "pip.ini" "pip/" "desktop.ini" "Default User/" "Default/" "All Users/" "Administrator.PC-20170728DWIF/" "Administrator/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/" (23453 47628 0 0) "小咖秀-小咩唱的小毛驴.mp4" "【键客行】被遗忘的玻璃.mp4.download" "「开始」菜单/" "wc/" "Videos/" "Untitled.ipynb" "TruePianos Settings/" "Thumbs.db" "test.txt" "test.py" "Templates/" "sympy.ipynb" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "Pictures/" "ntuser.pol" "ntuser.ini" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "npm-debug.log" "NetHood/" "My Documents/" "Music/" "Local Settings/" "Links/" "itchat.pkl" "house_price.ipynb" "Favorites/" "Downloads/" "Documents/" "Desktop/" "data.txt" "Cookies/" "Contacts/" "Application Data/" "AppData/" ".viminfo" ".swt/" ".ssh/" ".PyCharmCE2017.2/" ".matplotlib/" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".gitconfig" ".git-credentials" ".emacs.d/" ".config/" ".android/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/" (19688 35085 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/" (23454 62288 0 0) "XunjiePDFEditor/" "XLGameBox/" "xl9dummy/" "wyUpdate AU/" "WNS/" "winscp.rnd" "WinRAR/" "VMware/" "Unity/" "Tencent/" "TeamViewer/" "taobao/" "Sun/" "Subversion/" "Sublime Text 3/" "Smallpdf/" "QMLogEx/" "pyinstaller/" "Pomotodo/" "Oracle/" "npm-cache/" "npm/" "Notepad++/" "MySQL/" "Mozilla/" "MiKTeX/" "Microsoft/" "MathWorks/" "MarkdownPad 2 2.5.0.27920/" "Macromedia/" "KuGou8/" "kjl-software/" "kingsoft/" "KGDataBak/" "jupyter/" "JetBrains/" "Jedi/" "java/" "IQIYI Video/" "Identities/" "Google/" "GlobalMgr.db" "Foxit Software/" "Foxit AgentInformation/" "FormatFactory/" "Everything/" "downer/" "DllDecompiler/" "Dev-Cpp/" "coreavc.ini" "BaiduYunKernel/" "BaiduYunGuanjia/" "baidu/" "Awesomium/" "audacity/" "Apple Computer/" "Adobe PNG 格式 CS6 首选项" "Adobe/" "8s/" "4Front/" ".ssh/" ".gitconfig" ".emacs.d/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/" (23455 50330 0 0) "extension/" "config/" "../" "./")
+
+ ("e:/baidu-cloud/dear/resume/./" (23459 52570 0 0) "补充.docx" "补充-v1.0.txt" "补充-raw.txt" "实习简历/" "archive/" "../" "./")
+
+ ("d:/Programs/" (23454 28674 0 0) "微信web开发者工具 Beta/" "YoudaoNoteAddin/" "YoudaoNote/" "Xunlei/" "xunjiePDF/" "XShell5/" "WinSCP/" "Windows Media Components/" "WeChat/" "VMware/" "TortoiseGit/" "swhytdx/" "Sublime Text 3/" "SogouInput/" "QQPlayer/" "QQPCMgr/" "QQLive/" "QQImage/" "QQGame/" "QQ/" "QDesk/" "Python36/" "Python27/" "PyCharm Community Edition 2017.2.2/" "Pomotodo/" "pandoc/" "Office2013/" "Notepad++/" "nodejs/" "MikTex/" "matlabR2017b/" "liebao/" "kujiale/" "KGMusic/" "jre1.8/" "jdk1.8/" "iTunes/" "Huorong/" "Haroopad/" "Git/" "Foxit Reader/" "FormatFactory/" "Everything/" "EveryonePiano/" "EOPVideoRecorder/" "emacs-25.1-2-x86_64-w64-mingw32.zip" "emacs-25.1-2-x86_64-w64-mingw32/" "Dict/" "Dev-Cpp/" "CloudMusic/" "BaiduNetdisk/" "Audacity/" "AppStore/" "Adobe Photoshop CS6 Extended 64bit/" "../" "./")
+
+ ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/" (23294 64702 0 0) "var/" "share/" "libexec/" "bin/" "../" "./")
+
+ ("e:/$RECYCLE.BIN/S-1-5-21-1130190671-4074319291-2719029717-500/" (23459 47123 0 0) "desktop.ini" "$RTOGUEY.jpg" "$RRFOV4Y.jpg" "$RKTEIPW.application(1)/" "$RDE9OJ3/" "$R44STGU.env/" "$IU16VWA.png" "$ITOGUEY.jpg" "$IRFOV4Y.jpg" "$I1BAY69.png" "../" "./")
+
+ ("e:/$RECYCLE.BIN/" (22906 55978 0 0) "S-1-5-21-1130190671-4074319291-2719029717-500/" "../" "./")
+
+ ("e:/baidu-cloud/" (23399 1172 0 0) "quickread/" "notes/" "me/" "learn/" "img/" "docs/" "dear/" "data-backup/" "career/" "books/" "../" "./")
+
+ ("e:/baidu-cloud/dear/resume/archive/" (23262 47254 0 0) "text.txt" "Resume模板.png" "Resume模板-20170813.docx" "Resume_Li Qirui_20170813.docx" "Resume_Li Qirui.doc" "Resume_Li Qirui - bak.doc" "Li Qirui MSFE2017 v3.docx" "Li Qirui MSFE2017 v2.docx" "../" "./")
+
+ ("e:/baidu-cloud/dear/" (23403 3911 0 0) "work/" "weqiji.net/" "visa/" "study/" "resume/" "ps-center/" "other/" "image/" "gift/" "docs/" "competition/" "activity/" "../" "./")
+
+ ("e:/code/" (23451 52540 0 0) "wxapp/" "tmp/" "python-basic/" "py-project/" "PDFCUT/" "matlab-basic/" "learngit/" "js-basic/" "java-projects/" "env/" "data.bak/" "data-analysis-basic/" "csvs/" "blog/" "android/" "algorithm/" "../" "./")
+
+ ("e:/code/py-project/" (23459 47901 0 0) "ZiruSpider/" "ZhilianSpider/" "Selenium/" "SantiWordCloud/" "SantiCut/" "README.md" "py_template.py" "MyBlog/" "LICENSE" "LianjiaHousePriceSpider/" "inspider/" "GovWorkReportAnalysis/" "GeneralJinja2TableTpl/" "DoXPath/" "DoubanHouse/" "CutPDF/" "CrepricecnHousePriceSpider/" "auto-commit.bat" "AddWinContextMenu/" "AddPDFBookmarks/" ".idea/" ".gitignore" ".git/" "../" "./")
 
  ("e:/code/py-project/inspider/" (23458 58443 0 0) "__init__.py" "readme.md" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23458 35479 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-quick-access-local.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-network.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
-
- ("e:/gitee/vector8/" (23458 58522 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" ".#vector8.org.txt" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/virtualenvwrapper/" (23458 34518 0 0) "virtualenvwrapper.el" "../" "./")
 
@@ -63,11 +100,7 @@
 
  ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/" (22571 7646 0 0) "woman.info" "wisent.info" "widget.info" "viper.info" "vip.info" "vhdl-mode.info" "url.info" "tramp.info" "todo-mode.info" "srecode.info" "speedbar.info" "smtpmail.info" "sieve.info" "ses.info" "semantic.info" "sc.info" "sasl.info" "remember.info" "reftex.info" "rcirc.info" "pgg.info" "pcl-cvs.info" "org.info" "octave-mode.info" "nxml-mode.info" "newsticker.info" "mh-e.info" "message.info" "mairix-el.info" "info.info" "ido.info" "idlwave.info" "htmlfontify.info" "gnus.info" "forms.info" "flymake.info" "eww.info" "eudc.info" "eshell.info" "ert.info" "erc.info" "epa.info" "emacs.info" "emacs-mime.info" "emacs-gnutls.info" "elisp.info" "eintr.info" "eieio.info" "efaq.info" "efaq-w32.info" "edt.info" "ediff.info" "ede.info" "ebrowse.info" "dired-x.info" "dir" "dbus.info" "cl.info" "ccmode.info" "calc.info" "bovine.info" "autotype.info" "auth.info" "ada-mode.info" "../" "./")
 
- ("e:/code/py-project/" (23446 63831 0 0) "ZiruSpider/" "ZhilianSpider/" "Selenium/" "SantiWordCloud/" "SantiCut/" "README.md" "MyBlog/" "LICENSE" "LianjiaHousePriceSpider/" "GovWorkReportAnalysis/" "GeneralJinja2TableTpl/" "DoXPath/" "DoubanHouse/" "CutPDF/" "CrepricecnHousePriceSpider/" "AddWinContextMenu/" "AddPDFBookmarks/" ".idea/" ".gitignore" ".git/" "../" "./")
-
  ("e:/code/py-project/Selenium/" (23445 19051 0 0) "tmp2.txt" "tmp.txt~" "tmp.txt" "login.py~" "login.py" "html.txt" "../" "./")
-
- ("e:/code/" (23298 21424 0 0) "wxapp/" "tmp/" "python-basic/" "py-project/" "PDFCUT/" "matlab-basic/" "learngit/" "js-basic/" "java-projects/" "env/" "data.bak/" "data-analysis-basic/" "csvs/" "blog/" "android/" "algorithm/" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----

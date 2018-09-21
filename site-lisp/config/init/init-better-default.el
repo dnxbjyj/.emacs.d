@@ -9,6 +9,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 在状态栏显示当前时间、日期
+(display-time-mode 1)
+(setq display-time-day-and-date t)
+
+;; 显示内存负载
+(setq display-time-default-load-average t)
+
 ;; 防止页面滚动时跳动
 (setq scroll-margin 3 scroll-conservatively 10000)
 
@@ -51,7 +58,7 @@
 ;; 关闭自动保存文件
 (setq auto-save-default nil)
 
-;; 使用ido-mode让切换buffer时体验更好
+;; 使用ido-mode让切换buffer时可以自动联想、自动补全
 (ido-mode 1)
 (setq ido-seperator "\n")
 

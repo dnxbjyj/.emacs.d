@@ -5,6 +5,8 @@
 (require 'init-company-mode)
 ;; 加载dired模式的自定义配置
 (require 'init-dired)
+;; helm插件配置
+(require 'init-helm)
 ;; 按键绑定
 (require 'init-key-binding)
 ;; 自定义函数

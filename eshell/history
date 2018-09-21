@@ -1,3 +1,11 @@
 python user.py 
 python
 pip list
+python py-code-templage.py 
+python py-code-templage.py 
+python py-code-templage.py 
+workon
+workon py2env
+pip list
+python py-code-templage.py 
+python

@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 21 Sep 2018 15:22:21 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["它的"],"basic":{"us-phonetic":"ɪts","phonetic":"ɪts","uk-phonetic":"ɪts","explains":["n. (Its)人名；(俄)伊茨","pron. 它的"]},"query":"its","errorCode":0,"web":[{"value":["智能交通","它的","智能交通系统(Intelligent Transportation Systems)"],"key":"ITS"},{"value":["味道好极了","美味佳肴"],"key":"ItS Delicious"},{"value":["ITS区","序列分析","itsl序列分析"],"key":"ITS sequence"}]}

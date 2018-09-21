@@ -4,12 +4,17 @@
 ;;;; init-package start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
+(require 'package)
 
+(package-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 
-
+;; 加载melpa扩展列表
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/")
+	     'APPEND)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

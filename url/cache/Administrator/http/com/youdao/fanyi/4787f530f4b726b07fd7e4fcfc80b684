@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 21 Sep 2018 15:22:32 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["美联储"],"basic":{"phonetic":"fed","uk-phonetic":"fed","explains":["v. 喂养（feed过去式）","abbr. 联邦储备局（the Federal Reserve System）"]},"query":"fed","errorCode":0,"web":[{"value":["美联储","美国联准会","联邦储备理事会"],"key":"Fed"},{"value":["联合会杯","协会杯","年协会杯"],"key":"Fed Cup"},{"value":["美国费城联储","费城联储","费城联邦储备银行"],"key":"Philadelphia Fed"}]}

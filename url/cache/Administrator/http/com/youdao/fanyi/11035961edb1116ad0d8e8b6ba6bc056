@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 21 Sep 2018 15:23:12 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["理智的"],"basic":{"us-phonetic":"sen","phonetic":"seɪn","uk-phonetic":"seɪn","explains":["adj. 健全的；理智的；[临床] 神志正常的","n. (Sane)人名；(日)实(姓)；(日)实(名)；(芬、塞、冈、几比、塞内)萨内"]},"query":"sane","errorCode":0,"web":[{"value":["健全的","Scanner Access Now Easy","神志清楚的"],"key":"sane"},{"value":["SANE选项","sane选项"],"key":"SANE option"},{"value":["尔多后卫萨尼"],"key":"Ludovic Sane"}]}
