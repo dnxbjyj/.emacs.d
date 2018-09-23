@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Fri, 21 Sep 2018 15:23:06 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["填充"],"basic":{"us-phonetic":"'pɑpjulet","phonetic":"'pɒpjʊleɪt","uk-phonetic":"'pɒpjʊleɪt","explains":["vt. 居住于；构成人口；移民于；殖民于"]},"query":"populate","errorCode":0,"web":[{"value":["填充","居住于","填入"],"key":"populate"},{"value":["布到库中"],"key":"Populate Gallery"},{"value":["随机复制工具"],"key":"Populate Tool"}]}

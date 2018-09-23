@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Fri, 21 Sep 2018 15:22:28 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["显式地"],"basic":{"us-phonetic":"ɪk'splɪsɪtli","phonetic":"ik'splisitli","uk-phonetic":"ik'splisitli","explains":["adv. 明确地；明白地"]},"query":"explicitly","errorCode":0,"web":[{"value":["明确地","明白地","明言"],"key":"explicitly"},{"value":["明确地"],"key":"explicitly ad"},{"value":["下显定义"],"key":"explicitly defined"}]}

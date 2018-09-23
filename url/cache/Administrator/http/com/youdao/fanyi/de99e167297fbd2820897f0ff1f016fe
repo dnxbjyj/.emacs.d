@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 23 Sep 2018 04:16:20 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["操"],"basic":{"us-phonetic":"fʌk","phonetic":"fʌk","uk-phonetic":"fʌk","explains":["n. 性交；杂种；一丁点儿","n. (Fuck)人名；(德)富克","vt. 与...性交；诅咒；欺骗","int. 他妈的","vi. 性交；鬼混"]},"query":"fuck","errorCode":0,"web":[{"value":["Fuck","fuck","他妈的"],"key":"fuck"},{"value":["Fuck You (Lily Allen)","去你的","你"],"key":"Fuck You"},{"value":["黑人大战美女"],"key":"biack fuck"}]}

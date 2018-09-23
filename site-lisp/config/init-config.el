@@ -7,6 +7,8 @@
 (require 'init-dired)
 ;; helm插件配置
 (require 'init-helm)
+;; 写代码中-英文翻译辅助插件
+(require 'init-insert-translated-name)
 ;; 按键绑定
 (require 'init-key-binding)
 ;; 自定义函数
