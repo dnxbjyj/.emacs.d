@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 23 Sep 2018 04:30:37 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["占位符"],"basic":{"us-phonetic":"'pleis,həuldə","phonetic":"'pleis,həuldə","uk-phonetic":"'pleis,həuldə","explains":["n. 占位符"]},"query":"placeholder","errorCode":0,"web":[{"value":["占位符","占位","占位文本"],"key":"placeholder"},{"value":["占位节点"],"key":"placeholder node"},{"value":["预留位置图案"],"key":"placeholder Shape"}]}
