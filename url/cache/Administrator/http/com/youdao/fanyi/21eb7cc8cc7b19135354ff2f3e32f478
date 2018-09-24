@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 24 Sep 2018 16:20:36 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["同行"],"basic":{"explains":["n. （契约）副本（counterpart的复数）；相对物；相对应的人"]},"query":"counterparts","errorCode":0,"web":[{"value":["一对一 (小说)","一对一","对口"],"key":"Counterparts"},{"value":["外内相应"],"key":"Foreign Counterparts"},{"value":["进料对口"],"key":"Feeding counterparts"}]}

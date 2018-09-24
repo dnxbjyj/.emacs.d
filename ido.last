@@ -13,11 +13,14 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/wangyi-music-mode/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/"
+ "e:/code/py-project/inspider/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/"
  "e:/baidu-cloud/dear/resume/"
  "e:/gitee/vector8/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/virtualenvwrapper/"
- "e:/code/py-project/inspider/"
  "e:/code/py-project/DoubanHouse/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/"
@@ -30,29 +33,39 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "wangyi-music-mode.el"
+ "readme.md"
+ "init-insert-translated-name.el"
+ "insert-translated-name.el"
  "init-helm.el"
  "补充-raw.txt"
  "补充-v1.0.txt"
  "py_template.py"
  "init-virtualenvwrapper.el"
  "virtualenvwrapper.el"
- "user.py"
- "__init__.py"
- "r.md"
- "readme.md"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23461 7399 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23464 12003 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23461 3754 0 0) "template.el" "init-config.el" "init/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/" (23463 44191 0 0) "readme.org" "elisp/" "../" "./")
 
- ("e:/gitee/vector8/" (23461 1467 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("e:/code/py-project/DoubanHouse/" (23464 19851 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-24.html" "douban-house-topics-2018-09-23.html" "douban-house-topics-2018-09-19.html" "douban-house-topics-2018-09-18.html" "douban-house-topics-2018-09-17.html" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto-commit.bat" "../" "./")
+
+ ("e:/gitee/vector8/" (23464 47551 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/" (23464 47579 0 0) "youdao-dictionary-20180714.414/" "with-editor-20180726.2044/" "watch-other-window/" "wangyi-music-mode/" "w3m-20180405.520/" "virtualenvwrapper/" "themes/" "skewer-mode-20180706.1807/" "simple-httpd-20180528.1603/" "s-20180406.808/" "pydoc-20180509.2219/" "pos-tip-20150318.1513/" "popup-20160709.1429/" "pkg-info-20150517.1143/" "org-pomodoro-20171108.2114/" "names-20180321.1155/" "memoize-20180614.1930/" "markdown-mode-20180731.1830/" "magit-popup-20180726.2037/" "magit-20180903.2339/" "log4e-20170401.1304/" "let-alist-1.0.5/" "js2-mode-20180724.801/" "jdee-20180711.2036/" "insert-translated-name.el" "helm-core-20180826.515/" "helm-20180906.517/" "gntp-20141025.250/" "git-commit-20180802.2018/" "ghub-20180821.1430/" "flycheck-20180720.947/" "epl-20180205.2049/" "dash-20180726.1213/" "company-0.9.6/" "chinese-word-at-point-20170811.941/" "async-20180527.1730/" "archives/" "alert-20180827.422/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/" (23463 50122 0 0) "readme.md" "insert-translated-name.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/wangyi-music-mode/" (23464 47579 0 0) "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23463 5427 0 0) "template.el" "init-config.el" "init/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23463 5410 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-network.el" "init-my-function.el" "init-key-binding.el" "init-insert-translated-name.el" "init-helm.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
 
  ("e:/baidu-cloud/dear/resume/" (23460 33746 0 0) "补充.docx" "补充-v1.2.txt" "补充-v1.2.docx" "补充-v1.1.docx" "补充-raw.txt" "实习简历/" "archive/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23461 6997 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-network.el" "init-my-function.el" "init-key-binding.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
 
  ("c:/Users/" (22909 11438 0 0) "Public/" "pip.ini" "pip/" "desktop.ini" "Default User/" "Default/" "All Users/" "Administrator.PC-20170728DWIF/" "Administrator/" "../" "./")
 
@@ -87,10 +100,6 @@
  ("e:/code/py-project/inspider/" (23458 58443 0 0) "__init__.py" "readme.md" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/virtualenvwrapper/" (23458 34518 0 0) "virtualenvwrapper.el" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/" (23458 34119 0 0) "readme.org" "elisp/" "../" "./")
-
- ("e:/code/py-project/DoubanHouse/" (23458 33367 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-19.html" "douban-house-topics-2018-09-18.html" "douban-house-topics-2018-09-17.html" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto-commit.bat" "../" "./")
 
  ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/bin/" (22571 8984 0 0) "runemacs.exe" "libXpm-noX4.dll" "etags.exe" "emacsclientw.exe" "emacsclient.exe" "emacs.exe" "emacs-25.1.exe" "ebrowse.exe" "ctags.exe" "addpm.exe" "../" "./")
 

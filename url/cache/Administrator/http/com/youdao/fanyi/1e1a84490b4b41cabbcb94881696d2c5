@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 23 Sep 2018 04:31:04 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["异步"],"basic":{"us-phonetic":"e'sɪŋkrənəs","phonetic":"ə'sɪŋkrənəs; eɪ-","uk-phonetic":"ə'sɪŋkrənəs; eɪ-","explains":["adj. [电] 异步的；不同时的；不同期的"]},"query":"asynchronous","errorCode":0,"web":[{"value":["异步的","非同步","不同时的"],"key":"asynchronous"},{"value":["异步电动机","异步电机","感应电动机"],"key":"asynchronous motor"},{"value":["异步电路","非同步电路","异步电路"],"key":"Asynchronous circuit"}]}

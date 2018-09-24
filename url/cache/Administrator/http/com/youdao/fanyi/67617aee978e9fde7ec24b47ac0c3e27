@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 24 Sep 2018 16:19:43 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["普通的"],"basic":{"us-phonetic":"'ɔrdnɛri","phonetic":"'ɔːdɪn(ə)rɪ; -d(ə)n-","uk-phonetic":"'ɔːdɪn(ə)rɪ; -d(ə)n-","explains":["n. 普通；平常的人（或事）","adj. 普通的；平凡的；平常的"]},"query":"ordinary","errorCode":0,"web":[{"value":["普通的","平常","平凡"],"key":"ordinary"},{"value":["千言万语 (电影)","千言万语","平凡英雄"],"key":"Ordinary Heroes"},{"value":["普通列车","平凡列车","普通轮系"],"key":"ordinary train"}]}

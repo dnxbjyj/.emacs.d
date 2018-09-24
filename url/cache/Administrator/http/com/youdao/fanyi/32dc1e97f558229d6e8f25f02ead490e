@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 23 Sep 2018 04:31:14 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["覆盖"],"basic":{"us-phonetic":"'ovəlɛi","phonetic":"əʊvə'leɪ","uk-phonetic":"əʊvə'leɪ","explains":["vt. 在表面上铺一薄层，镀","n. 覆盖图；覆盖物"]},"query":"overlay","errorCode":0,"web":[{"value":["覆盖 (编程)","覆盖","叠加"],"key":"Overlay"},{"value":["覆盖区","覆迭键盘","重叠区"],"key":"overlay region"},{"value":["视频覆盖","视频重叠","视频叠加"],"key":"video overlay"}]}

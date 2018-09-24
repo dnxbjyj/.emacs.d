@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 24 Sep 2018 16:24:04 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["符号"],"basic":{"explains":["adj. 记数的（notation的形容词）"]},"query":"notational","errorCode":0,"web":[{"value":["标志"],"key":"notational"},{"value":["概念上的便利","符号方便"],"key":"notational convenience"},{"value":["符号系统"],"key":"notational system"}]}

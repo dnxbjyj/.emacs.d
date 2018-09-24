@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 23 Sep 2018 04:11:36 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["Method,"],"basic":{"explains":["Farquer"]},"query":"法克","errorCode":0,"web":[{"value":["Fack","Faxe","FuCK"],"key":"法克"},{"value":["Cesar Franck","Frenk","Franck"],"key":"法朗克"},{"value":["Julia Franck","Frank Ellermann"],"key":"法蓝克"}]}

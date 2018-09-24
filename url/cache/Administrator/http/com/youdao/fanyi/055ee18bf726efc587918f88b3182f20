@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 23 Sep 2018 04:07:33 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["Ha ha"],"basic":{"phonetic":"hā ha","explains":["ha","ha-ha","haw-haw"]},"query":"哈哈","errorCode":0,"web":[{"value":["OO","ha","Breez"],"key":"哈哈"},{"value":["Distorting mirror","distorting mirror","Zeallsoft Magic Mirror"],"key":"哈哈镜"},{"value":["LAUGH AND SING","Ha Ha Siu","laugh"],"key":"哈哈笑"}]}

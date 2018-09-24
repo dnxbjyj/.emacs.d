@@ -1,0 +1,9 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 24 Sep 2018 16:22:03 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+
+{"translation":["致谢"],"basic":{"explains":["n. 感谢，鸣谢（acknowledgment的复数形式）；致谢"]},"query":"acknowledgments","errorCode":0,"web":[{"value":["致谢","鸣谢","版权声明"],"key":"Acknowledgments"},{"value":["关税减让"],"key":"tariff acknowledgments"},{"value":["确认出现","鸣谢出现"],"key":"acknowledgments appear"}]}

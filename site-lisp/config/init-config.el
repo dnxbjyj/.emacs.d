@@ -36,3 +36,4 @@
 
 ;; 提供init-config模块
 (provide 'init-config)
+

@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 23 Sep 2018 04:30:07 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["评论"],"basic":{"us-phonetic":"'kɑməntɛri","phonetic":"'kɒmənt(ə)rɪ","uk-phonetic":"'kɒmənt(ə)rɪ","explains":["n. 评论；注释；评注；说明"]},"query":"commentary","errorCode":0,"web":[{"value":["评论","解说","实况报道"],"key":"Commentary"},{"value":["体育评论"],"key":"Sport Commentary"},{"value":["电视解说音量"],"key":"Commentary Vol"}]}

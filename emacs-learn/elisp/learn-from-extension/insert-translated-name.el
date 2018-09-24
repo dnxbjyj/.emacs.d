@@ -73,13 +73,16 @@
 (defvar insert-translated-name-line-style-mode-list
   '(web-mode emacs-lisp-mode))
 
+;; 驼峰风格变量
 (defvar insert-translated-name-camel-style-mode-list
   '(js-mode))
 
+;; 下划线风格变量
 (defvar insert-translated-name-underline-style-mode-list
   '(ruby-mode))
 
 ;;;;;;;;;;;;;;;;;;;;; Interactive functions ;;;;;;;;;;;;;;;;;;;;;
+;; 
 (defun insert-translated-name-insert ()
   (interactive)
   (if (or (insert-translated-name-in-string-p)

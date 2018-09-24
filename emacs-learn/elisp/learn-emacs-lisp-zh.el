@@ -275,7 +275,7 @@
     (erase-buffer)
     ;; 为`list-of-names'中的每个名字调用hello
     (mapcar 'hello list-of-names)
-    (goto-char (point-min))
+V=    (goto-char (point-min))
     ;; 将"Hello" 替换为"Bonjour"
     (while (search-forward "Hello" nil t)
       (replace-match "Bonjour"))
