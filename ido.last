@@ -13,6 +13,7 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/wangyi-music-mode/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/"
  "e:/code/py-project/inspider/"
@@ -33,6 +34,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "workbench.el"
  "wangyi-music-mode.el"
  "readme.md"
  "init-insert-translated-name.el"
@@ -42,11 +44,12 @@
  "补充-v1.0.txt"
  "py_template.py"
  "init-virtualenvwrapper.el"
- "virtualenvwrapper.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23465 5981 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.md" ".#learn-emacs-lisp-zh.el" "../" "./")
+
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23464 12003 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/" (23463 44191 0 0) "readme.org" "elisp/" "../" "./")

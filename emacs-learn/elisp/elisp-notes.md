@@ -1,5 +1,5 @@
 > An Introduction to Programming in Emacs Lisp: https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html
-> 2018-09-25 周二，该看：1.2 Run a Program
+> 2018-09-25 周二，该看：1.8 Arguments
 
 # 运行elisp代码的几种方式：
 ### 运行单行代码
