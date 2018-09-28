@@ -48,7 +48,7 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23465 5981 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.md" ".#learn-emacs-lisp-zh.el" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23467 48930 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.md" ".#learn-emacs-lisp-zh.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23464 12003 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
