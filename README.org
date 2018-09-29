@@ -1,5 +1,5 @@
 * .emacs.d
-My Emacs Configurations.
+我的Emacs配置日积月累。
 
 * 核心配置文件结构
 - init.el :: 主入口文件
@@ -13,3 +13,4 @@ My Emacs Configurations.
 
 - site-lisp/extension/themes/ :: 主题扩展目录
 
+- local-lisp :: 本地化的一些配置

@@ -8,6 +8,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 快速打开windows下的hosts文件
+(defun my-local/hosts()
+  "quickly open hosts config file."
+  (interactive)
+  (find-file "C:/Windows/System32/drivers/etc/hosts"))
+
 ;; 在文件夹中打开.emacs.d目录: C-S-<f1>
 (global-set-key (kbd "C-S-<f1>") '(lambda() (interactive) (shell-command "start C:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d")))
 
