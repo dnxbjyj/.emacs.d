@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 24 Sep 2018 16:19:09 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["集成"],"basic":{"us-phonetic":"'ɪntɪɡretɪd","phonetic":"'ɪntɪgreɪtɪd","uk-phonetic":"'ɪntɪgreɪtɪd","explains":["adj. 综合的；完整的；互相协调的","v. 整合；使\u2026成整体（integrate的过去分词）"]},"query":"integrated","errorCode":0,"web":[{"value":["整合","集成的","综合的"],"key":"integrated"},{"value":["集成电路","集成电路","积体电路"],"key":"Integrated Circuit"},{"value":["美信集成产品","美信集成","美信半导体"],"key":"Maxim Integrated"}]}

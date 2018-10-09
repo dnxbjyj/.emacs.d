@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 24 Sep 2018 16:22:31 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["警告"],"basic":{"explains":["n. 警告；说明（caveat的复数）"]},"query":"caveats","errorCode":0,"web":[{"value":["警告","注意事项","中止申请"],"key":"Caveats"},{"value":["国家警告"],"key":"National Caveats"},{"value":["你忠告"],"key":"Your Caveats"}]}

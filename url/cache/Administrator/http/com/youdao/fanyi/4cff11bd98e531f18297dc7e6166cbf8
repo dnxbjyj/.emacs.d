@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 24 Sep 2018 16:19:26 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["设施"],"basic":{"us-phonetic":"fə'sɪlɪtɪz","phonetic":"fə'sɪlɪtɪz","uk-phonetic":"fə'sɪlɪtɪz","explains":["n. 设施；工具，设备"]},"query":"facilities","errorCode":0,"web":[{"value":["设施","设备","条件"],"key":"facilities"},{"value":["运输设备","运输设施","运输工具"],"key":"transportation facilities"},{"value":["体育设施","运动设施","体育设备"],"key":"Sports facilities"}]}

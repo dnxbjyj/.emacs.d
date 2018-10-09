@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 24 Sep 2018 16:20:20 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["相当大的"],"basic":{"us-phonetic":"kən'sɪdərəbl","phonetic":"kən'sɪd(ə)rəb(ə)l","uk-phonetic":"kən'sɪd(ə)rəb(ə)l","explains":["adj. 相当大的；重要的，值得考虑的"]},"query":"considerable","errorCode":0,"web":[{"value":["可观","相当大的","长足"],"key":"Considerable"},{"value":["大数量","可观的数量","大数量可观的数量"],"key":"considerable quantity"},{"value":["大量","大量订购","大量订货"],"key":"considerable orders"}]}

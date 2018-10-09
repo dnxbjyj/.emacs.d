@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 24 Sep 2018 16:20:08 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["假定"],"basic":{"us-phonetic":"prɪ'zum","phonetic":"prɪ'zjuːm","uk-phonetic":"prɪ'zjuːm","explains":["vt. 假定；推测；擅自；意味着","vi. 相信；擅自行为"]},"query":"presume","errorCode":0,"web":[{"value":["假定"],"key":"presumes"},{"value":["宗老恃势"],"key":"The head of the clan presumes upon his influence"}]}

@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 24 Sep 2018 16:23:57 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["约定"],"basic":{"us-phonetic":"kən'vɛnʃən","explains":["n. [法] 惯例；会议；[计] 约定（convention的复数）"]},"query":"conventions","errorCode":0,"web":[{"value":["常规","集会","约定"],"key":"conventions"},{"value":["区域性公约","地区性合同"],"key":"Regional conventions"},{"value":["编码约定"],"key":"Codjng Conventions"}]}

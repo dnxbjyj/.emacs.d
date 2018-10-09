@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 08 Oct 2018 16:04:57 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["术语"],"basic":{"us-phonetic":"tɝm","phonetic":"tɜːm","uk-phonetic":"tɜːm","explains":["n. 术语；学期；期限；条款","n. (Term)人名；(泰)丁","vt. 把\u2026叫做"]},"query":"term","errorCode":0,"web":[{"value":["学期","术语","术语"],"key":"term"},{"value":["条款清单","风险投资协议","条款说明书"],"key":"Term Sheet"},{"value":["学期","学期"],"key":"Academic term"}]}

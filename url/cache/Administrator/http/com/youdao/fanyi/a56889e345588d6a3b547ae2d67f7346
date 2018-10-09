@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Mon, 24 Sep 2018 16:20:57 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["相应的"],"basic":{"us-phonetic":",kɔrə'spɑndɪŋ","phonetic":",kɒrɪ'spɒndɪŋ","uk-phonetic":",kɒrɪ'spɒndɪŋ","explains":["adj. 相当的，相应的；一致的；通信的","v. 类似（correspond的ing形式）；相配"]},"query":"corresponding","errorCode":0,"web":[{"value":["相应","通讯的","对应的"],"key":"Corresponding"},{"value":["对应边"],"key":"corresponding side"},{"value":["出入相抵帐目","对应科目","对应帐户"],"key":"corresponding account"}]}
