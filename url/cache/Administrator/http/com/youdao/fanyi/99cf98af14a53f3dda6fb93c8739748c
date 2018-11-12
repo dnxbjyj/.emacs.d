@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 11 Nov 2018 01:05:27 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["一团"],"basic":{"us-phonetic":"ɡlɑb","phonetic":"glɒb","uk-phonetic":"glɒb","explains":["n. 一滴；水珠；一团","n. (Glob)人名；(丹)格洛布"]},"query":"glob","errorCode":0,"web":[{"value":["球蛋白","球卵白","一滴"],"key":"GLOB"},{"value":["球蛋白"],"key":"glob ulin"},{"value":["数字地球"],"key":"digital glob"}]}

@@ -21,6 +21,9 @@
 ;;;; common end 
 
 ;;;; plugin start：插件初始化设置
+(require 'init-projectile)
+;; awesome-tab插件
+(require 'init-awesome-tab)
 ;; 自动保存插件
 (require 'init-auto-save)
 ;; 加载company-mode的自定义配置

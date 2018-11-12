@@ -13,6 +13,16 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/awesome-tab/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/projectile/"
+ "d:/"
+ "e:/code/py-project/PiiicTalk/sample/"
+ "e:/code/py-project/PiiicTalk/"
+ "d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/bin/"
+ "e:/gitee/interview/java/"
+ "e:/gitee/interview/"
+ "e:/gitee/interview/alg/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/auto-save/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/"
@@ -35,41 +45,57 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init-auto-save.el"
- "auto-save.el"
- "workbench.el"
- "wangyi-music-mode.el"
- "readme.md"
- "init-insert-translated-name.el"
- "insert-translated-name.el"
- "init-helm.el"
- "补充-raw.txt"
- "补充-v1.0.txt"
+ "init-awesome-tab.el"
+ "init-projectile.el"
+ "awesome-tab.el"
+ "projectile.el"
+ "todo.org"
+ "convert.py"
+ "tmp.org"
+ "d;"
+ "java-tips.org"
+ "tech-interview-tips.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/auto-save/" (23483 27288 0 0) "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23529 45567 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-org-mode.el" "init-insert-translated-name.el" "init-helm.el" "init-company-mode.el" "init-auto-save.el" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23467 48930 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.md" ".#learn-emacs-lisp-zh.el" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/awesome-tab/" (23529 45510 0 0) "awesome-tab.el" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23464 12003 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/" (23529 45431 0 0) "youdao-dictionary-20180714.414/" "with-editor-20180726.2044/" "watch-other-window/" "w3m-20180405.520/" "virtualenvwrapper/" "themes/" "skewer-mode-20180706.1807/" "simple-httpd-20180528.1603/" "s-20180406.808/" "pydoc-20180509.2219/" "projectile/" "pos-tip-20150318.1513/" "popup-20160709.1429/" "pkg-info-20150517.1143/" "org-pomodoro-20171108.2114/" "names-20180321.1155/" "memoize-20180614.1930/" "markdown-mode-20180731.1830/" "magit-popup-20180726.2037/" "magit-20180903.2339/" "log4e-20170401.1304/" "let-alist-1.0.5/" "js2-mode-20180724.801/" "jdee-20180711.2036/" "insert-translated-name.el" "helm-core-20180826.515/" "helm-20180906.517/" "gntp-20141025.250/" "git-commit-20180802.2018/" "ghub-20180821.1430/" "flycheck-20180720.947/" "epl-20180205.2049/" "dash-20180726.1213/" "company-0.9.6/" "chinese-word-at-point-20170811.941/" "awesome-tab/" "auto-save/" "async-20180527.1730/" "archives/" "alert-20180827.422/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/projectile/" (23529 45461 0 0) "projectile.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23528 24124 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("e:/code/py-project/PiiicTalk/sample/" (23527 34809 0 0) "img/" "convert.py" "../" "./")
+
+ ("e:/code/py-project/PiiicTalk/" (23525 48474 0 0) "sample/" "../" "./")
+
+ ("e:/gitee/interview/java/" (23519 55402 0 0) "java-tips.org" "../" "./")
+
+ ("e:/gitee/interview/" (23519 55136 0 0) "tech-interview-tips.org" "README.md" "java/" "auto-commit.bat" "alg/" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23483 28773 0 0) "template.el" "init-config.el" "init/" "../" "./")
+
+ ("e:/code/py-project/DoubanHouse/" (23494 31683 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-10-17.html" "config.conf" "auto-commit.bat" "archive/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/" (23465 1995 0 0) "readme.md" "insert-translated-name.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23469 30521 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.md" ".#learn-emacs-lisp-zh.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/auto-save/" (23484 50834 0 0) "auto-save.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23483 28440 0 0) "plugin/" "common/" "../" "./")
+
+ ("e:/gitee/interview/alg/" (23519 54275 0 0) "linkedlist/" "../" "./")
+
+ ("e:/gitee/vector8/" (23487 24207 0 0) "vector8.org.txt" "README.md" "me/" "doc-tpl/" "dear/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/" (23463 44191 0 0) "readme.org" "elisp/" "../" "./")
 
- ("e:/code/py-project/DoubanHouse/" (23464 19851 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-09-24.html" "douban-house-topics-2018-09-23.html" "douban-house-topics-2018-09-19.html" "douban-house-topics-2018-09-18.html" "douban-house-topics-2018-09-17.html" "douban-house-topics-2018-09-16.html" "douban-house-topics-2018-09-15.html" "douban-house-topics-2018-09-14.html" "douban-house-topics-2018-09-13.html" "douban-house-topics-2018-09-12.html" "config.conf" "auto-commit.bat" "../" "./")
-
- ("e:/gitee/vector8/" (23464 47551 0 0) "vector8.org.txt" "README.md" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/" (23464 47579 0 0) "youdao-dictionary-20180714.414/" "with-editor-20180726.2044/" "watch-other-window/" "wangyi-music-mode/" "w3m-20180405.520/" "virtualenvwrapper/" "themes/" "skewer-mode-20180706.1807/" "simple-httpd-20180528.1603/" "s-20180406.808/" "pydoc-20180509.2219/" "pos-tip-20150318.1513/" "popup-20160709.1429/" "pkg-info-20150517.1143/" "org-pomodoro-20171108.2114/" "names-20180321.1155/" "memoize-20180614.1930/" "markdown-mode-20180731.1830/" "magit-popup-20180726.2037/" "magit-20180903.2339/" "log4e-20170401.1304/" "let-alist-1.0.5/" "js2-mode-20180724.801/" "jdee-20180711.2036/" "insert-translated-name.el" "helm-core-20180826.515/" "helm-20180906.517/" "gntp-20141025.250/" "git-commit-20180802.2018/" "ghub-20180821.1430/" "flycheck-20180720.947/" "epl-20180205.2049/" "dash-20180726.1213/" "company-0.9.6/" "chinese-word-at-point-20170811.941/" "async-20180527.1730/" "archives/" "alert-20180827.422/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/" (23463 50122 0 0) "readme.md" "insert-translated-name.el" "../" "./")
-
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/wangyi-music-mode/" (23464 47579 0 0) "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23463 5427 0 0) "template.el" "init-config.el" "init/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23463 5410 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-ui.el" "init-theme.el" "init-quick-access.el" "init-package.el" "init-org-pomodoro.el" "init-org-mode.el" "init-network.el" "init-my-function.el" "init-key-binding.el" "init-insert-translated-name.el" "init-helm.el" "init-dired.el" "init-company-mode.el" "init-better-default.el" "../" "./")
 
  ("e:/baidu-cloud/dear/resume/" (23460 33746 0 0) "补充.docx" "补充-v1.2.txt" "补充-v1.2.docx" "补充-v1.1.docx" "补充-raw.txt" "实习简历/" "archive/" "../" "./")
 
