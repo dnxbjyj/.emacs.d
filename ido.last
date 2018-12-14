@@ -14,9 +14,11 @@
 ;; ----- ido-work-directory-list -----
 (
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/"
+ "d:/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/awesome-tab/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/projectile/"
- "d:/"
  "e:/code/py-project/PiiicTalk/sample/"
  "e:/code/py-project/PiiicTalk/"
  "d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/bin/"
@@ -27,7 +29,6 @@
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/auto-save/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/wangyi-music-mode/"
- "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/"
  "e:/code/py-project/inspider/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/"
  "e:/baidu-cloud/dear/resume/"
@@ -45,21 +46,35 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init-company-english-helper.el"
+ "company-english-helper.el"
+ "tmp.org"
+ "todo.org"
+ "test.el"
+ "auto-save.el"
  "init-awesome-tab.el"
  "init-projectile.el"
  "awesome-tab.el"
  "projectile.el"
- "todo.org"
- "convert.py"
- "tmp.org"
- "d;"
- "java-tips.org"
- "tech-interview-tips.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23529 45567 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-org-mode.el" "init-insert-translated-name.el" "init-helm.el" "init-company-mode.el" "init-auto-save.el" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/" (23571 56178 0 0) "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23570 31353 0 0) "url/" "site-lisp/" "recentf" "README.org" "projectile-bookmarks.eld" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23529 45657 0 0) "template.el" "init-config.el" "init/" "../" "./")
+
+ ("e:/gitee/vector8/" (23529 46140 0 0) "vector8.org.txt" "README.md" "me/" "doc-tpl/" "dear/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23531 27805 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.org" ".#learn-emacs-lisp-zh.el" "../" "./")
+
+ ("e:/gitee/interview/" (23530 65053 0 0) "tech-interview-tips.org" "README.md" "java/" "auto-commit.bat" "alg/" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23529 46013 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-org-mode.el" "init-insert-translated-name.el" "init-helm.el" "init-company-mode.el" "init-awesome-tab.el" "init-auto-save.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/" (23531 27466 0 0) "readme.md" "insert-translated-name.el" "auto-save.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/awesome-tab/" (23529 45510 0 0) "awesome-tab.el" "../" "./")
 
@@ -67,31 +82,19 @@
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/projectile/" (23529 45461 0 0) "projectile.el" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23528 24124 0 0) "url/" "site-lisp/" "recentf" "README.org" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
-
  ("e:/code/py-project/PiiicTalk/sample/" (23527 34809 0 0) "img/" "convert.py" "../" "./")
 
  ("e:/code/py-project/PiiicTalk/" (23525 48474 0 0) "sample/" "../" "./")
 
  ("e:/gitee/interview/java/" (23519 55402 0 0) "java-tips.org" "../" "./")
 
- ("e:/gitee/interview/" (23519 55136 0 0) "tech-interview-tips.org" "README.md" "java/" "auto-commit.bat" "alg/" ".gitignore" ".git/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23483 28773 0 0) "template.el" "init-config.el" "init/" "../" "./")
-
  ("e:/code/py-project/DoubanHouse/" (23494 31683 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-10-17.html" "config.conf" "auto-commit.bat" "archive/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/" (23465 1995 0 0) "readme.md" "insert-translated-name.el" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23469 30521 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.md" ".#learn-emacs-lisp-zh.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/auto-save/" (23484 50834 0 0) "auto-save.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23483 28440 0 0) "plugin/" "common/" "../" "./")
 
  ("e:/gitee/interview/alg/" (23519 54275 0 0) "linkedlist/" "../" "./")
-
- ("e:/gitee/vector8/" (23487 24207 0 0) "vector8.org.txt" "README.md" "me/" "doc-tpl/" "dear/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/" (23463 44191 0 0) "readme.org" "elisp/" "../" "./")
 

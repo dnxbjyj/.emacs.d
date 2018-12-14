@@ -21,6 +21,9 @@
 ;;;; common end 
 
 ;;;; plugin start：插件初始化设置
+;; company-english-helper插件
+(require 'init-company-english-helper)
+;; projectile插件
 (require 'init-projectile)
 ;; awesome-tab插件
 (require 'init-awesome-tab)

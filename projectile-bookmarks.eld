@@ -1,1 +1,1 @@
-("e:/gitee/vector8/")
+("~/.emacs.d/" "e:/gitee/interview/" "e:/gitee/vector8/")

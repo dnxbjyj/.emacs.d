@@ -9,3 +9,15 @@ workon py2env
 pip list
 python py-code-templage.py 
 python
+(eval-buffer "todo.org" (get-buffer-create "output"))
+eval-buffer 
+eval-buffer "todo.org" (get-buffer-create "output")
+(eval-buffer "workbench.el" (get-buffer-create "output"))
+(eval-buffer "workbench.el" (get-buffer-create "output"))
+(eval-buffer "workbench.el" (get-buffer-create "output"))
+(eval-buffer "workbench.el" (get-buffer-create "output"))
+(+ 1 1)
+cat
+vi
+vim
+emacs --no-site-file --script ./test.el

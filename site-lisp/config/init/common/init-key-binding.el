@@ -8,6 +8,11 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 执行S式
+(global-set-key (kbd "<f5>") 'eval-last-sexp)
+
+;; 跳转到某行
+(global-set-key (kbd "C-=") 'goto-line)
 
 ;; 加载当前文件
 (global-set-key (kbd "C-<f3>") 'load-file)
