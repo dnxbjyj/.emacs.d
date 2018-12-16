@@ -21,3 +21,9 @@ cat
 vi
 vim
 emacs --no-site-file --script ./test.el
+set i 0
+(setq i 0)
+i
+(message i)
+message "hell"
+message i

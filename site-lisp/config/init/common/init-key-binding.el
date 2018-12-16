@@ -8,8 +8,17 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 快速打开elisp手册
+(defun open-elisp-manual ()
+  (interactive)
+  (progn
+    (info)
+    (Info-menu "Elisp")))
+(global-set-key (kbd "C-h C-x e") 'open-elisp-manual)
+
+
 ;; 执行S式
-(global-set-key (kbd "<f5>") 'eval-last-sexp)
+(global-set-key (kbd "<f9>") 'eval-last-sexp)
 
 ;; 跳转到某行
 (global-set-key (kbd "C-=") 'goto-line)
@@ -32,8 +41,14 @@
 (global-set-key (kbd "S-<tab>") 'bs-cycle-previous)
 
 ;; 运行当前buffer中的所有代码: C-<f9>
-(global-set-key (kbd "C-<f9>") '(lambda() (interactive) (eval-buffer nil)))
-
+(global-set-key (kbd "C-<f9>") '(lambda()
+				  (interactive)
+				  (setq cur-buf (current-buffer))
+				  (get-buffer-create "output")
+				  (switch-to-buffer-other-window "output")
+				  (erase-buffer)
+				  (eval-buffer cur-buf  (get-buffer-create "output"))
+			           	  (other-window -1)))
 
 ;; 格式化JSON字符串: C-c C-j
 (global-set-key (kbd "C-c C-j") 'json-pretty-print-buffer)

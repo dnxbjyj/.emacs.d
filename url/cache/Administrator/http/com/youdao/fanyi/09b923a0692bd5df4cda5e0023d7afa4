@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 16 Dec 2018 15:00:13 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["显式地"],"basic":{"us-phonetic":"ɪk'splɪsɪtli","phonetic":"ik'splisitli","uk-phonetic":"ik'splisitli","explains":["adv. 明确地；明白地"]},"query":"explicitly","errorCode":0,"web":[{"value":["明确地","明白地","明言"],"key":"explicitly"},{"value":["明确地"],"key":"explicitly ad"},{"value":["下显定义"],"key":"explicitly defined"}]}

@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 16 Dec 2018 15:41:25 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["德国和来"],"basic":{"explains":["n. 德国和来（德国公司名）"]},"query":"Hohner","errorCode":0,"web":[{"value":["Hohner","Hohner","德国和莱"],"key":"Hohner"},{"value":["约翰·布里顿"],"key":"Hohner Bratton"},{"value":["区域","法国买家"],"key":"HOHNER SA"}]}

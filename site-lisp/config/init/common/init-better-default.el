@@ -9,6 +9,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 在elisp-mode高亮括号配对
+(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
+
 ;; 在状态栏显示当前时间、日期
 (display-time-mode 1)
 (setq display-time-day-and-date t)

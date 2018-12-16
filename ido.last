@@ -13,9 +13,9 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "d:/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/"
- "d:/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/awesome-tab/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/projectile/"
@@ -46,39 +46,39 @@
 
 ;; ----- ido-work-file-list -----
 (
- "init-company-english-helper.el"
- "company-english-helper.el"
+ "tmp.md"
  "tmp.org"
  "todo.org"
+ "init-company-english-helper.el"
+ "company-english-helper.el"
  "test.el"
  "auto-save.el"
  "init-awesome-tab.el"
  "init-projectile.el"
  "awesome-tab.el"
- "projectile.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/" (23571 56178 0 0) "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23574 15821 0 0) "url/" "site-lisp/" "recentf" "README.org" "projectile-bookmarks.eld" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23570 31353 0 0) "url/" "site-lisp/" "recentf" "README.org" "projectile-bookmarks.eld" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23571 56684 0 0) "template.el" "init-config.el" "init/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23529 45657 0 0) "template.el" "init-config.el" "init/" "../" "./")
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/" (23571 56178 0 0) "youdao-dictionary-20180714.414/" "with-editor-20180726.2044/" "watch-other-window/" "w3m-20180405.520/" "virtualenvwrapper/" "themes/" "skewer-mode-20180706.1807/" "simple-httpd-20180528.1603/" "s-20180406.808/" "pydoc-20180509.2219/" "projectile/" "pos-tip-20150318.1513/" "popup-20160709.1429/" "pkg-info-20150517.1143/" "org-pomodoro-20171108.2114/" "names-20180321.1155/" "memoize-20180614.1930/" "markdown-mode-20180731.1830/" "magit-popup-20180726.2037/" "magit-20180903.2339/" "log4e-20170401.1304/" "let-alist-1.0.5/" "js2-mode-20180724.801/" "jdee-20180711.2036/" "insert-translated-name.el" "helm-core-20180826.515/" "helm-20180906.517/" "gntp-20141025.250/" "git-commit-20180802.2018/" "ghub-20180821.1430/" "flycheck-20180720.947/" "epl-20180205.2049/" "dash-20180726.1213/" "company-english-helper/" "company-0.9.6/" "chinese-word-at-point-20170811.941/" "awesome-tab/" "auto-save/" "async-20180527.1730/" "archives/" "alert-20180827.422/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/" (23571 56876 0 0) "stardict.py" "company-english-helper.el" "company-english-helper-data.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23574 12078 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-org-mode.el" "init-insert-translated-name.el" "init-helm.el" "init-company-mode.el" "init-company-english-helper.el" "init-awesome-tab.el" "init-auto-save.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23574 15836 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.org" ".#learn-emacs-lisp-zh.el" "../" "./")
 
  ("e:/gitee/vector8/" (23529 46140 0 0) "vector8.org.txt" "README.md" "me/" "doc-tpl/" "dear/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23531 27805 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.org" ".#learn-emacs-lisp-zh.el" "../" "./")
-
  ("e:/gitee/interview/" (23530 65053 0 0) "tech-interview-tips.org" "README.md" "java/" "auto-commit.bat" "alg/" ".gitignore" ".git/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23529 46013 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-org-mode.el" "init-insert-translated-name.el" "init-helm.el" "init-company-mode.el" "init-awesome-tab.el" "init-auto-save.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/" (23531 27466 0 0) "readme.md" "insert-translated-name.el" "auto-save.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/awesome-tab/" (23529 45510 0 0) "awesome-tab.el" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/" (23529 45431 0 0) "youdao-dictionary-20180714.414/" "with-editor-20180726.2044/" "watch-other-window/" "w3m-20180405.520/" "virtualenvwrapper/" "themes/" "skewer-mode-20180706.1807/" "simple-httpd-20180528.1603/" "s-20180406.808/" "pydoc-20180509.2219/" "projectile/" "pos-tip-20150318.1513/" "popup-20160709.1429/" "pkg-info-20150517.1143/" "org-pomodoro-20171108.2114/" "names-20180321.1155/" "memoize-20180614.1930/" "markdown-mode-20180731.1830/" "magit-popup-20180726.2037/" "magit-20180903.2339/" "log4e-20170401.1304/" "let-alist-1.0.5/" "js2-mode-20180724.801/" "jdee-20180711.2036/" "insert-translated-name.el" "helm-core-20180826.515/" "helm-20180906.517/" "gntp-20141025.250/" "git-commit-20180802.2018/" "ghub-20180821.1430/" "flycheck-20180720.947/" "epl-20180205.2049/" "dash-20180726.1213/" "company-0.9.6/" "chinese-word-at-point-20170811.941/" "awesome-tab/" "auto-save/" "async-20180527.1730/" "archives/" "alert-20180827.422/" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/projectile/" (23529 45461 0 0) "projectile.el" "../" "./")
 
