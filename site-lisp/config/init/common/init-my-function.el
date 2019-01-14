@@ -8,17 +8,20 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-;; select word at current point
+(defun select-current-word-core (word-char-regex)
+  "Select current word with indicated word char regex."
+  (skip-chars-backward word-char-regex)
+  (setq start (point))
+  (skip-chars-forward word-char-regex)
+  (set-mark start))
+
 (defun select-current-word ()
-  "Select word at current point."
+  "Select current word using default word char regex."
   (interactive)
-  (setq bounds (bounds-of-thing-at-point 'word))
-  (setq start (car bounds))
-  (setq end (cdr bounds))
-  (ignore-errors
-    (goto-char end)
-    (set-mark start)))
+  (let ((default-word-char-regex "[\\-_a-zA-Z0-9]"))
+  (select-current-word-core default-word-char-regex)))
 (global-set-key (kbd "C-?") 'select-current-word)
+
 
 ;; select current line
 (defun select-current-line ()
