@@ -8,6 +8,25 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun check-inside-quotations (position)
+  "Check whether the indicated position inside a pair of quotations."
+  (nth 3 (syntax-ppss position)))
+
+(defun select-text-between-quotations ()
+  "Select text between two nearest quotation marks."
+  (interactive)
+  (if (check-inside-quotations (point))
+      (progn
+    ;; here should not use square brackets in regexp
+    (let ((start) (skip-char "^\""))
+      (skip-chars-backward skip-char)
+      (setq start (point))
+      (skip-chars-forward skip-char)
+      (push-mark start)
+      (setq mark-active t)))
+    (message "not inside a pair of quotation marks!")))
+(global-set-key (kbd "C-\"") 'select-text-between-quotations)
+
 (defun select-current-word-core (word-char-regex)
   "Select current word with indicated word char regex."
   (skip-chars-backward word-char-regex)
