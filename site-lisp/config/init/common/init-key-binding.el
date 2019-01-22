@@ -18,7 +18,9 @@
 
 
 ;; 执行S式
-(global-set-key (kbd "<f9>") 'eval-last-sexp)
+(global-set-key (kbd "<f9>") (lambda () (interactive)
+			       (goto-char (line-end-position))
+			       (eval-last-sexp nil)))
 
 ;; 跳转到某行
 (global-set-key (kbd "C-=") 'goto-line)
