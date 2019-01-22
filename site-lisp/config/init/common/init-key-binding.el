@@ -17,7 +17,7 @@
 (global-set-key (kbd "C-h C-x e") 'open-elisp-manual)
 
 
-;; 执行S式
+;; 执行当前行的S式
 (global-set-key (kbd "<f9>") (lambda () (interactive)
 			       (goto-char (line-end-position))
 			       (eval-last-sexp nil)))
