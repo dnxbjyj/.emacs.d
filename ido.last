@@ -14,6 +14,7 @@
 ;; ----- ido-work-directory-list -----
 (
  "d:/"
+ "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/learn-from-extension/"
@@ -27,7 +28,6 @@
  "e:/gitee/interview/alg/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/auto-save/"
- "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/wangyi-music-mode/"
  "e:/code/py-project/inspider/"
  "c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/"
@@ -47,19 +47,23 @@
 ;; ----- ido-work-file-list -----
 (
  "tmp.md"
- "tmp.org"
  "todo.org"
+ "info.json"
+ "archive-workbench.el"
+ "tmp.org"
  "init-company-english-helper.el"
  "company-english-helper.el"
  "test.el"
  "auto-save.el"
  "init-awesome-tab.el"
- "init-projectile.el"
- "awesome-tab.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23642 16478 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.org" ".#learn-emacs-lisp-zh.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/youdao-dictionary-20180714.414/" (23639 42232 0 0) "youdao-dictionary.el" "youdao-dictionary-pkg.el" "youdao-dictionary-autoloads.el" "../" "./")
+
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23574 15821 0 0) "url/" "site-lisp/" "recentf" "README.org" "projectile-bookmarks.eld" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23571 56684 0 0) "template.el" "init-config.el" "init/" "../" "./")
@@ -69,8 +73,6 @@
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/" (23571 56876 0 0) "stardict.py" "company-english-helper.el" "company-english-helper-data.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23574 12078 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-org-mode.el" "init-insert-translated-name.el" "init-helm.el" "init-company-mode.el" "init-company-english-helper.el" "init-awesome-tab.el" "init-auto-save.el" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23574 15836 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.org" ".#learn-emacs-lisp-zh.el" "../" "./")
 
  ("e:/gitee/vector8/" (23529 46140 0 0) "vector8.org.txt" "README.md" "me/" "doc-tpl/" "dear/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 

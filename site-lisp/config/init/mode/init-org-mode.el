@@ -8,6 +8,18 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; shrink parent leve heading
+(add-hook 'org-mode-hook
+	  '(lambda ()
+	     (local-set-key (kbd "C-M-{") '(lambda () (interactive)
+						     (outline-up-heading 1) (org-cycle)))))
+
+;; shrink current leve heading
+(add-hook 'org-mode-hook
+	  '(lambda ()
+	     (local-set-key (kbd "C-{") '(lambda () (interactive)
+						     (outline-previous-visible-heading 1) (org-cycle)))))
+
 
 ;; 插入代码块
 (defun org-insert-src-block (src-code-type)

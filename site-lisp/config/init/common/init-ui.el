@@ -8,6 +8,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; set noto sans monospaced font, should install corresponding ttf in advance
+; (set-default-font "Noto Sans Mono")
 
 ;; 设置行号格式为数字后面跟一个空格
 (setq linum-format "%d ")

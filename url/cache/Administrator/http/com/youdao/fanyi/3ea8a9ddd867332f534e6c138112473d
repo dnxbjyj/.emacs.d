@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Server: nginx
-Date: Sun, 16 Dec 2018 15:50:05 GMT
-Content-Type: application/json;charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-
-{"translation":["主要的"],"basic":{"us-phonetic":"praɪm","phonetic":"praɪm","uk-phonetic":"praɪm","explains":["n. 初期；青年；精华；全盛时期","adj. 主要的；最好的；基本的","vt. 使准备好；填装","vi. 作准备","adv. 极好地","n. (Prime)人名；(英)普赖姆；(德)普里梅"]},"query":"prime","errorCode":0,"web":[{"value":["领袖","角分符号","春心荡漾"],"key":"Prime"},{"value":["质数","素数","素数"],"key":"Prime number"},{"value":["威尔逊质数","威尔逊质数"],"key":"Wilson prime"}]}

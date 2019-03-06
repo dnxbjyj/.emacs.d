@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: Tengine
+Date: Wed, 06 Feb 2019 01:43:39 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["随意翻阅"],"basic":{"us-phonetic":"'pædʒə'net","phonetic":"'pædʒɪneɪt","uk-phonetic":"'pædʒɪneɪt","explains":["vt. 为\u2026标页数","vi. 随意翻阅"]},"query":"paginate","errorCode":0,"web":[{"value":["标页数","编页","标页号"],"key":"paginate"},{"value":["解析和分页"],"key":"parse and paginate"},{"value":["编页码"],"key":"paginate; paginating; pagination"}]}

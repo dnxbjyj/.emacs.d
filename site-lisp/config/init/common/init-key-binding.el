@@ -8,25 +8,16 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-;; 快速打开elisp手册
-(defun open-elisp-manual ()
-  (interactive)
-  (progn
-    (info)
-    (Info-menu "Elisp")))
-(global-set-key (kbd "C-h C-x e") 'open-elisp-manual)
-
+;; 跳转到某行
+(global-set-key (kbd "C-=") 'goto-line)
 
 ;; 执行当前行的S式
 (global-set-key (kbd "<f9>") (lambda () (interactive)
 			       (goto-char (line-end-position))
 			       (eval-last-sexp nil)))
 
-;; 跳转到某行
-(global-set-key (kbd "C-=") 'goto-line)
-
 ;; 加载当前文件
-(global-set-key (kbd "C-<f3>") 'load-file)
+(global-set-key (kbd "C-<f12>") 'load-file)
 
 ;; 窗口缩放，用于多窗口场景
 (global-set-key (kbd "C-S-<left>") 'shrink-window-horizontally)

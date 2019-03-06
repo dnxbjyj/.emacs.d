@@ -8,6 +8,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 快速打开elisp手册
+(defun open-elisp-manual ()
+  (interactive)
+  (progn
+    (info)
+    (Info-menu "Elisp")))
+(global-set-key (kbd "C-h C-x e") 'open-elisp-manual)
 
 ;; 在dired模式中打开.emacs.d目录: C-<f1>
 (global-set-key (kbd "C-<f1>") '(lambda() (interactive) (dired "~/.emacs.d/")))

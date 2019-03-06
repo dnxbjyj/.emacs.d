@@ -2,14 +2,7 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".baidu.com"
-  [url-cookie "PSTM" "1535808483" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
-  [url-cookie "BIDUPSID" "0F0CB3046FA4050DE4C158DE12A4917E" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
-  [url-cookie "max-age" "2147483647" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil]
-  [url-cookie "BAIDUID" "0F0CB3046FA4050DE4C158DE12A4917E:FG=1" "31 Dec 37 23:55:55 [GMT]" "/" ".baidu.com" nil])
- ("www.baidu.com"
-  [url-cookie "delPer" "0" "24-Aug-2048 13:27:26.00 GMT" "/" "www.baidu.com" nil]))
-)
+ 'nil)
 (setq url-cookie-secure-storage
  'nil)
 

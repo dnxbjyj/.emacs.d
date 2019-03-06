@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: Tengine
+Date: Wed, 06 Feb 2019 01:40:46 GMT
+Content-Type: application/json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+Set-Cookie: SESSION_FROM_COOKIE=YouDaoCV; domain=fanyi.youdao.com; path=/
+
+{"translation":["搜索"],"basic":{"us-phonetic":"sɝtʃ","phonetic":"sɜːtʃ","uk-phonetic":"sɜːtʃ","explains":["n. 搜寻；探究，查究","n. (Search)人名；(英)瑟奇","vt. 搜索；搜寻；调查；搜查；探求","vi. 搜寻；调查；探求"]},"query":"search","errorCode":0,"web":[{"value":["搜寻商品","搜索","搜"],"key":"Search"},{"value":["线性搜索","线性搜寻","线性查找"],"key":"Linear search"},{"value":["桌面搜索","桌面搜索","桌面搜寻"],"key":"Desktop search"}]}

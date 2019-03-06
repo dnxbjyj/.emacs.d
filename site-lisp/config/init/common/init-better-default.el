@@ -9,6 +9,18 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; change search default key binding
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+
+;; set vertical split when open a new buffer
+(setq split-width-threshold nil)
+
+;; format current buffer code to pretty print
+(global-set-key (kbd "C-c C-f") (lambda () (interactive) (pp-buffer)))
+
 ;; 在elisp-mode高亮括号配对
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 

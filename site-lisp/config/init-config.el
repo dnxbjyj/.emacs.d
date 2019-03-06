@@ -20,6 +20,15 @@
 (require 'init-ui)
 ;;;; common end 
 
+;;;; init mode start
+;; config eshell-mode
+(require 'init-eshell-mode)
+;; config org-mode
+(require 'init-org-mode)
+;; config company-mode
+(require 'init-company-mode)
+;;;; init mode end
+
 ;;;; plugin start：插件初始化设置
 ;; company-english-helper插件
 (require 'init-company-english-helper)
@@ -29,14 +38,10 @@
 (require 'init-awesome-tab)
 ;; 自动保存插件
 (require 'init-auto-save)
-;; 加载company-mode的自定义配置
-(require 'init-company-mode)
 ;; helm插件配置
 (require 'init-helm)
 ;; 写代码中-英文翻译辅助插件
 (require 'init-insert-translated-name)
-;; org-mode配置
-(require 'init-org-mode)
 ;; org-pomodoro插件配置
 (require 'init-org-pomodoro)
 ;; virtualenvwrapper虚拟化环境配置
