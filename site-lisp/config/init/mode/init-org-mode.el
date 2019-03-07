@@ -8,18 +8,22 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-;; shrink parent leve heading
+;; set org-table font to mono font
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (set-face-attribute 'org-table nil :family "Noto Sans Mono")))
+
+;; shrink parent leve headline
 (add-hook 'org-mode-hook
 	  '(lambda ()
 	     (local-set-key (kbd "C-M-{") '(lambda () (interactive)
 						     (outline-up-heading 1) (org-cycle)))))
 
-;; shrink current leve heading
+;; shrink current leve headline
 (add-hook 'org-mode-hook
 	  '(lambda ()
 	     (local-set-key (kbd "C-{") '(lambda () (interactive)
 						     (outline-previous-visible-heading 1) (org-cycle)))))
-
 
 ;; 插入代码块
 (defun org-insert-src-block (src-code-type)

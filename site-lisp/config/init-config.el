@@ -21,6 +21,8 @@
 ;;;; common end 
 
 ;;;; init mode start
+;; config markdown-mode
+(require 'init-markdown-mode)
 ;; config eshell-mode
 (require 'init-eshell-mode)
 ;; config org-mode

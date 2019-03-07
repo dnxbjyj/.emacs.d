@@ -17,17 +17,15 @@
 (global-set-key (kbd "C-h C-x e") 'open-elisp-manual)
 
 ;; 在dired模式中打开.emacs.d目录: C-<f1>
-(global-set-key (kbd "C-<f1>") '(lambda() (interactive) (dired "~/.emacs.d/")))
+(global-set-key (kbd "C-<f10>") '(lambda() (interactive) (dired "~/.emacs.d/")))
 
 ;; 快速打开配置文件init-config.el: <f2>
-(global-set-key (kbd "<f2>") '(lambda() (interactive) (find-file "~/.emacs.d/site-lisp/config/init-config.el")))
-;; 快速加载init-config.el: C-<f2>
-(global-set-key (kbd "C-<f2>") '(lambda() (interactive) (load-file "~/.emacs.d/site-lisp/config/init-config.el")))
+(global-set-key (kbd "C-<f11>") '(lambda() (interactive) (find-file "~/.emacs.d/site-lisp/config/init-config.el")))
 
-;; 加载当前文件: C-<f3>
-(global-set-key (kbd "C-<f3>") 'load-file)
+;; 加载当前文件
+(global-set-key (kbd "C-<f12>") 'load-file)
 
-;; 快速提交git代码: <f12>
+;; 快速提交git代码（need auto-commit.bat file in ~/.emacs.d/ directory）
 (global-set-key (kbd "<f12>") (lambda() (interactive) (shell-command "start auto-commit.bat")))
 
 ;; 在文件夹中打开当前文件所在目录: C-c o
