@@ -1,3 +1,7 @@
+# local files
+emacs-learn/*
+eshell/*
+
 # Compiled
 *.elc
 

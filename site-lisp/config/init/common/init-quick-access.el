@@ -20,7 +20,7 @@
 (global-set-key (kbd "C-<f10>") '(lambda() (interactive) (dired "~/.emacs.d/")))
 
 ;; 快速打开配置文件init-config.el: <f2>
-(global-set-key (kbd "C-<f11>") '(lambda() (interactive) (find-file "~/.emacs.d/site-lisp/config/init-config.el")))
+(global-set-key (kbd "C-<f11>") '(lambda() (interactive) (dired "~/.emacs.d/site-lisp/config/")))
 
 ;; 加载当前文件
 (global-set-key (kbd "C-<f12>") 'load-file)

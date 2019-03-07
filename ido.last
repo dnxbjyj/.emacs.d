@@ -46,6 +46,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "test.org"
  "tmp.md"
  "todo.org"
  "info.json"
@@ -55,24 +56,29 @@
  "company-english-helper.el"
  "test.el"
  "auto-save.el"
- "init-awesome-tab.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/" (23639 40312 0 0) "woman.info" "wisent.info" "widget.info" "viper.info" "vip.info" "vhdl-mode.info" "url.info" "tramp.info" "todo-mode.info" "srecode.info" "speedbar.info" "smtpmail.info" "sieve.info" "ses.info" "semantic.info" "sc.info" "sasl.info" "remember.info" "reftex.info" "rcirc.info" "pgg.info" "pcl-cvs.info" "org.info" "octave-mode.info" "nxml-mode.info" "newsticker.info" "mh-e.info" "message.info" "mairix-el.info" "info.info" "ido.info" "idlwave.info" "htmlfontify.info" "gnus.info" "forms.info" "flymake.info" "eww.info" "eudc.info" "eshell.info" "ert.info" "erc.info" "epa.info" "emacs.info" "emacs-mime.info" "emacs-gnutls.info" "elisp.info" "eintr.info" "eieio.info" "efaq.info" "efaq-w32.info" "edt.info" "ediff.info" "ede.info" "ebrowse.info" "dired-x.info" "dir" "dbus.info" "cl.info" "ccmode.info" "calc.info" "bovine.info" "autotype.info" "auth.info" "ada-mode.info" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23680 25508 0 0) "url/" "site-lisp/" "recentf" "README.org" "projectile-bookmarks.eld" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23680 25439 0 0) "init-template.el" "init-config.el" "init/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23680 25326 0 0) "plugin/" "mode/" "common/" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23679 64664 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-insert-translated-name.el" "init-helm.el" "init-company-english-helper.el" "init-awesome-tab.el" "init-auto-save.el" "../" "./")
+
+ ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/mode/" (23680 25680 0 0) "init-org-mode.el" "init-markdown-mode.el" "init-eshell-mode.el" "init-company-mode.el" "../" "./")
+
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/emacs-learn/elisp/" (23642 16478 0 0) "workbench.el" "learn-from-extension/" "learn-emacs-lisp-zh.el" "elisp-notes.org" ".#learn-emacs-lisp-zh.el" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/youdao-dictionary-20180714.414/" (23639 42232 0 0) "youdao-dictionary.el" "youdao-dictionary-pkg.el" "youdao-dictionary-autoloads.el" "../" "./")
 
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/" (23574 15821 0 0) "url/" "site-lisp/" "recentf" "README.org" "projectile-bookmarks.eld" "local-lisp/" "LICENSE" "init.el" "ido.last" "eshell/" "emacs-learn/" "emacs-daily.org" "auto-save-list/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/" (23571 56684 0 0) "template.el" "init-config.el" "init/" "../" "./")
-
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/" (23571 56178 0 0) "youdao-dictionary-20180714.414/" "with-editor-20180726.2044/" "watch-other-window/" "w3m-20180405.520/" "virtualenvwrapper/" "themes/" "skewer-mode-20180706.1807/" "simple-httpd-20180528.1603/" "s-20180406.808/" "pydoc-20180509.2219/" "projectile/" "pos-tip-20150318.1513/" "popup-20160709.1429/" "pkg-info-20150517.1143/" "org-pomodoro-20171108.2114/" "names-20180321.1155/" "memoize-20180614.1930/" "markdown-mode-20180731.1830/" "magit-popup-20180726.2037/" "magit-20180903.2339/" "log4e-20170401.1304/" "let-alist-1.0.5/" "js2-mode-20180724.801/" "jdee-20180711.2036/" "insert-translated-name.el" "helm-core-20180826.515/" "helm-20180906.517/" "gntp-20141025.250/" "git-commit-20180802.2018/" "ghub-20180821.1430/" "flycheck-20180720.947/" "epl-20180205.2049/" "dash-20180726.1213/" "company-english-helper/" "company-0.9.6/" "chinese-word-at-point-20170811.941/" "awesome-tab/" "auto-save/" "async-20180527.1730/" "archives/" "alert-20180827.422/" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/company-english-helper/" (23571 56876 0 0) "stardict.py" "company-english-helper.el" "company-english-helper-data.el" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/plugin/" (23574 12078 0 0) "init-youdao-dictionary.el" "init-watch-other-window.el" "init-virtualenvwrapper.el" "init-projectile.el" "init-org-pomodoro.el" "init-org-mode.el" "init-insert-translated-name.el" "init-helm.el" "init-company-mode.el" "init-company-english-helper.el" "init-awesome-tab.el" "init-auto-save.el" "../" "./")
 
  ("e:/gitee/vector8/" (23529 46140 0 0) "vector8.org.txt" "README.md" "me/" "doc-tpl/" "dear/" "auto-commit.bat" ".gitignore" ".git/" "../" "./")
 
@@ -93,8 +99,6 @@
  ("e:/code/py-project/DoubanHouse/" (23494 31683 0 0) "topics_tpl.html" "topics/" "SpiderCore.py" "readme.md" "douban-house-topics-2018-10-17.html" "config.conf" "auto-commit.bat" "archive/" "../" "./")
 
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/extension/auto-save/" (23484 50834 0 0) "auto-save.el" "../" "./")
-
- ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/site-lisp/config/init/" (23483 28440 0 0) "plugin/" "common/" "../" "./")
 
  ("e:/gitee/interview/alg/" (23519 54275 0 0) "linkedlist/" "../" "./")
 
@@ -143,8 +147,6 @@
  ("c:/Users/Administrator.PC-20170728DWIF/AppData/Roaming/.emacs.d/elisp/" (23455 52862 0 0) "watch-other-window.el" "init-myfunction.el" "custom.el" ".#init-myfunction.el" "../" "./")
 
  ("e:/code/py-project/GeneralJinja2TableTpl/" (23447 1094 0 0) "table_tpl.html" "result.html" "render.py" "readme.md" "../" "./")
-
- ("d:/Programs/emacs-25.1-2-x86_64-w64-mingw32/share/info/" (22571 7646 0 0) "woman.info" "wisent.info" "widget.info" "viper.info" "vip.info" "vhdl-mode.info" "url.info" "tramp.info" "todo-mode.info" "srecode.info" "speedbar.info" "smtpmail.info" "sieve.info" "ses.info" "semantic.info" "sc.info" "sasl.info" "remember.info" "reftex.info" "rcirc.info" "pgg.info" "pcl-cvs.info" "org.info" "octave-mode.info" "nxml-mode.info" "newsticker.info" "mh-e.info" "message.info" "mairix-el.info" "info.info" "ido.info" "idlwave.info" "htmlfontify.info" "gnus.info" "forms.info" "flymake.info" "eww.info" "eudc.info" "eshell.info" "ert.info" "erc.info" "epa.info" "emacs.info" "emacs-mime.info" "emacs-gnutls.info" "elisp.info" "eintr.info" "eieio.info" "efaq.info" "efaq-w32.info" "edt.info" "ediff.info" "ede.info" "ebrowse.info" "dired-x.info" "dir" "dbus.info" "cl.info" "ccmode.info" "calc.info" "bovine.info" "autotype.info" "auth.info" "ada-mode.info" "../" "./")
 
  ("e:/code/py-project/Selenium/" (23445 19051 0 0) "tmp2.txt" "tmp.txt~" "tmp.txt" "login.py~" "login.py" "html.txt" "../" "./")
 )

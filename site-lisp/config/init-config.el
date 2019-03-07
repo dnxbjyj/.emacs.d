@@ -21,6 +21,8 @@
 ;;;; common end 
 
 ;;;; init mode start
+;; config python-mode
+(require 'init-python-mode)
 ;; config markdown-mode
 (require 'init-markdown-mode)
 ;; config eshell-mode

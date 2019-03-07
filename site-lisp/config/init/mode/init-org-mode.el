@@ -8,7 +8,15 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-;; set org-table font to mono font
+;; eval code block
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
+
+;; config virtualenv root path
+(setq python-shell-virtualenv-root "e:/code/env/.py2env")
+
+;; set org-table font to mono font, should install ttf in advance
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (set-face-attribute 'org-table nil :family "Noto Sans Mono")))
