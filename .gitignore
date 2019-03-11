@@ -1,4 +1,7 @@
-# local files
+
+# local and files
+url/*
+projectile-bookmarks.eld
 emacs-learn/*
 eshell/*
 

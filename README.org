@@ -1,16 +1,19 @@
 * .emacs.d
-我的Emacs配置日积月累。
+我的Emacs配置。
 
 * 核心配置文件结构
-- init.el :: 主入口文件
-- site-lisp/ :: 模块化配置目录
-- site-lisp/config/ :: 模块化配置文件存放目录
-- site-lisp/extension/ :: 扩展文件存放目录
-
-- site-lisp/config/init-config.el :: 模块化配置入口配置文件
-- site-lisp/config/template.el :: 模块化配置模板文件
-- site-lisp/config/init/ :: 各个模块初始化配置文件存放目录
-
-- site-lisp/extension/themes/ :: 主题扩展目录
-
-- local-lisp :: 本地化的一些配置
+** init.el :: 主入口文件
+** site-lisp/ :: 开箱即用的模块化配置目录
+*** config/ :: 模块化配置文件存放目录
+**** init-config.el :: 模块化配置入口配置文件
+**** init-template.el :: 模块化配置模板文件
+**** init/ :: 各个模块初始化配置文件存放目录
+***** common/ :: 通用自定义配置
+***** mode/ :: 各种模式自定义配置
+***** plugin/ :: 各种插件自定义配置
+*** site-lisp/extension/ :: 插件代码文件存放目录
+**** themes/ :: 主题插件
+**** auto-save/ :: 自动保存插件
+**** youdao-dictionary :: 有道词典插件
+**** ...
+** local-list/ :: 本地化的模块化配置目录
