@@ -8,6 +8,56 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun kill-all-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer
+	(delq (current-buffer)
+	      (remove-if-not 'buffer-file-name (buffer-list))))
+  (message "all other buffers have been killed!"))
+(global-set-key (kbd "C-x C-k k") 'kill-all-other-buffers)
+
+(defun switch-to-minibuffer-window ()
+  "Switch to minibuffer window (if active)."
+  (interactive)
+  (when (active-minibuffer-window)
+    (select-frame-set-input-focus (window-frame (active-minibuffer-window)))
+    (select-window (active-minibuffer-window))))
+(global-set-key (kbd "<f10>") 'switch-to-minibuffer-window)
+
+;; scroll halfly
+(defun get-half-window-height ()
+  "Get half height of current window"
+  (max 1 (/ (1- (window-height (selected-window))) 2)))
+
+(defun scroll-up-half-window ()
+  "Scroll up half window."
+  (interactive)
+  (setq half-window-height (get-half-window-height))
+  (scroll-up half-window-height))
+(global-set-key (kbd "C-S-v") 'scroll-up-half-window)
+
+(defun scroll-down-half-window ()
+  "Scroll down half window."
+  (interactive)
+  (setq half-window-height (get-half-window-height))
+  (scroll-down half-window-height))
+(global-set-key (kbd "M-V") 'scroll-down-half-window)
+
+(defun next-5-lines ()
+  "Move cursor to next five lines."
+  (interactive)
+  (let ((current-prefix-arg '(5)))
+    (call-interactively 'next-line)))
+(global-set-key (kbd "C-S-M-n") 'next-5-lines)
+
+(defun previous-5-lines()
+  "Move cursor to previous five lines."
+  (interactive)
+  (let ((current-prefix-arg '(5)))
+    (call-interactively 'previous-line)))
+(global-set-key (kbd "C-S-M-p") 'previous-5-lines)
+
 (defun check-inside-quotations (position)
   "Check whether the indicated position inside a pair of quotations."
   (nth 3 (syntax-ppss position)))
@@ -37,7 +87,7 @@
 (defun select-current-word ()
   "Select current word using default word char regex."
   (interactive)
-  (let ((default-word-char-regex "[\\-_a-zA-Z0-9]"))
+  (let ((default-word-char-regex "[\\-_a-zA-Z0-9!@#$%]"))
   (select-current-word-core default-word-char-regex)))
 (global-set-key (kbd "C-?") 'select-current-word)
 
