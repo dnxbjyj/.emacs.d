@@ -4,6 +4,7 @@ url/*
 projectile-bookmarks.eld
 emacs-learn/*
 eshell/*
+auto-save-list/*
 
 # Compiled
 *.elc
