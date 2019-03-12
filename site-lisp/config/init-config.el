@@ -35,9 +35,9 @@
 
 ;;;; init plugin start
 ;; edit server
-;; (require 'init-edit-server)
+(require 'init-edit-server)
 ;; edit text area by emacs in chrome
-;; (require 'init-atomic-chrome)
+(require 'init-atomic-chrome)
 ;; lazy search config
 (require 'init-lazy-search)
 ;; auto pair
