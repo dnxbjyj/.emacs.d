@@ -1,4 +1,5 @@
-# local and files
+# local and temp files
+ido.last
 recentf
 url/*
 projectile-bookmarks.eld

@@ -33,12 +33,20 @@
 (require 'init-company-mode)
 ;;;; init mode end
 
-;;;; plugin start：插件初始化设置
-;; company-english-helper插件
+;;;; init plugin start
+;; edit server
+;; (require 'init-edit-server)
+;; edit text area by emacs in chrome
+;; (require 'init-atomic-chrome)
+;; lazy search config
+(require 'init-lazy-search)
+;; auto pair
+(require 'init-awesome-pair)
+;; company-english-helper
 (require 'init-company-english-helper)
-;; projectile插件
+;; projectile config
 (require 'init-projectile)
-;; awesome-tab插件
+;; awesome-tab config
 (require 'init-awesome-tab)
 ;; 自动保存插件
 (require 'init-auto-save)
@@ -52,9 +60,9 @@
 (require 'init-virtualenvwrapper)
 ;; 滚动另一个窗口插件配置
 (require 'init-watch-other-window)
-;; 有道词典配置
+;; Youdao dictionary config
 (require 'init-youdao-dictionary)
-;;;; plugin end
+;;;; init plugin end
 
-;; 提供init-config模块
+;; provide init-config module
 (provide 'init-config)
