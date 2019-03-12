@@ -7,6 +7,37 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun week-translate (zh-week)
+  "Translate Chinese week string into English."
+  (interactive)
+  (setq week-table (make-hash-table :test 'equal))
+  (puthash "周一" "Mon" week-table)
+  (puthash "周二" "Tue" week-table)
+  (puthash "周三" "Wed" week-table)
+  (puthash "周四" "Thu" week-table)
+  (puthash "周五" "Fri" week-table)
+  (puthash "周六" "Sat" week-table)
+  (puthash "周日" "Sun" week-table)
+  (gethash zh-week week-table))
+
+(defun yesterday ()
+  "Insert date string of yesterday."
+  (interactive)
+  (setq date-str (format-time-string "%Y-%m-%d %a" (org-time-string-to-time (org-read-date nil nil "-1d"))))
+  (insert date-str))
+
+(defun today ()
+  "Insert date string of today."
+  (interactive)
+  (setq datetime-str (format-time-string "%Y-%m-%d %a"))
+  (insert datetime-str))
+
+(defun now ()
+  "Insert current datetime string."
+  (interactive)
+  (setq datetime-str (format-time-string "%Y-%m-%d %a %H:%M:%S"))
+  (insert datetime-str))
+
 (defun kill-all-other-buffers ()
   "Kill all other buffers."
   (interactive)
