@@ -2,8 +2,6 @@
 ;;;; common start：通用设置
 ;; 更好的默认设置
 (require 'init-better-default)
-;; 加载dired模式的自定义配置
-(require 'init-dired)
 ;; 按键绑定
 (require 'init-key-binding)
 ;; 自定义函数
@@ -20,7 +18,9 @@
 (require 'init-ui)
 ;;;; common end 
 
-;;;; init mode start
+;;;; init mode star
+;; config dired-mode
+(require 'init-dired-mode)
 ;; config python-mode
 (require 'init-python-mode)
 ;; config markdown-mode

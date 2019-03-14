@@ -4,7 +4,8 @@
 ;;;; init-dired start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
-
+;; 启用dired-x模式
+(require 'dired-x)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
@@ -16,15 +17,12 @@
 (with-eval-after-load 'dired
     (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
-;; 启用dired-x模式
-(require 'dired-x)
-
 ;; 让dired模式多个目录同时打开时共用一个缓冲区
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
-(provide 'init-dired)
+(provide 'init-dired-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; init-dired end here

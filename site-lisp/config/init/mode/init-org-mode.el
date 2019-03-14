@@ -8,6 +8,38 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun my-org-insert-str-to-head-tail (flag)
+  "Operate a region, or word at point, insert a character both at the position of head and tail.
+If flag is `d', insert `+' character, for the sake of deleting text in org-mode.
+If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
+  (interactive "sPlease input operate flag(`d' for deleting text, `q' for quoting text): ")
+  (let (from to input-str output-str)
+    ;; if select a region, then operate the region
+    (if (use-region-p)
+	(progn
+	  (setq from (region-beginning))
+	  (setq to (region-end)))
+      ;; if not select a region, then operate word at point
+      (progn
+	(setq bounds (bounds-of-thing-at-point 'word))
+	(setq from (car bounds))
+	(setq to (cdr bounds))))
+    (setq input-str (buffer-substring-no-properties from to))
+    ;; set the value of output-str
+    (cond
+     ((string-equal flag "d") (setq output-str (concat " +" input-str "+ ")))
+     ((string-equal flag "q") (setq output-str (concat " ~" input-str "~ ")))
+     (t (message "NOT support the operate: %s" flag)))
+    ;; operate the regin between "from" to "to"
+    (progn
+      (delete-region from to)
+      (goto-char from)
+      (insert output-str)
+      (goto-char (+ to 4)))))
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c a") 'my-org-insert-str-to-head-tail)))
+
 ;; eval code block
 (org-babel-do-load-languages
  'org-babel-load-languages
