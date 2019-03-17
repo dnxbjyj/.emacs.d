@@ -41,7 +41,7 @@
 ;; lazy search config
 (require 'init-lazy-search)
 ;; auto pair
-(require 'init-awesome-pair)
+;; (require 'init-awesome-pair)
 ;; company-english-helper
 (require 'init-company-english-helper)
 ;; projectile config
