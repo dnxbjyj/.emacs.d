@@ -10,6 +10,8 @@
 (require 'init-network)
 ;; 加载包
 (require 'init-package)
+;; configuration for quick access org file
+(require 'init-quick-access-org)
 ;; 快速访问按键配置
 (require 'init-quick-access)
 ;; 主题设置
