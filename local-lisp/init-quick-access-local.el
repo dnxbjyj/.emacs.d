@@ -14,10 +14,8 @@
   (interactive)
   (find-file "C:/Windows/System32/drivers/etc/hosts"))
 
-;; 快速在dired模式打开d:/github目录: C-<f1>
-(global-set-key (kbd "C-<f1>") (lambda() (interactive) (dired "d:/github")))
-;; 快速在文件夹中打开e:/code目录: C-S-<f6>
-(global-set-key (kbd "C-S-<f1>") (lambda() (interactive) (shell-command "start d:/github")))
+;; quickly open quick-access.org
+(global-set-key (kbd "C-<f12>") '(lambda() (interactive) (find-file "~/.emacs.d/local-lisp/quick-access-local.org")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

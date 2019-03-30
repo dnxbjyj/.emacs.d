@@ -1,5 +1,16 @@
-* shortcut
-
+* ---------------------------------------------------------
 * directory
-
+* ---------------------------------------------------------
 * files
+* ---------------------------------------------------------
+* global shortcut
+** <f> series
+- <f5> :: run git commit script `auto-commit.bat`
+- <f9> :: open file `~/.emacs.d/site-lisp/config/init-config.el`
+- C-<f9> :: open directory `~/.emacs.d/site-lisp/config/`
+- <f10> :: open file `~/.emacs.d/init.el`
+- C-<f10> :: open directory `~/.emacs.d/`
+- <f11> :: eval last sexp
+- C-<f11> :: load current file
+- <f12> :: open file `~/.emacs.d/site-lisp/org/quick-access.org`
+* ---------------------------------------------------------
