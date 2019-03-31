@@ -6,16 +6,15 @@
 ;;;; Require:
 (require 'package)
 
-(package-initialize)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(package-initialize)
 
 ;; 加载melpa扩展列表
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.milkbox.net/packages/")
 	     'APPEND)
-
+ 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
 (provide 'init-package)
