@@ -14,7 +14,7 @@
   (let ((cur-line-str (buffer-substring-no-properties (line-beginning-position) (line-end-position))))
     (cond
      ;; judge whether current line text match python function define pattern
-     ((string-match "^[[:space:]]*def.+?(\\(.+*\\))[[:space:]]*:" cur-line-str)
+     ((string-match "^[[:space:]]*def.+?(\\(.*\\))[[:space:]]*:" cur-line-str)
       ;; first capture group of regex above is params list string
       (setq params-str (match-string 1 cur-line-str))
       ;; split params list string to list, and do some strip operation
@@ -54,7 +54,7 @@
       ;; jump back to the position of annotation top
       (goto-line annotation-top-line)
       (indent-for-tab-command))
-     ((string-match "^[[:space:]]*class.+?:" cur-line-str) (message "match class")
+     ((string-match "^[[:space:]]*class.+?:" cur-line-str)
       (goto-char (line-end-position))
       (newline-and-indent)
       ;; insert head of doc annotation `'''`
