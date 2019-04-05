@@ -4,10 +4,13 @@
 ;;;; init-org-mode start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
-
+(require 'org-indent)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; close org mode indent
+(org-indent-mode -1)
+
 (defun my-org-insert-str-to-head-tail (flag)
   "Operate a region, or word at point, insert a character both at the position of head and tail.
 If flag is `d', insert `+' character, for the sake of deleting text in org-mode.

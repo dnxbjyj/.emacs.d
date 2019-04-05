@@ -7,6 +7,15 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun my-comment-or-uncomment-region (beg end &optional arg)
+  "My custom comment or uncomment region function."
+  (interactive
+   (if (use-region-p)
+       (list (region-beginning) (region-end))
+     (list (line-beginning-position) (line-end-position))))
+  (comment-or-uncomment-region beg end arg))
+(global-set-key (kbd "C-c C-/") 'my-comment-or-uncomment-region)
+
 (defun bind-key-for-open (path key-str in-where)
   "Quickly make a key bind for the operation of opening a directory or file in emacs dired-mode, or in system explorer."
   (interactive)

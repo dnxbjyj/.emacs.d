@@ -9,6 +9,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; display lambda and other smbols more pretty
+(global-prettify-symbols-mode 1)
+
 ;; change search default key binding
 (global-set-key (kbd "C-s") 'isearch-forward-regexp)
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)

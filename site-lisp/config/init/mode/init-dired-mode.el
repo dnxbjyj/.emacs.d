@@ -9,6 +9,24 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun dired-mode-open-file-at-point ()
+  "Open any file in dired-mode, using system default opening method."
+  (interactive)
+  ;; when in windows system, set encoding of `cmdproxy.exe` to GBK
+  (when (eq system-type 'windows-nt)
+    (set-default 'process-coding-system-alist
+		 '(("[pP][lL][iI][nN][kK]" gbk-dos . gbk-dos)
+		   ("[cC][mM][dD][pP][rR][oO][xX][yY]" gbk-dos . gbk-dos))))
+  (if-let ((file (dired-get-filename)))
+      (progn
+	;; the usage of windows cmd command `start` has a pit when there is blank character in path string, pay attention.
+	(async-shell-command (format "start \"\" \"%s\"" file))
+	(message "Success to open file: %s" file))
+    (message "NO file found at point!")))
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c C-o") 'dired-mode-open-file-at-point)))
+
 ;; dired模式默认递归删除目录
 (setq dired-recursive-deletes 'always)
 (setq dired-recursive-copies 'always)
