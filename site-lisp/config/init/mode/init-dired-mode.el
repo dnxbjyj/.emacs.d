@@ -9,6 +9,38 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun dired-mode-copy-current-directory-path ()
+  "Copy current directory path to clipboard in dired-mode."
+  (interactive)
+  (if-let ((file (dired-get-filename)))
+      (progn
+	(setq dir-seq (split-string file "/" t))
+	(setq dir-seq (subseq dir-seq 0 (- (seq-length dir-seq) 1)))
+	(print dir-seq)
+	(setq dir-path (string-join dir-seq "/"))
+	(with-temp-buffer
+	  (insert dir-path)
+	  (kill-ring-save (point-min) (point-max)))
+	(message "directory path (%s) has been copied to clipboard!" dir-path))
+    (message "NO directory at current point!")))
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c C-c") 'dired-mode-copy-current-directory-path)))
+
+(defun dired-mode-copy-current-file-path ()
+  "Copy current file path to clipboard in dired-mode."
+  (interactive)
+  (if-let ((file (dired-get-filename)))
+      (progn
+	(with-temp-buffer
+	  (insert file)
+	  (kill-ring-save (point-min) (point-max)))
+	(message "file path (%s) has been copied to clipboard!" file))
+    (message "NO file at current point!")))
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c c") 'dired-mode-copy-current-file-path)))
+
 (defun dired-mode-open-file-at-point ()
   "Open any file in dired-mode, using system default opening method."
   (interactive)
