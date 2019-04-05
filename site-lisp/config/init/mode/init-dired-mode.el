@@ -9,6 +9,23 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun dired-mode-copy-current-file-name ()
+  "Copy current file name to clipboard in dired-mode."
+  (interactive)
+  (if-let ((file (dired-get-filename)))
+      (progn
+	(setq dir-seq (split-string file "/" t))
+	(setq file-name (seq-elt dir-seq (1- (length dir-seq))))
+	(print file-name)
+	(with-temp-buffer
+	  (insert file-name)
+	  (kill-ring-save (point-min) (point-max)))
+	(message "file name (%s) has been copied to clipboard!" file-name))
+    (message "NO file at current point!")))
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c n") 'dired-mode-copy-current-file-name)))
+
 (defun dired-mode-copy-current-directory-path ()
   "Copy current directory path to clipboard in dired-mode."
   (interactive)
@@ -16,7 +33,6 @@
       (progn
 	(setq dir-seq (split-string file "/" t))
 	(setq dir-seq (subseq dir-seq 0 (- (seq-length dir-seq) 1)))
-	(print dir-seq)
 	(setq dir-path (string-join dir-seq "/"))
 	(with-temp-buffer
 	  (insert dir-path)
