@@ -7,6 +7,23 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun tomorrow ()
+  "Insert tomorrow's date string at current point."
+  (interactive)
+  (setq date-str (format-time-string "%Y-%m-%d %a" (org-time-string-to-time (org-read-date nil nil "+1d"))))
+  (insert date-str))
+
+(defun my-list-hooks (search-keywords)
+  "List all of current hooks that match the given search key words (separated by space character)."
+  (interactive "sInput keywords of hook (separated by space character, or empty for searching all hooks): ")
+  (if (string-empty-p search-keywords)
+      (apropos-variable "-hook$")
+    (progn
+      (setq keywords (split-string search-keywords " +" t))
+      (setq search-str (concat (string-join keywords ".*") ".*-hook$"))
+      (apropos-variable search-str))))
+(global-set-key (kbd "C-c h") 'my-list-hooks)
+
 (defun my-comment-or-uncomment-region (beg end &optional arg)
   "My custom comment or uncomment region function."
   (interactive

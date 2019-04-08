@@ -8,6 +8,27 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun insert-s-or-f-note (command)
+  "Insert snote or fnote mark, or delete an existing mark in org-mode."
+  (interactive "sInput `s' for inputing snote mark, `f' for inputing fnote mark, `d' for deleting an existing mark: ")
+  (cond
+   ((string-equal command "s") (insert "[s&f:s]"))
+   ((string-equal command "f") (insert "[s&f:f]"))
+   ((string-equal command "d")
+    (skip-chars-backward "^[:space:]")
+    (insert "+")
+    (skip-chars-forward "^[:space:]")
+    (insert "+"))
+   (t (message "NOT support the command: %s" command))))
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c s n") 'insert-s-or-f-note)))
+
+;; toggle link display
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c t p") 'org-toggle-link-display)))
+
 ;; close org mode indent
 (org-indent-mode -1)
 

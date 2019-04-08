@@ -7,6 +7,18 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun select-line-fit-indent ()
+  "Select current line with fit indent."
+  (interactive)
+  (goto-char (line-beginning-position))
+  (skip-chars-forward "[[:space:]]")
+  (setq head-point (point))
+  (end-of-line)
+  (set-mark head-point))
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-_") 'select-line-fit-indent)))
+
 (defun insert-doc-annotation-below-current-line ()
   "Insert doc annotations for python class or function below current line."
   (interactive)
