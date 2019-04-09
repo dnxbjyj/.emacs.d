@@ -37,7 +37,7 @@
 (global-set-key (kbd "<f11>") 'load-file)
 
 ;; 快速提交git代码（need auto-commit.bat file in ~/.emacs.d/ directory）
-(global-set-key (kbd "C-<f5>") (lambda() (interactive) (shell-command "start auto-commit.bat")))
+(global-set-key (kbd "C-<f5>") (lambda() (interactive) (async-shell-command "start auto-commit.bat")))
 
 ;; 在文件夹中打开当前文件所在目录: C-c o
 (global-set-key (kbd "C-c o") '(lambda() (interactive) (shell-command "start .\\")))
