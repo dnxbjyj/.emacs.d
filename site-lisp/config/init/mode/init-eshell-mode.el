@@ -8,6 +8,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; solve the problem that Chinese character messy code in eshell-mode
+(add-hook 'eshell-mode-hook
+	  (lambda ()
+	    (when (eq system-type 'windows-nt)
+	      (prefer-coding-system 'gbk))))
+
 (defun clear-screen ()
   "Clear current screen."
   (interactive)
