@@ -1,9 +1,11 @@
-;;;;;;;;;; xxx module ;;;;;;;;;;
+;;;;;;;;;; init-grep-dired module ;;;;;;;;;;
 ;;;; Desc:
+;; attention: NOT for windows system now!
 
-;;;; xxx starts here
+;;;; init-grep-dired starts here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
+(require 'grep-dired)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
@@ -11,7 +13,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
-(provide 'xxx)
+(provide 'init-grep-dired)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; xxx ends here
+;;;; init-grep-dired ends here

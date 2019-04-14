@@ -8,6 +8,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; search file in dired
+(global-set-key (kbd "C-c s") 'find-lisp-find-dired)
+
 ;; 跳转到某行
 (global-set-key (kbd "C-=") 'goto-line)
 
