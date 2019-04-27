@@ -89,7 +89,7 @@
   (when (active-minibuffer-window)
     (select-frame-set-input-focus (window-frame (active-minibuffer-window)))
     (select-window (active-minibuffer-window))))
-(global-set-key (kbd "<f10>") 'switch-to-minibuffer-window)
+(global-set-key (kbd "C-c .") 'switch-to-minibuffer-window)
 
 ;; scroll halfly
 (defun get-half-window-height ()
@@ -134,7 +134,7 @@
   (if (check-inside-quotations (point))
       (progn
     ;; here should not use square brackets in regexp
-    (let ((start) (skip-char "^\""))
+    (let ((start) (skip-char "^\"'"))
       (skip-chars-backward skip-char)
       (setq start (point))
       (skip-chars-forward skip-char)
