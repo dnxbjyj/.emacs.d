@@ -22,7 +22,7 @@
 (setq split-width-threshold nil)
 
 ;; format current buffer code to pretty print
-(global-set-key (kbd "C-c C-f") (lambda () (interactive) (pp-buffer)))
+;; (global-set-key (kbd "C-c C-f") (lambda () (interactive) (pp-buffer)))
 
 ;; 在elisp-mode高亮括号配对
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
@@ -51,7 +51,7 @@
 (setq recentf-max-menu-item 10)
 
 ;; 打开最近的文件列表
-(global-set-key (kbd "C-c C-r") 'recentf-open-files)
+;; (global-set-key (kbd "C-c C-r") 'recentf-open-files)
 
 ;; 在状态条显示当前buffer大小
 (size-indication-mode 1)

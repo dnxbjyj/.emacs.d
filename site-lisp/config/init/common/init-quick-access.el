@@ -14,13 +14,19 @@
   (progn
     (info)
     (Info-menu "Elisp")))
-(global-set-key (kbd "C-h C-x e") 'open-elisp-manual)
+;; (global-set-key (kbd "C-h C-x e") 'open-elisp-manual)
 
 ;; 快速打开配置文件init-config.el
-(global-set-key (kbd "<C-f9>") '(lambda() (interactive) (find-file "~/.emacs.d/site-lisp/config/init-config.el")))
+(defun open-init-config ()
+  (interactive)
+  (find-file "~/.emacs.d/site-lisp/config/init-config.el"))
+;; (global-set-key (kbd "<C-f9>") '(lambda() (interactive) (find-file "~/.emacs.d/site-lisp/config/init-config.el")))
 
 ;; 快速打开config目录
-(global-set-key (kbd "<f9>") '(lambda() (interactive) (dired "~/.emacs.d/site-lisp/config/")))
+(defun open-config-dir ()
+  (interactive)
+  (dired "~/.emacs.d/site-lisp/config/"))
+;; (global-set-key (kbd "<f9>") '(lambda() (interactive) (dired "~/.emacs.d/site-lisp/config/")))
 
 ;; 快速打开init.el
 (global-set-key (kbd "C-<f10>") '(lambda() (interactive) (find-file "~/.emacs.d/init.el")))

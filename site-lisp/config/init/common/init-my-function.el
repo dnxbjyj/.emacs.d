@@ -22,7 +22,7 @@
       (setq keywords (split-string search-keywords " +" t))
       (setq search-str (concat (string-join keywords ".*") ".*-hook$"))
       (apropos-variable search-str))))
-(global-set-key (kbd "C-c h") 'my-list-hooks)
+;; (global-set-key (kbd "C-c h") 'my-list-hooks)
 
 (defun my-comment-or-uncomment-region (beg end &optional arg)
   "My custom comment or uncomment region function."
@@ -31,7 +31,7 @@
        (list (region-beginning) (region-end))
      (list (line-beginning-position) (line-end-position))))
   (comment-or-uncomment-region beg end arg))
-(global-set-key (kbd "C-c C-/") 'my-comment-or-uncomment-region)
+;; (global-set-key (kbd "C-c C-/") 'my-comment-or-uncomment-region)
 
 (defun bind-key-for-open (path key-str in-where)
   "Quickly make a key bind for the operation of opening a directory or file in emacs dired-mode, or in system explorer."
@@ -41,7 +41,6 @@
    ((string-equal in-where "dired") (global-set-key (kbd key-str) `(lambda() (interactive) (message "open %s in %s..." ',path ',in-where)(dired ',path))))
    ((string-equal in-where "explorer") (global-set-key (kbd key-str) `(lambda() (interactive) (message "open %s in %s..." ',path ',in-where)(async-shell-command (format "start \"\" \"%s\"" ',path)))))
    (t (message "NOT support the operation: %s!" in-where))))
-
 
 (defun week-translate (zh-week)
   "Translate Chinese week string into English."
@@ -81,7 +80,7 @@
 	(delq (current-buffer)
 	      (remove-if-not 'buffer-file-name (buffer-list))))
   (message "all other buffers have been killed!"))
-(global-set-key (kbd "C-x C-k k") 'kill-all-other-buffers)
+;; (global-set-key (kbd "C-x C-k k") 'kill-all-other-buffers)
 
 (defun switch-to-minibuffer-window ()
   "Switch to minibuffer window (if active)."
@@ -89,7 +88,7 @@
   (when (active-minibuffer-window)
     (select-frame-set-input-focus (window-frame (active-minibuffer-window)))
     (select-window (active-minibuffer-window))))
-(global-set-key (kbd "C-c .") 'switch-to-minibuffer-window)
+;; (global-set-key (kbd "C-c .") 'switch-to-minibuffer-window)
 
 ;; scroll halfly
 (defun get-half-window-height ()
@@ -141,7 +140,7 @@
       (push-mark start)
       (setq mark-active t)))
     (message "not inside a pair of quotation marks!")))
-(global-set-key (kbd "C-\"") 'select-text-between-quotations)
+;; (global-set-key (kbd "C-\"") 'select-text-between-quotations)
 
 (defun select-current-word-core (word-char-regex)
   "Select current word with indicated word char regex."
@@ -155,7 +154,7 @@
   (interactive)
   (let ((default-word-char-regex "[\\-_a-zA-Z0-9!@#$%]"))
   (select-current-word-core default-word-char-regex)))
-(global-set-key (kbd "C-?") 'select-current-word)
+;; (global-set-key (kbd "C-?") 'select-current-word)
 
 
 ;; select current line
@@ -164,7 +163,7 @@
   (interactive)
   (end-of-line)
   (set-mark (line-beginning-position)))
-(global-set-key (kbd "C-_") 'select-current-line)
+;; (global-set-key (kbd "C-_") 'select-current-line)
 
 ;; copy current line to clipboard
 (defun copy-current-line ()
@@ -173,26 +172,26 @@
   (select-current-line)
   (kill-ring-save (line-beginning-position) (line-end-position))
   (message "current line has been copied to clipboard!"))
-(global-set-key (kbd "C-c C-l") 'copy-current-line)
+;; (global-set-key (kbd "C-c C-l") 'copy-current-line)
 
 ;; run current buffer elisp code, output to another buffer named "output"
-(defun eval-current-buf-elisp ()
-  "Run current buffer elisp code, output to another buffer named 'output'."
-  (interactive)
-  (setq cur-buf (current-buffer))
-  (get-buffer-create "output")
-  (switch-to-buffer-other-window "output")
-  (erase-buffer)
-  (eval-buffer cur-buf (get-buffer-create "output"))
-  (other-buffer -1))
-(global-set-key (kbd "C-<f9>") 'eval-current-buf-elisp)
+;; (defun eval-current-buf-elisp ()
+;;   "Run current buffer elisp code, output to another buffer named 'output'."
+;;   (interactive)
+;;   (setq cur-buf (current-buffer))
+;;   (get-buffer-create "output")
+;;   (switch-to-buffer-other-window "output")
+;;   (erase-buffer)
+;;   (eval-buffer cur-buf (get-buffer-create "output"))
+;;   (other-buffer -1))
+;; (global-set-key (kbd "C-<f9>") 'eval-current-buf-elisp)
 
-;; 正则替换: C-c f
-(global-set-key (kbd "C-c f")
-		(lambda (from to)
-		  (interactive "squery, then replace, from:\nsto:")
-		  (goto-char (point-min))
-		  (query-replace-regexp from to)))
+;; 正则替换: 
+(defun search-and-replace  (from to)
+  "Search, and then replace."
+  (interactive "squery, then replace, from:\nsto:")
+  (goto-char (point-min))
+  (query-replace-regexp from to))
 
 ;; 在当前位置插入当前日期，格式举例：2018-09-14 Fri
 (defun today ()
