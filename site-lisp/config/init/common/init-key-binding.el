@@ -20,9 +20,6 @@
 ;; (global-set-key (kbd "C-S-<down>") 'shrink-window)
 ;; (global-set-key (kbd "C-S-<up>") 'enlarge-window)
 
-;; 切换到另一个窗口: C-;
-;; (global-set-key (kbd "C-;") 'other-window)
-
 ;; 在当前窗口中切换buffer
 ;; (global-set-key (kbd "C-<tab>") 'bs-cycle-next)
 ;; (global-set-key (kbd "S-<tab>") 'bs-cycle-previous)

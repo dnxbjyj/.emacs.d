@@ -12,12 +12,6 @@
 ;; display lambda and other smbols more pretty
 (global-prettify-symbols-mode 1)
 
-;; change search default key binding
-(global-set-key (kbd "C-s") 'isearch-forward-regexp)
-(global-set-key (kbd "C-r") 'isearch-backward-regexp)
-(global-set-key (kbd "C-M-s") 'isearch-forward)
-(global-set-key (kbd "C-M-r") 'isearch-backward)
-
 ;; set vertical split when open a new buffer
 (setq split-width-threshold nil)
 

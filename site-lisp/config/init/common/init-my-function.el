@@ -24,6 +24,18 @@
       (apropos-variable search-str))))
 ;; (global-set-key (kbd "C-c h") 'my-list-hooks)
 
+
+(defun my-list-key-maps (search-keywords)
+  "List all of current key maps that match the given search key words (separated by space character)."
+  (interactive "sInput keywords of key map (separated by space character, or empty for searching all key maps): ")
+  (if (string-empty-p search-keywords)
+      (apropos-variable "-map$")
+    (progn
+      (setq keywords (split-string search-keywords " +" t))
+      (setq search-str (concat (string-join keywords ".*") ".*-map$"))
+      (apropos-variable search-str))))
+
+
 (defun my-comment-or-uncomment-region (beg end &optional arg)
   "My custom comment or uncomment region function."
   (interactive
@@ -100,28 +112,28 @@
   (interactive)
   (setq half-window-height (get-half-window-height))
   (scroll-up half-window-height))
-(global-set-key (kbd "C-S-v") 'scroll-up-half-window)
+;; (global-set-key (kbd "C-S-v") 'scroll-up-half-window)
 
 (defun scroll-down-half-window ()
   "Scroll down half window."
   (interactive)
   (setq half-window-height (get-half-window-height))
   (scroll-down half-window-height))
-(global-set-key (kbd "M-V") 'scroll-down-half-window)
+;; (global-set-key (kbd "M-V") 'scroll-down-half-window)
 
 (defun next-5-lines ()
   "Move cursor to next five lines."
   (interactive)
   (let ((current-prefix-arg '(5)))
     (call-interactively 'next-line)))
-(global-set-key (kbd "C-S-M-n") 'next-5-lines)
+;; (global-set-key (kbd "C-S-M-n") 'next-5-lines)
 
 (defun previous-5-lines()
   "Move cursor to previous five lines."
   (interactive)
   (let ((current-prefix-arg '(5)))
     (call-interactively 'previous-line)))
-(global-set-key (kbd "C-S-M-p") 'previous-5-lines)
+;; (global-set-key (kbd "C-S-M-p") 'previous-5-lines)
 
 (defun check-inside-quotations (position)
   "Check whether the indicated position inside a pair of quotations."

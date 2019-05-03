@@ -9,7 +9,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;; quickly open quick-access.org
-(bind-key-for-open "~/.emacs.d/site-lisp/org/quick-access.org" "<f12>" "file")
+;; (bind-key-for-open "~/.emacs.d/site-lisp/org/quick-access.org" "<f12>" "file")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
