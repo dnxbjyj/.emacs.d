@@ -42,8 +42,11 @@
 ;; 快速提交git代码（need auto-commit.bat file in ~/.emacs.d/ directory）
 (global-set-key (kbd "C-<f5>") (lambda() (interactive) (async-shell-command "start auto-commit.bat")))
 
-;; 切换到另一个窗口: C-;
+;; 切换到下一个窗口: C-;
 (global-set-key (kbd "C-;") 'other-window)
+
+;; 切换到上一个窗口: C-:
+(global-set-key (kbd "C-:") '(lambda () (interactive) (other-window -1)))
 
 ;; go to line
 (global-set-key (kbd "C-j") 'goto-line)
