@@ -115,12 +115,10 @@ _q_: quit this hydra
   "
 Code operations.
 
-_f_: prettify buffer code format
 _j_: format JSON buffer
 _/_: comment/uncomment region code
 _q_: quit this hydra
 "
-  ("f" (pp-buffer))
   ("j" json-pretty-print-buffer)
   ("/" my-comment-or-uncomment-region)
   ("q" nil :color blue))

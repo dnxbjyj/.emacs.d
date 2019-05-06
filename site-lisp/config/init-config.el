@@ -1,23 +1,22 @@
-;;;;;;;;;; 包加载入口 ;;;;;;;;;; 
-;;;; common start：通用设置
-;; 更好的默认设置
-(require 'init-better-default)
-;; 按键绑定
-(require 'init-key-binding)
-;; 自定义函数
-(require 'init-my-function)
-;; 网络配置
-(require 'init-network)
-;; 加载包
-(require 'init-package)
-;; configuration for quick access org file
-(require 'init-quick-access-org)
-;; 快速访问按键配置
-(require 'init-quick-access)
+;;;;;;;;;; 包加载入口 ;;;;;;;;;;
+;;;; basic config starts
+;; hydra
+(require 'init-hydra-one-key)
 ;; 主题设置
 (require 'init-theme)
 ;; 界面外观设置
 (require 'init-ui)
+;;;; basic config ends
+
+;;;; common start：通用设置
+;; 更好的默认设置
+(require 'init-better-default)
+;; 自定义函数
+(require 'init-my-function)
+;; 加载包
+(require 'init-package)
+;; 快速访问按键配置
+(require 'init-quick-access)
 ;;;; common end 
 
 ;;;; init mode star
@@ -36,8 +35,6 @@
 ;;;; init mode end
 
 ;;;; init plugin start
-;; hydra
-(require 'init-hydra-one-key)
 ;; edit server
 (require 'init-edit-server)
 ;; edit text area by emacs in chrome
@@ -45,7 +42,7 @@
 ;; lazy search config
 (require 'init-lazy-search)
 ;; auto pair
-;; (require 'init-awesome-pair)
+(require 'init-awesome-pair)
 ;; company-english-helper
 (require 'init-company-english-helper)
 ;; projectile config
