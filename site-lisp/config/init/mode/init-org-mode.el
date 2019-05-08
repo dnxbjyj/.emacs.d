@@ -22,12 +22,12 @@
    (t (message "NOT support the command: %s" command))))
 (add-hook 'org-mode-hook
 	  (lambda ()
-	    (local-set-key (kbd "C-c s n") 'insert-s-or-f-note)))
+	    (local-set-key (kbd "C-x s") 'insert-s-or-f-note)))
 
 ;; toggle link display
 (add-hook 'org-mode-hook
 	  (lambda ()
-	    (local-set-key (kbd "C-c t p") 'org-toggle-link-display)))
+	    (local-set-key (kbd "C-x t l") 'org-toggle-link-display)))
 
 (defun my-org-table-insert-row-below ()
   "Insert a new row at current row below quickly in org-table."
@@ -80,7 +80,7 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
       (goto-char (+ to 4)))))
 (add-hook 'org-mode-hook
 	  (lambda ()
-	    (local-set-key (kbd "C-c a") 'my-org-insert-str-to-head-tail)))
+	    (local-set-key (kbd "C-x a") 'my-org-insert-str-to-head-tail)))
 
 ;; eval code block
 (org-babel-do-load-languages
@@ -133,10 +133,10 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
                             (local-set-key (kbd "C-<tab>")
                                            'yas/expand-from-trigger-key)
                             ;; keybinding for editing source code blocks
-                            (local-set-key (kbd "C-c s e")
+                            (local-set-key (kbd "C-x s e")
                                            'org-edit-src-code)
                             ;; keybinding for inserting code blocks
-                            (local-set-key (kbd "C-c s i")
+                            (local-set-key (kbd "C-x s i")
                                            'org-insert-src-block)
                             ))
 
@@ -146,10 +146,10 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
 ;; 缩进
 (add-hook 'org-mode-hook
 	  (lambda()
-	    (global-set-key (kbd "C-c i") '(lambda () (interactive) (org-indent-mode 1)))))
+	    (global-set-key (kbd "C-x i") '(lambda () (interactive) (org-indent-mode 1)))))
 (add-hook 'org-mode-hook
 	  (lambda()
-	    (global-set-key (kbd "C-c l") '(lambda () (interactive) (org-indent-mode 0)))))
+	    (global-set-key (kbd "C-x l") '(lambda () (interactive) (org-indent-mode 0)))))
 
 
 ;; 上下移动同一级主题的整行的内容
