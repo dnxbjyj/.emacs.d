@@ -22,7 +22,7 @@
    (t (message "NOT support the command: %s" command))))
 (add-hook 'org-mode-hook
 	  (lambda ()
-	    (local-set-key (kbd "C-x s") 'insert-s-or-f-note)))
+	    (local-set-key (kbd "C-x s s") 'insert-s-or-f-note)))
 
 ;; toggle link display
 (add-hook 'org-mode-hook
@@ -125,7 +125,7 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
     (insert "#+END_SRC\n")
     (previous-line 2)
     (org-edit-src-code)))
-;; 绑定快捷键：C-c s i
+;; 绑定快捷键
 (add-hook 'org-mode-hook '(lambda ()
                             ;; turn on flyspell-mode by default
                             (flyspell-mode 1)

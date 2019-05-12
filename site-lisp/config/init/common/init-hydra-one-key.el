@@ -86,6 +86,7 @@
   "
 Access operations (access to position, file, directory, buffer, etc.).
 
+_c_: open cmd window
 _e_: open elisp manual
 _f_: search file        
 _h_: search and list hooks         
@@ -93,11 +94,13 @@ _j_: jump to line
 _m_: search and list key maps
 _M_: switch to minibuffer window
 _o_: open explorer
+_p_: open powershell window
 _r_: show recent opened files
 _C-<tab>_: cycle next buffer
 _S-<tab>_: cycle previous buffer
 _q_: quit this hydra
 "
+  ("c" open-cmd)
   ("e" open-elisp-manual)
   ("f" find-lisp-find-dired)
   ("h" my-list-hooks)
@@ -105,6 +108,7 @@ _q_: quit this hydra
   ("m" my-list-key-maps)
   ("M" switch-to-minibuffer-window)
   ("o" open-explorer)
+  ("p" open-powershell)
   ("r" recentf-open-files)
   ("C-<tab>" bs-cycle-next)
   ("S-<tab>" bs-cycle-previous)
