@@ -1,6 +1,5 @@
-addrorfasdffdsa
-
-
+:: pull latest code
+git pull origin master
 :: input commit message
 set /p commit_msg=Please input commit message:
 :: show git status
