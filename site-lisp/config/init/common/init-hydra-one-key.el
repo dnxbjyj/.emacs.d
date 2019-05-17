@@ -6,6 +6,7 @@
 (require 'hydra)
 (require 'init-my-function)
 (require 'init-quick-access)
+(require 'init-org-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
@@ -186,6 +187,49 @@ _q_: quit this hydra
   ("<up>" enlarge-window)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c w") 'hydra-one-key-window-operation/body)
+
+;;-----------------mode hydra-----------------;;
+;;;; org-mode ;;;;
+(defhydra hydra-one-key-org-mode (:color pink :hint nil)
+  "
+Shortcut for org-mode.
+
+_{_: shrink parent leve headline
+_[_: shrink current leve headline
+_+_: open org-indent-mode
+_-_: close org-indent-mode
+_C_: insert a new column at current column below quickly in org-table
+_e_: export dispatch
+_i_: operate a region, or word at point, insert a character both at the position of head and tail
+_l_: toggle link display
+_n_: insert s&f note
+_R_: insert a new row at current row below quickly in org-table
+_s_: insert code src block
+_S_: edit code src block
+_t_: modify a line to a chapter title
+_M-n_: move down
+_M-p_: move up
+_q_: quit this hydra
+"
+  ("{" shrink-parent-level-headline)
+  ("[" shrink-current-level-headline)
+  ("+" indent-mode-on)
+  ("-" indent-mode-off)
+  ("C" my-org-table-insert-column-below)
+  ("e" org-export-dispatch)
+  ("i" my-org-insert-str-to-head-tail)
+  ("l" org-toggle-link-display)
+  ("n" insert-s-or-f-note)
+  ("R" my-org-table-insert-row-below)
+  ("s" org-insert-src-block)
+  ("S" org-edit-src-code)
+  ("t" make-line-to-title)
+  ("M-n" org-metadown)
+  ("M-p" org-metaup)  
+  ("q" nil :color blue))
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c o") 'hydra-one-key-org-mode/body)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

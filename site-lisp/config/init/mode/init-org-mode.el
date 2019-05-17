@@ -8,6 +8,17 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; close org mode indent
+(org-indent-mode -1)
+
+(defun make-line-to-title ()
+  "Make a line to a title."
+  (interactive)
+  (goto-char (line-beginning-position))
+  (insert "- ")
+  (goto-char (line-end-position))
+  (insert " :: "))
+
 (defun insert-s-or-f-note (command)
   "Insert snote or fnote mark, or delete an existing mark in org-mode."
   (interactive "sInput `s' for inputing snote mark, `f' for inputing fnote mark, `d' for deleting an existing mark: ")
@@ -20,35 +31,18 @@
     (skip-chars-forward "^[:space:]")
     (insert "+"))
    (t (message "NOT support the command: %s" command))))
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-x s s") 'insert-s-or-f-note)))
-
-;; toggle link display
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-x t l") 'org-toggle-link-display)))
 
 (defun my-org-table-insert-row-below ()
   "Insert a new row at current row below quickly in org-table."
   (interactive)
   (let ((current-prefix-arg 5))
     (call-interactively 'org-table-insert-row)))
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c M-RET") 'my-org-table-insert-row-below)))
 
 (defun my-org-table-insert-column-below ()
   "Insert a new column at current column below quickly in org-table."
   (interactive)
   (let ((current-prefix-arg 5))
     (call-interactively 'org-table-insert-column)))
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c <S-return>") 'my-org-table-insert-column-below)))
-
-;; close org mode indent
-(org-indent-mode -1)
 
 (defun my-org-insert-str-to-head-tail (flag)
   "Operate a region, or word at point, insert a character both at the position of head and tail.
@@ -78,9 +72,6 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
       (goto-char from)
       (insert output-str)
       (goto-char (+ to 4)))))
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-x a") 'my-org-insert-str-to-head-tail)))
 
 ;; eval code block
 (org-babel-do-load-languages
@@ -95,17 +86,17 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
 	  (lambda ()
 	    (set-face-attribute 'org-table nil :family "Noto Sans Mono")))
 
-;; shrink parent leve headline
-(add-hook 'org-mode-hook
-	  '(lambda ()
-	     (local-set-key (kbd "C-M-{") '(lambda () (interactive)
-						     (outline-up-heading 1) (org-cycle)))))
+(defun shrink-parent-level-headline ()
+  "Shrink parent leve headline."
+  (interactive)
+  (outline-up-heading 1)
+  (org-cycle))
 
-;; shrink current leve headline
-(add-hook 'org-mode-hook
-	  '(lambda ()
-	     (local-set-key (kbd "C-{") '(lambda () (interactive)
-						     (outline-previous-visible-heading 1) (org-cycle)))))
+(defun shrink-current-level-headline ()
+  "Shrink current leve headline."
+  (interactive)
+  (outline-previous-visible-heading 1)
+  (org-cycle))
 
 ;; 插入代码块
 (defun org-insert-src-block (src-code-type)
@@ -125,40 +116,20 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
     (insert "#+END_SRC\n")
     (previous-line 2)
     (org-edit-src-code)))
-;; 绑定快捷键
-(add-hook 'org-mode-hook '(lambda ()
-                            ;; turn on flyspell-mode by default
-                            (flyspell-mode 1)
-                            ;; C-TAB for expanding
-                            (local-set-key (kbd "C-<tab>")
-                                           'yas/expand-from-trigger-key)
-                            ;; keybinding for editing source code blocks
-                            (local-set-key (kbd "C-x s e")
-                                           'org-edit-src-code)
-                            ;; keybinding for inserting code blocks
-                            (local-set-key (kbd "C-x s i")
-                                           'org-insert-src-block)
-                            ))
 
 ;; 代码块语法高亮
 (setq org-src-fontify-natively t)
 
 ;; 缩进
-(add-hook 'org-mode-hook
-	  (lambda()
-	    (global-set-key (kbd "C-x i") '(lambda () (interactive) (org-indent-mode 1)))))
-(add-hook 'org-mode-hook
-	  (lambda()
-	    (global-set-key (kbd "C-x l") '(lambda () (interactive) (org-indent-mode 0)))))
+(defun indent-mode-on ()
+  "Open org-indent-mode."
+  (interactive)
+  (org-indent-mode 1))
 
-
-;; 上下移动同一级主题的整行的内容
-(add-hook 'org-mode-hook
-	  (lambda()
-	    (global-set-key (kbd "M-n") 'org-metadown)))
-(add-hook 'org-mode-hook
-	  (lambda()
-	    (global-set-key (kbd "M-p") 'org-metaup)))
+(defun indent-mode-off ()
+  "Close org-indent-mode."
+  (interactive)
+  (org-indent-mode 0))
 
 ;; org-mode自动换行
 (add-hook 'org-mode-hook
