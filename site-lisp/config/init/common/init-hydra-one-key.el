@@ -87,6 +87,7 @@
   "
 Access operations (access to position, file, directory, buffer, etc.).
 
+_a_: apropos search
 _c_: open cmd window
 _e_: open elisp manual
 _f_: search file        
@@ -101,6 +102,7 @@ _C-<tab>_: cycle next buffer
 _S-<tab>_: cycle previous buffer
 _q_: quit this hydra
 "
+  ("a" apropos)
   ("c" open-cmd)
   ("e" open-elisp-manual)
   ("f" find-lisp-find-dired)

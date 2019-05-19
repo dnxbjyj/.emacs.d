@@ -35,6 +35,8 @@
 ;;;; init mode end
 
 ;;;; init plugin start
+;; grep dired
+(require 'init-grep-dired)
 ;; edit server
 (require 'init-edit-server)
 ;; edit text area by emacs in chrome
