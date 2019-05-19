@@ -1,5 +1,5 @@
 * .emacs.d
-我的Emacs配置。
+我的Emacs配置。x
 
 * 核心配置文件结构
 ** init.el :: 主入口文件
