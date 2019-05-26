@@ -8,6 +8,11 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun search-symbol ()
+  "Search any symbol by use function `apropos'."
+  (interactive)
+  (call-interactively 'apropos))
+
 ;; 在当前路径快速打开powershell命令行窗口
 (defun open-powershell ()
   (interactive)

@@ -98,6 +98,7 @@ _M_: switch to minibuffer window
 _o_: open explorer
 _p_: open powershell window
 _r_: show recent opened files
+_s_: search symbol
 _C-<tab>_: cycle next buffer
 _S-<tab>_: cycle previous buffer
 _q_: quit this hydra
@@ -113,6 +114,7 @@ _q_: quit this hydra
   ("o" open-explorer)
   ("p" open-powershell)
   ("r" recentf-open-files)
+  ("s" search-symbol)
   ("C-<tab>" bs-cycle-next)
   ("S-<tab>" bs-cycle-previous)
   ("q" nil :color blue))
@@ -144,6 +146,8 @@ _d_: toggle debug on error
   "
 Common edit operations.
 
+_c_: show current buffer coding
+_C_: set current buffer coding system
 _f_: find and replace
 _k_: kill all other buffers
 _l_: select current line
@@ -152,10 +156,12 @@ _n_: insert current datetime string
 _s_: select text between two nearest quotation marks
 _t_: insert today's date string
 _T_: insert tomorrow's date string
-_w_: select word at point
+_w_: show white space character
 _y_: insert yesterday's date string
 _q_: quit this hydra
 "
+  ("c" show-current-buffer-coding)
+  ("C" set-current-buffer-coding-system)
   ("f" search-and-replace)
   ("k" kill-all-other-buffers)
   ("l" select-current-line)
@@ -164,7 +170,7 @@ _q_: quit this hydra
   ("s" select-text-between-quotations)
   ("t" today)
   ("T" tomorrow)
-  ("w" select-current-word)
+  ("w" whitespace-mode)
   ("y" yesterday)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c e") 'hydra-one-key-edit-operation/body)

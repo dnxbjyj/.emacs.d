@@ -7,6 +7,16 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun show-current-buffer-coding ()
+  "Show current buffer coding."
+  (interactive)
+  (message "%s" buffer-file-coding-system))
+
+(defun set-current-buffer-coding-system ()
+  "Set current buffer coding system."
+  (interactive)
+  (call-interactively 'set-buffer-file-coding-system))
+
 (defun tomorrow ()
   "Insert tomorrow's date string at current point."
   (interactive)
