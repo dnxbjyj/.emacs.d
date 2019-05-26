@@ -156,6 +156,7 @@ _n_: insert current datetime string
 _s_: select text between two nearest quotation marks
 _t_: insert today's date string
 _T_: insert tomorrow's date string
+_u_: set current buffer coding system to utf-8-unix
 _w_: show white space character
 _y_: insert yesterday's date string
 _q_: quit this hydra
@@ -170,6 +171,7 @@ _q_: quit this hydra
   ("s" select-text-between-quotations)
   ("t" today)
   ("T" tomorrow)
+  ("u" set-current-buffer-coding-system-utf-8-unix)
   ("w" whitespace-mode)
   ("y" yesterday)
   ("q" nil :color blue))

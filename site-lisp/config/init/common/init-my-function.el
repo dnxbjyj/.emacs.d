@@ -12,6 +12,11 @@
   (interactive)
   (message "%s" buffer-file-coding-system))
 
+(defun set-current-buffer-coding-system-utf-8-unix ()
+  "Set current buffer coding system to utf-8-unix."
+  (interactive)
+  (set-buffer-file-coding-system 'utf-8-unix))
+
 (defun set-current-buffer-coding-system ()
   "Set current buffer coding system."
   (interactive)
