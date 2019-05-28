@@ -124,11 +124,11 @@ _q_: quit this hydra
   "
 Code operations.
 
-_j_: format JSON buffer
+_j_: format JSON at point or in region
 _/_: comment/uncomment region code
 _q_: quit this hydra
 "
-  ("j" json-pretty-print-buffer)
+  ("j" json-pretty-print)
   ("/" my-comment-or-uncomment-region)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c c") 'hydra-one-key-code-operation/body)
