@@ -14,6 +14,12 @@
 ;; quickly open this file
 (global-set-key (kbd "C-c h") '(lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
 
+;; in selected window switch to previous buffer
+(global-set-key (kbd "C-{") 'previous-buffer)
+
+;; in selected window switch to next buffer
+(global-set-key (kbd "C-}") 'next-buffer)
+
 ;; 快速打开config目录
 (global-set-key (kbd "<f9>") '(lambda() (interactive) (dired "~/.emacs.d/site-lisp/config/")))
 
@@ -136,11 +142,12 @@ _q_: quit this hydra
 (defhydra hydra-one-key-better-default (:color pink :hint nil)
   "
 Better default operations.
+
 _d_: toggle debug on error
 "
   ("d" toggle-debug-on-error)
   ("q" nil :color blue))
-(global-set-key (kbd "C-c d") 'hydra-one-key-better-defaultca/body)
+(global-set-key (kbd "C-c d") 'hydra-one-key-better-default/body)
 
 (defhydra hydra-one-key-edit-operation (:color pink :hint nil)
   "
