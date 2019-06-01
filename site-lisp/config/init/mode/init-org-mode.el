@@ -8,6 +8,11 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; to go line
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-j") 'goto-line)))
+
 ;; close org mode indent
 (org-indent-mode -1)
 

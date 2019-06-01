@@ -11,9 +11,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;;-----------------common quick shortcut-----------------;;
-;; quickly open this file
-(global-set-key (kbd "C-c h") '(lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
-
 ;; in selected window switch to previous buffer
 (global-set-key (kbd "C-{") 'previous-buffer)
 
@@ -93,12 +90,9 @@
   "
 Access operations (access to position, file, directory, buffer, etc.).
 
-_a_: apropos search
 _c_: open cmd window
-_e_: open elisp manual
-_f_: search file        
-_h_: search and list hooks         
-_j_: jump to line
+_f_: search file
+_h_: search and list hooks
 _m_: search and list key maps
 _M_: switch to minibuffer window
 _o_: open explorer
@@ -109,12 +103,9 @@ _C-<tab>_: cycle next buffer
 _S-<tab>_: cycle previous buffer
 _q_: quit this hydra
 "
-  ("a" apropos)
   ("c" open-cmd)
-  ("e" open-elisp-manual)
   ("f" find-lisp-find-dired)
   ("h" my-list-hooks)
-  ("j" goto-line)
   ("m" my-list-key-maps)
   ("M" switch-to-minibuffer-window)
   ("o" open-explorer)
@@ -125,6 +116,23 @@ _q_: quit this hydra
   ("S-<tab>" bs-cycle-previous)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c a") 'hydra-one-key-access/body)
+
+(defhydra hydra-one-key-help (:color pink :hint nil)
+  "
+Help operations.
+
+_a_: apropos search
+_e_: open elisp manual
+_h_: open my hydra configuration file (this file)
+_i_: info apropos
+_q_: quit this hydra
+"
+  ("a" apropos)  
+  ("e" open-elisp-manual)  
+  ("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
+  ("i" info-apropos)  
+  ("q" nil :color blue))
+(global-set-key (kbd "C-c h") 'hydra-one-key-help/body)
 
 (defhydra hydra-one-key-code-operation (:color pink :hint nil)
   "
