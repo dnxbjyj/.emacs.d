@@ -1,4 +1,6 @@
 # local and temp files..
+request/*
+smex-items
 quick-access-local.org
 ido.last
 recentf
