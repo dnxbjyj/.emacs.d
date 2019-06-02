@@ -34,7 +34,11 @@
 (require 'init-company-mode)
 ;;;; init mode end
 
-;;;; init plugin start
+;;;; init extension start
+;; leetcode
+(require 'init-leetcode)
+;; smex
+(require 'init-smex)
 ;; grep dired
 (require 'init-grep-dired)
 ;; edit server
@@ -65,7 +69,7 @@
 (require 'init-watch-other-window)
 ;; Youdao dictionary config
 (require 'init-youdao-dictionary)
-;;;; init plugin end
+;;;; init extension end
 
 ;; provide init-config module
 (provide 'init-config)
