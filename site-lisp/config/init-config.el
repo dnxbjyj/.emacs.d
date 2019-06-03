@@ -35,6 +35,8 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; sift: full text search
+(require 'init-sift)
 ;; leetcode
 (require 'init-leetcode)
 ;; smex

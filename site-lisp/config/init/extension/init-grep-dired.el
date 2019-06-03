@@ -9,7 +9,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; change the find program path to location find exe file
+(setq find-program "D:/program/Git/usr/bin/find.exe")
 
+;; set key bindings
+(global-set-key (kbd "C-M-g") 'grep-dired-dwim)
+(global-set-key (kbd "C-M-S-g") 'grep-dired)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
