@@ -8,6 +8,9 @@
 (require 'init-quick-access)
 (require 'init-org-mode)
 
+(require 'init-sift)
+(require 'init-grep-dired)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;;-----------------common quick shortcut-----------------;;
@@ -85,54 +88,41 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
-;;-----------------common hydra-----------------;;
+;;-----------------hydra-----------------;;
 (defhydra hydra-one-key-access (:color pink :hint nil)
   "
 Access operations (access to position, file, directory, buffer, etc.).
 
 _c_: open cmd window
-_f_: search file
+_f_: search file by grep-dired-dwim
+_F_: search file by find-lisp-find-dired
 _h_: search and list hooks
 _m_: search and list key maps
 _M_: switch to minibuffer window
 _o_: open explorer
 _p_: open powershell window
 _r_: show recent opened files
-_s_: search symbol
+_s_: sift full-text search
+_S_: search symbol
 _C-<tab>_: cycle next buffer
 _S-<tab>_: cycle previous buffer
 _q_: quit this hydra
 "
   ("c" open-cmd)
-  ("f" find-lisp-find-dired)
+  ("f" grep-dired-dwim)
+  ("F" find-lisp-find-dired)
   ("h" my-list-hooks)
   ("m" my-list-key-maps)
   ("M" switch-to-minibuffer-window)
   ("o" open-explorer)
   ("p" open-powershell)
   ("r" recentf-open-files)
-  ("s" search-symbol)
+  ("s" sift-regexp)
+  ("S" search-symbol)
   ("C-<tab>" bs-cycle-next)
   ("S-<tab>" bs-cycle-previous)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c a") 'hydra-one-key-access/body)
-
-(defhydra hydra-one-key-help (:color pink :hint nil)
-  "
-Help operations.
-
-_a_: apropos search
-_e_: open elisp manual
-_h_: open my hydra configuration file (this file)
-_i_: info apropos
-_q_: quit this hydra
-"
-  ("a" apropos)  
-  ("e" open-elisp-manual)  
-  ("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
-  ("i" info-apropos)  
-  ("q" nil :color blue))
-(global-set-key (kbd "C-c h") 'hydra-one-key-help/body)
 
 (defhydra hydra-one-key-code-operation (:color pink :hint nil)
   "
@@ -192,28 +182,23 @@ _q_: quit this hydra
   ("q" nil :color blue))
 (global-set-key (kbd "C-c e") 'hydra-one-key-edit-operation/body)
 
-(defhydra hydra-one-key-window-operation (:color pink :hint nil)
+(defhydra hydra-one-key-help (:color pink :hint nil)
   "
-Common window operations.
+Help operations.
 
-_+_: increase text scale                                    
-_-_: decrease text scale
-_<left>_: shrink window horizontally
-_<right>_: enlarge window horizontally
-_<down>_: shrink window
-_<up>_: enlarge window
+_a_: apropos search
+_e_: open elisp manual
+_h_: open my hydra configuration file (this file)
+_i_: info apropos
 _q_: quit this hydra
 "
-  ("+" text-scale-increase)
-  ("-" text-scale-decrease)
-  ("<left>" shrink-window-horizontally)
-  ("<right>" enlarge-window-horizontally)
-  ("<down>" shrink-window)
-  ("<up>" enlarge-window)
+  ("a" apropos)  
+  ("e" open-elisp-manual)  
+  ("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
+  ("i" info-apropos)  
   ("q" nil :color blue))
-(global-set-key (kbd "C-c w") 'hydra-one-key-window-operation/body)
+(global-set-key (kbd "C-c h") 'hydra-one-key-help/body)
 
-;;-----------------mode hydra-----------------;;
 ;;;; org-mode ;;;;
 (defhydra hydra-one-key-org-mode (:color pink :hint nil)
   "
@@ -255,6 +240,27 @@ _q_: quit this hydra
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (local-set-key (kbd "C-c o") 'hydra-one-key-org-mode/body)))
+
+(defhydra hydra-one-key-window-operation (:color pink :hint nil)
+  "
+Common window operations.
+
+_+_: increase text scale                                    
+_-_: decrease text scale
+_<left>_: shrink window horizontally
+_<right>_: enlarge window horizontally
+_<down>_: shrink window
+_<up>_: enlarge window
+_q_: quit this hydra
+"
+  ("+" text-scale-increase)
+  ("-" text-scale-decrease)
+  ("<left>" shrink-window-horizontally)
+  ("<right>" enlarge-window-horizontally)
+  ("<down>" shrink-window)
+  ("<up>" enlarge-window)
+  ("q" nil :color blue))
+(global-set-key (kbd "C-c w") 'hydra-one-key-window-operation/body)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
