@@ -1,4 +1,5 @@
 # local and temp files..
+pyim/*
 request/*
 smex-items
 quick-access-local.org
