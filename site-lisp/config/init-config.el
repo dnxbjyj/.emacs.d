@@ -35,6 +35,8 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; pyim
+(require 'init-pyim)
 ;; sift: full text search
 (require 'init-sift)
 ;; leetcode
