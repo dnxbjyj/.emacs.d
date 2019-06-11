@@ -8,6 +8,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; display line number and column number on mode line
+(setq line-number-mode 1)
+(setq column-number-mode 1)
+
 ;; set noto sans monospaced font, should install corresponding ttf in advance
 ; (set-default-font "Noto Sans Mono")
 

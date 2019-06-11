@@ -9,6 +9,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; switch on debug on error
+(setq debug-on-error t)
+
 ;; display lambda and other smbols more pretty
 (global-prettify-symbols-mode 1)
 

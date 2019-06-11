@@ -8,6 +8,28 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; select org-table field
+(defun my-org-table-select-field ()
+  "Select current org-table field."
+  (interactive)
+  (when (not (looking-back "|[[:blank:]]?"))
+    (org-table-beginning-of-field 1))
+  (set-mark-command nil)
+  (org-table-end-of-field 1))
+
+;; org delete line
+(defun my-org-delete-line (&optional line-number)
+  "Delete current line (means add `+' to head and tail of line) if optional param `line-number' is not indicated, otherwise delete the indicated line."
+  (interactive "sInput line number (default current line): ")
+  (save-excursion
+    (ignore-errors
+      (unless (string-empty-p line-number)
+	(goto-line (string-to-int line-number)))
+      (beginning-of-line)
+      (insert "+")
+      (end-of-line)
+      (insert "+"))))
+
 ;; to go line
 (add-hook 'org-mode-hook
 	  (lambda ()

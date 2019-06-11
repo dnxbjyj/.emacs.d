@@ -204,11 +204,8 @@ _q_: quit this hydra
   "
 Shortcut for org-mode.
 
-_{_: shrink parent leve headline
-_[_: shrink current leve headline
-_+_: open org-indent-mode
-_-_: close org-indent-mode
 _C_: insert a new column at current column below quickly in org-table
+_d_: org delete line (means add `+' to head and tail of line)
 _e_: export dispatch
 _i_: operate a region, or word at point, insert a character both at the position of head and tail
 _l_: toggle link display
@@ -219,13 +216,15 @@ _S_: edit code src block
 _t_: modify a line to a chapter title
 _M-n_: move down
 _M-p_: move up
+_{_: shrink parent leve headline
+_[_: shrink current leve headline
+_+_: open org-indent-mode
+_-_: close org-indent-mode
+_,_: select org-table field
 _q_: quit this hydra
 "
-  ("{" shrink-parent-level-headline)
-  ("[" shrink-current-level-headline)
-  ("+" indent-mode-on)
-  ("-" indent-mode-off)
   ("C" my-org-table-insert-column-below)
+  ("d" my-org-delete-line)
   ("e" org-export-dispatch)
   ("i" my-org-insert-str-to-head-tail)
   ("l" org-toggle-link-display)
@@ -235,7 +234,12 @@ _q_: quit this hydra
   ("S" org-edit-src-code)
   ("t" make-line-to-title)
   ("M-n" org-metadown)
-  ("M-p" org-metaup)  
+  ("M-p" org-metaup)
+  ("{" shrink-parent-level-headline)
+  ("[" shrink-current-level-headline)
+  ("+" indent-mode-on)
+  ("-" indent-mode-off)
+  ("," my-org-table-select-field)
   ("q" nil :color blue))
 (add-hook 'org-mode-hook
 	  (lambda ()
