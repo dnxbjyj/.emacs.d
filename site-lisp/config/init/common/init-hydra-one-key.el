@@ -95,7 +95,7 @@ Access operations (access to position, file, directory, buffer, etc.).
 
 _c_: open cmd window
 _f_: search file by grep-dired-dwim
-_F_: search file by find-lisp-find-dired
+_F_: grep dired by custom
 _h_: search and list hooks
 _m_: search and list key maps
 _M_: switch to minibuffer window
@@ -110,7 +110,7 @@ _q_: quit this hydra
 "
   ("c" open-cmd)
   ("f" grep-dired-dwim)
-  ("F" find-lisp-find-dired)
+  ("F" grep-dired)
   ("h" my-list-hooks)
   ("m" my-list-key-maps)
   ("M" switch-to-minibuffer-window)
