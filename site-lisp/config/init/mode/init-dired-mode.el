@@ -9,6 +9,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; guess target dir of some dired-mode command (such ass copy, move, etc)
+(setq dired-dwim-target t)
+
 (defun dired-mode-copy-current-file-name ()
   "Copy current file name to clipboard in dired-mode."
   (interactive)

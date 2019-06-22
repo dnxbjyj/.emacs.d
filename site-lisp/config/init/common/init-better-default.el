@@ -9,6 +9,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; set case insensitive when search
+(setq case-fold-search t)
+
 ;; switch on debug on error
 (setq debug-on-error t)
 
