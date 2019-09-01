@@ -20,6 +20,8 @@
 ;;;; common end 
 
 ;;;; init mode star
+;; pasteex-mode
+(require 'init-pasteex-mode)
 ;; config dired-mode
 (require 'init-dired-mode)
 ;; config python-mode
