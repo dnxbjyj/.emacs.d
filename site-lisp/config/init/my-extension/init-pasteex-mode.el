@@ -8,8 +8,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-(setq pasteex-executable-path "D:/program/PasteEx/pasteex.exe")
-(global-set-key (kbd "C-c i") 'pasteex-image)
+(setq pasteex-executable-path "D:/program/PasteEx.v1.1.8.0.beta/PasteEx/pasteex.exe")
+(define-key pasteex-mode-map (kbd "C-c i") 'pasteex-image)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
