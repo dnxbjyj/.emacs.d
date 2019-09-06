@@ -1,0 +1,3 @@
+[submodule "site-lisp/my-extension/pasteex"]
+	path = site-lisp/my-extension/pasteex
+	url = https://github.com/dnxbjyj/pasteex-mode.git
