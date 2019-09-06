@@ -9,7 +9,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 (setq pasteex-executable-path "D:/program/PasteEx.v1.1.8.0.beta/PasteEx/pasteex.exe")
-(define-key pasteex-mode-map (kbd "C-c i") 'pasteex-image)
+(global-set-key (kbd "C-x p i") 'pasteex-image)
+(global-set-key (kbd "C-x p d") 'pasteex-delete-img-link-and-file-at-line)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
