@@ -147,16 +147,13 @@
 (defun select-text-between-quotations ()
   "Select text between two nearest quotation marks."
   (interactive)
-  (if (check-inside-quotations (point))
-      (progn
     ;; here should not use square brackets in regexp
-    (let ((start) (skip-char "^\"'"))
+    (let ((start) (skip-char "^\"'`'"))
       (skip-chars-backward skip-char)
       (setq start (point))
       (skip-chars-forward skip-char)
       (push-mark start)
       (setq mark-active t)))
-    (message "not inside a pair of quotation marks!")))
 
 (defun select-current-word-core (word-char-regex)
   "Select current word with indicated word char regex."
