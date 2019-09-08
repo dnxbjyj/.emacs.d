@@ -188,7 +188,7 @@ Help operations.
 
 _a_: apropos search
 _e_: open elisp manual
-_h_: open my hydra configuration file (this file)
+_h_: open my hydra configuration file
 _i_: info apropos
 _q_: quit this hydra
 "
