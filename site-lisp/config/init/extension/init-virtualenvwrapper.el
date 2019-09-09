@@ -13,9 +13,6 @@
 ;; note that setting `venv-location` is not necessary if you
 ;; use the default location (`~/.virtualenvs`), or if the
 ;; the environment variable `WORKON_HOME` points to the right place
-(setq venv-location "e:/code/env/.py2env/")
-
-;; Use M-x venv-workon to activate virtualenvs and M-x venv-deactivate deactivate them
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

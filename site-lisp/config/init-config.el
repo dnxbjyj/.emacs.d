@@ -9,6 +9,8 @@
 ;;;; basic config ends
 
 ;;;; common start：通用设置
+;; some local path config
+(require 'init-local-path)
 ;; 更好的默认设置
 (require 'init-better-default)
 ;; 自定义函数
