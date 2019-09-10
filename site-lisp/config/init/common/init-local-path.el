@@ -11,7 +11,7 @@
   "Init local path."
   (when module-name
     (require module-name))
-  (setq path-var-name path))
+  (set path-var-name path))
 
 (init-local-path nil find-function-C-source-directory "")
 (init-local-path 'pasteex-mode 'pasteex-executable-path "D:/program/PasteEx.v1.1.8.0.beta/PasteEx/pasteex.exe")
