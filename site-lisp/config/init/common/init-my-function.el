@@ -7,6 +7,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun insert-4-space ()
+  "Insert 4 space."
+  (interactive)
+  (insert "    "))
+(global-set-key (kbd "C-M-SPC") 'insert-4-space)
+
 (defun show-current-buffer-coding ()
   "Show current buffer coding."
   (interactive)
