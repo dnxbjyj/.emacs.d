@@ -7,11 +7,15 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun backward-4-space ()
+  "Backward 4 space."
+  (interactive)
+  (backward-char 4))
+
 (defun insert-4-space ()
   "Insert 4 space."
   (interactive)
   (insert "    "))
-(global-set-key (kbd "C-M-SPC") 'insert-4-space)
 
 (defun show-current-buffer-coding ()
   "Show current buffer coding."

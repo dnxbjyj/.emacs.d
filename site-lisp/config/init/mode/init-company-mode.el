@@ -10,6 +10,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; 解决自动补全时不区分大小写的问题
+(setq company-dabbrev-downcase nil)
 
 ;; 为所有的缓冲区开启company-mode模式
 (add-hook 'after-init-hook 'global-company-mode)

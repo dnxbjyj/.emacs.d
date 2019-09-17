@@ -88,6 +88,11 @@
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
+;; insert 4 space
+(global-set-key (kbd "C-M-SPC") 'insert-4-space)
+;; backward 4 space
+(global-set-key (kbd "M-S-SPC") 'backward-4-space)
+
 ;;-----------------hydra-----------------;;
 (defhydra hydra-one-key-access (:color pink :hint nil)
   "
