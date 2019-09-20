@@ -98,10 +98,13 @@
   "
 Access operations (access to position, file, directory, buffer, etc.).
 
-_c_: open cmd window
+_a_: run auto-commit.bat to do git commit and push
+_c_: run Windows CMD with admin privilege
 _f_: search file by grep-dired-dwim
 _F_: grep dired by custom
+_g_: run git bash
 _h_: search and list hooks
+_i_: run ipython
 _m_: search and list key maps
 _M_: switch to minibuffer window
 _o_: open explorer
@@ -112,10 +115,13 @@ _C-<tab>_: cycle next buffer
 _S-<tab>_: cycle previous buffer
 _q_: quit this hydra
 "
-  ("c" open-cmd)
+  ("a" run-auto-commit)
+  ("c" run-win-cmd-with-admin)
   ("f" grep-dired-dwim)
   ("F" grep-dired)
+  ("g" run-git-bash)
   ("h" my-list-hooks)
+  ("i" run-ipython)
   ("m" my-list-key-maps)
   ("M" switch-to-minibuffer-window)
   ("o" open-explorer)
@@ -190,15 +196,19 @@ _q_: quit this hydra
 Help operations.
 
 _a_: apropos search
+_A_: info apropos
 _e_: open elisp manual
+_E_: open emacs manual
 _h_: open my hydra configuration file
-_i_: info apropos
+_i_: open info
 _q_: quit this hydra
 "
-  ("a" apropos)  
-  ("e" open-elisp-manual)  
+  ("a" apropos)
+  ("A" info-apropos)
+  ("e" open-elisp-manual)
+  ("E" open-emacs-manual)
   ("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
-  ("i" info-apropos)  
+  ("i" info)  
   ("q" nil :color blue))
 (global-set-key (kbd "C-c h") 'hydra-one-key-help/body)
 
