@@ -105,7 +105,6 @@ _h_: search and list hooks
 _m_: search and list key maps
 _M_: switch to minibuffer window
 _o_: open explorer
-_p_: open powershell window
 _r_: show recent opened files
 _s_: sift full-text search
 _S_: search symbol
@@ -120,7 +119,6 @@ _q_: quit this hydra
   ("m" my-list-key-maps)
   ("M" switch-to-minibuffer-window)
   ("o" open-explorer)
-  ("p" open-powershell)
   ("r" recentf-open-files)
   ("s" sift-regexp)
   ("S" search-symbol)

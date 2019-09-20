@@ -13,11 +13,6 @@
   (interactive)
   (call-interactively 'apropos))
 
-;; 在当前路径快速打开powershell命令行窗口
-(defun open-powershell ()
-  (interactive)
-  (async-shell-command "start powershell"))
-
 ;; 在当前路径快速打开cmd命令行窗口
 (defun open-cmd ()
   (interactive)
