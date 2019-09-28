@@ -24,14 +24,16 @@
 ;; 语法高亮
 (global-font-lock-mode t)
 
-;; 关闭菜单栏
-(menu-bar-mode 0)
-
-;; 关闭工具栏
-(tool-bar-mode 0)
-
-;; 关闭右边滚动条
-(scroll-bar-mode 0)
+;; 图形界面模式时关闭一些界面元素
+(if (display-graphic-p)
+    (progn
+      ;; 关闭滚动条
+      (scroll-bar-mode 0)
+      ;; 关闭菜单栏
+      (menu-bar-mode 0)
+      ;; 关闭工具栏
+      (tool-bar-mode 0)))
+  
 
 ;; 关闭启动欢迎画面
 (setq inhibit-startup-message t)

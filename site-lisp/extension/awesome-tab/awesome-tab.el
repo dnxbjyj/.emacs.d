@@ -1377,12 +1377,12 @@ Returns non-nil if the new state is enabled.
   :global t
   :keymap awesome-tab-mwheel-mode-map
   (when awesome-tab-mwheel-mode
-    (unless (and mouse-wheel-mode awesome-tab-mode)
+    (unless (and (and (display-graphic-p) mouse-wheel-mode) awesome-tab-mode)
       (awesome-tab-mwheel-mode -1))))
 
 (defun awesome-tab-mwheel-follow ()
   "Toggle Awesome-Tab-Mwheel following Awesome-Tab and Mouse-Wheel modes."
-  (awesome-tab-mwheel-mode (if (and mouse-wheel-mode awesome-tab-mode) 1 -1)))
+  (awesome-tab-mwheel-mode (if (and (and (display-graphic-p) mouse-wheel-mode) awesome-tab-mode) 1 -1)))
 
 (add-hook 'awesome-tab-mode-hook      'awesome-tab-mwheel-follow)
 (add-hook 'mouse-wheel-mode-hook 'awesome-tab-mwheel-follow)

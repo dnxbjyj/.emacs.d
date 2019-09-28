@@ -22,8 +22,9 @@
 ;;;; common end 
 
 ;;;; init mode star
-;; pasteex-mode
-(require 'init-pasteex-mode)
+(if (equal system-type 'windows-nt)
+    ;; pasteex-mode, only on Windows
+    (require 'init-pasteex-mode))
 ;; config dired-mode
 (require 'init-dired-mode)
 ;; config python-mode
