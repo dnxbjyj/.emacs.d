@@ -9,6 +9,21 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; macOS copy and paste with OS clipboard
+(defun copy-from-osx ()
+  "Copy from OSX."
+  (shell-command-to-string "pbpaste"))
+(defun paste-to-osx (text &optional push)
+  "Paste to OSX."
+  (let ((process-connection-type nil))
+    (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+      (process-send-string proc text)
+      (process-send-eof proc))))
+(if (equal system-type 'darwin)
+    (progn
+      (setq interprogram-cut-function 'paste-to-osx)
+      (setq interprogram-paste-function 'copy-from-osx)))
+
 ;; set case insensitive when search
 (setq case-fold-search t)
 
