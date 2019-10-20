@@ -20,7 +20,10 @@
 				    (init-local-path 'pasteex-mode 'pasteex-executable-path "D:/program/PasteEx.v1.1.8.0.beta/PasteEx/pasteex.exe")
 				    (init-local-path 'grep-dired 'find-program "D:/program/Git/usr/bin/find.exe")
 				    (init-local-path 'sift 'sift-executable "d:/program/Git/usr/bin/sift.exe")
-				    (init-local-path 'virtualenvwrapper 'venv-location "e:/code/env/.py2env/")))
+				    (init-local-path 'virtualenvwrapper 'venv-location "e:/code/env/.py2env/")
+				    (init-local-path nil 'dirs-to-be-read-only '("d:/program/emacs-25.3.1-with-modules/emacs/share/emacs/25.3/lisp"
+										 "c:/Users/76512/AppData/Roaming/.emacs.d/site-lisp/extension"))
+				    (init-local-path nil 'chrome-executable-path "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe")))
  (t nil))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

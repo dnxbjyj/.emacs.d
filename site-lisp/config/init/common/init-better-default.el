@@ -1,14 +1,30 @@
 ;;;;;;;;;; init-better-default模块 ;;;;;;;;;;
 ;;;; Desc: 更好的默认设置
 
+
 ;;;; init-better-default start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
 (require 'recentf)
 (require 'saveplace)
+(require 'init-local-path)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; set some important source code dirs to READ ONLY
+(defun set-dirs-read-only ()
+  "Set some dirs to be read only."
+  (if dirs-to-be-read-only
+      (progn
+	(setq case-fold-search t)
+	(mapcar (lambda (dir-prefix)
+		  (if (string-match (concat dir-prefix ".+?$") (buffer-file-name))
+		      (progn
+			(setq buffer-read-only t)
+			(message "current buffer is setted to READ ONLY!"))))
+		dirs-to-be-read-only))))
+(add-hook 'find-file-hooks 'set-dirs-read-only)
+
 ;; macOS copy and paste with OS clipboard
 (defun copy-from-osx ()
   "Copy from OSX."

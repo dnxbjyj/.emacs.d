@@ -4,7 +4,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
 (require 'hydra)
-(require 'init-my-function)
+(require 'init-my-awesome-function)
 (require 'init-quick-access)
 (require 'init-org-mode)
 
@@ -100,6 +100,7 @@ Access operations (access to position, file, directory, buffer, etc.).
 
 _a_: run auto-commit.bat to do git commit and push
 _c_: run Windows CMD with admin privilege
+_C_: open current file in chrome
 _f_: search file by grep-dired-dwim
 _F_: grep dired by custom
 _g_: run git bash
@@ -117,6 +118,7 @@ _q_: quit this hydra
 "
   ("a" run-auto-commit)
   ("c" run-win-cmd-with-admin)
+  ("C" open-current-file-in-chrome)
   ("f" grep-dired-dwim)
   ("F" grep-dired)
   ("g" run-git-bash)
@@ -167,6 +169,7 @@ _k_: kill all other buffers
 _l_: select current line
 _L_: copy current line
 _n_: insert current datetime string
+_r_: toggle current buffer read only
 _s_: select text between two nearest quotation marks
 _t_: insert today's date string
 _T_: insert tomorrow's date string
@@ -182,6 +185,7 @@ _q_: quit this hydra
   ("l" select-current-line)
   ("L" copy-current-line)
   ("n" now)
+  ("r" toggle-buffer-read-only)
   ("s" select-text-between-quotations)
   ("t" today)
   ("T" tomorrow)
@@ -190,6 +194,7 @@ _q_: quit this hydra
   ("y" yesterday)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c e") 'hydra-one-key-edit-operation/body)
+
 
 (defhydra hydra-one-key-help (:color pink :hint nil)
   "

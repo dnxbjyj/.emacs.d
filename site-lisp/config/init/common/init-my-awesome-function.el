@@ -1,12 +1,23 @@
-;;;;;;;;;; init-my-function模块 ;;;;;;;;;;
-;;;; Desc: 自定义函数配置
+;;;;;;;;;; init-my-awesome-function模块 ;;;;;;;;;;
+;;;; Desc: 自定义的好用函数配置
 
-;;;; init-my-function start here
+;;;; init-my-awesome-function start here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun toggle-buffer-read-only ()
+  "Toggle current buffer read only."
+  (interactive)
+  (if buffer-read-only
+      (progn
+	(setq buffer-read-only nil)
+	(message "current buffer toggled to NOT read only!"))
+    (progn
+      (setq buffer-read-only t)
+      (message "current buffer toggled to read only!"))))
+
 (defun backward-4-space ()
   "Backward 4 space."
   (interactive)
@@ -216,7 +227,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
-(provide 'init-my-function)
+(provide 'init-my-awesome-function)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; init-my-function end here
+;;;; init-my-awesome-function end here

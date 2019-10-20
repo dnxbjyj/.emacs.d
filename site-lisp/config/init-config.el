@@ -13,8 +13,8 @@
 (require 'init-local-path)
 ;; 更好的默认设置
 (require 'init-better-default)
-;; 自定义函数
-(require 'init-my-function)
+;; 自定义的好用函数
+(require 'init-my-awesome-function)
 ;; 加载包
 (require 'init-package)
 ;; 快速访问按键配置
