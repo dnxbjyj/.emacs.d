@@ -14,7 +14,7 @@
 ;; set some important source code dirs to READ ONLY
 (defun set-dirs-read-only ()
   "Set some dirs to be read only."
-  (if dirs-to-be-read-only
+  (if (and (boundp 'dirs-to-be-read-only) dirs-to-be-read-only)
       (progn
 	(setq case-fold-search t)
 	(mapcar (lambda (dir-prefix)
