@@ -21,10 +21,12 @@
 (require 'init-quick-access)
 ;;;; common end 
 
-;;;; init mode star
+;;;; init mode start
 (if (equal system-type 'windows-nt)
     ;; pasteex-mode, only on Windows
     (require 'init-pasteex-mode))
+;; config java-mode
+(require 'init-java-mode)
 ;; config dired-mode
 (require 'init-dired-mode)
 ;; config python-mode

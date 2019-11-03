@@ -29,16 +29,12 @@
 (defun copy-from-osx ()
   "Copy from OSX."
   (shell-command-to-string "pbpaste"))
-(defun paste-to-osx (text &optional push)
-  "Paste to OSX."
-  (let ((process-connection-type nil))
-    (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
-      (process-send-string proc text)
-      (process-send-eof proc))))
 (if (equal system-type 'darwin)
     (progn
-      (setq interprogram-cut-function 'paste-to-osx)
-      (setq interprogram-paste-function 'copy-from-osx)))
+      ;; copy from clipboard
+      (setq interprogram-paste-function 'copy-from-osx)
+      ;; paste to clipboard
+      (setq x-select-enable-clipboard t)))
 
 ;; set case insensitive when search
 (setq case-fold-search t)

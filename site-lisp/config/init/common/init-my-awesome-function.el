@@ -7,6 +7,24 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun toggle-message-buffer-window ()
+  "Toggle *Messages* buffer window."
+  (interactive)
+  (setq message-buffer-name "*Messages*")
+  (setq buffer (get-buffer message-buffer-name))
+  (if buffer
+      (progn
+	(setq window (get-buffer-window message-buffer-name))
+	(if window
+	    (progn
+	      (switch-to-buffer-other-window message-buffer-name)
+	      (delete-window))
+	  (progn
+	    (switch-to-buffer-other-window message-buffer-name)
+	    (goto-char (max-char))
+	    (other-window -1))))
+    (message "NOT found *Messages* buffer!")))
+
 (defun toggle-buffer-read-only ()
   "Toggle current buffer read only."
   (interactive)

@@ -14,6 +14,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;;-----------------common quick shortcut-----------------;;
+;; kill buffer and delete window at the same time
+(global-set-key (kbd "C-x K") 'kill-buffer-and-window)
+
 ;; in selected window switch to previous buffer
 (global-set-key (kbd "C-{") 'previous-buffer)
 
@@ -141,10 +144,12 @@ Code operations.
 
 _j_: format JSON at point or in region
 _/_: comment/uncomment region code
+_m_: toggle *Messages* buffer window
 _q_: quit this hydra
 "
   ("j" json-pretty-print)
   ("/" my-comment-or-uncomment-region)
+  ("m" toggle-message-buffer-window)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c c") 'hydra-one-key-code-operation/body)
 
