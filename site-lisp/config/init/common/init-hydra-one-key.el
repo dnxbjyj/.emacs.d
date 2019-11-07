@@ -10,6 +10,7 @@
 
 (require 'init-sift)
 (require 'init-grep-dired)
+(require 'init-gud-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
@@ -200,6 +201,43 @@ _q_: quit this hydra
   ("q" nil :color blue))
 (global-set-key (kbd "C-c e") 'hydra-one-key-edit-operation/body)
 
+(defhydra hydra-one-key-gud (:color pink :hint nil)
+  "
+Gud shotcut.
+
+_c_: compile current Java source code file using javac command with debug info
+_j_: debug current Java file using jdb
+_r_: run code, if has breakpoints, stop at first breakpoint
+_p_: print value of expression at point
+_e_: eval expr
+_b_: set breakpoint at current line
+_B_: remove breakpoint at current line
+_d_: dump expr
+_l_: list current code
+_L_: show all jdb breakpoints
+_k_: kill process
+_s_: step one line (not skip but enter into function)
+_n_: step one line (skip function)
+_u_: continue until current method returns
+_q_: quit this hydra
+"
+  ("c" javac-compile-with-debug-info)
+  ("j" jdb-debug-current-file)
+  ("r" gud-jdb-run)
+  ("p" gud-print)
+  ("e" jdb-eval-expr)
+  ("b" gud-break)
+  ("B" gud-remove)
+  ("d" jdb-dump-expr)
+  ("l" jdb-list-code)
+  ("L" jdb-show-breakpoints)
+  ("k" gud-kill)
+  ("s" gud-jdb-step)
+  ("n" gud-jdb-next)
+  ("u" gud-finish)
+  ("q" nil :color blue))
+(add-hook 'java-mode-hook
+	  (lambda () (local-set-key (kbd "C-c g") 'hydra-one-key-gud/body)))
 
 (defhydra hydra-one-key-help (:color pink :hint nil)
   "

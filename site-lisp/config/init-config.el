@@ -22,6 +22,9 @@
 ;;;; common end 
 
 ;;;; init mode start
+;; gud-mode
+(require 'init-gud-mode)
+;; pasteex-mode
 (if (equal system-type 'windows-nt)
     ;; pasteex-mode, only on Windows
     (require 'init-pasteex-mode))
