@@ -75,6 +75,25 @@
   (setq expr (read-string "Input expr: "))
   (execute-jdb-cmd-based-on-cur-buf (format "dump %s" expr)))
 
+(defun run-gud-cmd-at-a-line (gud-cmd cmd-action-desc)
+  "Run gud command at a line."
+  (setq cur-pos (point))
+  (setq cur-line (line-number-at-pos))
+  (setq cmd-execute-line (read-number (format "Input line number to %s: " cmd-action-desc) cur-line))
+  (goto-line cmd-execute-line)
+  (call-interactively gud-cmd)
+  (goto-char cur-pos))
+
+(defun jdb-gud-break ()
+  "Set breakpoint at indicated line, or defalut at current line."
+  (interactive)
+  (run-gud-cmd-at-a-line 'gud-break "set breakpoint"))
+
+(defun jdb-gud-remove-break ()
+  "Remove breakpoint at indicated line, or defalut at current line."
+  (interactive)
+  (run-gud-cmd-at-a-line 'gud-remove "remove breakpoint"))
+
 (defun gud-jdb-run ()
   "Run code, if has breakpoints, stop at first breakpoint."
   (interactive)

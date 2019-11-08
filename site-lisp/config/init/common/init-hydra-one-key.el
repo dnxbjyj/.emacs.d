@@ -210,9 +210,9 @@ _j_: debug current Java file using jdb
 _r_: run code, if has breakpoints, stop at first breakpoint
 _p_: print value of expression at point
 _e_: eval expr
-_b_: set breakpoint at current line
-_B_: remove breakpoint at current line
 _d_: dump expr
+_b_: set breakpoint
+_B_: remove breakpoint
 _l_: list current code
 _L_: show all jdb breakpoints
 _k_: kill process
@@ -226,9 +226,9 @@ _q_: quit this hydra
   ("r" gud-jdb-run)
   ("p" gud-print)
   ("e" jdb-eval-expr)
-  ("b" gud-break)
-  ("B" gud-remove)
   ("d" jdb-dump-expr)
+  ("b" jdb-gud-break)
+  ("B" jdb-gud-remove-break)
   ("l" jdb-list-code)
   ("L" jdb-show-breakpoints)
   ("k" gud-kill)
