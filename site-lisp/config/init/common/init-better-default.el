@@ -87,6 +87,7 @@
 (setq default-process-coding-system 'utf-8-unix)  ;; 进程输入输出
 (setq default-sendmail-coding-system 'utf-8-unix)  ;; 发送邮件
 (setq default-terminal-coding-system 'utf-8-unix)  ;; 终端
+(setq selection-coding-system 'utf-8-unix) ;; 与其他X程序的交互
 
 ;; 设置光标的形状为长条形（而非默认的矩形块）
 (setq-default cursor-type 'bar)

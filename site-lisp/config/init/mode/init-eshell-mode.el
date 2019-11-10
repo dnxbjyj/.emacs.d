@@ -8,6 +8,23 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; set every eshell buffer name
+(defvar eshell-related-buffer-file-name nil "Eshell related buffer file name.")
+(defadvice eshell (before remember-buffer-file-name nil compile)
+  "Remember buffer file name before open eshell."
+  (if (not (eq last-command 'eshell))
+      (let ((eshell-extra-name))
+	(if (buffer-file-name)
+	    (setq eshell-extra-name (file-name-nondirectory (buffer-file-name)))
+	  (setq eshell-extra-name (int-to-string (random 10000))))
+	(setq eshell-related-buffer-file-name (format "*(eshell) %s*" eshell-extra-name)))))
+(defun rename-eshell-buffer-to-pre-buf-file-name ()
+  "Rename eshell buffer to pre buffer file name."
+  (interactive)
+  (if eshell-related-buffer-file-name
+      (rename-buffer eshell-related-buffer-file-name)))
+(add-hook 'eshell-mode-hook 'rename-eshell-buffer-to-pre-buf-file-name)
+
 ;; solve the problem that Chinese character messy code in eshell-mode
 (add-hook 'eshell-mode-hook
 	  (lambda ()
@@ -27,12 +44,7 @@
 (defun set-java-tool-options ()
   "Set Java tool options."
   (interactive)
-  (let ((encoding))
-    (cond
-      ;; set gbk when windows
-     ((eq system-type 'windows-nt) (setq encoding "gbk"))
-      ;; set utf-8 when other OS
-     (t (setq encoding "utf-8")))
+  (let ((encoding "utf-8"))
     (setq export-command (format "export JAVA_TOOL_OPTIONS=\"-Dfile.encoding=%s -Duser.language=en\"" encoding))
     (insert export-command)
     (eshell-send-input)))
