@@ -115,12 +115,12 @@
 (defun gud-kill ()
   "Kill process."
   (interactive)
+  (setq buffer-read-only nil)
   (with-current-buffer gud-comint-buffer (comint-skip-input))
   (kill-process (get-buffer-process gud-comint-buffer))
   (setq gud-buffer-name (format "*gud-%s*" (file-name-base)))
   (switch-to-buffer gud-buffer-name)
-  (kill-buffer-and-window)
-  (setq buffer-read-only nil))
+  (kill-buffer-and-window))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
