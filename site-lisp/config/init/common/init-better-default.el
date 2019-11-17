@@ -26,15 +26,24 @@
 (add-hook 'find-file-hooks 'set-dirs-read-only)
 
 ;; macOS copy and paste with OS clipboard
-(defun copy-from-osx ()
-  "Copy from OSX."
+(defun paste-from-osx ()
+  "Paste from OSX."
   (shell-command-to-string "pbpaste"))
+
+(defun macos-awesome-yank ()
+  "Awesome yank on MacOS."
+  (interactive)
+  (insert-for-yank (gui-get-primary-selection)))
+
 (if (equal system-type 'darwin)
     (progn
-      ;; copy from clipboard
-      (setq interprogram-paste-function 'copy-from-osx)
-      ;; paste to clipboard
-      (setq x-select-enable-clipboard t)))
+      ;; paste from clipboard
+      (setq interprogram-paste-function 'paste-from-osx)
+      ;; copy to clipboard
+      (setq x-select-enable-clipboard t)
+      (setq x-select-enable-primary t)))
+      ;; set global awesome yank
+      ;; (global-set-key (kbd "C-y") 'macos-awesome-yank)))
 
 ;; set case insensitive when search
 (setq case-fold-search t)
@@ -87,6 +96,14 @@
 (setq default-process-coding-system 'utf-8-unix)  ;; 进程输入输出
 (setq default-sendmail-coding-system 'utf-8-unix)  ;; 发送邮件
 (setq default-terminal-coding-system 'utf-8-unix)  ;; 终端
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))  ;; process处理程序字符编码
+;; (modify-coding-system-alist 'process "*" 'utf-8-unix)
+;; (set-default-coding-systems 'utf-8-unix)
+;; (set-selection-coding-system 'utf-8-unix)
+;; (setq-default buffer-file-coding-system 'utf-8-unix)
+;; (setq-default default-buffer-file-coding-system 'utf-8-unix)
+;; (set-default-coding-systems 'utf-8-unix)
+;; (prefer-coding-system 'utf-8-unix)
 (setq selection-coding-system 'utf-8-unix) ;; 与其他X程序的交互
 
 ;; 设置光标的形状为长条形（而非默认的矩形块）

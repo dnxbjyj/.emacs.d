@@ -15,9 +15,6 @@
   (setq head-point (point))
   (end-of-line)
   (set-mark head-point))
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-_") 'select-line-fit-indent)))
 
 (defun insert-doc-annotation-below-current-line ()
   "Insert doc annotations for python class or function below current line."
@@ -83,20 +80,14 @@
       (indent-for-tab-command))
      (t (message "current line NOT match neither function nor class!")))))
 
+;; add-hooks
 (add-hook 'python-mode-hook
 	  (lambda ()
-	    (local-set-key (kbd "C-c C-a") 'insert-doc-annotation-below-current-line)))
-
-;; 4 space
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-<return>") '(lambda () (interactive)
-						 (insert "    ")))))
-
-;; change the behavior of "C-a"
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-a") '(lambda () (interactive)
+	    (local-set-key (kbd "C-_") 'select-line-fit-indent)
+	    (local-set-key (kbd "C-c C-a") 'insert-doc-annotation-below-current-line)
+	    (local-set-key (kbd "C-<return>") '(lambda () (interactive)    ;; 4 space
+						 (insert "    ")))
+	    (local-set-key (kbd "C-a") '(lambda () (interactive)    ;; change the behavior of "C-a"
 					  (goto-char (line-beginning-position))
 					  (skip-chars-forward "[[:space:]]")))))
 

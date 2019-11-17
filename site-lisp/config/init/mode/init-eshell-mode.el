@@ -23,22 +23,12 @@
   (interactive)
   (if eshell-related-buffer-file-name
       (rename-buffer eshell-related-buffer-file-name)))
-(add-hook 'eshell-mode-hook 'rename-eshell-buffer-to-pre-buf-file-name)
-
-;; solve the problem that Chinese character messy code in eshell-mode
-(add-hook 'eshell-mode-hook
-	  (lambda ()
-	    (when (eq system-type 'windows-nt)
-	      (prefer-coding-system 'gbk))))
 
 (defun clear-screen ()
   "Clear current screen."
   (interactive)
   (let ((eshell-buffer-maximum-lines 0))
 	(eshell-truncate-buffer)))
-(add-hook 'eshell-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-l") 'clear-screen)))
 
 ;;;;; config for Java ;;;;;
 (defun set-java-tool-options ()
@@ -48,7 +38,6 @@
     (setq export-command (format "export JAVA_TOOL_OPTIONS=\"-Dfile.encoding=%s -Duser.language=en\"" encoding))
     (insert export-command)
     (eshell-send-input)))
-(add-hook 'eshell-mode-hook 'set-java-tool-options)
 
 (defun javac-with-junit4 ()
   "Insert javac command with junit4 jar."
@@ -57,9 +46,6 @@
     (user-error "JUnit4 jar path NOT setted!"))
   (setq javac-command (format "javac -cp .:%s " junit-jar-path))
   (insert javac-command))
-(add-hook 'eshell-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-x j") 'javac-with-junit4)))
 
 (defun run-java-as-junit4-test ()
   "Run java as JUnit4 test."
@@ -68,11 +54,21 @@
     (user-error "JUnit4 jar path NOT setted!"))
   (setq run-command (format "java -cp .:%s org.junit.runner.JUnitCore " junit-jar-path))
   (insert run-command))
+
+;; add hooks
 (add-hook 'eshell-mode-hook
 	  (lambda ()
+	    (local-set-key (kbd "C-l") 'clear-screen)
+	    (local-set-key (kbd "C-x j") 'javac-with-junit4)
 	    (local-set-key (kbd "C-x t") 'run-java-as-junit4-test)))
+(add-hook 'eshell-mode-hook 'set-java-tool-options)
+(add-hook 'eshell-mode-hook 'rename-eshell-buffer-to-pre-buf-file-name)
 
-;;;;;;;;;;
+;; solve the problem that Chinese character messy code in eshell-mode
+;; (add-hook 'eshell-mode-hook
+;; 	  (lambda ()
+;; 	    (when (eq system-type 'windows-nt)
+;; 	      (prefer-coding-system 'gbk))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

@@ -42,11 +42,6 @@
 ;; 加载当前文件
 (global-set-key (kbd "<f11>") 'load-file)
 
-;; 执行当前行的S式
-(global-set-key (kbd "C-<f11>") (lambda () (interactive)
-			       (goto-char (line-end-position))
-			       (eval-last-sexp nil)))
-
 ;; quickly open quick-access.org
 (bind-key-for-open "~/.emacs.d/site-lisp/org/quick-access.org" "<f12>" "file")
 

@@ -49,7 +49,7 @@
 
 ;; 自定义字体设置
 (custom-set-faces
- '(default ((t (:family "微软雅黑" :foundry "outline" :slant normal :weight normal :height 160 :width normal)))))
+ '(default ((t (:family "Microsoft YaHei" :foundry "outline" :slant normal :weight normal :height 160 :width normal)))))
 
 ;; 显示行号
 (global-linum-mode 1)

@@ -30,11 +30,6 @@
       (end-of-line)
       (insert "+"))))
 
-;; to go line
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-j") 'goto-line)))
-
 ;; close org mode indent
 (org-indent-mode -1)
 
@@ -108,11 +103,6 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
 ;; config virtualenv root path
 (setq python-shell-virtualenv-root "e:/code/env/.py2env")
 
-;; set org-table font to mono font, should install ttf in advance
-(add-hook 'org-mode-hook
-	  (lambda ()
-	    (set-face-attribute 'org-table nil :family "Noto Sans Mono")))
-
 (defun shrink-parent-level-headline ()
   "Shrink parent leve headline."
   (interactive)
@@ -158,10 +148,19 @@ If flag is `q', insert `~' character, for the sake of quoting text in org-mode."
   (interactive)
   (org-indent-mode 0))
 
+;; add hooks
+;; to go line
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-j") 'goto-line)))
 ;; org-mode自动换行
 (add-hook 'org-mode-hook
 	  (lambda()
 	    (setq truncate-lines nil)))
+;; set org-table font to mono font, should install ttf in advance
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (set-face-attribute 'org-table nil :family "Noto Sans Mono")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

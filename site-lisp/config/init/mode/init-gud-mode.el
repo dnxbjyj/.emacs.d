@@ -15,7 +15,8 @@
   (if (string-equal (downcase extension) "java")
       (progn
 	(setq error-buffer-name "*javac error*")
-	(setq result (shell-command (format "javac -g -encoding utf-8 %s" (file-name-nondirectory (buffer-file-name))) nil error-buffer-name))
+	;; (setq result (shell-command (format "javac -g -encoding utf-8 %s" (file-name-nondirectory (buffer-file-name))) nil error-buffer-name))
+	(setq result (shell-command (format "export JAVA_TOOL_OPTIONS=\"-Dfile.encoding=utf-8 -Duser.language=en\"; javac -g -encoding utf-8 %s" (file-name-nondirectory (buffer-file-name))) nil error-buffer-name))
 	(if (equal result 0)
 	    (message "compile %s SUCCESS!" (buffer-file-name))
 	  (progn

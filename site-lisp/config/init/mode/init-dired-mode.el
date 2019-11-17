@@ -25,9 +25,6 @@
 	  (kill-ring-save (point-min) (point-max)))
 	(message "file name (%s) has been copied to clipboard!" file-name))
     (message "NO file at current point!")))
-(add-hook 'dired-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c n") 'dired-mode-copy-current-file-name)))
 
 (defun dired-mode-copy-current-directory-path ()
   "Copy current directory path to clipboard in dired-mode."
@@ -42,9 +39,6 @@
 	  (kill-ring-save (point-min) (point-max)))
 	(message "directory path (%s) has been copied to clipboard!" dir-path))
     (message "NO directory at current point!")))
-(add-hook 'dired-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c C-c") 'dired-mode-copy-current-directory-path)))
 
 (defun dired-mode-copy-current-file-path ()
   "Copy current file path to clipboard in dired-mode."
@@ -56,9 +50,6 @@
 	  (kill-ring-save (point-min) (point-max)))
 	(message "file path (%s) has been copied to clipboard!" file))
     (message "NO file at current point!")))
-(add-hook 'dired-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c c") 'dired-mode-copy-current-file-path)))
 
 (defun dired-mode-open-file-at-point ()
   "Open any file in dired-mode, using system default opening method."
@@ -74,9 +65,6 @@
 	(async-shell-command (format "start \"\" \"%s\"" file))
 	(message "Success to open file: %s" file))
     (message "NO file found at point!")))
-(add-hook 'dired-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c C-o") 'dired-mode-open-file-at-point)))
 
 ;; dired模式默认递归删除目录
 (setq dired-recursive-deletes 'always)
@@ -88,6 +76,14 @@
 
 ;; 让dired模式多个目录同时打开时共用一个缓冲区
 (put 'dired-find-alternate-file 'disabled nil)
+
+;; add hooks
+(add-hook 'dired-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c n") 'dired-mode-copy-current-file-name)
+	    (local-set-key (kbd "C-c C-c") 'dired-mode-copy-current-directory-path)
+	    (local-set-key (kbd "C-c C-o") 'dired-mode-open-file-at-point)
+	    (local-set-key (kbd "C-c c") 'dired-mode-copy-current-file-path)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

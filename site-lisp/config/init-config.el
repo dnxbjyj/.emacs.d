@@ -22,6 +22,8 @@
 ;;;; common end 
 
 ;;;; init mode start
+;; elisp-mode
+(require 'init-elisp-mode)
 ;; gud-mode
 (require 'init-gud-mode)
 ;; pasteex-mode

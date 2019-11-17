@@ -13,10 +13,11 @@
   (insert "import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;\n\n"))
+
+;; add hooks
 (add-hook 'java-mode-hook
 	  (lambda ()
 	    (local-set-key (kbd "C-x u") 'insert-junit-imports)))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
