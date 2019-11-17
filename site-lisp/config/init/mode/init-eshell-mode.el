@@ -18,6 +18,12 @@
 	    (setq eshell-extra-name (file-name-nondirectory (buffer-file-name)))
 	  (setq eshell-extra-name (int-to-string (random 10000))))
 	(setq eshell-related-buffer-file-name (format "*(eshell) %s*" eshell-extra-name)))))
+
+(defadvice eshell (before split-window-horizontally-before-eshell nil compile)
+  "Split window horizontally before eshell."
+  (split-window-horizontally)
+  (other-buffer))
+
 (defun rename-eshell-buffer-to-pre-buf-file-name ()
   "Rename eshell buffer to pre buffer file name."
   (interactive)
