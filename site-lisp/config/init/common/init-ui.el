@@ -48,8 +48,23 @@
 (global-hl-line-mode 1)
 
 ;; 自定义字体设置
-(custom-set-faces
- '(default ((t (:family "Microsoft YaHei" :foundry "outline" :slant normal :weight normal :height 160 :width normal)))))
+(let (
+      ;; 屏幕像素高度
+      (pixel-height (x-display-pixel-height)))
+      ;; 默认字体高度
+  ;;      (font-height))
+  (setq-default font-height nil)
+  ;; 根据屏幕适配调整字体高度
+  (cond
+   ((eq pixel-height 1080) (setq-default font-height 120))
+   ((eq pixel-height 900) (setq-default font-height 160))
+   (t (setq-default font-height 120)))
+  (message "font-height: %s" font-height)
+  (custom-set-faces
+   '(default ((t (:family "Microsoft YaHei" :foundry "outline" :slant normal :weight normal :height 160 :width normal))))))
+
+;; (custom-set-faces
+;;  '(default ((t (:family "Microsoft YaHei" :foundry "outline" :slant normal :weight normal :height 160 :width normal)))))
 
 ;; 显示行号
 (global-linum-mode 1)
