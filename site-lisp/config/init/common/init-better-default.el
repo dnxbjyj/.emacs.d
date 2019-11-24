@@ -25,26 +25,6 @@
 		dirs-to-be-read-only))))
 (add-hook 'find-file-hooks 'set-dirs-read-only)
 
-;; macOS copy and paste with OS clipboard
-;; (defun paste-from-osx ()
-;;   "Paste from OSX."
-;;   (shell-command-to-string "pbpaste"))
-
-;; (defun macos-awesome-yank ()
-;;   "Awesome yank on MacOS."
-;;   (interactive)
-;;   (insert-for-yank (gui-get-primary-selection)))
-
-;; (if (equal system-type 'darwin)
-;;     (progn
-;;       ;; paste from clipboard
-;;       (setq interprogram-paste-function 'paste-from-osx)
-;;       ;; copy to clipboard
-;;       (setq x-select-enable-clipboard t)))
-;;       ;; (setq x-select-enable-primary t)))
-;;       ;; set global awesome yank
-;;       ;; (global-set-key (kbd "C-y") 'macos-awesome-yank)))
-
 ;; set case insensitive when search
 (setq case-fold-search t)
 
@@ -98,6 +78,12 @@
 (setq default-terminal-coding-system 'utf-8-unix)  ;; 终端
 (setq default-process-coding-system '(utf-8-unix . utf-8-unix))  ;; process处理程序字符编码
 (prefer-coding-system 'utf-8)
+
+;; 设置Windows系统的字符
+(when (eq system-type 'windows-nt)
+  (set-next-selection-coding-system 'utf-16-le)
+  (set-selection-coding-system 'utf-16-le)
+  (set-clipboard-coding-system 'utf-16-le))
 
 ;; 设置光标的形状为长条形（而非默认的矩形块）
 (setq-default cursor-type 'bar)

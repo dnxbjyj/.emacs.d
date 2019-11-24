@@ -51,7 +51,7 @@
       ;; 屏幕像素高度
       (pixel-height (x-display-pixel-height)))
   (setq font-height nil)
-  ;; 根据屏幕适配调整字体高度
+  ;; 根据屏幕适配调整字体高度  ;; TODO
   (cond
    ((eq pixel-height 1080) (setq font-height 120))
    ((eq pixel-height 900) (setq font-height 160))
