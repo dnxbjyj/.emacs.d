@@ -169,7 +169,9 @@ _f_: find and replace
 _k_: kill all other buffers
 _l_: select current line
 _L_: copy current line
+_m_: convert markdown TODO list to org
 _n_: insert current datetime string
+_o_: convert org TODO list to markdown
 _r_: toggle current buffer read only
 _s_: select text between two nearest quotation marks
 _t_: insert today's date string
@@ -185,7 +187,9 @@ _q_: quit this hydra
   ("k" kill-all-other-buffers)
   ("l" select-current-line)
   ("L" copy-current-line)
+  ("m" todo-list-md-to-org)
   ("n" now)
+  ("o" todo-list-org-to-md)
   ("r" toggle-buffer-read-only)
   ("s" select-text-between-quotations)
   ("t" today)

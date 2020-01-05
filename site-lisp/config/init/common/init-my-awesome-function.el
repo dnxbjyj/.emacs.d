@@ -7,6 +7,44 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun todo-list-org-to-md ()
+  "Convert org TODO list to markdown."
+  (interactive)
+  (goto-char (point-min))
+  ;; replace titles
+  (replace-regexp "^* " "# ")
+  ;; replace items
+  (goto-char (point-min))
+  (replace-regexp "^** TODO " "- [ ] ")
+  (goto-char (point-min))
+  (replace-regexp "^** DONE " "- [x] ")
+  ;; replace deleted items
+  (goto-char (point-min))
+  (replace-regexp "^** \\+[[:blank:]]*\\(.+?\\)[[:blank:]]*\\+" "- ~~\\1~~")
+  (goto-char (point-min))
+  (replace-regexp "^** " "- [ ] ")
+  (goto-char (point-min))
+  ;; change major mode to markdown mode
+  (markdown-mode))
+
+(defun todo-list-md-to-org ()
+  "Convert markdown TODO list to org."
+  (interactive)
+  (goto-char (point-min))
+  ;; replace titles
+  (replace-regexp "^# " "* ")
+  ;; replace items
+  (goto-char (point-min))
+  (replace-regexp "^- \\[ \\] " "** TODO ")
+  (goto-char (point-min))
+  (replace-regexp "^- \\[x\\] " "** DONE ")
+  ;; replace deleted items
+  (goto-char (point-min))
+  (replace-regexp "^- ~~[[:blank:]]*\\(.+?\\)[[:blank:]]*~~" "** +\\1+")
+  (goto-char (point-min))
+  ;; change major mode to org mode
+  (org-mode))
+
 (defun toggle-message-buffer-window ()
   "Toggle *Messages* buffer window."
   (interactive)
