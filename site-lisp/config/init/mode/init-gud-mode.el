@@ -15,8 +15,11 @@
   (if (string-equal (downcase extension) "java")
       (progn
 	(setq error-buffer-name "*javac error*")
-	;; (setq result (shell-command (format "javac -g -encoding utf-8 %s" (file-name-nondirectory (buffer-file-name))) nil error-buffer-name))
-	(setq result (shell-command (format "export JAVA_TOOL_OPTIONS=\"-Dfile.encoding=utf-8 -Duser.language=en\"; javac -g -encoding utf-8 %s" (file-name-nondirectory (buffer-file-name))) nil error-buffer-name))
+	;; windows system
+	(if (eq system-type 'windows-nt)
+	    (setq result (shell-command (concat "set JAVA_TOOL_OPTIONS=-Dfile.encoding=utf-8 -Duser.language=en" (format " && javac -g -encoding utf-8 %s" (file-name-nondirectory (buffer-file-name))) " && echo %errorlevel%") nil error-buffer-name))
+	  ;; other system
+	  (setq result (shell-command (format "export JAVA_TOOL_OPTIONS=\"-Dfile.encoding=utf-8 -Duser.language=en\"; javac -g -encoding utf-8 %s" (file-name-nondirectory (buffer-file-name))) nil error-buffer-name)))
 	(if (equal result 0)
 	    (message "compile %s SUCCESS!" (buffer-file-name))
 	  (progn
@@ -31,6 +34,7 @@
   (setq buffer-read-only t)
   (split-window-horizontally)
   (other-buffer)
+  ;; attention: class name after `jdb' command must be without ".java" or ".class" prefix
   (jdb (gud-query-cmdline 'jdb))
   (message "start to debug %s using jdb" (buffer-file-name))
   (switch-to-buffer-other-window cur-buffer))

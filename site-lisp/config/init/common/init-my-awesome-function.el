@@ -7,6 +7,16 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; awesome kill-region
+(defun kill-line-or-region ()
+  "Kill region if active only or kill line normally."
+  (interactive)
+  (if (region-active-p)
+      (call-interactively 'kill-region)
+    (progn
+      (goto-char (line-beginning-position))
+      (call-interactively 'kill-line))))
+
 (defun todo-list-org-to-md ()
   "Convert org TODO list to markdown."
   (interactive)

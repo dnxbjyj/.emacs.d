@@ -92,6 +92,9 @@
 ;; backward 4 space
 (global-set-key (kbd "M-S-SPC") 'backward-4-space)
 
+;; change C-w default action
+(global-set-key (kbd "C-w") 'kill-line-or-region)
+
 ;;-----------------hydra-----------------;;
 (defhydra hydra-one-key-access (:color pink :hint nil)
   "
