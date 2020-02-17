@@ -57,7 +57,7 @@
 - `pasteex`: `org-mode`和`markdown-mode`下的剪贴板图片一键插入工具
 
 ### extension/ :: 插件代码文件存放目录
--`themes`: 主题插件
+- `themes`: 主题插件
 - `auto-save`: 自动保存插件
 - `youdao-dictionary`: 有道词典插件
 - ... :: 其他插件
