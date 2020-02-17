@@ -61,6 +61,10 @@
   (setq run-command (format "java -cp .:%s org.junit.runner.JUnitCore " junit-jar-path))
   (insert run-command))
 
+(defun adjust-eshell-window-width ()
+  "Adjust eshell window width."
+  (shrink-window-horizontally 35))
+
 ;; add hooks
 (add-hook 'eshell-mode-hook
 	  (lambda ()
@@ -69,6 +73,7 @@
 	    (local-set-key (kbd "C-x t") 'run-java-as-junit4-test)))
 (add-hook 'eshell-mode-hook 'set-java-tool-options)
 (add-hook 'eshell-mode-hook 'rename-eshell-buffer-to-pre-buf-file-name)
+(add-hook 'eshell-mode-hook 'adjust-eshell-window-width)
 
 ;; solve the problem that Chinese character messy code in eshell-mode
 ;; (add-hook 'eshell-mode-hook
