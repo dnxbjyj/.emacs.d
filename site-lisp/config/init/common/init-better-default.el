@@ -77,13 +77,19 @@
 (setq default-sendmail-coding-system 'utf-8-unix)  ;; 发送邮件
 (setq default-terminal-coding-system 'utf-8-unix)  ;; 终端
 (setq default-process-coding-system '(utf-8-unix . utf-8-unix))  ;; process处理程序字符编码
+(set-clipboard-coding-system 'utf-8-unix)
+(set-next-selection-coding-system 'utf-8-unix)
 (prefer-coding-system 'utf-8)
 
 ;; 设置Windows系统的字符
 (when (eq system-type 'windows-nt)
   (set-next-selection-coding-system 'utf-16-le)
   (set-selection-coding-system 'utf-16-le)
-  (set-clipboard-coding-system 'utf-16-le))
+  (set-clipboard-coding-system 'utf-16-le)
+  ;; when in windows system, set encoding of `cmdproxy.exe` to GBK
+  (set-default 'process-coding-system-alist
+	       '(("[pP][lL][iI][nN][kK]" gbk-dos . gbk-dos)
+		 ("[cC][mM][dD][pP][rR][oO][xX][yY]" gbk-dos . gbk-dos))))
 
 ;; 设置光标的形状为长条形（而非默认的矩形块）
 (setq-default cursor-type 'bar)

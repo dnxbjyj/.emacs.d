@@ -7,6 +7,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; clear blank lines
+(defun remove-blank-lines-in-buffer ()
+  "Remove blank lines in buffer."
+  (interactive)
+  (goto-char (point-min))
+  (replace-regexp "^[[:blank:]]*\r*\n" "")
+  (goto-char (point-min)))
+
 ;; awesome kill-region
 (defun kill-line-or-region ()
   "Kill region if active only or kill line normally."

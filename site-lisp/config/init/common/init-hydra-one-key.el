@@ -166,6 +166,7 @@ _d_: toggle debug on error
   "
 Common edit operations.
 
+_B_: remove blank lines in buffer
 _c_: show current buffer coding
 _C_: set current buffer coding system
 _f_: find and replace
@@ -184,6 +185,7 @@ _w_: show white space character
 _y_: insert yesterday's date string
 _q_: quit this hydra
 "
+  ("B" remove-blank-lines-in-buffer)
   ("c" show-current-buffer-coding)
   ("C" set-current-buffer-coding-system)
   ("f" search-and-replace)

@@ -54,11 +54,6 @@
 (defun dired-mode-open-file-at-point ()
   "Open any file in dired-mode, using system default opening method."
   (interactive)
-  ;; when in windows system, set encoding of `cmdproxy.exe` to GBK
-  (when (eq system-type 'windows-nt)
-    (set-default 'process-coding-system-alist
-		 '(("[pP][lL][iI][nN][kK]" gbk-dos . gbk-dos)
-		   ("[cC][mM][dD][pP][rR][oO][xX][yY]" gbk-dos . gbk-dos))))
   (if-let ((file (dired-get-filename)))
       (progn
 	;; the usage of windows cmd command `start` has a pit when there is blank character in path string, pay attention.

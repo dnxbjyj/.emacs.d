@@ -22,6 +22,14 @@
 ;;;; common end 
 
 ;;;; init mode start
+;; init yaml-mode
+(require 'init-yaml-mode)
+;; init scheme-mode
+(require 'init-cmuscheme)
+;; init parenface
+(require 'init-parenface)
+;; init paredit
+(require 'init-paredit)
 ;; elisp-mode
 (require 'init-elisp-mode)
 ;; gud-mode
