@@ -11,6 +11,7 @@
 (require 'init-sift)
 (require 'init-grep-dired)
 (require 'init-gud-mode)
+(require 'init-atomic-chrome)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
@@ -166,6 +167,8 @@ _d_: toggle debug on error
   "
 Common edit operations.
 
+_a_: add sync atomic chrome hook locally
+_A_: remove sync atomic chrome hook locally
 _B_: remove blank lines in buffer
 _c_: show current buffer coding
 _C_: set current buffer coding system
@@ -185,6 +188,8 @@ _w_: show white space character
 _y_: insert yesterday's date string
 _q_: quit this hydra
 "
+  ("a" add-sync-atomic-chrome-hook-locally)
+  ("A" remove-sync-atomic-chrome-hook-locally)
   ("B" remove-blank-lines-in-buffer)
   ("c" show-current-buffer-coding)
   ("C" set-current-buffer-coding-system)
