@@ -173,6 +173,7 @@ _B_: remove blank lines in buffer
 _c_: show current buffer coding
 _C_: set current buffer coding system
 _f_: find and replace
+_j_: jump to next blank char
 _k_: kill all other buffers
 _l_: select current line
 _L_: copy current line
@@ -181,6 +182,7 @@ _n_: insert current datetime string
 _o_: convert org TODO list to markdown
 _r_: toggle current buffer read only
 _s_: select text between two nearest quotation marks
+_S_: select sequential non empty text at point
 _t_: insert today's date string
 _T_: insert tomorrow's date string
 _u_: set current buffer coding system to utf-8-unix
@@ -194,6 +196,7 @@ _q_: quit this hydra
   ("c" show-current-buffer-coding)
   ("C" set-current-buffer-coding-system)
   ("f" search-and-replace)
+  ("j" jump-to-next-blank-char)
   ("k" kill-all-other-buffers)
   ("l" select-current-line)
   ("L" copy-current-line)
@@ -202,6 +205,7 @@ _q_: quit this hydra
   ("o" todo-list-org-to-md)
   ("r" toggle-buffer-read-only)
   ("s" select-text-between-quotations)
+  ("S" select-sequential-non-empty-text-at-point)
   ("t" today)
   ("T" tomorrow)
   ("u" set-current-buffer-coding-system-utf-8-unix)
@@ -258,6 +262,7 @@ _e_: open elisp manual
 _E_: open emacs manual
 _h_: open my hydra configuration file
 _i_: open info
+_I_: open eintr
 _q_: quit this hydra
 "
   ("a" apropos)
@@ -265,7 +270,8 @@ _q_: quit this hydra
   ("e" open-elisp-manual)
   ("E" open-emacs-manual)
   ("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
-  ("i" info)  
+  ("i" info)
+  ("I" open-eintr)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c h") 'hydra-one-key-help/body)
 
@@ -275,10 +281,12 @@ _q_: quit this hydra
 Shortcut for org-mode.
 
 _C_: insert a new column at current column below quickly in org-table
-_d_: org delete line (means add `+' to head and tail of line)
+_d_: delete item on current line
+_D_: org delete line (means add `+' to head and tail of line)
 _e_: export dispatch
 _i_: operate a region, or word at point, insert a character both at the position of head and tail
 _l_: toggle link display
+_m_: execute `org-todo' at point, and move item to top of current subtree
 _n_: insert s&f note
 _R_: insert a new row at current row below quickly in org-table
 _s_: insert code src block
@@ -294,10 +302,12 @@ _,_: select org-table field
 _q_: quit this hydra
 "
   ("C" my-org-table-insert-column-below)
-  ("d" my-org-delete-line)
+  ("d" org-delete-item)
+  ("D" my-org-delete-line)
   ("e" org-export-dispatch)
   ("i" my-org-insert-str-to-head-tail)
   ("l" org-toggle-link-display)
+  ("m" org-todo-and-move-top)
   ("n" insert-s-or-f-note)
   ("R" my-org-table-insert-row-below)
   ("s" org-insert-src-block)

@@ -8,6 +8,22 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;; clear blank lines
+(defun jump-to-next-blank-char ()
+  "Jump to next blank char."
+  (interactive)
+  (skip-chars-forward "^[:blank:]\r\n")
+  (skip-chars-forward "[:blank:]\r\n"))
+
+(defun select-sequential-non-empty-text-at-point ()
+  "Select sequential non empty text at point."
+  (interactive)
+  (select-current-word-core "^[:blank:]\r\n"))
+
+(defun open-eintr ()
+  "Open eintr."
+  (interactive)
+  (info "(eintr) Top"))
+
 (defun remove-blank-lines-in-buffer ()
   "Remove blank lines in buffer."
   (interactive)

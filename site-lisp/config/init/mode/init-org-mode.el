@@ -8,6 +8,53 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun org-todo-and-move-top ()
+  "Execute `org-todo' at point, and move item to top of current subtree."
+  (interactive)
+  (widen)
+  ;; add timestamp
+  (goto-char (line-end-position))
+  (insert " @")
+  (now)
+  ;; execute org-todo
+  (org-todo)
+  ;; record raw line number
+  (setq raw-line-number (line-number-at-pos))
+  ;; raw next line number
+  (setq raw-next-line-number (1+ raw-line-number))
+  (save-excursion
+    (next-line)
+    (setq raw-next-line-number (line-number-at-pos)))
+  ;; go to up level top
+  (outline-up-heading 1)
+  ;; go to next line
+  (next-line)
+  ;; get current line number
+  (setq top-line-number (line-number-at-pos))
+  ;; go to raw line
+  (goto-line raw-line-number)
+  ;; line diff
+  (setq line-diff (- raw-line-number top-line-number))
+  (ignore-errors
+    ;; move current item
+    (while (> line-diff 0)
+      (org-metaup)
+      (setq line-diff (1- line-diff))))
+  (goto-line raw-next-line-number))
+
+(defun org-delete-item (&optional line-number)
+  "Delete item on current line (means add '+' to head and tail of item title) if optional arguement `line-number' is not indicated, otherwise delete the item on indicated line."
+  (interactive "sInput line number (default current line): ")
+  (unless (string-empty-p line-number)
+    (goto-line (string-to-number line-number)))
+  (setq cur-line (buffer-substring-no-properties (line-beginning-position) (line-end-position)))
+  (setq replaced-line (replace-regexp-in-string "^\\(**[[:blank:]]*\\(TODO|DONE\\)*[[:blank:]]*\\)\\(.+?\\)[[:blank:]]*$" "\\1 +\\3+" cur-line))
+  (goto-char (line-beginning-position))
+  (org-show-subtree)
+  (kill-line)
+  (insert replaced-line)
+  (org-cycle))
+
 ;; select org-table field
 (defun my-org-table-select-field ()
   "Select current org-table field."
