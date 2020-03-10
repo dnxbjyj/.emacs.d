@@ -48,7 +48,7 @@
   (unless (string-empty-p line-number)
     (goto-line (string-to-number line-number)))
   (setq cur-line (buffer-substring-no-properties (line-beginning-position) (line-end-position)))
-  (setq replaced-line (replace-regexp-in-string "^\\(**[[:blank:]]*\\(TODO|DONE\\)*[[:blank:]]*\\)\\(.+?\\)[[:blank:]]*$" "\\1 +\\3+" cur-line))
+  (setq replaced-line (replace-regexp-in-string "^\\(**[[:blank:]]*\\(TODO\\|DONE\\)*[[:blank:]]*\\)\\(.+?\\)[[:blank:]]*$" "\\1 +\\3+" cur-line))
   (goto-char (line-beginning-position))
   (org-show-subtree)
   (kill-line)
