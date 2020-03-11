@@ -67,6 +67,9 @@
 ;; select current word
 (global-set-key (kbd "C-?") 'select-current-word)
 
+;; select sequential non-empty text at point
+(global-set-key (kbd "C-M-?") 'select-sequential-non-empty-text-at-point)
+
 ;; select text between current quotation marks
 (global-set-key (kbd "C-\"") 'select-text-between-quotations)
 
@@ -182,7 +185,6 @@ _n_: insert current datetime string
 _o_: convert org TODO list to markdown
 _r_: toggle current buffer read only
 _s_: select text between two nearest quotation marks
-_S_: select sequential non empty text at point
 _t_: insert today's date string
 _T_: insert tomorrow's date string
 _u_: set current buffer coding system to utf-8-unix
@@ -205,7 +207,6 @@ _q_: quit this hydra
   ("o" todo-list-org-to-md)
   ("r" toggle-buffer-read-only)
   ("s" select-text-between-quotations)
-  ("S" select-sequential-non-empty-text-at-point)
   ("t" today)
   ("T" tomorrow)
   ("u" set-current-buffer-coding-system-utf-8-unix)
