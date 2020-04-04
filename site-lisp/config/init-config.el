@@ -22,6 +22,8 @@
 ;;;; common end 
 
 ;;;; init mode start
+;; c-mode
+(require 'init-c-mode)
 ;; init yaml-mode
 (require 'init-yaml-mode)
 ;; init scheme-mode
