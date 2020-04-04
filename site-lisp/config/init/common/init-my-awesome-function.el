@@ -7,6 +7,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun insert-at-timestamp ()
+  "Insert the `@timestamp'"
+  (interactive)
+  (insert "@")
+  (now))
+
 ;; clear blank lines
 (defun jump-to-next-blank-char ()
   "Jump to next blank char."

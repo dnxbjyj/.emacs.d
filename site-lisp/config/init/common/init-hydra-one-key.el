@@ -12,10 +12,15 @@
 (require 'init-grep-dired)
 (require 'init-gud-mode)
 (require 'init-atomic-chrome)
+(require 'init-anzu)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;;-----------------common quick shortcut-----------------;;
+;; Insert the `@timestamp'
+(global-unset-key (kbd "M-A"))
+(global-set-key (kbd "M-A") 'insert-at-timestamp)
+
 ;; kill buffer and delete window at the same time
 (global-set-key (kbd "C-x K") 'kill-buffer-and-window)
 
@@ -175,7 +180,7 @@ _A_: remove sync atomic chrome hook locally
 _B_: remove blank lines in buffer
 _c_: show current buffer coding
 _C_: set current buffer coding system
-_f_: find and replace
+_f_: awesome anzu quey replace regexp
 _j_: jump to next blank char
 _k_: kill all other buffers
 _l_: select current line
@@ -188,7 +193,8 @@ _s_: select text between two nearest quotation marks
 _t_: insert today's date string
 _T_: insert tomorrow's date string
 _u_: set current buffer coding system to utf-8-unix
-_w_: show white space character
+_w_: toggle show white space character
+_W_: widen
 _y_: insert yesterday's date string
 _q_: quit this hydra
 "
@@ -197,7 +203,7 @@ _q_: quit this hydra
   ("B" remove-blank-lines-in-buffer)
   ("c" show-current-buffer-coding)
   ("C" set-current-buffer-coding-system)
-  ("f" search-and-replace)
+  ("f" awesome-anzu-query-replace-regexp)
   ("j" jump-to-next-blank-char)
   ("k" kill-all-other-buffers)
   ("l" select-current-line)
@@ -211,6 +217,7 @@ _q_: quit this hydra
   ("T" tomorrow)
   ("u" set-current-buffer-coding-system-utf-8-unix)
   ("w" whitespace-mode)
+  ("W" widen)
   ("y" yesterday)
   ("q" nil :color blue))
 (global-set-key (kbd "C-c e") 'hydra-one-key-edit-operation/body)
@@ -289,6 +296,7 @@ _i_: operate a region, or word at point, insert a character both at the position
 _l_: toggle link display
 _m_: execute `org-todo' at point, and move item to top of current subtree
 _n_: insert s&f note
+_N_: narrow to subtree
 _R_: insert a new row at current row below quickly in org-table
 _s_: insert code src block
 _S_: edit code src block
@@ -310,6 +318,7 @@ _q_: quit this hydra
   ("l" org-toggle-link-display)
   ("m" org-todo-and-move-top)
   ("n" insert-s-or-f-note)
+  ("N" org-narrow-to-subtree)
   ("R" my-org-table-insert-row-below)
   ("s" org-insert-src-block)
   ("S" org-edit-src-code)
@@ -330,6 +339,8 @@ _q_: quit this hydra
   "
 Common window operations.
 
+_f_: toggle frame full screen
+_m_: toggle frame maximized
 _+_: increase text scale                                    
 _-_: decrease text scale
 _<left>_: shrink window horizontally
@@ -338,6 +349,8 @@ _<down>_: shrink window
 _<up>_: enlarge window
 _q_: quit this hydra
 "
+  ("f" toggle-frame-fullscreen)
+  ("m" toggle-frame-maximized)
   ("+" text-scale-increase)
   ("-" text-scale-decrease)
   ("<left>" shrink-window-horizontally)

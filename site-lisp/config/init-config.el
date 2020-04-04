@@ -55,6 +55,8 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; anzu
+(require 'init-anzu)
 ;; pyim
 (require 'init-pyim)
 ;; sift: full text search

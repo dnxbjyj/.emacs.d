@@ -11,6 +11,16 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun my-c-mode-hook ()
+  (setq c-basic-offset 4
+        c-indent-level 4
+        c-default-style "bsd"))
+(add-hook'c-mode-common-hook 'my-c-mode-hook)
+
+;; close indent-tabs-mode
+(setq-default indent-tabs-mode nil)
+(setq default-tab-width 4)
+
 ;; set some important source code dirs to READ ONLY
 (defun set-dirs-read-only ()
   "Set some dirs to be read only."
