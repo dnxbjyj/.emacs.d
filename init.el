@@ -21,7 +21,8 @@
   (add-subdirs-to-load-path "~/.emacs.d/local-lisp/")
 )
 
-;; 本地化快速访问配置
-(require 'init-quick-access-local)
 ;; 加载init-config模块
 (require 'init-config)
+
+;; 本地化配置
+(require 'init-local-config)

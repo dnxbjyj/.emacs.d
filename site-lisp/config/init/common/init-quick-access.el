@@ -11,20 +11,23 @@
 (defun open-current-file-in-chrome ()
   "Open current file in chrome."
   (interactive)
-  (if chrome-executable-path
-      (let ((open-file-in-chrome-command) (file-path-to-open))
-	;; dired-mode
-	(if (string-equal major-mode "dired-mode")
-	    (if-let ((file (dired-get-filename)))
-		(setq file-path-to-open file))
-	  ;; other mode
-	  (setq file-path-to-open buffer-file-name))
-	(message "file path to open in chrome: %s" file-path-to-open)
-	(if file-path-to-open
-	    (setq open-file-in-chrome-command (format "\"%s\" \"%s\"" chrome-executable-path file-path-to-open)))
-	(if open-file-in-chrome-command
-	    (shell-command open-file-in-chrome-command)
-	  (message "NOT on a file!")))))
+  ;; should add chrome executable path to env PATH at first
+  (setq chrome-executable-path "chrome")
+  (let ((open-file-in-chrome-command) (file-path-to-open))
+    ;; dired-mode
+    (if (string-equal major-mode "dired-mode")
+        (if-let ((file (dired-get-filename)))
+            (setq file-path-to-open file))
+      ;; other mode
+      (setq file-path-to-open buffer-file-name))
+    (message "file path to open in chrome: %s" file-path-to-open)
+    (if file-path-to-open
+        (setq open-file-in-chrome-command (format "\"%s\" \"%s\"" chrome-executable-path file-path-to-open)))
+    (if open-file-in-chrome-command
+        (progn
+          (async-shell-command open-file-in-chrome-command)
+          (delete-window (get-buffer-window "*Async Shell Command*")))
+      (message "NOT on a file!"))))
 
 (defun search-symbol ()
   "Search any symbol by use function `apropos'."

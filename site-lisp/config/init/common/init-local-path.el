@@ -23,7 +23,8 @@
 				    (init-local-path 'virtualenvwrapper 'venv-location "e:/code/env/.py2env/")
 				    (init-local-path nil 'dirs-to-be-read-only '("d:/program/emacs-25.3.1-with-modules/emacs/share/emacs/25.3/lisp"
 										 "c:/Users/76512/AppData/Roaming/.emacs.d/site-lisp/extension"))
-				    (init-local-path nil 'chrome-executable-path "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe")))
+				    ;; (init-local-path nil 'chrome-executable-path "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe")
+                                    ))
  ((equal system-type 'darwin) (progn
 				(init-local-path nil 'junit-jar-path "/Users/m2fox/software/dev/junit-4.10.jar")))
  (t nil))
