@@ -181,6 +181,7 @@ _B_: remove blank lines in buffer
 _c_: show current buffer coding
 _C_: set current buffer coding system
 _f_: awesome anzu quey replace regexp
+_F_: anzu query replace at cusor thing
 _j_: jump to next blank char
 _k_: kill all other buffers
 _l_: select current line
@@ -204,6 +205,7 @@ _q_: quit this hydra
   ("c" show-current-buffer-coding)
   ("C" set-current-buffer-coding-system)
   ("f" awesome-anzu-query-replace-regexp)
+  ("F" anzu-query-replace-at-cursor)
   ("j" jump-to-next-blank-char)
   ("k" kill-all-other-buffers)
   ("l" select-current-line)

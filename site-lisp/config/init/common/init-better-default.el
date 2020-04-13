@@ -14,6 +14,7 @@
 ;; close indent-tabs-mode
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
+(setq c-default-style '((java-mode . "java")))
 
 ;; set some important source code dirs to READ ONLY
 (defun set-dirs-read-only ()
