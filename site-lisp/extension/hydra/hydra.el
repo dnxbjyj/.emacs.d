@@ -5,7 +5,7 @@
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; Maintainer: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/hydra
-;; Version: 0.14.0
+;; Version: 0.15.0
 ;; Keywords: bindings
 ;; Package-Requires: ((cl-lib "0.5") (lv "0"))
 
@@ -33,7 +33,7 @@
 ;; heads can be called in succession with only a short extension.
 ;; The Hydra is vanquished once Hercules, any binding that isn't the
 ;; Hydra's head, arrives.  Note that Hercules, besides vanquishing the
-;; Hydra, will still serve his orignal purpose, calling his proper
+;; Hydra, will still serve his original purpose, calling his proper
 ;; command.  This makes the Hydra very seamless, it's like a minor
 ;; mode that disables itself automagically.
 ;;
@@ -211,15 +211,33 @@ the body or the head."
 (declare-function posframe-hide "posframe")
 (declare-function posframe-poshandler-window-center "posframe")
 
+(defvar hydra-posframe-show-params
+  '(:internal-border-width 1
+    :internal-border-color "red"
+    :poshandler posframe-poshandler-window-center)
+  "List of parameters passed to `posframe-show'.")
+
+(defvar hydra--posframe-timer nil
+  "Timer for hiding posframe hint.")
+
 (defun hydra-posframe-show (str)
   (require 'posframe)
-  (posframe-show
-   " *hydra-posframe*"
-   :string str
-   :poshandler #'posframe-poshandler-window-center))
+  (when hydra--posframe-timer
+    (cancel-timer hydra--posframe-timer))
+  (setq hydra--posframe-timer nil)
+  (apply #'posframe-show
+         " *hydra-posframe*"
+         :string str
+         hydra-posframe-show-params))
 
 (defun hydra-posframe-hide ()
-  (posframe-hide " *hydra-posframe*"))
+  (require 'posframe)
+  (unless hydra--posframe-timer
+    (setq hydra--posframe-timer
+          (run-with-idle-timer
+           0 nil (lambda ()
+                   (setq hydra--posframe-timer nil)
+                   (posframe-hide " *hydra-posframe*"))))))
 
 (defvar hydra-hint-display-alist
   (list (list 'lv #'lv-message #'lv-delete-window)
@@ -234,14 +252,6 @@ the body or the head."
           (const lv)
           (const posframe))
   :group 'hydra)
-
-(define-obsolete-variable-alias
-    'hydra-lv 'hydra-hint-display-type "0.14.0"
-    "Use either `hydra-hint-display-type' or `hydra-set-property' :verbosity.")
-
-(defcustom hydra-lv t
-  "When non-nil, `lv-message' (not `message') will be used to display hints."
-  :type 'boolean)
 
 (defcustom hydra-verbose nil
   "When non-nil, hydra will issue some non essential style warnings."
@@ -315,18 +325,19 @@ Exitable only through a blue head.")
     (around hydra-around-find-function-search-for-symbol-advice
      (symbol type library) activate)
     "Navigate to hydras with `find-function-search-for-symbol'."
-    ad-do-it
-    ;; The orignial function returns (cons (current-buffer) (point))
-    ;; if it found the point.
-    (unless (cdr ad-return-value)
-      (with-current-buffer (find-file-noselect library)
-        (let ((sn (symbol-name symbol)))
-          (when (and (null type)
-                     (string-match "\\`\\(hydra-[a-z-A-Z0-9]+\\)/\\(.*\\)\\'" sn)
-                     (re-search-forward (concat "(defhydra " (match-string 1 sn))
-                                        nil t))
-            (goto-char (match-beginning 0)))
-          (cons (current-buffer) (point)))))))
+    (prog1 ad-do-it
+      (when (symbolp symbol)
+        ;; The original function returns (cons (current-buffer) (point))
+        ;; if it found the point.
+        (unless (cdr ad-return-value)
+          (with-current-buffer (find-file-noselect library)
+            (let ((sn (symbol-name symbol)))
+              (when (and (null type)
+                         (string-match "\\`\\(hydra-[a-z-A-Z0-9]+\\)/\\(.*\\)\\'" sn)
+                         (re-search-forward (concat "(defhydra " (match-string 1 sn))
+                                            nil t))
+                (goto-char (match-beginning 0)))
+              (cons (current-buffer) (point)))))))))
 
 ;;* Universal Argument
 (defvar hydra-base-map
@@ -684,7 +695,7 @@ HEAD's binding is returned as a string wrapped with [] or {}."
 (defconst hydra-width-spec-regex " ?-?[0-9]*?"
   "Regex for the width spec in keys and %` quoted sexps.")
 
-(defvar hydra-key-regex "\\[\\|]\\|[-\\[:alnum:] ~.,;:/|?<>={}*+#%@!&^↑↓←→⌫⌦⏎'`()\"$]+?"
+(defvar hydra-key-regex "[][\\[:alnum:] ~.,;:/|?<>={}*+#%@!&^↑↓←→⌫⌦⏎'`()\"$-]+?"
   "Regex for the key quoted in the docstring.")
 
 (defun hydra--format (_name body docstring heads)
@@ -705,11 +716,14 @@ The expressions can be auto-expanded according to NAME."
       (while (setq start
                    (string-match
                     (format
-                     "\\(?:%%\\( ?-?[0-9]*s?\\)\\(`[a-z-A-Z/0-9]+\\|(\\)\\)\\|\\(?:_%s_\\)\\|\\(?:[?]%s[?]\\)"
+                     "\\(?:%%\\( ?-?[0-9]*s?\\)\\(`[a-z-A-Z/0-9]+\\|(\\)\\)\\|\\(?:_%s_\\)\\|\\(?:[?]%s[?]\\)\\|__"
                      inner-regex
                      inner-regex)
                     docstring start))
-        (cond ((eq ?? (aref (match-string 0 docstring) 0))
+        (cond ((string= "__" (match-string 0 docstring))
+               (setq docstring (replace-match "_" nil t docstring))
+               (setq start (1- (match-end 0))))
+              ((eq ?? (aref (match-string 0 docstring) 0))
                (let* ((key (match-string 6 docstring))
                       (head (assoc key heads)))
                  (if head
@@ -852,56 +866,67 @@ HEAD is one of the HEADS passed to `defhydra'.
 BODY-PRE is added to the start of the wrapper.
 BODY-BEFORE-EXIT will be called before the hydra quits.
 BODY-AFTER-EXIT is added to the end of the wrapper."
-  (let ((cmd-name (hydra--head-name head name))
-        (cmd (when (car head)
-               (hydra--make-callable
-                (cadr head))))
-        (doc (if (car head)
-                 (format "Call the head `%S' in the \"%s\" hydra.\n\n%s"
-                         (cadr head) name doc)
-               (format "Call the body in the \"%s\" hydra.\n\n%s"
-                       name doc)))
-        (hint (intern (format "%S/hint" name)))
-        (body-foreign-keys (hydra--body-foreign-keys body))
-        (body-timeout (plist-get body :timeout))
-        (body-idle (plist-get body :idle)))
+  (let* ((cmd-name (hydra--head-name head name))
+         (cmd (when (car head)
+                (hydra--make-callable
+                 (cadr head))))
+         (doc (if (car head)
+                  (format "Call the head `%S' in the \"%s\" hydra.\n\n%s"
+                          (cadr head) name doc)
+                (format "Call the body in the \"%s\" hydra.\n\n%s"
+                        name doc)))
+         (hint (intern (format "%S/hint" name)))
+         (body-foreign-keys (hydra--body-foreign-keys body))
+         (body-timeout (plist-get body :timeout))
+         (body-idle (plist-get body :idle))
+         (curr-body-fn-sym (intern (format "%S/body" name)))
+         (body-on-exit-t
+          `((hydra-keyboard-quit)
+            (setq hydra-curr-body-fn ',curr-body-fn-sym)
+            ,@(if body-after-exit
+                  `((unwind-protect
+                         ,(when cmd
+                            (hydra--call-interactively cmd (cadr head)))
+                      ,body-after-exit))
+                (when cmd
+                  `(,(hydra--call-interactively cmd (cadr head)))))))
+         (body-on-exit-nil
+          (delq
+           nil
+           `((let ((hydra--ignore ,(not (eq (cadr head) 'body))))
+               (hydra-keyboard-quit)
+               (setq hydra-curr-body-fn ',curr-body-fn-sym))
+             ,(when cmd
+                `(condition-case err
+                     ,(hydra--call-interactively cmd (cadr head))
+                   ((quit error)
+                    (message (error-message-string err)))))
+             ,(if (and body-idle (eq (cadr head) 'body))
+                  `(hydra-idle-message ,body-idle ,hint ',name)
+                `(hydra-show-hint ,hint ',name))
+             (hydra-set-transient-map
+              ,keymap
+              (lambda () (hydra-keyboard-quit) ,body-before-exit)
+              ,(when body-foreign-keys
+                 (list 'quote body-foreign-keys)))
+             ,body-after-exit
+             ,(when body-timeout
+                `(hydra-timeout ,body-timeout))))))
     `(defun ,cmd-name ()
        ,doc
        (interactive)
        (require 'hydra)
        (hydra-default-pre)
        ,@(when body-pre (list body-pre))
-       ,@(if (hydra--head-property head :exit)
-             `((hydra-keyboard-quit)
-               (setq hydra-curr-body-fn ',(intern (format "%S/body" name)))
-               ,@(if body-after-exit
-                     `((unwind-protect
-                            ,(when cmd
-                               (hydra--call-interactively cmd (cadr head)))
-                         ,body-after-exit))
-                   (when cmd
-                     `(,(hydra--call-interactively cmd (cadr head))))))
-           (delq
-            nil
-            `((let ((hydra--ignore ,(not (eq (cadr head) 'body))))
-                (hydra-keyboard-quit)
-                (setq hydra-curr-body-fn ',(intern (format "%S/body" name))))
-              ,(when cmd
-                 `(condition-case err
-                      ,(hydra--call-interactively cmd (cadr head))
-                    ((quit error)
-                     (message (error-message-string err)))))
-              ,(if (and body-idle (eq (cadr head) 'body))
-                   `(hydra-idle-message ,body-idle ,hint ',name)
-                 `(hydra-show-hint ,hint ',name))
-              (hydra-set-transient-map
-               ,keymap
-               (lambda () (hydra-keyboard-quit) ,body-before-exit)
-               ,(when body-foreign-keys
-                  (list 'quote body-foreign-keys)))
-              ,body-after-exit
-              ,(when body-timeout
-                 `(hydra-timeout ,body-timeout))))))))
+       ,@(cond ((eq (hydra--head-property head :exit) t)
+                body-on-exit-t)
+               ((eq (hydra--head-property head :exit) nil)
+                body-on-exit-nil)
+               (t
+                `((if ,(hydra--head-property head :exit)
+                      (progn
+                        ,@body-on-exit-t)
+                    ,@body-on-exit-nil)))))))
 
 (defvar hydra-props-alist nil)
 
@@ -1061,7 +1086,7 @@ If CELL-FORMATS is nil, `hydra-cell-format' is used for all columns."
      (mapconcat #'identity x "    "))))
 
 (defun hydra-reset-radios (names)
-  "Set varibles NAMES to their defaults.
+  "Set variables NAMES to their defaults.
 NAMES should be defined by `defhydradio' or similar."
   (dolist (n names)
     (set n (aref (get n 'range) 0))))
@@ -1112,7 +1137,7 @@ Each head of NORMALIZED-HEADS must have a column property."
      finally return balanced-heads-groups))
 
 (defun hydra--generate-matrix (heads-groups)
-  "Return a copy of HEADS-GROUPS decorated with table formating information.
+  "Return a copy of HEADS-GROUPS decorated with table formatting information.
 Details of modification:
 2 virtual heads acting as table header were added to each heads-group.
 Each head is decorated with 2 new properties max-doc-len and max-key-len
@@ -1163,7 +1188,7 @@ representing the maximum dimension of their owning group.
 
 
 (defun hydra--hint-from-matrix (body heads-matrix)
-  "Generate a formated table-style docstring according to BODY and HEADS-MATRIX.
+  "Generate a formatted table-style docstring according to BODY and HEADS-MATRIX.
 HEADS-MATRIX is expected to be a list of heads with following features:
 Each heads must have the same length
 Each head must have a property max-key-len and max-doc-len."

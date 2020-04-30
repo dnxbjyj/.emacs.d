@@ -1219,6 +1219,15 @@ _f_ auto-fill-mode:    %`auto-fill-function
        ", ")
       "."))))
 
+(ert-deftest hydra-format-11 ()
+  (should
+   (equal
+    (hydra--format nil '(nil nil :hint nil) "\n_f_ #+begin__src/#+end__src"
+                   '(("f" forward-char nil :exit nil)))
+    '(format
+      "%s #+begin_src/#+end_src"
+      #("f" 0 1 (face hydra-face-red))))))
+
 (ert-deftest hydra-format-with-sexp-1 ()
   (should (equal
            (let ((hydra-fontify-head-function
@@ -1322,9 +1331,9 @@ _f_ auto-fill-mode:    %`auto-fill-function
                  '((a b c d) (e f g h) (i nil nil nil)))))
 
 (ert-deftest hydra--cell ()
-  (should (equal (hydra--cell "% -75s %%`%s" '(hydra-lv hydra-verbose))
-                 "When non-nil, `lv-message' (not `message') will be used to display hints.   %`hydra-lv^^^^^
-When non-nil, hydra will issue some non essential style warnings.           %`hydra-verbose")))
+  (should (equal (hydra--cell "% -75s %%`%s" '(hydra-hint-display-type hydra-verbose))
+                 "The utility to show hydra hint                                              %`hydra-hint-display-type
+When non-nil, hydra will issue some non essential style warnings.           %`hydra-verbose^^^^^^^^^^")))
 
 (ert-deftest hydra--vconcat ()
   (should (equal (hydra--vconcat '("abc\ndef" "012\n34" "def\nabc"))
@@ -1549,7 +1558,7 @@ y: back     | b: up
 
 ;; checked:
 ;; basic rendering
-;; column compatibility with ruby style and no colum specified
+;; column compatibility with ruby style and no column specified
 ;; column declared several time
 ;; nil column
 (ert-deftest hydra-column-basic ()
@@ -1632,7 +1641,7 @@ o: ok       | s: string
                                 ("s" split-window-below "split window" :color blue :column "Split Management")
                                 ("v" split-window-right "split window vertically" :color blue)
                                 ("d" delete-window "delete current window")
-                                ("f" follow-mode "toogle follow mode")
+                                ("f" follow-mode "toggle follow mode")
                                 ("u" winner-undo "undo window conf" :column "Undo/Redo")
                                 ("r" winner-redo "redo window conf")
                                 ("b" balance-windows "balance window height" :column "1-Sizing")
@@ -1645,7 +1654,7 @@ o: ok       | s: string
 z: ace      | s: split window            | u: undo window conf | b: balance window height
 h: ← window | v: split window vertically | r: redo window conf | m: maximize current window
 j: ↓ window | d: delete current window   |                     | M: minimize current window
-l: → window | f: toogle follow mode      |                     |
+l: → window | f: toggle follow mode      |                     |
 k: ↑ window |                            |                     |
 [q]: quit menu."
                    173 174 (face hydra-face-blue)

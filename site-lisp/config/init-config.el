@@ -57,6 +57,8 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; pretty-hydra
+(require 'init-pretty-hydra)
 ;; anzu
 (require 'init-anzu)
 ;; pyim
