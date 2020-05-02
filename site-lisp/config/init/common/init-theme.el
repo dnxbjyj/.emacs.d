@@ -17,6 +17,14 @@
 ;; 设置calm-forest主题
 (color-theme-calm-forest)
 
+;; 设置英文字体为等宽字体
+(set-face-attribute
+ 'default nil :font "Monaco 12")
+;; 设置中文字体为等宽楷体kaiti
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset
+                    (font-spec :family "Kaiti SC" :size 14)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
