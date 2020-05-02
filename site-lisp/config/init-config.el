@@ -1,7 +1,7 @@
 ;;;;;;;;;; 包加载入口 ;;;;;;;;;;
 ;;;; basic config starts
-;; hydra
-(require 'init-hydra-one-key)
+;; pretty-hydra one key
+(require 'init-pretty-hydra-one-key)
 ;; 主题设置
 (require 'init-theme)
 ;; 界面外观设置

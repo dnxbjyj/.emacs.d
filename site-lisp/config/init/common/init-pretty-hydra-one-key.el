@@ -1,6 +1,6 @@
-;;;;;;;;;; init-hydra-one-key module ;;;;;;;;;;
+;;;;;;;;;; init-pretty-hydra-one-key module ;;;;;;;;;;
 ;;;; Desc:
-;;;; init-hydra-one-key starts here
+;;;; init-pretty-hydra-one-key starts here
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
 (require 'hydra)
@@ -376,7 +376,7 @@ _q_: quit this hydra
   ("A" info-apropos)
   ("e" open-elisp-manual)
   ("E" open-emacs-manual)
-  ("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")))
+  ("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-pretty-hydra-one-key.el")))
   ("i" info)
   ("I" open-eintr)
   ("q" nil :color blue))
@@ -394,8 +394,8 @@ _q_: quit this hydra
     ("i" info "open info")
     ("I" open-eintr "open eintr"))
 
-   "Pretty Hydra"
-   (("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-hydra-one-key.el")) "open pretty hydra configuration file"))))
+   "Pretty Hydra One Key"
+   (("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-pretty-hydra-one-key.el")) "open pretty hydra one key configuration file"))))
 (global-set-key (kbd "C-c H") 'pretty-hydra-one-key-help/body)
 
 ;;;; org-mode ;;;;
@@ -531,7 +531,7 @@ _q_: quit this hydra
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
-(provide 'init-hydra-one-key)
+(provide 'init-pretty-hydra-one-key)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; init-hydra-one-key ends here
+;;;; init-pretty-hydra-one-key ends here
