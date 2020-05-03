@@ -26,3 +26,4 @@
 
 ;; 本地化配置
 (require 'init-local-config)
+(put 'narrow-to-region 'disabled nil)

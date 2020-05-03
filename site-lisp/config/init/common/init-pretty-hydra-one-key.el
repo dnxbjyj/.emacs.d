@@ -159,20 +159,20 @@ _q_: quit this hydra
    "File"
    (("C" open-current-file-in-chrome "open current file in chrome")
     ("o" open-explorer "open explorer")
-    ("r" recentf-open-files "show recent opened files"))
+    ("r" recentf-open-files "show recent opened files"))  ;; TESTED
 
    "Emacs"
-   (("h" my-list-hooks "search hooks")
-    ("m" my-list-key-maps "search key maps")
+   (("h" my-list-hooks "search hooks")  ;; TESTED
+    ("m" my-list-key-maps "search key maps")  ;; TESTED
     ("M" switch-to-minibuffer-window "switch to minibuffer window")
-    ("S" search-symbol "search symbol")
-    ("C-<tab>" bs-cycle-next "cycle next buffer")
-    ("S-<tab>" bs-cycle-previous "cycle previous buffer"))
+    ("S" search-symbol "search symbol")  ;; TESTED
+    ("C-<tab>" bs-cycle-next "cycle next buffer")  ;; TESTED
+    ("S-<tab>" bs-cycle-previous "cycle previous buffer"))  ;; TESTED
 
    "Search"
-   (("f" grep-dired-dwim "search file by grep-dired-dwim")
-    ("F" grep-dired "grep dired by custom")
-    ("s" sift-regexp "sift full-text search"))))
+   (("f" grep-dired-dwim "search file by grep-dired-dwim")  ;; TESTED
+    ("F" grep-dired "grep dired by custom")  ;; TESTED
+    ("s" sift-regexp "sift full-text search"))))  ;; TESTED
 (global-set-key (kbd "C-c A") 'pretty-hydra-one-key-access/body)
 
 (defhydra hydra-one-key-code-operation (:color pink :hint nil)
@@ -193,9 +193,9 @@ _q_: quit this hydra
 (pretty-hydra-define pretty-hydra-one-key-code-operation
   (:color pink :quit-key "q" :title "Code operations.")
   ("Code"
-   (("j" json-pretty-print "format JSON at point or in region")
-    ("/" my-comment-or-uncomment-region "comment/uncomment region code")
-    ("m" toggle-message-buffer-window "toggle *Messages* buffer window"))))
+   (("j" json-pretty-print "format JSON at point or in region")  ;; TESTED
+    ("/" my-comment-or-uncomment-region "comment/uncomment region code")  ;; TESTED
+    ("m" toggle-message-buffer-window "toggle *Messages* buffer window"))))  ;; TESTED
 (global-set-key (kbd "C-c C") 'pretty-hydra-one-key-code-operation/body)
 
 (defhydra hydra-one-key-better-default (:color pink :hint nil)
@@ -211,7 +211,7 @@ _d_: toggle debug on error
 (pretty-hydra-define pretty-hydra-one-key-toggles
   (:color pink :quit-key "q" :title "Toggle operations.")
   ("Debug"
-   (("d" toggle-debug-on-error "toggle debug on error"))))
+   (("d" toggle-debug-on-error "toggle debug on error"))))  ;; TESTED
 (global-set-key (kbd "C-c T") 'pretty-hydra-one-key-toggles/body)
 
 (defhydra hydra-one-key-edit-operation (:color pink :hint nil)
@@ -270,36 +270,37 @@ _q_: quit this hydra
 (pretty-hydra-define pretty-hydra-one-key-edit-operation
   (:color pink :quit-key "q" :title "Common edit operations.")
   ("Buffer"
-   (("B" remove-blank-lines-in-buffer "remove blank lines in buffer")
-    ("c" show-current-buffer-coding "show current buffer coding")
-    ("C" set-current-buffer-coding-system "set current buffer coding system")
-    ("j" jump-to-next-blank-char "jump to next blank char")
-    ("k" kill-all-other-buffers "kill all other buffers")
-    ("l" select-current-line "select current line")
-    ("L" copy-current-line "copy current line")
-    ("n" now "insert current datetime string")
-    ("r" toggle-buffer-read-only "toggle current buffer read only")
-    ("s" select-text-between-quotations "select text between two nearest quotation marks")
-    ("t" today "insert today's date string")
-    ("T" tomorrow "insert tomorrow's date string")
-    ("u" set-current-buffer-coding-system-utf-8-unix "set current buffer coding system to utf-8-unix")
-    ("w" whitespace-mode "toggle show white space character")
-    ("W" widen "widen")
-    ("y" yesterday "insert yesterday's date string"))
+   (("B" remove-blank-lines-in-buffer "remove blank lines in buffer")  ;; TESTED
+    ("c" show-current-buffer-coding "show current buffer coding")  ;; TESTED
+    ("C" set-current-buffer-coding-system "set current buffer coding system")  ;; TESTED
+    ("j" jump-to-next-blank-char "jump to next blank char")  ;; TESTED
+    ("k" kill-all-other-buffers "kill all other buffers")  ;; TESTED
+    ("l" select-current-line "select current line")  ;; TESTED
+    ("L" copy-current-line "copy current line")  ;; TESTED
+    ("n" now "insert current datetime string")  ;; TESTED
+    ("r" toggle-buffer-read-only "toggle current buffer read only")  ;; TESTED
+    ("s" select-text-between-quotations "select text between two nearest quotation marks")  ;; TESTED
+    ("t" today "insert today's date string")  ;; FAILED: Debugger entered--Lisp error: (void-function gnus-replace-in-string) @emacs-26.1
+    ("T" tomorrow "insert tomorrow's date string")  ;; TESTED
+    ("u" set-current-buffer-coding-system-utf-8-unix "set current buffer coding system to utf-8-unix")  ;; TESTED
+    ("w" whitespace-mode "toggle show white space character")  ;; TESTED
+    ("W" widen "widen")  ;; TESTED
+    ("y" yesterday "insert yesterday's date string"))  ;; TESTED
 
    "File"
-   (("m" todo-list-md-to-org "convert markdown TODO list to org")
-    ("o" todo-list-org-to-md "convert org TODO list to markdown"))
+   (("m" todo-list-md-to-org "convert markdown TODO list to org")  ;; TESTED
+    ("o" todo-list-org-to-md "convert org TODO list to markdown"))  ;; TESTED
    
    "Remote"
    (("a" add-sync-atomic-chrome-hook-locally "add sync atomic chrome hook locally")
     ("A" remove-sync-atomic-chrome-hook-locally "remove sync atomic chrome hook locally"))
 
    "Search"
-   (("f" awesome-anzu-query-replace-regexp "awesome anzu quey replace regexp")
-    ("F" anzu-query-replace-at-cursor "anzu query replace at cusor thing"))))
+   (("f" awesome-anzu-query-replace-regexp "awesome anzu quey replace regexp")  ;; TESTED
+    ("F" anzu-query-replace-at-cursor "anzu query replace at cusor thing"))))  ;; TESTED
 (global-set-key (kbd "C-c E") 'pretty-hydra-one-key-edit-operation/body)
 
+;; TESTED
 (defhydra hydra-one-key-gud (:color pink :hint nil)
   "
 Gud shotcut.
@@ -338,6 +339,7 @@ _q_: quit this hydra
 (add-hook 'java-mode-hook
 	  (lambda () (local-set-key (kbd "C-c g") 'hydra-one-key-gud/body)))
 
+;; TESTED
 (pretty-hydra-define pretty-hydra-one-key-gud
   (:color pink :quit-key "q" :title "Gud shotcut.")
   ("Compile"
@@ -456,36 +458,36 @@ _q_: quit this hydra
 (pretty-hydra-define pretty-hydra-one-key-org-mode
   (:color pink :quit-key "q" :title "Shortcut for org-mode.")
   ("Edit"
-   (("d" org-delete-item "delete item on current line")
-    ("D" my-org-delete-line "add `+' to line head and tail")
-    ("e" org-export-dispatch "export dispatch")
-    ("i" my-org-insert-str-to-head-tail "insert str at head and tail")
-    ("n" insert-s-or-f-note "insert s&f note")
-    ("t" make-line-to-title "modify line to title"))
+   (("d" org-delete-item "delete item on current line")  ;; TESTED
+    ("D" my-org-delete-line "add `+' to line head and tail")  ;; TESTED
+    ("e" org-export-dispatch "export dispatch")  ;; TESTED
+    ("i" my-org-insert-str-to-head-tail "insert str at head and tail")  ;; TESTED
+    ("n" insert-s-or-f-note "insert s&f note")  ;; TESTED
+    ("t" make-line-to-title "modify line to title"))  ;; TESTED
    
    "Display"
-   (("l" org-toggle-link-display "toggle link display")
-    ("N" org-narrow-to-subtree "narrow to subtree")
-    ("{" shrink-parent-level-headline "shrink parent leve headline")
-    ("[" shrink-current-level-headline "shrink current leve headline")
-    ("+" indent-mode-on "open org-indent-mode")
-    ("-" indent-mode-off "close org-indent-mode"))
+   (("l" org-toggle-link-display "toggle link display")  ;; TESTED
+    ("N" org-narrow-to-subtree "narrow to subtree")  ;; TESTED
+    ("{" shrink-parent-level-headline "shrink parent leve headline")  ;; TESTED
+    ("[" shrink-current-level-headline "shrink current leve headline")  ;; TESTED
+    ("+" indent-mode-on "open org-indent-mode")  ;; TESTED
+    ("-" indent-mode-off "close org-indent-mode"))  ;; TESTED
 
    "Move"
-   (("M-n" org-metadown "move down")
-    ("M-p" org-metaup "move up"))
+   (("M-n" org-metadown "move down")  ;; TESTED
+    ("M-p" org-metaup "move up"))  ;; TESTED
    
    "Code"
-   (("s" org-insert-src-block "insert code src block")
-    ("S" org-edit-src-code "edit code src block"))
+   (("s" org-insert-src-block "insert code src block")  ;; TESTED
+    ("S" org-edit-src-code "edit code src block"))  ;; TESTED
    
    "TODO"
-   (("m" org-todo-and-move-top "done and move top"))
+   (("m" org-todo-and-move-top "done and move top"))  ;; TESTED
    
    "Table"
-   (("C" my-org-table-insert-column-below "insert column below")
-    ("R" my-org-table-insert-row-below "insert row below")
-    ("," my-org-table-select-field "select field"))))
+   (("C" my-org-table-insert-column-below "insert column below")  ;; TESTED
+    ("R" my-org-table-insert-row-below "insert row below")  ;; TESTED
+    ("," my-org-table-select-field "select field"))))  ;; TESTED
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (local-set-key (kbd "C-c O") 'pretty-hydra-one-key-org-mode/body)))

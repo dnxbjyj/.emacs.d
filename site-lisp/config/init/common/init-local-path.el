@@ -26,7 +26,8 @@
 				    ;; (init-local-path nil 'chrome-executable-path "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe")
                                     ))
  ((equal system-type 'darwin) (progn
-				(init-local-path nil 'junit-jar-path "/Users/m2fox/software/dev/junit-4.10.jar")))
+				(init-local-path nil 'junit-jar-path "/Users/m2fox/software/dev/junit-4.10.jar")
+                                (init-local-path 'sift 'sift-executable "/usr/local/bin/sift")))
  (t nil))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
