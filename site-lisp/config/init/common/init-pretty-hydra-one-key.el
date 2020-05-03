@@ -149,7 +149,7 @@ _q_: quit this hydra
 (global-set-key (kbd "C-c a") 'hydra-one-key-access/body)
 
 (pretty-hydra-define pretty-hydra-one-key-access
-  (:color amaranth :quit-key "q" :title "Access operations (access to position, file, directory, buffer, etc.).")
+  (:color pink :quit-key "q" :title "Access operations (access to position, file, directory, buffer, etc.).")
   ("Code"
    (("a" run-auto-commit "run auto-commit.bat")
     ("c" run-win-cmd-with-admin "run win cmd with admin")
@@ -191,7 +191,7 @@ _q_: quit this hydra
 (global-set-key (kbd "C-c c") 'hydra-one-key-code-operation/body)
 
 (pretty-hydra-define pretty-hydra-one-key-code-operation
-  (:color amaranth :quit-key "q" :title "Code operations.")
+  (:color pink :quit-key "q" :title "Code operations.")
   ("Code"
    (("j" json-pretty-print "format JSON at point or in region")
     ("/" my-comment-or-uncomment-region "comment/uncomment region code")
@@ -209,7 +209,7 @@ _d_: toggle debug on error
 (global-set-key (kbd "C-c d") 'hydra-one-key-better-default/body)
 
 (pretty-hydra-define pretty-hydra-one-key-toggles
-  (:color amaranth :quit-key "q" :title "Toggle operations.")
+  (:color pink :quit-key "q" :title "Toggle operations.")
   ("Debug"
    (("d" toggle-debug-on-error "toggle debug on error"))))
 (global-set-key (kbd "C-c T") 'pretty-hydra-one-key-toggles/body)
@@ -268,7 +268,7 @@ _q_: quit this hydra
 (global-set-key (kbd "C-c e") 'hydra-one-key-edit-operation/body)
 
 (pretty-hydra-define pretty-hydra-one-key-edit-operation
-  (:color amaranth :quit-key "q" :title "Common edit operations.")
+  (:color pink :quit-key "q" :title "Common edit operations.")
   ("Buffer"
    (("B" remove-blank-lines-in-buffer "remove blank lines in buffer")
     ("c" show-current-buffer-coding "show current buffer coding")
@@ -339,7 +339,7 @@ _q_: quit this hydra
 	  (lambda () (local-set-key (kbd "C-c g") 'hydra-one-key-gud/body)))
 
 (pretty-hydra-define pretty-hydra-one-key-gud
-  (:color amaranth :quit-key "q" :title "Gud shotcut.")
+  (:color pink :quit-key "q" :title "Gud shotcut.")
   ("Compile"
    (("c" javac-compile-with-debug-info "javac compile"))
    
@@ -359,6 +359,7 @@ _q_: quit this hydra
     ("u" gud-finish "continue until current method returns"))))
 (global-set-key (kbd "C-c G") 'pretty-hydra-one-key-gud/body)
 
+;; TESTED
 (defhydra hydra-one-key-help (:color pink :hint nil)
   "
 Help operations.
@@ -382,20 +383,21 @@ _q_: quit this hydra
   ("q" nil :color blue))
 (global-set-key (kbd "C-c h") 'hydra-one-key-help/body)
 
+;; TESTED
 (pretty-hydra-define pretty-hydra-one-key-help
-  (:color amaranth :quit-key "q" :title "Help operations.")
+  (:color pink :quit-key "q" :title "Help operations.")
   ("Search"
    (("a" apropos "apropos search")
     ("A" info-apropos "info apropos"))
    
    "Manual"
-   (("e" open-elisp-manual "open elisp manual")
-    ("E" open-emacs-manual "open emacs manual")
-    ("i" info "open info")
-    ("I" open-eintr "open eintr"))
+   (("e" open-elisp-manual "elisp manual")
+    ("E" open-emacs-manual "emacs manual")
+    ("i" info "info")
+    ("I" open-eintr "eintr"))
 
    "Pretty Hydra One Key"
-   (("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-pretty-hydra-one-key.el")) "open pretty hydra one key configuration file"))))
+   (("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-pretty-hydra-one-key.el")) "pretty hydra one key configuration file"))))
 (global-set-key (kbd "C-c H") 'pretty-hydra-one-key-help/body)
 
 ;;;; org-mode ;;;;
@@ -452,7 +454,7 @@ _q_: quit this hydra
 
 ;;;; org-mode ;;;;
 (pretty-hydra-define pretty-hydra-one-key-org-mode
-  (:color amaranth :quit-key "q" :title "Shortcut for org-mode.")
+  (:color pink :quit-key "q" :title "Shortcut for org-mode.")
   ("Edit"
    (("d" org-delete-item "delete item on current line")
     ("D" my-org-delete-line "add `+' to line head and tail")
@@ -488,6 +490,7 @@ _q_: quit this hydra
 	  (lambda ()
 	    (local-set-key (kbd "C-c O") 'pretty-hydra-one-key-org-mode/body)))
 
+;; TESTED
 (defhydra hydra-one-key-window-operation (:color pink :hint nil)
   "
 Common window operations.
@@ -513,8 +516,9 @@ _q_: quit this hydra
   ("q" nil :color blue))
 (global-set-key (kbd "C-c w") 'hydra-one-key-window-operation/body)
 
+;; TESTED
 (pretty-hydra-define pretty-hydra-one-key-window-operation
-  (:color amaranth :quit-key "q" :title "Common window operations.")
+  (:color pink :quit-key "q" :title "Common window operations.")
   ("Window"
    (("f" toggle-frame-fullscreen "toggle frame full screen")
     ("m" toggle-frame-maximized "toggle frame maximized")
