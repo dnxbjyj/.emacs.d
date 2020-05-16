@@ -13,7 +13,6 @@
 (require 'init-gud-mode)
 (require 'init-atomic-chrome)
 (require 'init-anzu)
-(require 'init-aweshell)
 
 (require 'init-pretty-hydra)
 
