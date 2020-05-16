@@ -57,6 +57,8 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; aweshell
+(require 'init-aweshell)
 ;; pretty-hydra
 (require 'init-pretty-hydra)
 ;; anzu
