@@ -12,6 +12,8 @@
 	  (lambda ()
 	    (local-set-key (kbd "C-l") 'aweshell-clear-buffer)))
 
+(global-set-key (kbd "C-x t") 'aweshell-new)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:
 (provide 'init-aweshell)

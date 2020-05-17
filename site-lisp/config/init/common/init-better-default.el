@@ -11,6 +11,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; yes-or-no when quit emacs
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;; close indent-tabs-mode
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4)
