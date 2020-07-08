@@ -11,6 +11,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+;; revert any buffer associated with a file whne the file changed on disk
+(global-auto-revert-mode 1)
+
 ;; yes-or-no when quit emacs
 (setq confirm-kill-emacs 'y-or-n-p)
 

@@ -57,6 +57,8 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; init-valign
+(require 'init-valign)
 ;; aweshell
 (require 'init-aweshell)
 ;; pretty-hydra

@@ -81,10 +81,12 @@
 (global-set-key (kbd "C-\"") 'select-text-between-quotations)
 
 ;; Move cursor to next five lines
-(global-set-key (kbd "C-S-M-n") 'next-5-lines)
+(global-unset-key (kbd "M-N"))
+(global-set-key (kbd "M-N") 'next-5-lines)
 
 ;; Move cursor to previous five lines
-(global-set-key (kbd "C-S-M-p") 'previous-5-lines)
+(global-unset-key (kbd "M-P"))
+(global-set-key (kbd "M-P") 'previous-5-lines)
 
 ;; Scroll up half window
 (global-set-key (kbd "C-S-v") 'scroll-up-half-window)
@@ -124,7 +126,8 @@
    (("h" my-list-hooks "search hooks")  
     ("m" my-list-key-maps "search key maps")  
     ("M" switch-to-minibuffer-window "switch to minibuffer window")
-    ("S" search-symbol "search symbol")  
+    ("S" search-symbol "search symbol")
+    ("t" open-tmp-txt-buffer "open a tmp txt buffer quickly")
     ("C-<tab>" bs-cycle-next "cycle next buffer")  
     ("S-<tab>" bs-cycle-previous "cycle previous buffer"))  
 
@@ -228,7 +231,8 @@
     ("t" make-line-to-title "modify line to title"))  
    
    "Display"
-   (("l" org-toggle-link-display "toggle link display")  
+   (("I" org-toggle-inline-images "toggle inline images")
+    ("l" org-toggle-link-display "toggle link display")  
     ("N" org-narrow-to-subtree "narrow to subtree")  
     ("{" shrink-parent-level-headline "shrink parent leve headline")  
     ("[" shrink-current-level-headline "shrink current leve headline")  

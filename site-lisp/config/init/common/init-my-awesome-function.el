@@ -7,6 +7,11 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun open-tmp-txt-buffer ()
+  "Open a tmp txt buffer quickly."
+  (interactive)
+  (switch-to-buffer (get-buffer-create (format "tmp-txt-%s.txt" (random 10000)))))
+
 (defun insert-at-timestamp ()
   "Insert the `@timestamp'"
   (interactive)
