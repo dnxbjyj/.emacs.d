@@ -90,6 +90,8 @@
 (setq default-process-coding-system '(utf-8-unix . utf-8-unix))  ;; process处理程序字符编码
 (set-clipboard-coding-system 'utf-8-unix)
 (set-next-selection-coding-system 'utf-8-unix)
+(setq coding-system-for-write 'utf-8)
+(setq coding-system-for-read 'utf-8)
 (prefer-coding-system 'utf-8)
 
 ;; 设置Windows系统的字符
