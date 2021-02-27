@@ -145,8 +145,9 @@
    
    "Code"
    (("j" json-pretty-print "format JSON at point or in region")  
-    ("/" my-comment-or-uncomment-region "comment/uncomment region code")  
-    ("m" toggle-message-buffer-window "toggle *Messages* buffer window"))))  
+    ("m" toggle-message-buffer-window "toggle *Messages* buffer window")
+    ("w" prepare-coding-workspace "prepare coding workspace")
+    ("/" my-comment-or-uncomment-region "comment/uncomment region code"))))
 (global-set-key (kbd "C-c c") 'pretty-hydra-one-key-code-operation/body)
 
 (pretty-hydra-define pretty-hydra-one-key-edit-operation

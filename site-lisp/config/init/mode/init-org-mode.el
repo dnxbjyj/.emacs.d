@@ -30,7 +30,7 @@
   ;; go to next line
   (next-line)
   ;; get current line number
-  (setq top-line-number (line-number-at-pos))
+  (setq top-line-number (line-number-ats{}-pos))
   ;; go to raw line
   (goto-line raw-line-number)
   ;; line diff

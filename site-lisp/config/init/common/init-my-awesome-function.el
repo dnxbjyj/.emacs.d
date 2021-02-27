@@ -7,6 +7,33 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun prepare-coding-workspace ()
+  "Prepare coding workspace."
+  (interactive)
+  ;; 记录原始buffer高度
+  (setq raw-window-height (window-height))
+
+  ;; 打开文档写作window（上下布局）
+  (split-window-below)
+  ;; 创建临时文档写作buffer
+  (other-window 1)
+  (setq tmp-file-name "tmp.md")
+  ;; 若buffer不存在则创建，然后切换到这个buffer
+  (unless (gnus-buffer-exists-p tmp-file-name)
+    (progn
+      (create-file-buffer tmp-file-name)))
+  (switch-to-buffer tmp-file-name)
+
+  ;; 调整window高度
+  (shrink-window (floor (* raw-window-height 0.15)))
+  (other-window 1)
+
+  ;; 打开eshell window（左右布局，宽度已经调整好）
+  (eshell)
+
+  ;; 返回原始window
+  (other-window 1))
+
 (defun open-tmp-txt-buffer ()
   "Open a tmp txt buffer quickly."
   (interactive)
