@@ -19,11 +19,14 @@
   (add-subdirs-to-load-path "~/.emacs.d/site-lisp/")
   ;; 递归加载~/.emacs.d/local-lisp目录
   (add-subdirs-to-load-path "~/.emacs.d/local-lisp/")
+  
+  ;; benchmark性能分析，emacs启动之后使用这个命令查看每个插件加载的耗时明细：M-x benchmark-init/show-durations-tree
+  (require 'benchmark-init-modes)
+  (require 'benchmark-init)
+  (benchmark-init/activate)
+  
+  ;; 加载init-config模块
+  (require 'init-config)
+  ;; 本地化配置
+  (require 'init-local-config)
 )
-
-;; 加载init-config模块
-(require 'init-config)
-
-;; 本地化配置
-(require 'init-local-config)
-(put 'narrow-to-region 'disabled nil)

@@ -9,7 +9,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 (defun open-current-file-in-chrome ()
-  "Open current file in chrome."
+  "Open current file in chrome. 
+PS: should add path of chrome.exe to environment path."
   (interactive)
   ;; should add chrome executable path to env PATH at first
   (setq chrome-executable-path "chrome")

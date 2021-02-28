@@ -115,7 +115,8 @@
    (("a" run-auto-commit "run auto-commit.bat")
     ("c" run-win-cmd-with-admin "run win cmd with admin")
     ("g" run-git-bash "run git bash")
-    ("i" run-ipython "run ipython"))
+    ("i" run-ipython "run ipython")
+    ("w" prepare-coding-workspace "prepare coding workspace"))
    
    "File"
    (("C" open-current-file-in-chrome "open current file in chrome")
@@ -134,7 +135,7 @@
    "Search"
    (("f" grep-dired-dwim "search file by grep-dired-dwim")  
     ("F" grep-dired "grep dired by custom")  
-    ("s" sift-regexp "sift full-text search"))))  
+    ("s" sift-regexp "sift full-text search"))))
 (global-set-key (kbd "C-c a") 'pretty-hydra-one-key-access/body)
 
 (pretty-hydra-define pretty-hydra-one-key-code-operation
@@ -146,7 +147,6 @@
    "Code"
    (("j" json-pretty-print "format JSON at point or in region")  
     ("m" toggle-message-buffer-window "toggle *Messages* buffer window")
-    ("w" prepare-coding-workspace "prepare coding workspace")
     ("/" my-comment-or-uncomment-region "comment/uncomment region code"))))
 (global-set-key (kbd "C-c c") 'pretty-hydra-one-key-code-operation/body)
 
