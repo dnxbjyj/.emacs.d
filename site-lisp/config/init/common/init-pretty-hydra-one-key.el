@@ -4,7 +4,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
 (require 'hydra)
-(require 'init-my-awesome-function)
+;; (require 'init-my-awesome-function)
 (require 'init-quick-access)
 (require 'init-org-mode)
 

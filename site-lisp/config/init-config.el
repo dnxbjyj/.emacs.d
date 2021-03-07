@@ -1,7 +1,8 @@
 ;;;;;;;;;; 包加载入口 ;;;;;;;;;;
+;;;; use-package基础插件加载
+(require 'init-use-package)
+
 ;;;; basic config starts
-;; pretty-hydra one key
-(require 'init-pretty-hydra-one-key)
 ;; 主题设置
 (require 'init-theme)
 ;; 界面外观设置
@@ -15,6 +16,7 @@
 (require 'init-better-default)
 ;; 自定义的好用函数
 (require 'init-my-awesome-function)
+
 ;; 加载包
 (require 'init-package)
 ;; 快速访问按键配置
@@ -104,6 +106,9 @@
 ;; Youdao dictionary config
 (require 'init-youdao-dictionary)
 ;;;; init extension end
+
+;; pretty-hydra one key (在所有配置加载之后加载，以节省加载时间）
+(require 'init-pretty-hydra-one-key)
 
 ;; provide init-config module
 (provide 'init-config)

@@ -68,3 +68,6 @@
 ## local-list/ :: 本地化的模块化配置目录
 - `init-quick-access-local.el`: 本地化的快速访问配置文件
 - `quick-access-local.org`: 本地化的快速访问org配置文件
+# 需要本地化适配的配置
+## `site-lisp/config/init/common/init-local-path.el`
+
