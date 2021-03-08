@@ -11,6 +11,11 @@
 
 (add-to-list 'auto-mode-alist '("\\.scm\\'" . scheme-mode))
 
+(defun open-racket-manual-search-page ()
+  "Open racket manual search page."
+  (interactive)
+  (find-file-at-point "https://docs.racket-lang.org/search/"))
+
 ;; precondition: should install racket, and add its executable path to environment path
 (setq scheme-program-name "racket")
 

@@ -8,6 +8,12 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun open-hosts ()
+  "Open hosts."
+  (interactive)
+  ;; TODO open Linux/Mac hosts
+  (find-file "c:/windows/system32/drivers/etc/hosts"))
+
 (defun open-current-file-in-chrome ()
   "Open current file in chrome. 
 PS: should add path of chrome.exe to environment path."

@@ -8,8 +8,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-(global-set-key (kbd "C-x p i") 'pasteex-image)
-(global-set-key (kbd "C-x p d") 'pasteex-delete-img-link-and-file-at-line)
+(when (equal system-type 'windows-nt)
+  (global-set-key (kbd "C-x p i") 'pasteex-image)
+  (global-set-key (kbd "C-x p d") 'pasteex-delete-img-link-and-file-at-line))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Provide:

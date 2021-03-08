@@ -19,6 +19,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
 ;;-----------------common quick shortcut-----------------;;
+;; [locally] quickly open quick-access-local.org
+(bind-key-for-open "~/.emacs.d/local-lisp/quick-access-local.org" "C-<f12>" "file")
+
+;; quickly open quick-access.org
+(bind-key-for-open "~/.emacs.d/site-lisp/org/quick-access.org" "<f12>" "file")
+
 ;; Insert the `@timestamp'
 (global-unset-key (kbd "M-A"))
 (global-set-key (kbd "M-A") 'insert-at-timestamp)
@@ -49,9 +55,6 @@
 
 ;; 加载当前文件
 (global-set-key (kbd "<f11>") 'load-file)
-
-;; quickly open quick-access.org
-(bind-key-for-open "~/.emacs.d/site-lisp/org/quick-access.org" "<f12>" "file")
 
 ;; 快速提交git代码（need auto-commit.bat file in ~/.emacs.d/ directory）
 (global-set-key (kbd "C-<f5>") (lambda() (interactive) (async-shell-command "start auto-commit.bat")))
@@ -120,6 +123,7 @@
    
    "File"
    (("C" open-current-file-in-chrome "open current file in chrome")
+    ("H" open-hosts "open hosts")
     ("o" open-explorer "open explorer")
     ("r" recentf-open-files "show recent opened files"))  
 
@@ -147,6 +151,7 @@
    "Code"
    (("j" json-pretty-print "format JSON at point or in region")  
     ("m" toggle-message-buffer-window "toggle *Messages* buffer window")
+    ("R" open-racket-manual-search-page "open racket manual search page")
     ("/" my-comment-or-uncomment-region "comment/uncomment region code"))))
 (global-set-key (kbd "C-c c") 'pretty-hydra-one-key-code-operation/body)
 

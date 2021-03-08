@@ -38,10 +38,8 @@
 (require 'init-elisp-mode)
 ;; gud-mode
 (require 'init-gud-mode)
-;; pasteex-mode
-(if (equal system-type 'windows-nt)
-    ;; pasteex-mode, only on Windows
-    (require 'init-pasteex-mode))
+;; pasteex-mode, only on Windows
+(require 'init-pasteex-mode)
 ;; config java-mode
 (require 'init-java-mode)
 ;; config dired-mode
