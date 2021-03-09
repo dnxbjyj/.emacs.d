@@ -4,9 +4,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Require:
 (require 'hydra)
-;; (require 'init-my-awesome-function)
+(require 'init-my-awesome-function)
 (require 'init-quick-access)
 (require 'init-org-mode)
+(require 'init-sh-mode)
 
 (require 'init-sift)
 (require 'init-grep-dired)
@@ -133,6 +134,7 @@
     ("M" switch-to-minibuffer-window "switch to minibuffer window")
     ("S" search-symbol "search symbol")
     ("t" open-tmp-txt-buffer "open a tmp txt buffer quickly")
+    ("T" cd-my-tmp-dir "cd to my tmp dir")
     ("C-<tab>" bs-cycle-next "cycle next buffer")  
     ("S-<tab>" bs-cycle-previous "cycle previous buffer"))  
 
@@ -263,6 +265,12 @@
 (add-hook 'org-mode-hook
 	  (lambda ()
 	    (local-set-key (kbd "C-c o") 'pretty-hydra-one-key-org-mode/body)))
+
+(pretty-hydra-define pretty-hydra-one-key-script-coding
+  (:color pink :quit-key "q" :title "Script coding operations.")
+  ("Shell"
+   (("f" insert-shell-func-template "insert shell function template"))))
+(global-set-key (kbd "C-c s") 'pretty-hydra-one-key-script-coding/body)
 
 (pretty-hydra-define pretty-hydra-one-key-toggles
   (:color pink :quit-key "q" :title "Toggle operations.")

@@ -54,6 +54,8 @@
 (require 'init-org-mode)
 ;; config company-mode
 (require 'init-company-mode)
+;; config sh-mode
+(require 'init-sh-mode)
 ;;;; init mode end
 
 ;;;; init extension start

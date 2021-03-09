@@ -7,6 +7,15 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
+(defun cd-my-tmp-dir ()
+  "Cd to my tmp dir."
+  (interactive)
+  (setq tmp-dir "~/tmp/")
+  (unless (file-directory-p tmp-dir)
+    (make-directory tmp-dir))
+  (cd tmp-dir)
+  (ido-dired))
+
 (defun prepare-coding-workspace ()
   "Prepare coding workspace."
   (interactive)
