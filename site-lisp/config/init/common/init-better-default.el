@@ -11,7 +11,21 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Code:
-;; revert any buffer associated with a file whne the file changed on disk
+(setq url-proxy-services `(("no_proxy" . ,no-proxy-urls)
+                           ("http" . ,http-proxy-url)
+                           ("https" . ,https-proxy-url)))
+
+(advice-add 'yank
+            :around
+            (lambda (orig-func &rest args)
+              (when (eq system-type 'windows-nt)
+                (set-clipboard-coding-system 'utf-16-le))
+              (apply orig-func args)
+              (when (eq system-type 'windows-nt)
+                (set-clipboard-coding-system 'utf-16-le)))
+            '((name . "modify-clipboard-encoding-around@yank")))
+
+;; revert any buffer associated with a file when the file changed on disk
 (global-auto-revert-mode 1)
 
 ;; yes-or-no when quit emacs
