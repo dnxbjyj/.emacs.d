@@ -59,6 +59,8 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; init-markdown-toc
+(require 'init-markdown-toc)
 ;; init-valign
 (require 'init-valign)
 ;; aweshell

@@ -1,8 +1,31 @@
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [.emacs.d](#emacsd)
+- [核心配置文件和目录结构](#核心配置文件和目录结构)
+    - [init.el](#initel)
+    - [site-lisp](#site-lisp)
+        - [config](#config)
+            - [init-config.el](#init-configel)
+            - [init](#init)
+                - [init-template.el](#init-templateel)
+                - [common](#common)
+                - [mode](#mode)
+                - [extension](#extension)
+                - [my-extension](#my-extension)
+        - [org](#org)
+        - [extension](#extension-1)
+        - [my-extension](#my-extension-1)
+    - [local-lisp](#local-lisp)
+- [需要本地化适配的配置](#需要本地化适配的配置)
+    - [init-local-path.el](#init-local-pathel)
+
+<!-- markdown-toc end -->
 # .emacs.d
 我的Emacs配置。
 
 # 核心配置文件和目录结构
-## init.el（文件）
+## init.el
 主入口文件，把所有的package路径递归加入`load-path`，并启动benchmark性能分析插件。
 
 ## site-lisp
@@ -11,12 +34,14 @@
 ### config
 模块化配置文件存放目录，包括如下配置文件和目录：
 
-- `init-config.el`: 模块化配置入口配置文件，在其中只做一件事：加载各个package的init初始化配置文件。
+#### init-config.el
+模块化配置入口配置文件，在其中只做一件事：加载各个package的init初始化配置文件。
 
 #### init
 各个package的初始化配置文件存放目录，包括如下配置文件和目录：
 
-- `init-template.el`: 模块化package初始化配置模板文件，每一个package的初始化都要使用该模板文件。
+##### init-template.el
+模块化package初始化配置模板文件，每一个package的初始化都要使用该模板文件。
 
 ##### common
 通用初始化配置文件目录，包括如下配置文件：
@@ -102,13 +127,13 @@
 - `pasteex`: `org-mode`和`markdown-mode`下的剪贴板图片一键插入工具
 
 
-## local-list
+## local-lisp
 本地化的模块化配置目录，包括如下配置文件：
 - `init-quick-access-local.el`: 本地化的快速访问配置文件
 - `quick-access-local.org`: 本地化的快速访问org配置文件
 
 # 需要本地化适配的配置
-## `init-local-path.el`
+## init-local-path.el
 - 存放位置：`site-lisp/config/init/common/init-local-path.el`
 - 说明：本地化的路径参数配置。
 

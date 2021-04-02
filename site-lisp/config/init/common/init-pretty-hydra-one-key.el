@@ -14,6 +14,8 @@
 (require 'init-gud-mode)
 (require 'init-atomic-chrome)
 (require 'init-anzu)
+(require 'init-pasteex-mode)
+(require 'init-markdown-toc)
 
 (require 'init-pretty-hydra)
 
@@ -226,6 +228,19 @@
    "Pretty Hydra One Key"
    (("h" (lambda () (interactive) (find-file "~/.emacs.d/site-lisp/config/init/common/init-pretty-hydra-one-key.el")) "pretty hydra one key configuration file"))))
 (global-set-key (kbd "C-c h") 'pretty-hydra-one-key-help/body)
+
+;;;; markdown-mode ;;;;
+(pretty-hydra-define pretty-hydra-one-key-markdown-mode
+  (:color pink :quit-key "q" :title "Shortcut for markdown-mode.")
+  ("Edit"
+   (("t" markdown-toc-generate-or-refresh-toc "generate or refresh toc by markdown-toc"))  
+   
+   "Resource"
+   (("p" pasteex-image "paste image by pasteex-mode")
+    ("P" pasteex-delete-img-link-and-file-at-line "delete pasted image at line by pasteex-mode"))))
+(add-hook 'markdown-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-c m") 'pretty-hydra-one-key-markdown-mode/body)))
 
 ;;;; org-mode ;;;;
 (pretty-hydra-define pretty-hydra-one-key-org-mode
