@@ -21,13 +21,14 @@
 (cond
  ;; Windows系统
  ((equal system-type 'windows-nt) (progn
-				    (init-local-path nil 'find-function-C-source-directory "d:/")
+				    (init-local-path nil 'find-function-C-source-directory "D:/program/emacs/emacs-27.2-x86_64/source/emacs-27.2/src/")
 				    (init-local-path 'pasteex-mode 'pasteex-executable-path "D:/program/PasteEx.v1.1.8.0.beta/PasteEx/pasteex.exe")
 				    (init-local-path 'grep-dired 'find-program "D:/program/Git/usr/bin/find.exe")
 				    (init-local-path 'sift 'sift-executable "d:/program/Git/usr/bin/sift.exe")
 				    (init-local-path 'virtualenvwrapper 'venv-location "e:/code/env/.py2env/")
-				    (init-local-path nil 'dirs-to-be-read-only '("d:/program/emacs-25.3.1-with-modules/emacs/share/emacs/25.3/lisp"
-										 "c:/Users/76512/AppData/Roaming/.emacs.d/site-lisp/"))
+				    (init-local-path nil 'dirs-to-be-read-only '("D:/program/emacs/emacs-27.2-x86_64/share/emacs/27.2/lisp"
+										 "c:/Users/76512/AppData/Roaming/.emacs.d/"
+                                         "D:/program/emacs/emacs-27.2-x86_64/source/"))
 				    (init-local-path nil 'chrome-executable-path "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe")
                     ))
  ;; Mac OS X系统

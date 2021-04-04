@@ -59,6 +59,10 @@
 ;;;; init mode end
 
 ;;;; init extension start
+;; init-company-posframe
+(require 'init-company-posframe)
+;; init-posframe
+(require 'init-posframe)
 ;; init-markdown-toc
 (require 'init-markdown-toc)
 ;; init-valign

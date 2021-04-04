@@ -109,6 +109,32 @@
   "Implementation detail to protect the `_` characters
   when converting to link.")
 
+(defconst punct-protect-map (progn
+                              (setq punct-protect-table (make-hash-table :test 'equal))
+                              (puthash "（" "290aef28d38d4e118ca5ead7cbf068af" punct-protect-table)
+                              (puthash "）" "c95e0f4aadf048c19e1f18c0d515c7ba" punct-protect-table)
+                              (puthash "【" "1d5d3f2bb01249ef80caaa4ca51ff819" punct-protect-table)
+                              (puthash "】" "b6c597f02bd4401bb97feb094ff35a81" punct-protect-table)
+                              punct-protect-table)
+  "Punct protect map.")
+
+(defconst punct-recover-map (progn
+                              (let ((punct-recover-table (make-hash-table :test 'equal)))
+                                (dolist (punct (hash-table-keys punct-protect-map))
+                                  (progn
+                                    (puthash (gethash punct punct-protect-map) punct punct-recover-table)))
+                                punct-recover-table))
+  "Punct recover map.")
+
+;; (dolist (punct (hash-table-keys punct-protect-map))
+;;                    (progn
+;;                      (setq code (gethash punct punct-protect-map))
+;;                      (message "punct: %s, code: %s" punct code)
+;;                      (setq s "abc（123）【456】")
+;;                      (s-replace punct code t)
+;;                      (print s)
+;;                      ))
+
 (defun markdown-toc--to-link (title &optional count)
   "Given a TITLE, return the markdown link associated."
 
@@ -119,9 +145,26 @@
                  downcase
                  (s-replace "-" markdown-toc--dash-protection-symbol)
                  (s-replace "_" markdown-toc--underscore-protection-symbol)
+                 ;; (dolist (punct (hash-table-keys punct-protect-map))
+                 ;;   (progn
+                 ;;     (setq code (gethash punct punct-protect-map))
+                 ;;     (message "punct: %s, code: %s" punct code)
+                 ;;     (s-replace punct code title)))
+                 (s-replace "（" "290aef28d38d4e118ca5ead7cbf068af")
+                 (s-replace "）" "c95e0f4aadf048c19e1f18c0d515c7ba")
+                 (s-replace "【" "1d5d3f2bb01249ef80caaa4ca51ff819")
+                 (s-replace "】" "b6c597f02bd4401bb97feb094ff35a81")
                  (replace-regexp-in-string "[[:punct:]]" "")
                  (s-replace markdown-toc--dash-protection-symbol "-")
                  (s-replace markdown-toc--underscore-protection-symbol "_")
+                 ;; (dolist (code (hash-table-keys punct-recover-map))
+                 ;;   (progn
+                 ;;     (setq punct (gethash code punct-recover-map))
+                 ;;     (s-replace code punct)))
+                 (s-replace "290aef28d38d4e118ca5ead7cbf068af" "（")
+                 (s-replace "c95e0f4aadf048c19e1f18c0d515c7ba" "）")
+                 (s-replace "1d5d3f2bb01249ef80caaa4ca51ff819" "【")
+                 (s-replace "b6c597f02bd4401bb97feb094ff35a81" "】")
                  (s-replace " " "-"))
             (if (> count 0)
                 (concat "-" (number-to-string count))

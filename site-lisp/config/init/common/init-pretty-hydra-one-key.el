@@ -249,8 +249,13 @@
    (("d" org-delete-item "delete item on current line")  
     ("D" my-org-delete-line "add `+' to line head and tail")  
     ("e" org-export-dispatch "export dispatch")  
-    ("i" my-org-insert-str-to-head-tail "insert str at head and tail")  
-    ("n" insert-s-or-f-note "insert s&f note")  
+    ("i" my-org-insert-str-to-head-tail "insert str at head and tail")
+    ("m" org-todo-and-move-top "todo done and move top")
+    ("n" insert-s-or-f-note "insert s&f note")
+    ("p" pasteex-image "paste image by pasteex-mode")
+    ("P" pasteex-delete-img-link-and-file-at-line "delete pasted image at line by pasteex-mode")
+    ("s" org-insert-src-block "insert code src block")  
+    ("S" org-edit-src-code "edit code src block")
     ("t" make-line-to-title "modify line to title"))  
    
    "Display"
@@ -265,14 +270,7 @@
    "Move"
    (("M-n" org-metadown "move down")  
     ("M-p" org-metaup "move up"))  
-   
-   "Code"
-   (("s" org-insert-src-block "insert code src block")  
-    ("S" org-edit-src-code "edit code src block"))  
-   
-   "TODO"
-   (("m" org-todo-and-move-top "done and move top"))  
-   
+         
    "Table"
    (("C" my-org-table-insert-column-below "insert column below")  
     ("R" my-org-table-insert-row-below "insert row below")  

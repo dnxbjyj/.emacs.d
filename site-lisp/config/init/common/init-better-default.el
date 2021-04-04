@@ -110,9 +110,9 @@
 
 ;; 设置Windows系统的字符
 (when (eq system-type 'windows-nt)
-  (set-next-selection-coding-system 'utf-16-le)
-  (set-selection-coding-system 'utf-16-le)
-  (set-clipboard-coding-system 'utf-16-le)
+  (set-next-selection-coding-system 'utf-8-unix)
+  (set-selection-coding-system 'utf-8-unix)
+  (set-clipboard-coding-system 'utf-8-unix)
   ;; when in windows system, set encoding of `cmdproxy.exe` to GBK
   (set-default 'process-coding-system-alist
 	       '(("[pP][lL][iI][nN][kK]" gbk-dos . gbk-dos)
