@@ -14,9 +14,11 @@
   (set path-var-name path))
 
 ;; proxy setting
-(init-local-path nil 'http-proxy-url "proxy.example.com:8080")
-(init-local-path nil 'https-proxy-url "proxy.example.com:8080")
-(init-local-path nil 'no-proxy-urls "example.com")
+;; (init-local-path nil 'http-proxy-url "proxy.example.com:8080")
+;; (init-local-path nil 'https-proxy-url "proxy.example.com:8080")
+(init-local-path nil 'http-proxy-url nil)
+(init-local-path nil 'https-proxy-url nil)
+(init-local-path nil 'no-proxy-urls "^\\(fanyi.youdao.com\\|localhost\\|127.0.0.1\\)")
 
 (cond
  ;; Windows系统
