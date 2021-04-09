@@ -52,9 +52,9 @@
 	    (setq param (car params))
 	    ;; insert param name annotation line
 	    (insert (format ":param %s: " param))
-	    (newline-and-indent)
 	    ;; insert param type annotation line when type hint not exist
             (unless type-hint-exist
+              (newline-and-indent)
               (insert (format ":type %s: " param))
               (newline-and-indent))
 	    (newline-and-indent)))
